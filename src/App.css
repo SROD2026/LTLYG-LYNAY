@@ -1,3 +1,12 @@
+.container {
+  min-height: 100vh;
+  padding: 18px;
+  background: var(--page-bg, #0b0f14);
+  background-image: var(--page-bg-gradient, none);
+  color: var(--text, rgba(255, 255, 255, 0.92));
+  transition: background 700ms ease, background-image 700ms ease;
+}
+
 .appShell {
   display: grid;
   gap: 14px;
@@ -11,11 +20,68 @@
   box-shadow: var(--shadow);
 }
 
+:root {
+  color-scheme: dark;
+
+  --bg: #0b0f14;
+  --card: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.12);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+  --shadow: 0 10px 40px rgba(0,0,0,0.35);
+
+html, body {
+  font-family: var(--ui-font);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pageTitle,
+.sectionTitle,
+.purposeDD__title,
+.btn,
+.gratitudeStepTitle {
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.pageTitle,
+.sectionTitle,
+.purposeDD__title,
+.btn,
+.gratitudeStepTitle {
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+body {
+  font-weight: 600;
+}
+
+button,
+.btn,
+.topNav button {
+  font-weight: 700;
+}
+
+  /* global font */
+--ui-font: "Inter", system-ui, -apple-system, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;}
+
 .metaRow {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -25,12 +91,91 @@
   line-height: 1.35;
 }
 
-.gridWrap {
-  width: 100%;
-  overflow: auto; /* iPhone scroll if needed */
-  -webkit-overflow-scrolling: touch;
+.gridFrame {
   border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: visible;          /* ✅ stop clipping text */
+  background: rgba(0,0,0,0.0); /* optional */
 }
+.gridScroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+  touch-action: pan-x;
+
+  box-sizing: border-box;
+
+  padding-top: max(28px, env(safe-area-inset-top));
+  padding-right: max(28px, env(safe-area-inset-right));
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+  padding-left: max(28px, env(safe-area-inset-left));
+
+  scrollbar-width: none;
+  scroll-padding-top: 50vh;
+  scroll-padding-right: 50vw;
+  scroll-padding-bottom: 50vh;
+  scroll-padding-left: 50vw;
+}
+
+.gridScroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .gridScroll {
+    padding-top: max(42px, env(safe-area-inset-top));
+    padding-right: max(42px, env(safe-area-inset-right));
+    padding-bottom: max(42px, env(safe-area-inset-bottom));
+    padding-left: max(42px, env(safe-area-inset-left));
+  }
+}
+
+
+.gridViewportGuide {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .gridViewportGuide {
+    display: block;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 34px;
+    height: 34px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 40;
+  }
+
+  .gridViewportGuide__ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    border: 2px solid rgba(255,255,255,0.85);
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,0.35),
+      0 0 16px rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .gridViewportGuide__dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translate(-50%, -50%);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 0 10px rgba(255,255,255,0.45);
+  }
+}
+
+
 
 .legend {
   display: grid;
@@ -51,5 +196,1022 @@
   width: 14px;
   height: 14px;
   border-radius: 4px;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+/* Buttons readable on both light/dark themes */
+.btn {
+  border-radius: 12px;
+  border: 1px solid var(--btn-border, rgba(255, 255, 255, 0.18));
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04)),
+    var(--btn-bg, rgba(255, 255, 255, 0.06));
+  color: var(--btn-text, rgba(255, 255, 255, 0.92));
+  padding: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 8px 18px rgba(0,0,0,0.14);
+  transition:
+    transform 140ms ease,
+    background 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    filter 140ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 12px 22px rgba(0,0,0,0.18);
+  border-color: var(--btn-border, rgba(255,255,255,0.24));
+  filter: brightness(1.03);
+}
+
+.btn:active {
+  transform: translateY(0.5px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    0 6px 12px rgba(0,0,0,0.14);
+}
+/* ---------- PurposePage launcher buttons ---------- */
+
+.launcherGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+@media (max-width: 760px) {
+  .launcherGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.launcherBtn {
+  width: 100%;
+  text-align: left;
+  padding: 16px 16px;
+  border-radius: 16px;
+  display: grid;
+  gap: 8px;
+  min-height: 92px;
+
+  /* overlays need clipping */
+  position: relative;
+  overflow: hidden;
+}
+.launcherBtnTitle {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+}
+
+.launcherBtnDesc {
+  font-size: 13px;
+  line-height: 1.35;
+  opacity: 0.7;
+}
+
+.launcherBtnRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.launcherChevron {
+  font-size: 20px;
+  opacity: 0.55;
+}
+
+/* --- Launcher themes (variable-driven, consistent with .btn) --- */
+
+.btn-nonviolent {
+  --btn-bg:
+    linear-gradient(180deg, rgba(0,120,255,0.18), rgba(0,60,160,0.15)),
+    repeating-linear-gradient(-30deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 2px, transparent 2px, transparent 8px);
+  --btn-border: rgba(120,180,255,0.35);
+}
+
+.btn-violent {
+  --btn-bg:
+    radial-gradient(circle at 30% 60%, rgba(255,120,60,0.32), transparent 60%),
+    radial-gradient(circle at 70% 40%, rgba(255,60,0,0.30), transparent 60%),
+    linear-gradient(180deg, rgba(80,0,0,0.60), rgba(20,0,0,0.60));
+  --btn-border: rgba(255,100,60,0.45);
+}
+
+.btn-checkin {
+  --btn-bg:
+    linear-gradient(180deg, rgba(60,180,100,0.22), rgba(40,120,70,0.18)),
+    radial-gradient(circle at 60% 80%, rgba(120,255,160,0.22), transparent 60%);
+  --btn-border: rgba(120,255,160,0.35);
+}
+
+.btn-log {
+  --btn-bg: rgba(255,255,255,0.05);
+  --btn-border: rgba(255,255,255,0.18);
+}
+
+/* gentle movement for themed button backgrounds */
+.btn-violent,
+.btn-nonviolent,
+.btn-checkin {
+  background-size: 200% 200%;
+  animation: launcherMove 10s ease infinite;
+}
+
+@keyframes launcherMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- page reacts to hovered launcher ---------- */
+
+/* Page reacts to hovered launcher buttons (use body so nesting can't break it) */
+body:has(.btn-nonviolent:hover) .container {
+  --page-bg: #0a1a28;
+  --page-bg-gradient:
+    radial-gradient(circle at 20% 20%, rgba(80,140,255,0.18), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(120,180,255,0.18), transparent 60%);
+}
+
+body:has(.btn-violent:hover) .container {
+  --page-bg: #1a0805;
+  --page-bg-gradient:
+    radial-gradient(circle at 30% 40%, rgba(255,80,0,0.35), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(255,120,60,0.25), transparent 60%);
+}
+
+body:has(.btn-checkin:hover) .container {
+  --page-bg: #071a0f;
+  --page-bg-gradient:
+    radial-gradient(circle at 40% 30%, rgba(80,200,120,0.30), transparent 60%),
+    radial-gradient(circle at 70% 80%, rgba(120,255,160,0.25), transparent 60%);
+}
+/* =========================
+   Launcher button FX layers
+   ========================= */
+
+/* Keep text above the effects */
+.launcherBtnTitle,
+.launcherBtnDesc,
+.launcherChevron,
+.launcherBtnRow {
+  position: relative;
+  z-index: 2;
+}
+
+/* Base overlay layer (shared) */
+.btn-nonviolent::before,
+.btn-nonviolent::after,
+.btn-violent::before,
+.btn-violent::after,
+.btn-checkin::before,
+.btn-checkin::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.btn-nonviolent:hover::before,
+.btn-nonviolent:hover::after,
+.btn-violent:hover::before,
+.btn-violent:hover::after,
+.btn-checkin:hover::before,
+.btn-checkin:hover::after {
+  opacity: 1;
+}
+
+/* ---------- Purpose Dropdown ---------- */
+
+.purposeDD {
+  display: grid;
+  gap: 12px;
+}
+
+.purposeDD__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.purposeDD__miniBtn {
+  padding: 8px 10px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+.hubPrayer .hubTile {
+  width: 190px;
+  height: 190px;
+  min-height: 190px;
+  max-width: 190px;
+  box-shadow:
+    0 14px 26px rgba(0,0,0,0.12),
+    0 0 18px rgba(255,255,255,0.15);
+}
+
+.hubPrayer {
+  width: 190px;
+}
+
+.prayerEmoji {
+  font-size: 68px;
+  line-height: 1;
+  display: inline-block;
+}
+.hubPrayer .hubTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purposeDD__list {
+  display: grid;
+  gap: 10px;
+}
+
+.purposeDD__card {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  overflow: hidden;
+}
+
+.purposeDD__card.isOpen {
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.05);
+}
+
+.purposeDD__header {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.purposeDD__title {
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.purposeDD__heading {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+}
+
+/* colored outline/glow text */
+.textOutlineBlue {
+  font-weight: 900;
+  text-shadow:
+    0 0 1px rgba(80,140,255,0.85),
+    0 0 10px rgba(80,140,255,0.25);
+}
+
+.textOutlineRed {
+  font-weight: 900;
+  text-shadow:
+    0 0 1px rgba(255,80,0,0.85),
+    0 0 10px rgba(255,80,0,0.25);
+}
+
+.textOutlineGreen {
+  font-weight: 900;
+  text-shadow:
+    0 0 1px rgba(80,200,120,0.85),
+    0 0 10px rgba(80,200,120,0.25);
+}
+
+
+
+
+/* =========================
+   Header typography (scope   ========================= */
+.headerWrap .pageTitle {
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* subtitle should NOT be global */
+.headerWrap .pageSubtitle {
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--muted);
+  opacity: 1;
+  max-width: 920px;
+}
+
+/* =========================
+   Section headings (explicit)
+   ========================= */
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/* Purpose dropdown row titles */
+.purposeDD__title {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/* =========================
+   Check-in / Gratitude page safety reset
+   (prevents any large header CSS from touching step headings)
+   ========================= */
+
+.checkinPage h1,
+.checkinPage h2,
+.checkinPage h3 {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.checkinSectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.purposeDD__chev {
+  opacity: 0.7;
+  font-size: 18px;
+  transform: rotate(0deg);
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.purposeDD__chev.isOpen {
+  transform: rotate(90deg);
+  opacity: 0.9;
+}
+
+.purposeDD__body {
+  padding: 0 12px 12px;
+}
+
+.purposeDD__section {
+  margin-top: 10px;
+}
+
+.purposeDD__label {
+  font-weight: 800;
+  margin-bottom: 6px;
+  opacity: 0.92;
+}
+
+.purposeDD__bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.45;
+}
+
+.purposeDD__bullets li {
+  margin: 6px 0;
+}
+
+.purposeDD__scriptureBox {
+  margin-top: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.18);
+  padding: 10px;
+}
+
+.purposeDD__scriptureGrid {
+  display: grid;
+  gap: 8px;
+}
+
+.purposeDD__scriptureRow {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .purposeDD__scriptureRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.purposeDD__ref {
+  font-weight: 900;
+  color: rgba(255,255,255,0.9);
+}
+
+.purposeDD__principle {
+  color: rgba(255,255,255,0.80);
+  line-height: 1.45;
+}
+/* =========================
+   Purpose page clean hub
+   ========================= */
+
+.purposePageClean .panel {
+  border-radius: 20px;
+}
+
+.purposePageClean .headerWrap .pageTitle {
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.purposePageClean .headerWrap .pageSubtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--muted);
+  opacity: 1;
+  max-width: 940px;
+}
+
+
+.purposeHubGrid {
+  display: grid;
+  grid-template-columns: 150px 160px 150px;
+  grid-template-areas:
+    ". violent ."
+    "nonviolent center prayer"
+    ". checkin ."
+    "needs communication log";
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 8px 0 6px;
+}
+
+.hubViolent { grid-area: violent; }
+.hubNonviolent { grid-area: nonviolent; }
+.hubCenter { grid-area: center; }
+.hubPrayer { grid-area: prayer; }
+.hubCheckin { grid-area: checkin; }
+.hubNeeds { grid-area: needs; }
+.hubCommunication { grid-area: communication; }
+.hubLog { grid-area: log; }
+
+.hubCell {
+  width: 150px;
+}
+
+.hubTile {
+  width: 150px;
+  height: 150px;
+  min-height: 150px;
+  aspect-ratio: 1 / 1;
+  max-width: 150px;
+}
+
+.hubTile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.10);
+}
+
+.hubTile:active {
+  transform: translateY(0px);
+}
+
+/* make the center tile quieter so the compass reads clearly */
+.hubCenterCard {
+  border-radius: 18px;
+  border: 1px solid rgba(73, 82, 78, 0.10);
+  background: rgba(255,255,255,0.62);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  width: 160px;
+  height: 160px;
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+/* bottom row = support tools, slightly calmer */
+.hubNeeds .hubTile,
+.hubCommunication .hubTile,
+.hubLog .hubTile {
+  filter: saturate(0.88) brightness(0.98);
+}
+
+/* prayer tile back to same size as the other action tiles */
+.hubPrayer .hubTile {
+  width: 150px;
+  height: 150px;
+  min-height: 150px;
+  max-width: 150px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 760px) {
+  .purposeHubGrid {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-areas:
+      "violent violent"
+      "nonviolent prayer"
+      "center checkin"
+      "needs communication"
+      "log log";
+    gap: 10px;
+  }
+
+  .hubCell,
+  .hubTile,
+  .hubCenterCard {
+    width: 150px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 520px) {
+  .purposeHubGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "violent"
+      "nonviolent"
+      "prayer"
+      "center"
+      "checkin"
+      "needs"
+      "communication"
+      "log";
+    justify-items: center;
+  }
+
+  .hubCell,
+  .hubTile,
+  .hubCenterCard {
+    width: min(150px, 100%);
+    max-width: 150px;
+  }
+}
+
+.hubCenterCard {
+  text-align: center;
+  padding: 14px;
+}
+
+.hubCenterCard .centerTitle {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hubCenterCard .centerSubtitle {
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(80,90,86,0.8);
+  font-weight: 600;
+}
+
+.theologyPanel {
+  color: #1f1f1f;
+}
+
+.theologyPanel h1,
+.theologyPanel h2,
+.theologyPanel h3,
+.theologyPanel strong {
+  color: #111;
+}
+
+.theologyPanel p,
+.theologyPanel li {
+  color: #2a2a2a;
+}
+
+.scriptureCard {
+  background: rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.12);
+  color: #111;
+}
+/* Gratitude sections */
+
+.gratitudeStepTitle {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+
+.gratitudeSection {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+}
+
+.gratitudeSection select,
+.gratitudeSection textarea {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.gratitudeSection + .gratitudeSection {
+  margin-top: 12px;
+}
+
+.gratitudeStepTitle {
+  text-shadow: 0 0 1px rgba(244, 248, 3, 0.828),
+               0 0 8px rgba(226, 255, 97, 0.15);
+}
+
+
+
+/* =========================
+   🔥 Violent = embers/flicker
+   ========================= */
+
+/* soft ember glow */
+.btn-violent::before {
+  background:
+    radial-gradient(circle at 30% 60%, rgba(255,120,60,0.28), transparent 55%),
+    radial-gradient(circle at 70% 40%, rgba(255,60,0,0.22), transparent 60%),
+    radial-gradient(circle at 50% 90%, rgba(255,180,80,0.18), transparent 60%);
+  filter: blur(10px);
+  animation: emberDrift 3.2s ease-in-out infinite;
+}
+
+/* subtle flicker noise-like pattern */
+.btn-violent::after {
+  background:
+    repeating-linear-gradient(
+      20deg,
+      rgba(255,220,180,0.06) 0px,
+      rgba(255,220,180,0.06) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+  mix-blend-mode: screen;
+  opacity: 0.0;
+  animation: emberFlicker 0.9s steps(2, end) infinite;
+}
+
+/* ↓ reduced intensity for readability */
+.btn-violent:hover::after {
+  opacity: 0.22;
+}
+
+@keyframes emberDrift {
+  0%   { transform: translate(-2%, 1%) scale(1.02); }
+  50%  { transform: translate(2%, -1%) scale(1.05); }
+  100% { transform: translate(-2%, 1%) scale(1.02); }
+}
+
+@keyframes emberFlicker {
+  0%   { transform: translate(0, 0); filter: blur(0px); }
+  25%  { transform: translate(1px, -1px); filter: blur(0.4px); }
+  50%  { transform: translate(-1px, 1px); filter: blur(0.2px); }
+  75%  { transform: translate(1px, 0px); filter: blur(0.5px); }
+  100% { transform: translate(0, 0); filter: blur(0px); }
+}
+
+/* =========================
+   🌧️ Nonviolent = rain streaks
+   ========================= */
+
+/* diagonal rain streaks (↓ reduced alpha) */
+.btn-nonviolent::before {
+  background:
+    repeating-linear-gradient(
+      -35deg,
+      rgba(180,220,255,0.07) 0px,
+      rgba(180,220,255,0.07) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+  transform: translateY(-10%);
+  animation: rainFall 1.15s linear infinite;
+  opacity: 0.9;
+}
+
+/* misty cool glow */
+.btn-nonviolent::after {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(80,140,255,0.18), transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(120,180,255,0.14), transparent 60%),
+    linear-gradient(180deg, rgba(0,90,170,0.10), rgba(0,30,70,0.10));
+  filter: blur(10px);
+  animation: mistShift 4.6s ease-in-out infinite;
+}
+
+@keyframes rainFall {
+  0%   { background-position: 0px -120px; }
+  100% { background-position: 0px 120px; }
+}
+
+@keyframes mistShift {
+  0%   { transform: translate(-2%, 1%) scale(1.03); }
+  50%  { transform: translate(2%, -1%) scale(1.06); }
+  100% { transform: translate(-2%, 1%) scale(1.03); }
+}
+
+/* =========================
+   🌿 Check-in = meadow shimmer
+   ========================= */
+
+/* soft moving light bands */
+.btn-checkin::before {
+  background:
+    linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(120,255,160,0.10) 18%,
+      rgba(80,200,120,0.12) 32%,
+      transparent 55%,
+      transparent 100%
+    );
+  animation: meadowSweep 2.8s ease-in-out infinite;
+  filter: blur(2px);
+}
+
+/* gentle green glow */
+.btn-checkin::after {
+  background:
+    radial-gradient(circle at 35% 30%, rgba(80,200,120,0.24), transparent 58%),
+    radial-gradient(circle at 70% 85%, rgba(120,255,160,0.18), transparent 62%),
+    linear-gradient(180deg, rgba(40,120,70,0.12), rgba(20,60,40,0.10));
+  filter: blur(10px);
+  animation: meadowBreathe 3.8s ease-in-out infinite;
+}
+
+@keyframes meadowSweep {
+  0%   { transform: translateX(-25%) translateY(5%) rotate(0deg); opacity: 0.55; }
+  50%  { transform: translateX(25%) translateY(-5%) rotate(0deg); opacity: 0.75; }
+  100% { transform: translateX(-25%) translateY(5%) rotate(0deg); opacity: 0.55; }
+}
+
+@keyframes meadowBreathe {
+  0%   { transform: scale(1.02); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1.02); }
+}
+
+/* =========================
+   Accessibility / Performance
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-nonviolent::before,
+  .btn-nonviolent::after,
+  .btn-violent::before,
+  .btn-violent::after,
+  .btn-checkin::before,
+  .btn-checkin::after,
+  .btn-violent,
+  .btn-nonviolent,
+  .btn-checkin {
+    animation: none !important;
+  }
+}
+
+/* Base overlay style (default for all regions) */
+.overlay {
+  fill: rgba(246, 121, 121, 0.75);
+  stroke: rgba(255, 60, 0, 0.85);
+  stroke-width: 2.5;
+  opacity: 0.25;
+  transition: all 180ms ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* If any effect class is present, make it stand out */
+.overlay[class*="eff-"] {
+  opacity: 0.95;
+  filter: drop-shadow(0 0 10px rgba(255, 80, 0, 0.75));
+}
+
+/* --- WHOLE BODY SPECIAL CASE: softer than everything else --- */
+.overlay.wholeBody {
+  opacity: 0.18;
+  fill: rgba(255, 210, 0, 0.18);
+  stroke: rgba(255, 80, 0, 0.35);
+  stroke-width: 2;
+  filter: blur(0.4px);
+}
+
+/* Even when Whole Body has effects, keep it softer than others */
+.overlay.wholeBody[class*="eff-"] {
+  opacity: 0.35;
+  filter: blur(0.6px) drop-shadow(0 0 6px rgba(255, 162, 0, 0.696));
+}
+
+.pageTransition {
+  width: 100%;
+  animation-duration: 460ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  will-change: transform, opacity, filter;
+}
+
+.pageTransition--fade {
+  animation-name: pageFadeIn;
+}
+
+.pageTransition--left {
+  animation-name: pageFlyInLeft;
+}
+
+.pageTransition--right {
+  animation-name: pageFlyInRight;
+}
+
+.pageTransition--top {
+  animation-name: pageFlyInTop;
+}
+
+.pageTransition--bottom {
+  animation-name: pageFlyInBottom;
+}
+
+.pageTransition--topRight {
+  animation-name: pageFlyInTopRight;
+}
+
+.pageTransition--bottomRight {
+  animation-name: pageFlyInBottomRight;
+}
+
+.pageTransition--bottomLeft {
+  animation-name: pageFlyInBottomLeft;
+}
+
+@keyframes pageFlyInTopRight {
+  from {
+    opacity: 0;
+    transform: translate(72px, -72px) scale(0.985);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes pageFlyInBottomRight {
+  from {
+    opacity: 0;
+    transform: translate(72px, 72px) scale(0.985);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes pageFlyInBottomLeft {
+  from {
+    opacity: 0;
+    transform: translate(-72px, 72px) scale(0.985);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes pageFlyInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-72px) scale(0.985);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes pageFlyInRight {
+  from {
+    opacity: 0;
+    transform: translateX(72px) scale(0.985);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes pageFlyInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-72px) scale(0.985);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes pageFlyInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(72px) scale(0.985);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Effects */
+.eff-pulse { animation: interoPulse 900ms ease-in-out infinite; }
+.eff-shake { animation: shake 220ms linear infinite; }
+.eff-heat  { filter: drop-shadow(0 0 14px rgba(255, 60, 0, 0.95)); }
+
+.eff-cool {
+  fill: rgba(0, 150, 255, 0.65);
+  stroke: rgba(120, 200, 255, 0.85);
+  opacity: 0.95;
+  filter: drop-shadow(0 0 12px rgba(0, 150, 255, 0.65));
+}
+
+.eff-spark { opacity: 1; filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.95)); }
+.eff-fog   { animation: fog 1500ms ease-in-out infinite; opacity: 0.75; }
+.eff-spin  { animation: spin 1200ms linear infinite; }
+
+@keyframes interoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@keyframes shake {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(1px,-1px); }
+  50% { transform: translate(-1px,1px); }
+  75% { transform: translate(1px,1px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes fog {
+  0%,100% { fill: rgba(200, 200, 200, 0.08); }
+  50%     { fill: rgba(200, 200, 200, 0.18); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+

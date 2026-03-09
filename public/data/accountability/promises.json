@@ -1,0 +1,137 @@
+{
+  "no_lying_or_omission": {
+    "title": "No lying / omitting / minimizing",
+    "repair_steps": [
+      "Correct the record clearly (one sentence).",
+      "State the missing truth.",
+      "Acknowledge impact.",
+      "Commit to transparency rule next time."
+    ]
+  },
+  "no_blameshifting": {
+    "title": "No blame-shifting",
+    "repair_steps": [
+      "Name the action you took.",
+      "Name its impact.",
+      "Own responsibility without justification.",
+      "State the change for next time."
+    ]
+  },
+  "take_ownership_no_excuses": {
+    "title": "Take ownership without excuses",
+    "repair_steps": [
+      "Name the specific behavior.",
+      "Acknowledge impact.",
+      "Apologize directly.",
+      "State a concrete corrective action."
+    ]
+  },
+  "pauses_equal_abandonment": {
+    "title": "No long pauses / emotional abandonment",
+    "repair_steps": [
+      "Answer directly first.",
+      "Give a clear timeline.",
+      "Close the loop (what happened → what happens next).",
+      "Confirm receipt."
+    ]
+  },
+  "transition_protocol": {
+    "title": "Provide clear transition before leaving or pausing",
+    "repair_steps": [
+      "Acknowledge the abrupt exit.",
+      "State when you will return.",
+      "Provide next step and timeline.",
+      "Follow through."
+    ]
+  },
+  "close_the_loop": {
+    "title": "Close conversational loops",
+    "repair_steps": [
+      "Answer the outstanding question directly.",
+      "Summarize shared understanding.",
+      "State what happens next.",
+      "Confirm the other person received the answer."
+    ]
+  },
+  "no_harsh_words": {
+    "title": "No harsh words / contempt / mockery",
+    "repair_steps": [
+      "Stop the tone immediately.",
+      "Apologize for disrespect and impact.",
+      "Restate respectfully (or pause to regulate).",
+      "Commit to respectful speech next time."
+    ]
+  },
+  "respect_emotions": {
+    "title": "Respect emotions (no invalidation)",
+    "repair_steps": [
+      "Name the emotion you hear.",
+      "Acknowledge it makes sense from their perspective.",
+      "Ask what support is wanted.",
+      "Commit to the next step."
+    ]
+  },
+  "respectful_listening": {
+    "title": "Respectful listening (no interrupting/talking over)",
+    "repair_steps": [
+      "Stop interrupting.",
+      "Let them finish.",
+      "Reflect back accurately.",
+      "Ask one clarifying question."
+    ]
+  },
+  "respectful_speech": {
+    "title": "Respectful speech (no insults/character attacks/public shaming)",
+    "repair_steps": [
+      "Name the disrespectful speech.",
+      "Apologize for dignity harm.",
+      "Correct any misinformation.",
+      "Commit to privacy/respect boundaries."
+    ]
+  },
+  "respect_boundaries": {
+    "title": "Respect boundaries (stop after no)",
+    "repair_steps": [
+      "Stop the behavior immediately.",
+      "Acknowledge the boundary.",
+      "Confirm you understand it.",
+      "State prevention plan."
+    ]
+  },
+  "truthful_communication": {
+    "title": "Truthful, precise communication (no exaggeration/assumption)",
+    "repair_steps": [
+      "Replace always/never with a specific example.",
+      "Separate fact from interpretation.",
+      "Ask a clarifying question.",
+      "Confirm shared understanding."
+    ]
+  },
+  "promise_integrity": {
+    "title": "Promise integrity (keep agreements or renegotiate clearly)",
+    "repair_steps": [
+      "Name the agreement.",
+      "Name what changed.",
+      "Renegotiate clearly (one sentence).",
+      "Confirm follow-through and timeline."
+    ]
+  },
+  "no_manipulation": {
+    "title": "No manipulation / coercion / emotional leverage",
+    "repair_steps": [
+      "Name the pressure/leverage used.",
+      "Remove it.",
+      "Affirm their freedom to say no.",
+      "Accept their decision without penalty."
+    ]
+  },
+  "no_spiritual_manipulation": {
+    "title": "No spiritual manipulation",
+    "repair_steps": [
+      "Name misuse of scripture/authority.",
+      "Apologize for coercion/bypass.",
+      "Restate issue without spiritual leverage.",
+      "Invite accountable support if needed."
+    ]
+  }
+}

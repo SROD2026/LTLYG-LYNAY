@@ -1,0 +1,1222 @@
+{
+  "assumption": {
+    "category": "communication_distortion",
+    "behaviors": [
+      "Assuming intent without clarification",
+      "Jumping to conclusions about another's internal motivations"
+    ],
+    "observation_templates": [
+      "intent was assumed without discussion, questions, or clarification",
+      "conclusions were drawn without communication"
+    ],
+    "promise_links": [
+      "truthful_communication"
+    ],
+    "protocol_links": [
+      "clarity_repair_protocol"
+    ],
+    "theology_links": [
+      "truthful_communication"
+    ]
+  },
+  "backhanded_compliments": {
+    "category": "passive_aggression",
+    "behaviors": [
+      "Compliments with embedded criticism",
+      "Praise that includes insult"
+    ],
+    "observation_templates": [
+      "a compliment included criticism",
+      "the statement sounded like praise but contained an insult",
+      "a positive statement was paired with a negative remark",
+      "the compliment included language that sounded critical",
+      "the praise included a comment that reduced its positivity",
+      "the statement contained both approval and criticism",
+      "the compliment included wording that sounded dismissive",
+      "the praise appeared to include a negative comparison",
+      "the comment sounded supportive but included criticism",
+      "the compliment included language that felt undermining"
+    ],
+    "promise_links": [
+      "respectful_speech"
+    ],
+    "protocol_links": [
+      "respect_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language"
+    ]
+  },
+  "blameshifted": {
+    "category": "accountability",
+    "behaviors": [
+      "Responsibility redirected back onto me",
+      "Impact minimized using intent",
+      "My experience treated as the problem"
+    ],
+    "observation_templates": [
+      "I heard responsibility move away from your actions and onto me",
+      "I heard your intent used to reduce the impact",
+      "the focus shifted from the behavior to my reaction",
+      "the response described my response as the main issue",
+      "the impact I described was redirected back toward me",
+      "the explanation focused on why the action happened rather than its impact",
+      "responsibility appeared to shift away from the original behavior",
+      "my reaction was discussed more than the original concern",
+      "the conversation focused on my role rather than the action described",
+      "accountability seemed redirected away from the original action"
+    ],
+    "promise_links": [
+      "no_blameshifting",
+      "take_ownership_no_excuses"
+    ],
+    "protocol_links": [
+      "repair_without_defensiveness"
+    ],
+    "theology_links": [
+      "no_blameshifting",
+      "no_defensiveness"
+    ]
+  },
+  "broken_promise": {
+    "category": "integrity",
+    "behaviors": [
+      "Commitment made but not followed",
+      "Agreement changed without discussion"
+    ],
+    "observation_templates": [
+      "an agreement we made was not followed",
+      "the commitment we discussed changed",
+      "the plan we agreed on was not carried out",
+      "the agreement did not occur as discussed",
+      "the commitment was not fulfilled",
+      "the action differed from what we agreed on",
+      "the agreement changed without discussion",
+      "the promise was not completed",
+      "the plan was altered from the original agreement",
+      "the commitment was not kept"
+    ],
+    "promise_links": [
+      "promise_integrity"
+    ],
+    "protocol_links": [
+      "promise_repair_protocol"
+    ],
+    "theology_links": [
+      "promise_integrity"
+    ]
+  },
+  "changing_agreements": {
+    "category": "integrity",
+    "behaviors": [
+      "Agreement altered after the fact",
+      "Commitment changed without discussion"
+    ],
+    "observation_templates": [
+      "the agreement we made changed",
+      "the commitment was altered without discussion",
+      "the plan differed from what we previously agreed",
+      "the expectation shifted from the original agreement",
+      "the commitment was modified after the discussion",
+      "the agreement changed without revisiting the conversation",
+      "the outcome differed from what we agreed earlier",
+      "the plan was adjusted without discussion",
+      "the commitment moved away from the original agreement",
+      "the terms of the agreement appeared to change"
+    ],
+    "promise_links": [
+      "promise_integrity"
+    ],
+    "protocol_links": [
+      "promise_repair_protocol"
+    ],
+    "theology_links": [
+      "promise_integrity"
+    ]
+  },
+  "character_attack": {
+    "category": "disrespect",
+    "behaviors": [
+      "Attacking character instead of behavior",
+      "Using insults during disagreement"
+    ],
+    "observation_templates": [
+      "my character was criticized instead of the behavior",
+      "the disagreement shifted into personal criticism",
+      "the response included comments about my character",
+      "the discussion included statements about my personality",
+      "the disagreement involved personal criticism",
+      "my identity was referenced rather than the action",
+      "the response included personal judgments",
+      "the conversation included remarks about my character",
+      "comments were made about who I am rather than the action",
+      "the disagreement included personal remarks"
+    ],
+    "promise_links": [
+      "respectful_speech"
+    ],
+    "protocol_links": [
+      "respect_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language"
+    ]
+  },
+  "coercion": {
+    "category": "control",
+    "behaviors": [
+      "Pressuring someone until they comply",
+      "Using emotional leverage to force agreement"
+    ],
+    "observation_templates": [
+      "pressure was applied until I agreed",
+      "agreement occurred under pressure",
+      "the conversation continued until compliance occurred",
+      "the interaction included pressure to change my decision",
+      "the situation created pressure toward agreement",
+      "the discussion included repeated pressure after I hesitated",
+      "the decision occurred after sustained persuasion",
+      "the interaction included pressure toward a specific outcome",
+      "agreement happened after repeated requests",
+      "the conversation continued until the answer changed"
+    ],
+    "promise_links": [
+      "no_manipulation"
+    ],
+    "protocol_links": [
+      "autonomy_repair_protocol"
+    ],
+    "theology_links": [
+      "spiritual_manipulation",
+      "no_manipulation",
+      "respect_boundaries"
+    ]
+  },
+  "contempt": {
+    "category": "disrespect",
+    "behaviors": [
+      "Sarcasm or mocking tone",
+      "Eye rolling",
+      "Belittling statements"
+    ],
+    "observation_templates": [
+      "the tone felt mocking or belittling",
+      "there was sarcasm directed at me",
+      "the response included ridicule",
+      "the tone sounded dismissive",
+      "the expression or tone appeared contemptuous",
+      "the words used sounded belittling",
+      "the delivery suggested mockery",
+      "I perceived sarcasm in the response",
+      "the tone communicated disrespect",
+      "the comment sounded demeaning"
+    ],
+    "promise_links": [
+      "no_harsh_words",
+      "respectful_speech"
+    ],
+    "protocol_links": [
+      "respect_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language"
+    ]
+  },
+  "defensiveness": {
+    "category": "accountability",
+    "behaviors": [
+      "Explaining intent instead of acknowledging impact",
+      "Immediate justification",
+      "Counter accusation"
+    ],
+    "observation_templates": [
+      "the response focused on explaining intent rather than impact",
+      "responsibility was deflected through explanation",
+      "the reply focused on reasons rather than the impact",
+      "the explanation came before acknowledgment of the concern",
+      "the conversation shifted to justification",
+      "the response focused on defending the action",
+      "the explanation centered on why the action occurred",
+      "the concern was answered with justification",
+      "the focus shifted to defending the action",
+      "the response emphasized intent instead of the impact"
+    ],
+    "promise_links": [
+      "take_ownership_no_excuses",
+      "no_blameshifting"
+    ],
+    "protocol_links": [
+      "repair_without_defensiveness"
+    ],
+    "theology_links": [
+      "no_blameshifting",
+      "no_defensiveness"
+    ]
+  },
+  "deflecting_topic": {
+    "category": "avoidance",
+    "behaviors": [
+      "Changing the subject when accountability appears",
+      "Redirecting the conversation away from the issue"
+    ],
+    "observation_templates": [
+      "the conversation shifted away from the issue",
+      "the topic changed when accountability appeared",
+      "the discussion moved to a different subject before the issue was addressed",
+      "the response redirected the conversation away from the concern raised",
+      "the focus changed when the original issue was brought up",
+      "the conversation moved away from accountability",
+      "the subject changed instead of staying with the original concern",
+      "the discussion transitioned to a different topic while the issue remained open",
+      "the response introduced a new topic during the accountability moment",
+      "the conversation did not stay on the original issue long enough to resolve it"
+    ],
+    "promise_links": [
+      "close_the_loop"
+    ],
+    "protocol_links": [
+      "focus_repair_protocol"
+    ],
+    "theology_links": [
+      "no_blameshifting",
+      "close_the_loop",
+      "no_defensiveness"
+    ]
+  },
+  "denial_of_events": {
+    "category": "reality_distortion",
+    "behaviors": [
+      "Denying something that clearly happened",
+      "Rewriting events after the fact"
+    ],
+    "observation_templates": [
+      "an event that occurred is being denied",
+      "what happened is being described differently than I experienced",
+      "the event I described is being stated as not having occurred",
+      "the explanation of events does not match my memory",
+      "the description of the event has changed from what I recall",
+      "my recollection of the event is being rejected",
+      "the event is being reframed in a way that differs from my experience",
+      "the conversation suggested the event did not happen",
+      "the explanation of the situation differs from what I observed",
+      "the account of the event conflicts with my experience"
+    ],
+    "promise_links": [
+      "no_lying_or_omission"
+    ],
+    "protocol_links": [
+      "reality_repair_protocol"
+    ],
+    "theology_links": [
+      "no_lying_or_omission",
+      "truthful_communication"
+    ]
+  },
+  "dismissed": {
+    "category": "emotional_invalidation",
+    "behaviors": [
+      "Concern brushed aside",
+      "Emotion ignored",
+      "Topic changed to avoid issue"
+    ],
+    "observation_templates": [
+      "my concern was dismissed without engagement",
+      "the conversation shifted away from the issue",
+      "the concern I raised did not receive a response",
+      "the topic changed before the issue was addressed",
+      "my concern did not appear to be acknowledged",
+      "the conversation moved on without addressing the concern",
+      "the issue I raised was not explored further",
+      "my statement did not receive a reply",
+      "the discussion changed direction quickly",
+      "the concern ended without engagement"
+    ],
+    "promise_links": [
+      "respect_emotions",
+      "close_the_loop",
+      "pauses_equal_abandonment"
+    ],
+    "protocol_links": [
+      "listening_repair_protocol",
+      "focus_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language",
+      "respectful_listening",
+      "emotional_presence",
+      "close_the_loop"
+    ]
+  },
+  "emotional_blackmail": {
+    "category": "control",
+    "behaviors": [
+      "Using guilt or fear to force agreement",
+      "Threatening consequences to control behavior"
+    ],
+    "observation_templates": [
+      "fear or guilt was used to pressure agreement",
+      "consequences were used to control the decision",
+      "I don't feel loved when you use guilt or fear to influence me",
+      "the conversation used guilt to influence my response",
+      "fear of consequences was raised during disagreement",
+      "the discussion suggested negative consequences if I did not agree",
+      "the interaction linked agreement with avoiding consequences",
+      "the conversation used fear of loss to influence my decision",
+      "the situation included pressure through guilt or fear",
+      "the discussion implied consequences tied to my response"
+    ],
+    "promise_links": [
+      "no_manipulation"
+    ],
+    "protocol_links": [
+      "autonomy_repair_protocol"
+    ],
+    "theology_links": [
+      "spiritual_manipulation",
+      "no_manipulation",
+      "respect_boundaries"
+    ]
+  },
+  "exaggeration": {
+    "category": "communication_distortion",
+    "behaviors": [
+      "Using absolute language like 'always' or 'never'",
+      "Inflating the scale of the problem"
+    ],
+    "observation_templates": [
+      "the problem was described using absolute language",
+      "the situation was exaggerated",
+      "terms like always or never were used to describe the issue",
+      "the description used absolute statements",
+      "the situation was described in extreme terms",
+      "the explanation included absolute language",
+      "the description expanded the scale of the issue",
+      "the problem was described as larger than the specific event",
+      "the explanation included generalized statements",
+      "the situation was described in broad or extreme terms"
+    ],
+    "promise_links": [
+      "truthful_communication"
+    ],
+    "protocol_links": [
+      "clarity_repair_protocol"
+    ],
+    "theology_links": [
+      "no_lying_or_omission",
+      "truthful_communication"
+    ]
+  },
+  "false_accusation": {
+    "category": "integrity",
+    "behaviors": [
+      "Accusing someone of actions they did not do",
+      "Assuming harmful intent without evidence"
+    ],
+    "observation_templates": [
+      "an accusation was made without evidence",
+      "intent was assigned without clarification",
+      "a claim was made about my actions without verification",
+      "the conclusion about what I did was stated without checking",
+      "harmful intent was attributed without asking questions",
+      "the accusation was presented as fact without confirming details",
+      "my motives were described without clarification",
+      "the explanation included an assumption about my intent",
+      "a statement about what I did was made without confirming accuracy",
+      "the accusation was made without first clarifying what happened"
+    ],
+    "promise_links": [
+      "truthful_communication",
+      "no_lying_or_omission"
+    ],
+    "protocol_links": [
+      "truth_repair_protocol",
+      "clarity_repair_protocol"
+    ],
+    "theology_links": [
+      "no_lying_or_omission",
+      "truthful_communication"
+    ]
+  },
+  "gaslighting": {
+    "category": "reality_distortion",
+    "behaviors": [
+      "Denial of previously stated facts",
+      "Reframing events to invalidate experience",
+      "Questioning memory to destabilize"
+    ],
+    "observation_templates": [
+      "what happened is being described differently than I experienced it",
+      "my memory or perception is being questioned",
+      "events are being described in a way that differs from my recollection",
+      "my experience of the situation was challenged",
+      "the description of events shifted from what I remember",
+      "my understanding of what occurred was disputed",
+      "the explanation of the event does not match my experience",
+      "the facts of the event appear to be changing",
+      "I heard a different version of events than what I experienced",
+      "the conversation questioned whether the event occurred as described"
+    ],
+    "promise_links": [
+      "no_lying_or_omission"
+    ],
+    "protocol_links": [
+      "reality_repair_protocol"
+    ],
+    "theology_links": [
+      "no_lying_or_omission",
+      "truthful_communication"
+    ]
+  },
+  "half_truth": {
+    "category": "integrity",
+    "behaviors": [
+      "Partial truth used to mislead",
+      "Important details omitted"
+    ],
+    "observation_templates": [
+      "information was incomplete in a way that changed the meaning",
+      "important details were omitted",
+      "the explanation included partial information",
+      "the information shared did not include all relevant details",
+      "the description of the situation appeared incomplete",
+      "some elements of the situation were not included",
+      "the explanation provided only part of the event",
+      "details that affect understanding were not mentioned",
+      "the information presented did not include the full context",
+      "the account of the situation appeared partial"
+    ],
+    "promise_links": [
+      "no_lying_or_omission"
+    ],
+    "protocol_links": [
+      "truth_repair_protocol"
+    ],
+    "theology_links": [
+      "no_lying_or_omission",
+      "truthful_communication"
+    ]
+  },
+  "ignoring_boundaries": {
+    "category": "boundaries",
+    "behaviors": [
+      "Continuing behavior after a boundary was stated",
+      "Dismissal of clearly communicated limits"
+    ],
+    "observation_templates": [
+      "the boundary I stated was not respected",
+      "the behavior continued after the limit was communicated",
+      "the action continued after I stated the boundary",
+      "the limit I described did not change the behavior",
+      "the boundary was acknowledged but the behavior continued",
+      "the action occurred again after the boundary was expressed",
+      "my stated limit did not appear to affect the interaction",
+      "the boundary I communicated was not followed",
+      "the behavior resumed after the limit was stated",
+      "the interaction continued beyond the boundary I described"
+    ],
+    "promise_links": [
+      "respect_boundaries"
+    ],
+    "protocol_links": [
+      "boundary_repair_protocol"
+    ],
+    "theology_links": [
+      "promise_integrity",
+      "respect_boundaries",
+      "no_manipulation"
+    ]
+  },
+  "interrupting": {
+    "category": "disrespect",
+    "behaviors": [
+      "Interrupting repeatedly",
+      "Not allowing the other person to finish speaking"
+    ],
+    "observation_templates": [
+      "I was interrupted multiple times",
+      "I could not finish my statement",
+      "my sentences were cut off while speaking",
+      "the response began before I finished talking",
+      "my attempt to speak was interrupted",
+      "the conversation included overlapping speech that prevented completion",
+      "my explanation was stopped before it finished",
+      "I attempted to continue speaking but was interrupted",
+      "the conversation moved forward before I completed my thought",
+      "my statement was cut short by another response"
+    ],
+    "promise_links": [
+      "respectful_listening"
+    ],
+    "protocol_links": [
+      "listening_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language",
+      "respectful_listening"
+    ]
+  },
+  "invalidating": {
+    "category": "emotional_invalidation",
+    "behaviors": [
+      "Emotion labeled irrational",
+      "Feeling dismissed as incorrect"
+    ],
+    "observation_templates": [
+      "my feelings were described as incorrect",
+      "the emotional experience was invalidated",
+      "my emotional response was described as unreasonable",
+      "the feelings I shared were dismissed",
+      "the response suggested my feelings were not valid",
+      "my experience was described as an overreaction",
+      "the emotional impact I described was questioned",
+      "the conversation framed my feelings as inaccurate",
+      "my emotional reaction was described as inappropriate",
+      "the response suggested the feelings should not exist"
+    ],
+    "promise_links": [
+      "respect_emotions"
+    ],
+    "protocol_links": [
+      "validation_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language",
+      "emotional_presence"
+    ]
+  },
+  "invalidating_experience": {
+    "category": "emotional_invalidation",
+    "behaviors": [
+      "Telling someone their experience is wrong",
+      "Rejecting their description of events"
+    ],
+    "observation_templates": [
+      "my experience was described as incorrect",
+      "the events I described were rejected",
+      "the account I gave was dismissed as wrong",
+      "my description of what happened was disputed",
+      "the conversation rejected my version of events",
+      "my experience was treated as inaccurate",
+      "the response suggested my account was not true",
+      "the events I described were not accepted",
+      "my description of the situation was denied",
+      "the response framed my experience as invalid"
+    ],
+    "promise_links": [
+      "respect_emotions",
+      "truthful_communication"
+    ],
+    "protocol_links": [
+      "validation_repair_protocol",
+      "reality_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language",
+      "truthful_communication"
+    ]
+  },
+  "manipulation": {
+    "category": "control",
+    "behaviors": [
+      "Pressure applied through guilt",
+      "Outcome controlled indirectly",
+      "Emotional leverage used"
+    ],
+    "observation_templates": [
+      "pressure was applied in a way that influenced my decision",
+      "the situation felt directed rather than collaborative",
+      "guilt appeared to be used to influence my response",
+      "the outcome seemed guided rather than mutually decided",
+      "the conversation included pressure toward a specific choice",
+      "the situation felt structured to lead toward a particular outcome",
+      "the discussion included emotional pressure to agree",
+      "the response created a sense that disagreement would cause harm",
+      "the interaction included indirect pressure toward agreement",
+      "the decision felt influenced rather than freely chosen"
+    ],
+    "promise_links": [
+      "no_manipulation"
+    ],
+    "protocol_links": [
+      "autonomy_repair_protocol"
+    ],
+    "theology_links": [
+      "spiritual_manipulation",
+      "no_manipulation",
+      "respect_boundaries"
+    ]
+  },
+  "minimization": {
+    "category": "emotional_invalidation",
+    "behaviors": [
+      "Impact described as small or unimportant",
+      "Concern dismissed quickly",
+      "Pain reframed as exaggeration"
+    ],
+    "observation_templates": [
+      "the impact I described was minimized",
+      "my concern was treated as smaller than it felt",
+      "the response suggested the issue was not significant",
+      "the concern I raised was described as minor",
+      "the impact I mentioned was described as insignificant",
+      "the situation was presented as less serious than I experienced it",
+      "my concern was reframed as exaggerated",
+      "the response suggested the issue should not be upsetting",
+      "the emotional impact was reduced in the explanation",
+      "the concern appeared to be downplayed"
+    ],
+    "promise_links": [
+      "take_ownership_no_excuses",
+      "respect_emotions"
+    ],
+    "protocol_links": [
+      "impact_acknowledgement_protocol"
+    ],
+    "theology_links": [
+      "respectful_language",
+      "no_defensiveness"
+    ]
+  },
+  "mockery": {
+    "category": "disrespect",
+    "behaviors": [
+      "Imitating someone sarcastically",
+      "Ridiculing the other person"
+    ],
+    "observation_templates": [
+      "my words or tone were mocked",
+      "the response included ridicule",
+      "my statement was imitated in a sarcastic way",
+      "the response mirrored my words in a mocking manner",
+      "the reaction to what I said included sarcasm",
+      "the reply included derisive humor",
+      "my communication was treated as something to ridicule",
+      "the response sounded mocking toward what I said",
+      "the reaction to my words included contemptuous humor",
+      "the interaction included ridicule directed at my statement"
+    ],
+    "promise_links": [
+      "no_harsh_words",
+      "respectful_speech"
+    ],
+    "protocol_links": [
+      "respect_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language"
+    ]
+  },
+  "mocking_emotions": {
+    "category": "emotional_invalidation",
+    "behaviors": [
+      "Mocking emotional reactions",
+      "Sarcastic tone about feelings"
+    ],
+    "observation_templates": [
+      "my feelings were mocked",
+      "the tone used toward my emotions was sarcastic",
+      "my emotional reaction was responded to with ridicule",
+      "the response to my feelings included sarcasm",
+      "my emotional expression was imitated in a mocking way",
+      "the tone suggested my feelings were being ridiculed",
+      "the reaction to my emotions included dismissive humor",
+      "my emotional experience was treated as something to mock",
+      "the response to my feelings sounded derisive",
+      "the interaction included ridicule directed at my emotions"
+    ],
+    "promise_links": [
+      "respect_emotions",
+      "no_harsh_words"
+    ],
+    "protocol_links": [
+      "validation_repair_protocol",
+      "respect_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language"
+    ]
+  },
+  "moving_goalposts": {
+    "category": "integrity",
+    "behaviors": [
+      "Changing expectations after agreement",
+      "Raising standards after they were met"
+    ],
+    "observation_templates": [
+      "the expectations changed after they were met",
+      "the requirements shifted after the agreement",
+      "the criteria changed after progress was made",
+      "the expectations differed from the earlier agreement",
+      "the standard changed after the condition was fulfilled",
+      "the requirement shifted during the process",
+      "the agreement was followed by new expectations",
+      "the original expectation changed during the discussion",
+      "the conditions appeared different from the original agreement",
+      "the expectation moved beyond what was previously discussed"
+    ],
+    "promise_links": [
+      "promise_integrity"
+    ],
+    "protocol_links": [
+      "agreement_repair_protocol"
+    ],
+    "theology_links": [
+      "promise_integrity",
+      "truthful_communication"
+    ]
+  },
+  "overgeneralizing": {
+    "category": "communication_distortion",
+    "behaviors": [
+      "Using extreme generalizations",
+      "Reducing complex issues to simplistic claims"
+    ],
+    "observation_templates": [
+      "the situation was described using generalizations",
+      "complex events were simplified inaccurately",
+      "the description used broad statements rather than the specific event",
+      "the conversation used generalized claims about patterns",
+      "the explanation applied a general label to a specific situation",
+      "the issue was described in sweeping terms",
+      "the situation was reduced to a simple claim that did not match the details",
+      "broad conclusions were stated from a limited set of events",
+      "the description generalized beyond the specific interaction",
+      "the explanation treated a complex issue as a single simplistic statement"
+    ],
+    "promise_links": [
+      "truthful_communication"
+    ],
+    "protocol_links": [
+      "clarity_repair_protocol"
+    ],
+    "theology_links": [
+      "no_lying_or_omission",
+      "truthful_communication"
+    ]
+  },
+  "passive_aggressive_silence": {
+    "category": "passive_aggression",
+    "behaviors": [
+      "Silent hostility",
+      "Non-response used as punishment"
+    ],
+    "observation_templates": [
+      "silence was used in a way that felt punitive",
+      "communication stopped without explanation",
+      "the conversation ended without a response to my question",
+      "my attempts to speak did not receive engagement",
+      "the interaction included silence after I raised the concern",
+      "communication remained closed despite attempts to reconnect",
+      "the conversation stopped without acknowledgment",
+      "there was extended silence after the issue was raised",
+      "my attempts to reopen communication did not receive a reply",
+      "the discussion paused without explanation or transition"
+    ],
+    "promise_links": [
+      "pauses_equal_abandonment",
+      "transition_protocol"
+    ],
+    "protocol_links": [
+      "closure_transition_protocol"
+    ],
+    "theology_links": [
+      "pauses_equal_abandonment",
+      "transition_protocol",
+      "close_the_loop",
+      "emotional_presence"
+    ]
+  },
+  "pressuring_after_no": {
+    "category": "boundaries",
+    "behaviors": [
+      "Repeated requests after refusal",
+      "Pressure applied after a clear no"
+    ],
+    "observation_templates": [
+      "pressure continued after I said no",
+      "the request continued after refusal",
+      "the topic was raised again after I declined",
+      "the request was repeated after I said no",
+      "additional persuasion occurred after refusal",
+      "the conversation continued to push for agreement",
+      "the request returned after my answer was no",
+      "pressure toward agreement continued after refusal",
+      "the request was raised multiple times after declining",
+      "the discussion continued to pursue the same request"
+    ],
+    "promise_links": [
+      "respect_boundaries",
+      "no_manipulation"
+    ],
+    "protocol_links": [
+      "boundary_repair_protocol",
+      "autonomy_repair_protocol"
+    ],
+    "theology_links": [
+      "spiritual_manipulation",
+      "respect_boundaries",
+      "no_manipulation"
+    ]
+  },
+  "public_shaming": {
+    "category": "disrespect",
+    "behaviors": [
+      "Criticizing someone in front of others",
+      "Sharing private failures publicly"
+    ],
+    "observation_templates": [
+      "a private issue was raised publicly",
+      "criticism occurred in front of others",
+      "a personal concern was discussed in a public setting",
+      "private information was shared in front of other people",
+      "the issue was brought up where others could hear",
+      "criticism was expressed in a group context",
+      "the conversation included public mention of a private matter",
+      "the concern was raised in front of people not involved",
+      "a private failure was referenced publicly",
+      "the criticism happened in a setting with other observers"
+    ],
+    "promise_links": [
+      "respectful_speech"
+    ],
+    "protocol_links": [
+      "dignity_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language"
+    ]
+  },
+  "scorekeeping": {
+    "category": "resentment",
+    "behaviors": [
+      "Tracking past mistakes to use later",
+      "Using previous conflicts to gain leverage"
+    ],
+    "observation_templates": [
+      "past issues were brought up to gain leverage",
+      "previous mistakes were used to win the argument",
+      "earlier conflicts were introduced during this discussion",
+      "past disagreements were referenced during the conversation",
+      "previous mistakes were mentioned while discussing this issue",
+      "earlier events were used in the current disagreement",
+      "the discussion included reference to past conflicts",
+      "previous actions were brought into the current argument",
+      "earlier mistakes were cited during this discussion",
+      "past disagreements were used during the conflict"
+    ],
+    "promise_links": [
+      "take_ownership_no_excuses",
+      "truthful_communication"
+    ],
+    "protocol_links": [
+      "resentment_repair_protocol",
+      "repair_without_defensiveness"
+    ],
+    "theology_links": [
+      "respectful_language",
+      "no_defensiveness"
+    ]
+  },
+  "selective_memory": {
+    "category": "reality_distortion",
+    "behaviors": [
+      "Only remembering information that removes responsibility",
+      "Ignoring parts of events that show impact"
+    ],
+    "observation_templates": [
+      "parts of the event are being left out",
+      "the memory being described removes responsibility",
+      "only certain parts of the event are being recalled",
+      "details that show impact are missing from the description",
+      "the recollection of events seems incomplete",
+      "the version of the event excludes some elements I remember",
+      "the memory focuses on certain details while omitting others",
+      "some parts of the situation appear to be excluded",
+      "the account of the event does not include all the elements I recall",
+      "the memory being shared leaves out portions that affected me"
+    ],
+    "promise_links": [
+      "no_lying_or_omission"
+    ],
+    "protocol_links": [
+      "reality_repair_protocol"
+    ],
+    "theology_links": [
+      "no_lying_or_omission",
+      "truthful_communication"
+    ]
+  },
+  "silent_treatment": {
+    "category": "availability",
+    "behaviors": [
+      "Intentional refusal to speak",
+      "Ignoring attempts to communicate"
+    ],
+    "observation_templates": [
+      "communication stopped without explanation",
+      "attempts to reconnect were ignored",
+      "there was no response after I attempted to communicate",
+      "messages or attempts to speak did not receive a reply",
+      "communication remained closed despite attempts to reconnect",
+      "the conversation ended without acknowledgment",
+      "there was extended silence after the issue was raised",
+      "my attempts to continue the discussion did not receive engagement",
+      "the communication channel remained closed",
+      "the interaction stopped without explanation or transition"
+    ],
+    "promise_links": [
+      "pauses_equal_abandonment",
+      "transition_protocol"
+    ],
+    "protocol_links": [
+      "closure_transition_protocol"
+    ],
+    "theology_links": [
+      "pauses_equal_abandonment",
+      "transition_protocol",
+      "close_the_loop",
+      "emotional_presence"
+    ]
+  },
+  "spiritualizing_conflict": {
+    "category": "spiritual_manipulation",
+    "behaviors": [
+      "Using scripture to control behavior",
+      "Using theology to avoid accountability"
+    ],
+    "observation_templates": [
+      "spiritual language was used to redirect the conflict",
+      "scripture was applied in a way that avoided accountability",
+      "spiritual concepts were introduced while the original concern remained unresolved",
+      "the discussion shifted from the behavior to spiritual framing",
+      "scripture was referenced in response to a request for accountability",
+      "the conflict was reframed as a spiritual issue instead of addressing the specific behavior",
+      "spiritual authority was referenced during the disagreement",
+      "the response used theological language instead of addressing the impact described",
+      "spiritual framing was used to change the focus of the conversation",
+      "scripture was used to redirect away from the concrete issue being discussed"
+    ],
+    "promise_links": [
+      "no_spiritual_manipulation"
+    ],
+    "protocol_links": [
+      "spiritual_repair_protocol"
+    ],
+    "theology_links": [
+      "spiritual_manipulation"
+    ]
+  },
+  "stonewalled": {
+    "category": "availability",
+    "behaviors": [
+      "Conversation stopped abruptly",
+      "No response when response expected",
+      "Left without transition",
+      "Withdrew while issue unresolved"
+    ],
+    "observation_templates": [
+      "the conversation stopped and I did not receive a response",
+      "there was a long pause and I did not know what would happen next",
+      "you disengaged while the issue was still open",
+      "communication ended without explanation",
+      "I asked a question and did not receive a reply",
+      "the discussion stopped while the concern was unresolved",
+      "there was silence after I attempted to continue the conversation",
+      "the conversation paused without a stated plan to return",
+      "I experienced the conversation ending without closure",
+      "the topic remained open without further communication"
+    ],
+    "promise_links": [
+      "pauses_equal_abandonment",
+      "transition_protocol",
+      "close_the_loop"
+    ],
+    "protocol_links": [
+      "closure_transition_protocol",
+      "repair_without_defensiveness"
+    ],
+    "theology_links": [
+      "pauses_equal_abandonment",
+      "transition_protocol",
+      "close_the_loop",
+      "emotional_presence"
+    ]
+  },
+  "talking_over": {
+    "category": "disrespect",
+    "behaviors": [
+      "Speaking over the other person",
+      "Raising voice to dominate conversation"
+    ],
+    "observation_templates": [
+      "the conversation was dominated by speaking over me",
+      "my attempt to speak was overridden",
+      "I began speaking and another voice continued over mine",
+      "my statements were covered by overlapping speech",
+      "I attempted to finish a sentence and was spoken over",
+      "the conversation volume increased while I was speaking",
+      "my attempts to continue talking were overridden",
+      "another response began before my statement finished",
+      "the conversation included overlapping speech that prevented completion",
+      "my voice was covered by another response while I was talking"
+    ],
+    "promise_links": [
+      "respectful_listening"
+    ],
+    "protocol_links": [
+      "listening_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language",
+      "respectful_listening"
+    ]
+  },
+  "telling_someone_they_are_too_sensitive": {
+    "category": "emotional_invalidation",
+    "behaviors": [
+      "Labeling emotions as excessive",
+      "Dismissing feelings instead of understanding them"
+    ],
+    "observation_templates": [
+      "my reaction was labeled as too sensitive",
+      "my feelings were dismissed as exaggerated",
+      "my emotional response was described as excessive",
+      "the reaction I shared was described as overreacting",
+      "the response suggested my emotions were disproportionate",
+      "my feelings were described as being too intense",
+      "the emotional impact I described was minimized as sensitivity",
+      "the reaction I expressed was framed as unreasonable",
+      "the conversation described my response as overly emotional",
+      "my emotional reaction was characterized as an overreaction"
+    ],
+    "promise_links": [
+      "respect_emotions"
+    ],
+    "protocol_links": [
+      "validation_repair_protocol"
+    ],
+    "theology_links": [
+      "respectful_language"
+    ]
+  },
+  "threat_of_withdrawal": {
+    "category": "control",
+    "behaviors": [
+      "Threatening to withdraw affection",
+      "Threatening distance if disagreement continues"
+    ],
+    "observation_templates": [
+      "withdrawal was used to influence my response",
+      "distance was threatened during disagreement",
+      "the possibility of disconnection was raised during the conflict",
+      "the response suggested connection would decrease if I disagreed",
+      "the conversation included the threat of distance",
+      "affection appeared conditional on agreement",
+      "the interaction suggested connection would be reduced",
+      "distance was mentioned as a consequence of disagreement",
+      "the discussion included the possibility of withdrawing closeness",
+      "the response linked connection with compliance"
+    ],
+    "promise_links": [
+      "no_manipulation"
+    ],
+    "protocol_links": [
+      "autonomy_repair_protocol"
+    ],
+    "theology_links": [
+      "spiritual_manipulation",
+      "no_manipulation",
+      "respect_boundaries"
+    ]
+  },
+  "triangulation": {
+    "category": "control",
+    "behaviors": [
+      "Bringing a third party into the conflict instead of addressing it directly",
+      "Using someone else's opinion to pressure agreement"
+    ],
+    "observation_templates": [
+      "another person's opinion was used to pressure agreement",
+      "a third party was introduced instead of resolving the issue directly",
+      "someone else's perspective was referenced during the disagreement",
+      "another person's view was brought into the discussion",
+      "a third party was mentioned while discussing the conflict",
+      "the conversation referenced another person's opinion",
+      "someone else's judgment was introduced during the disagreement",
+      "the discussion included another person's perspective about the issue",
+      "another individual's opinion was used during the conflict",
+      "a third person's viewpoint was raised in the discussion"
+    ],
+    "promise_links": [
+      "no_manipulation"
+    ],
+    "protocol_links": [
+      "direct_resolution_protocol"
+    ],
+    "theology_links": [
+      "spiritual_manipulation",
+      "no_manipulation",
+      "truthful_communication",
+      "respect_boundaries"
+    ]
+  },
+  "withholding_affection": {
+    "category": "control",
+    "behaviors": [
+      "Affection removed as punishment",
+      "Warmth withdrawn to control behavior"
+    ],
+    "observation_templates": [
+      "affection was withdrawn following disagreement",
+      "warmth changed suddenly during the conflict",
+      "the level of warmth decreased after I disagreed",
+      "closeness shifted after the disagreement began",
+      "affection appeared conditional during the conflict",
+      "the interaction became noticeably colder following disagreement",
+      "warmth was reduced after the concern was raised",
+      "connection felt withdrawn after I expressed disagreement",
+      "the tone became less warm following conflict",
+      "affection changed in response to disagreement"
+    ],
+    "promise_links": [
+      "no_manipulation",
+      "transition_protocol"
+    ],
+    "protocol_links": [
+      "connection_repair_protocol"
+    ],
+    "theology_links": [
+      "no_manipulation",
+      "pauses_equal_abandonment",
+      "emotional_presence"
+    ]
+  },
+  "withholding_information": {
+    "category": "integrity",
+    "behaviors": [
+      "Important information intentionally withheld",
+      "Details hidden that would affect decisions"
+    ],
+    "observation_templates": [
+      "important information was not shared",
+      "details that affect the situation were withheld",
+      "relevant information was not included in the explanation",
+      "some details affecting the decision were not mentioned",
+      "the information shared did not include all relevant elements",
+      "parts of the situation were not disclosed",
+      "key details about the situation were missing",
+      "information related to the decision was not provided",
+      "details that influence understanding were not shared",
+      "the explanation appeared to exclude some relevant information"
+    ],
+    "promise_links": [
+      "no_lying_or_omission"
+    ],
+    "protocol_links": [
+      "truth_repair_protocol"
+    ],
+    "theology_links": [
+      "no_lying_or_omission"
+    ]
+  }
+}

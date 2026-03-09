@@ -1,0 +1,22 @@
+{
+  "schema": "modular_data_v1",
+  "notes": [
+    "These files were split from MASTER_PROTOCOLS.json plus CHECKIN_GRID.json, CHECKIN_META.json, and PurposeDropdown.json.",
+    "violent_map was intentionally omitted because it duplicates violations.",
+    "Loaders can recombine these into the current app shape to preserve backward compatibility."
+  ],
+  "files": [
+    "public/data/accountability/promises.json",
+    "public/data/accountability/protocols.json",
+    "public/data/accountability/theology.json",
+    "public/data/accountability/violations.json",
+    "public/data/content/purposeDropdown.json",
+    "public/data/grids/checkinGrid.json",
+    "public/data/grids/nnmGrid.json",
+    "public/data/grids/violentGrid.json",
+    "public/data/meta/checkinMeta.json",
+    "public/data/meta/emotionMeta.json",
+    "public/data/meta/needsSupplement.json",
+    "public/data/meta/violentCauseMap.json"
+  ]
+}

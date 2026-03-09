@@ -1,0 +1,546 @@
+{
+  "respectful_language": {
+    "sin_label": "Contempt / degrading speech",
+    "core_principle": "Image-bearers must not be degraded. Love confronts sin and problems without contempt, mockery, scorning, or speech that strips dignity.",
+    "scriptures": [
+      {
+        "ref": "Genesis 1:27",
+        "principle": "Every person bears God's image and must be treated with dignity."
+      },
+      {
+        "ref": "James 3:9-10",
+        "principle": "It is inconsistent to bless God and curse people made in His likeness."
+      },
+      {
+        "ref": "Ephesians 4:29",
+        "principle": "Speech must build up and give grace, not corrupt or rot relationship."
+      },
+      {
+        "ref": "Proverbs 12:18",
+        "principle": "Rash words wound like a sword; wise speech heals."
+      },
+      {
+        "ref": "Colossians 4:6",
+        "principle": "Words should be gracious and fitting."
+      },
+      {
+        "ref": "1 Corinthians 13:4-5",
+        "principle": "Love is patient and kind, not rude or self-exalting."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want my words to feel safe, honest, and honoring.",
+      "motive_shift": "Not: 'I should stop being harsh.' → But: 'I love you, so I will guard your dignity even when I need to address harm.'",
+      "replacement_focus": [
+        "I will describe actions and impact instead of attacking character.",
+        "I will slow down before speaking when I feel heat rising.",
+        "I will choose words that are truthful and healing, not humiliating.",
+        "If I speak with contempt, I will repair directly and specifically."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, keep contempt and corruption far from my mouth.",
+      "Teach me to speak hard truths with gentleness and honor."
+    ]
+  },
+  "respectful_listening": {
+    "sin_label": "Prideful interruption / failure to honor another's voice",
+    "core_principle": "Listening is an act of humility and honor. Love does not overpower, dominate the floor, or rush past another person's pace.",
+    "scriptures": [
+      {
+        "ref": "James 1:19",
+        "principle": "Be quick to hear, slow to speak, and slow to anger."
+      },
+      {
+        "ref": "Proverbs 18:13",
+        "principle": "Answering before listening is folly and shame."
+      },
+      {
+        "ref": "Philippians 2:3-4",
+        "principle": "In humility count others significant and look to their interests."
+      },
+      {
+        "ref": "Proverbs 18:2",
+        "principle": "Foolishness prefers self-expression over understanding."
+      },
+      {
+        "ref": "Ephesians 4:2",
+        "principle": "Humility, gentleness, and patience protect unity."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want you to experience being heard, not competed with.",
+      "motive_shift": "Not: 'I shouldn't interrupt.' → But: 'I love you, so I will make room for your words, timing, and meaning.'",
+      "replacement_focus": [
+        "I will let you finish before I respond.",
+        "I will summarize what I heard before defending or redirecting.",
+        "I will ask clarifying questions instead of assuming I already know.",
+        "I will treat listening as service, not passivity."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, make me humble, patient, and teachable.",
+      "Help me listen to understand rather than to win."
+    ]
+  },
+  "truthful_communication": {
+    "sin_label": "False witness / distortion / careless speech",
+    "core_principle": "Love honors truth by being specific, fair, and reality-based. Exaggeration, mind-reading, selective framing, and careless accusations distort shared reality.",
+    "scriptures": [
+      {
+        "ref": "Exodus 20:16",
+        "principle": "God forbids bearing false witness."
+      },
+      {
+        "ref": "Ephesians 4:25",
+        "principle": "Put away falsehood and speak truth with your neighbor."
+      },
+      {
+        "ref": "Proverbs 12:22",
+        "principle": "Lying lips oppose God's character; faithfulness delights Him."
+      },
+      {
+        "ref": "Matthew 12:36",
+        "principle": "People give account for careless words."
+      },
+      {
+        "ref": "Zechariah 8:16-17",
+        "principle": "Speak truth and refuse evil schemes in the heart."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want my words to protect reality, not bend it.",
+      "motive_shift": "Not: 'I shouldn't exaggerate.' → But: 'I love you, so I will be fair, concrete, and careful with what I say happened.'",
+      "replacement_focus": [
+        "I will trade labels for observations.",
+        "I will name uncertainty when I do not know motives.",
+        "I will avoid all-or-nothing language when it is not true.",
+        "I will correct the record quickly when I overstate or misstate."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, make me careful with truth and quick to correct error.",
+      "Guard me from careless speech that harms shared reality."
+    ]
+  },
+  "no_lying_or_omission": {
+    "sin_label": "Falsehood / concealment / omission",
+    "core_principle": "God is truth. Love does not hide, mislead, or selectively reveal reality to preserve image, control outcomes, or avoid consequences.",
+    "scriptures": [
+      {
+        "ref": "Ephesians 4:25",
+        "principle": "Put away falsehood and speak truth with your neighbor."
+      },
+      {
+        "ref": "Colossians 3:9",
+        "principle": "Do not lie to one another; put off the old self."
+      },
+      {
+        "ref": "Proverbs 28:13",
+        "principle": "Concealing sin blocks mercy and healing; confession opens the door."
+      },
+      {
+        "ref": "Proverbs 12:22",
+        "principle": "The Lord delights in the faithful."
+      },
+      {
+        "ref": "Luke 8:17",
+        "principle": "What is hidden will be disclosed."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want my honesty to be a shelter, not a fog.",
+      "motive_shift": "Not: 'I shouldn't lie.' → But: 'I love you, so I will protect trust with whole truth, not curated truth.'",
+      "replacement_focus": [
+        "I will tell the whole truth, not only the least damaging part.",
+        "I will name uncertainty instead of shaping the story.",
+        "I will confess sooner rather than waiting for discovery.",
+        "I will remember that truth is part of safety."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, make me a person of truth in private and public.",
+      "Give me courage to tell the truth without self-protection."
+    ]
+  },
+  "promise_integrity": {
+    "sin_label": "Broken promises / unreliability / covenant-lightness",
+    "core_principle": "Love is trustworthy and carries weight. Repeated broken commitments erode safety, peace, and confidence in relationship.",
+    "scriptures": [
+      {
+        "ref": "Ecclesiastes 5:4-5",
+        "principle": "It is serious to vow and not fulfill."
+      },
+      {
+        "ref": "Matthew 5:37",
+        "principle": "Let your yes be yes and your no be no."
+      },
+      {
+        "ref": "Psalm 15:4",
+        "principle": "The righteous keep their word even when it costs."
+      },
+      {
+        "ref": "Luke 16:10",
+        "principle": "Faithfulness in little things matters."
+      },
+      {
+        "ref": "Romans 13:8",
+        "principle": "Love fulfills its obligations rather than leaving relational debt."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want my words and follow-through to match.",
+      "motive_shift": "Not: 'I should remember better.' → But: 'I love you, so I will treat my commitments as part of your safety and peace.'",
+      "replacement_focus": [
+        "I will promise less and follow through more.",
+        "I will communicate early when I cannot fulfill what I said.",
+        "I will use reminders and systems because love plans for faithfulness.",
+        "I will repair specifically when I break trust."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, make me dependable and faithful in small and great things.",
+      "Teach me integrity that does not collapse under pressure."
+    ]
+  },
+  "pauses_equal_abandonment": {
+    "sin_label": "Withholding presence / relational neglect",
+    "core_principle": "Love may need pauses, but it does not leave the other person in fear, silence, or uncertainty without orientation.",
+    "scriptures": [
+      {
+        "ref": "Philippians 2:4",
+        "principle": "Look to the interests of others."
+      },
+      {
+        "ref": "Ephesians 4:26",
+        "principle": "Do not let anger sit without movement toward peace."
+      },
+      {
+        "ref": "1 Corinthians 13:7",
+        "principle": "Love bears and endures rather than abandoning."
+      },
+      {
+        "ref": "Romans 12:15",
+        "principle": "Faithful love draws near to another's burden."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want my pauses to feel safe, not punishing or abandoning.",
+      "motive_shift": "Not: 'I shouldn't go silent.' → But: 'I love you, so I will regulate without leaving you alone in uncertainty.'",
+      "replacement_focus": [
+        "I can pause, but I will anchor you with a clear return time.",
+        "I will signal care while I regulate.",
+        "I will close loops so your nervous system is not forced to guess.",
+        "I will distinguish needed space from withholding."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, teach me steady presence under stress.",
+      "Help me pause without withdrawing love."
+    ]
+  },
+  "transition_protocol": {
+    "sin_label": "Abrupt withdrawal / disordering peace",
+    "core_principle": "Peace is protected through clarity, order, and orientation. Love does not disappear without helping the other person understand what is happening next.",
+    "scriptures": [
+      {
+        "ref": "1 Corinthians 14:33",
+        "principle": "God is not a God of confusion but of peace."
+      },
+      {
+        "ref": "Romans 12:18",
+        "principle": "As far as it depends on you, live peaceably."
+      },
+      {
+        "ref": "Proverbs 15:1",
+        "principle": "Gentleness turns away escalation."
+      },
+      {
+        "ref": "Philippians 2:4",
+        "principle": "Attend to how your actions affect the other person."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want my exits and returns to communicate safety.",
+      "motive_shift": "Not: 'I should explain myself.' → But: 'I love you, so I will give orientation, timing, and peace.'",
+      "replacement_focus": [
+        "I will name what is happening and what happens next.",
+        "I will give a concrete return point when I need to step away.",
+        "I will not vanish in the middle of unresolved distress.",
+        "I will follow through because order is part of love."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, make me orderly, gentle, and clear.",
+      "Help me bring peace instead of confusion in my movements."
+    ]
+  },
+  "close_the_loop": {
+    "sin_label": "Leaving repair unfinished / unresolved disorder",
+    "core_principle": "Love does not treat unfinished repair as neutral. Open loops keep harm alive; godly love moves toward completion, clarification, and peace.",
+    "scriptures": [
+      {
+        "ref": "Matthew 5:23-24",
+        "principle": "Move toward reconciliation when relationship is ruptured."
+      },
+      {
+        "ref": "Ephesians 4:26-27",
+        "principle": "Do not let anger stay unresolved and give space to further harm."
+      },
+      {
+        "ref": "Romans 12:18",
+        "principle": "Pursue peace where possible."
+      },
+      {
+        "ref": "2 Corinthians 13:11",
+        "principle": "Aim for restoration and live in peace."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want repair to become complete, not half-open and drifting.",
+      "motive_shift": "Not: 'I should probably revisit this.' → But: 'I love you, so I will not leave you carrying unresolved harm alone.'",
+      "replacement_focus": [
+        "I will revisit unresolved issues at the agreed time.",
+        "I will clarify what has and has not been repaired.",
+        "I will not call something finished just because I feel tired.",
+        "I will value completion as part of peace."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, make me willing to finish what repair requires.",
+      "Teach me perseverance in reconciliation."
+    ]
+  },
+  "no_blameshifting": {
+    "sin_label": "Refusing ownership / self-justifying blame transfer",
+    "core_principle": "Love owns its own sin and impact. Blame-shifting hides from repentance by relocating responsibility onto the harmed person, circumstances, or stress.",
+    "scriptures": [
+      {
+        "ref": "James 5:16",
+        "principle": "Confess sins openly instead of hiding behind excuses."
+      },
+      {
+        "ref": "Proverbs 28:13",
+        "principle": "Concealing wrong blocks mercy; confession leads toward mercy."
+      },
+      {
+        "ref": "Genesis 3:12-13",
+        "principle": "Blame-shifting is an ancient human reflex, not repentance."
+      },
+      {
+        "ref": "Psalm 51:3-4",
+        "principle": "Repentance says, 'I know my transgressions,' not 'someone made me do it.'"
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want my ownership to be clear and honest.",
+      "motive_shift": "Not: 'I shouldn't blame-shift.' → But: 'I love you, so I will not protect myself by placing my responsibility onto you.'",
+      "replacement_focus": [
+        "I will name what I did before I explain context.",
+        "I will separate causes from excuses.",
+        "I will avoid 'but you' after confession.",
+        "I will let ownership be specific, concrete, and complete."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, make me honest about my own sin and impact.",
+      "Remove self-justification and teach me clean confession."
+    ]
+  },
+  "no_defensiveness": {
+    "sin_label": "Hardness of heart / prideful argument",
+    "core_principle": "Defensiveness blocks listening, obscures empathy, and protects ego at the expense of repair. Love makes room for the other's pain before self-explanation.",
+    "scriptures": [
+      {
+        "ref": "James 1:19",
+        "principle": "Be quick to hear, slow to speak, slow to anger."
+      },
+      {
+        "ref": "Proverbs 18:13",
+        "principle": "Answering before listening is folly and shame."
+      },
+      {
+        "ref": "Ephesians 4:2",
+        "principle": "Humility and gentleness protect unity."
+      },
+      {
+        "ref": "Philippians 2:3-4",
+        "principle": "Humility looks outward rather than protecting self-importance."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want your pain to meet listening, not argument.",
+      "motive_shift": "Not: 'I shouldn't defend.' → But: 'I love you, so I will make room for your experience before I move toward explanation.'",
+      "replacement_focus": [
+        "I will reflect impact first.",
+        "I will ask what is most painful right now.",
+        "I will save explanation for the moment when it truly serves clarity.",
+        "I will remember that understanding is not the same as agreeing with every interpretation."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, soften my heart and quiet my self-defense.",
+      "Teach me to listen like You listen."
+    ]
+  },
+  "emotional_presence": {
+    "sin_label": "Neglect / withholding care / failure to draw near",
+    "core_principle": "Love draws near in difficulty. Presence, attunement, and burden-bearing are forms of service, not optional extras.",
+    "scriptures": [
+      {
+        "ref": "Romans 12:15",
+        "principle": "Weep with those who weep."
+      },
+      {
+        "ref": "Galatians 6:2",
+        "principle": "Bear one another's burdens."
+      },
+      {
+        "ref": "1 John 3:18",
+        "principle": "Love in deed and truth, not only in word."
+      },
+      {
+        "ref": "Philippians 2:4",
+        "principle": "Attend to the interests and needs of the other person."
+      },
+      {
+        "ref": "Job 2:13",
+        "principle": "Presence in suffering matters."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want my attention to communicate: you matter.",
+      "motive_shift": "Not: 'I should be more present.' → But: 'I love you, so I will draw near with attention, care, and steadiness.'",
+      "replacement_focus": [
+        "I will notice and respond when distress is visible.",
+        "I will ask follow-up questions instead of staying passive.",
+        "I will let presence be practical, not merely verbal.",
+        "I will treat attention as part of covenant care."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, make me attentive and near-hearted.",
+      "Teach me to show love through steady presence."
+    ]
+  },
+  "no_manipulation": {
+    "sin_label": "Control / coercion / leverage",
+    "core_principle": "Love does not coerce, corner, pressure, or use fear, guilt, silence, spirituality, or relational leverage to control another person's response.",
+    "scriptures": [
+      {
+        "ref": "1 Corinthians 13:5",
+        "principle": "Love does not insist on its own way."
+      },
+      {
+        "ref": "2 Corinthians 1:24",
+        "principle": "We do not domineer over others; we work with them for joy."
+      },
+      {
+        "ref": "Matthew 20:25-28",
+        "principle": "Kingdom leadership rejects domineering control."
+      },
+      {
+        "ref": "Philippians 2:3-4",
+        "principle": "Love seeks the other's good rather than self-advantage."
+      },
+      {
+        "ref": "1 Peter 5:2-3",
+        "principle": "Do not domineer, but be examples."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want your freedom and consent to be real, not extracted.",
+      "motive_shift": "Not: 'I shouldn't control.' → But: 'I love you, so I will protect your agency, clarity, and safety instead of forcing outcomes.'",
+      "replacement_focus": [
+        "I will ask instead of cornering.",
+        "I will remove leverage instead of increasing pressure.",
+        "I will accept no without punishment.",
+        "I will pursue influence through truth and trust, not force."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, remove control and fear from my heart.",
+      "Teach me love that honors the other person's agency."
+    ]
+  },
+  "respect_boundaries": {
+    "sin_label": "Boundary violation / disregard for limits",
+    "core_principle": "Love honors limits, pace, consent, and personhood. Boundaries are not the enemy of love; they are one way love protects safety and stewardship.",
+    "scriptures": [
+      {
+        "ref": "Romans 13:10",
+        "principle": "Love does no wrong to a neighbor."
+      },
+      {
+        "ref": "1 Corinthians 10:24",
+        "principle": "Seek the good of your neighbor, not only your own."
+      },
+      {
+        "ref": "Philippians 2:4",
+        "principle": "Look to the interests of others."
+      },
+      {
+        "ref": "Galatians 5:13",
+        "principle": "Freedom is for serving in love, not self-indulgence."
+      },
+      {
+        "ref": "Matthew 7:12",
+        "principle": "Treat others as you would want to be treated."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want your 'no,' your pace, and your limits to be safe with me.",
+      "motive_shift": "Not: 'I shouldn't push.' → But: 'I love you, so I will protect your safety by honoring your boundaries immediately and consistently.'",
+      "replacement_focus": [
+        "I will stop when you say no.",
+        "I will not argue boundaries in the moment.",
+        "I will not spiritualize, guilt, or pressure you past your limits.",
+        "I will prove safety through consistent follow-through."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, teach me to honor limits as love.",
+      "Help me prefer faithfulness over urgency."
+    ]
+  },
+  "spiritual_manipulation": {
+    "sin_label": "Using Scripture or theology as control",
+    "core_principle": "God's Word is for truth, healing, repentance, and formation—not for domination, deflection, silencing, or burdening another person while avoiding one's own accountability.",
+    "scriptures": [
+      {
+        "ref": "Matthew 23:4",
+        "principle": "Do not load burdens onto others while refusing real care."
+      },
+      {
+        "ref": "2 Timothy 2:24-25",
+        "principle": "The Lord's servant must be kind, patient, and correcting with gentleness."
+      },
+      {
+        "ref": "1 Peter 5:2-3",
+        "principle": "Do not domineer; shepherd with integrity."
+      },
+      {
+        "ref": "James 3:17",
+        "principle": "Wisdom from above is pure, peaceable, gentle, open to reason."
+      },
+      {
+        "ref": "Ephesians 4:15",
+        "principle": "Truth must be spoken in love."
+      }
+    ],
+    "love_reframe": {
+      "identity": "I want God's truth to be a light, not a weapon, in my hands.",
+      "motive_shift": "Not: 'I shouldn't use Bible verses like that.' → But: 'I love you, so I will use truth to serve repentance and healing, not to control, shame, or escape accountability.'",
+      "replacement_focus": [
+        "I will apply Scripture to myself before I use it to confront you.",
+        "I will not quote truth to avoid owning my behavior.",
+        "I will refuse theological superiority in conflict.",
+        "I will let gentleness and integrity govern how I use spiritual language."
+      ]
+    },
+    "self_application_prayer": [
+      "Lord, keep me from using Your Word to protect my ego.",
+      "Make me gentle, truthful, and accountable in how I speak about You."
+    ]
+  }
+}

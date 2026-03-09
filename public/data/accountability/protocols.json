@@ -1,0 +1,284 @@
+{
+  "repair_without_defensiveness": {
+    "title": "Repair Without Defensiveness",
+    "purpose": "Own impact before explaining intent; restore safety and accountability.",
+    "steps": [
+      "Pause and soften tone/body (stop escalation).",
+      "Name what you did (specific behavior; no excuses).",
+      "Acknowledge impact (reflect what you heard).",
+      "Take ownership (no counter-accusations).",
+      "Ask what repair would help right now.",
+      "Commit to one concrete change + a follow-up time."
+    ],
+    "micro_script": [
+      "You’re right. I did ___.",
+      "I can see how that impacted you as ___.",
+      "I’m not going to defend it. I own it.",
+      "What would help you feel safer right now?",
+      "Next time I will ___. I’ll follow up by ___."
+    ],
+    "avoid": [
+      "Explaining intent first",
+      "Turning it back on them",
+      "Debating their feelings",
+      "Spiritual bypassing"
+    ]
+  },
+  "closure_transition_protocol": {
+    "title": "Closure + Transition Protocol",
+    "purpose": "Prevent abandonment/stonewalling signals by closing loops and giving a clear next timepoint.",
+    "steps": [
+      "Name the pause/exit explicitly (no silent disappearance).",
+      "Give a one-sentence reason (capacity/safety; not blame).",
+      "State what is still open (what you are not abandoning).",
+      "Give a specific reconnection time or condition.",
+      "Follow up with a brief message if leaving physically or going offline."
+    ],
+    "micro_script": [
+      "I need to pause for __ minutes to regulate.",
+      "I’m not abandoning this. The open issue is ___.",
+      "I will come back at __ and continue.",
+      "If that changes, I will text you immediately with the new time."
+    ],
+    "avoid": [
+      "Going silent",
+      "Walking away without a timepoint",
+      "Leaving the other person guessing"
+    ]
+  },
+  "reality_repair_protocol": {
+    "title": "Reality Repair Protocol",
+    "purpose": "Repair reality distortion by clarifying facts, admitting uncertainty, and restoring trust.",
+    "steps": [
+      "Stop attacking the other person’s perception.",
+      "State your memory as your memory (not as the only truth).",
+      "Validate that their experience is real to them.",
+      "Separate facts from interpretations; list agreed facts.",
+      "Admit uncertainty where needed; propose verification method (notes/messages).",
+      "Commit to truth + correction if you were wrong."
+    ],
+    "micro_script": [
+      "Here’s what I remember: ___.",
+      "I believe you experienced it as ___. I’m not attacking your perception.",
+      "Facts we can agree on: ___.",
+      "If I’m wrong, I will correct it and own the impact."
+    ]
+  },
+  "impact_acknowledgement_protocol": {
+    "title": "Impact Acknowledgement Protocol",
+    "purpose": "Repair minimization by taking the impact seriously and responding proportionally.",
+    "steps": [
+      "Repeat back the impact you heard (their words).",
+      "Confirm the impact matters (no downplaying).",
+      "Apologize for the impact (not for being misunderstood).",
+      "Ask what part hurt most (one clarifying question).",
+      "Offer one repair action now and one prevention action later."
+    ],
+    "micro_script": [
+      "I hear the impact was ___.",
+      "That matters. I’m sorry I caused that.",
+      "What part hurt the most?",
+      "Right now I can ___. Next time I will ___."
+    ]
+  },
+  "listening_repair_protocol": {
+    "title": "Listening Repair Protocol",
+    "purpose": "Repair dismissal/interruptions by restoring turn-taking, reflection, and accuracy.",
+    "steps": [
+      "Stop interrupting and let them finish.",
+      "Reflect back what you heard (summary + emotion).",
+      "Ask if your reflection is accurate.",
+      "Ask one curiosity question before responding.",
+      "Respond only after confirmation."
+    ],
+    "micro_script": [
+      "Let me slow down and listen.",
+      "What I heard is ___. Did I get that right?",
+      "What would you want me to understand most?"
+    ]
+  },
+  "validation_repair_protocol": {
+    "title": "Validation Repair Protocol",
+    "purpose": "Repair invalidation by acknowledging emotion and making space for experience.",
+    "steps": [
+      "Name the emotion you hear.",
+      "Acknowledge it makes sense given their perspective.",
+      "Do not correct the feeling or argue the emotion.",
+      "Ask what support is wanted (space, listening, solution, reassurance).",
+      "Confirm what you will do next."
+    ],
+    "micro_script": [
+      "It sounds like you feel ___.",
+      "That makes sense given ___.",
+      "Do you want listening, space, or a plan?"
+    ]
+  },
+  "respect_repair_protocol": {
+    "title": "Respect Repair Protocol",
+    "purpose": "Repair contempt/mockery by restoring dignity and respectful tone.",
+    "steps": [
+      "Stop sarcasm/mockery immediately.",
+      "Name the disrespectful behavior plainly.",
+      "Apologize for tone/action and impact.",
+      "Restate your point respectfully (or pause if escalated).",
+      "Commit to respectful speech in the next exchange."
+    ],
+    "micro_script": [
+      "My tone was disrespectful. I’m sorry.",
+      "I can see it landed as ___.",
+      "Let me restate this respectfully: ___."
+    ]
+  },
+  "autonomy_repair_protocol": {
+    "title": "Autonomy Repair Protocol",
+    "purpose": "Repair pressure/manipulation by restoring freedom and consent.",
+    "steps": [
+      "Name the pressure that was applied.",
+      "Remove the leverage (guilt/fear consequence framing).",
+      "Explicitly affirm their freedom to say no.",
+      "Ask what they prefer without pushing.",
+      "Accept the answer without penalty."
+    ],
+    "micro_script": [
+      "I pressured you. That wasn’t fair.",
+      "You’re free to say no.",
+      "What do you prefer?"
+    ]
+  },
+  "promise_repair_protocol": {
+    "title": "Promise Repair Protocol",
+    "purpose": "Repair broken commitments by naming breach, restoring clarity, and creating follow-through.",
+    "steps": [
+      "Name the specific promise that was broken.",
+      "Acknowledge impact and loss of trust.",
+      "State what changed (factually, without excuses).",
+      "Offer a corrective action with a deadline.",
+      "Log/track follow-through and confirm completion."
+    ],
+    "micro_script": [
+      "I broke our agreement about ___.",
+      "I understand that impacts trust as ___.",
+      "Here is what I will do now: ___. By ___."
+    ]
+  },
+  "truth_repair_protocol": {
+    "title": "Truth Repair Protocol",
+    "purpose": "Repair omission/half-truth/withholding by correcting record and restoring transparency.",
+    "steps": [
+      "Correct the inaccurate/incomplete statement clearly.",
+      "Add the missing information that changes meaning.",
+      "Acknowledge impact of the distortion.",
+      "State the transparency rule for next time.",
+      "Offer verification (messages/logs) if helpful."
+    ],
+    "micro_script": []
+  },
+  "boundary_repair_protocol": {
+    "title": "Boundary Repair Protocol",
+    "purpose": "Repair boundary violations by stopping behavior and confirming limits going forward.",
+    "steps": [
+      "Name the boundary that was violated.",
+      "Stop the violating behavior immediately.",
+      "Confirm understanding of the boundary.",
+      "State prevention plan (one concrete change).",
+      "Ask if anything else is needed to restore safety."
+    ],
+    "micro_script": []
+  },
+  "agreement_repair_protocol": {
+    "title": "Agreement Repair Protocol",
+    "purpose": "Repair moving goalposts/changing agreements by re-clarifying terms and expectations.",
+    "steps": [
+      "Name that expectations changed.",
+      "Restate the original agreement.",
+      "Discuss whether it still stands and why.",
+      "Confirm a new agreement in one sentence.",
+      "Confirm follow-through checkpoints."
+    ],
+    "micro_script": []
+  },
+  "clarity_repair_protocol": {
+    "title": "Clarity Repair Protocol",
+    "purpose": "Repair exaggeration/overgeneralizing/assumption by returning to specifics and evidence.",
+    "steps": [
+      "Replace always/never language with one concrete example.",
+      "Separate fact from interpretation.",
+      "Ask a clarifying question instead of assuming intent.",
+      "Restate the issue in precise, time-bounded language.",
+      "Confirm shared understanding."
+    ],
+    "micro_script": []
+  },
+  "focus_repair_protocol": {
+    "title": "Focus Repair Protocol",
+    "purpose": "Repair deflection/avoidance by returning to the unresolved topic and closing the loop.",
+    "steps": [
+      "Name the deflection.",
+      "Return to the original question/issue.",
+      "Answer directly first.",
+      "Then give context.",
+      "Confirm closure or next step."
+    ],
+    "micro_script": []
+  },
+  "resentment_repair_protocol": {
+    "title": "Resentment Repair Protocol",
+    "purpose": "Repair scorekeeping by returning to present issue and clean ownership.",
+    "steps": [
+      "Name the scorekeeping pattern.",
+      "Return to the present issue only.",
+      "Own your part without listing their past failures.",
+      "Ask what repair is needed now.",
+      "If there are patterns, schedule a separate structured talk."
+    ],
+    "micro_script": []
+  },
+  "connection_repair_protocol": {
+    "title": "Connection Repair Protocol",
+    "purpose": "Repair withholding affection by re-stabilizing warmth without coercion.",
+    "steps": [
+      "Acknowledge warmth/affection was withdrawn as punishment.",
+      "Apologize for the relational threat signal.",
+      "Offer steady presence without bargaining.",
+      "Ask what helps connection feel safe (space vs closeness).",
+      "Commit to consistency."
+    ],
+    "micro_script": []
+  },
+  "dignity_repair_protocol": {
+    "title": "Dignity Repair Protocol",
+    "purpose": "Repair public shaming by restoring privacy, respect, and reputation where harmed.",
+    "steps": [
+      "Acknowledge the public exposure/shaming.",
+      "Apologize directly for the dignity violation.",
+      "Correct misinformation publicly if needed.",
+      "Commit to privacy boundaries.",
+      "Offer a repair action to restore safety."
+    ],
+    "micro_script": []
+  },
+  "spiritual_repair_protocol": {
+    "title": "Spiritual Repair Protocol",
+    "purpose": "Repair spiritual manipulation by separating faith from control and restoring humility.",
+    "steps": [
+      "Name the misuse of scripture/spiritual authority.",
+      "Apologize for coercion/bypassing accountability.",
+      "Restate the issue without spiritual leverage.",
+      "Invite accountability from appropriate supports (pastor/mentor).",
+      "Commit to integrity in spiritual language."
+    ],
+    "micro_script": []
+  },
+  "direct_resolution_protocol": {
+    "title": "Direct Resolution Protocol",
+    "purpose": "Repair triangulation by returning to direct, respectful problem-solving.",
+    "steps": [
+      "Name the triangulation (third party introduced for leverage).",
+      "Remove the third-party leverage from the discussion.",
+      "Return to direct dialogue with curiosity.",
+      "If mediation is needed, agree on a neutral process together.",
+      "Confirm next step and timeline."
+    ],
+    "micro_script": []
+  }
+}
