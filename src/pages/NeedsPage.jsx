@@ -210,8 +210,8 @@ export default function NeedsPage({ goHome, needsSupplement, purposeDropdown = [
 
   return (
     <div className="container" style={{ "--page-bg": "#4ea8a9", "--page-bg-gradient": "none", ...(bgStyle || {}) }}>
-      <div className="appShell" style={{ animation: "needsSeaDrift 18s ease-in-out infinite", width: "min(1200px, 100%)", margin: "0 auto" }}>
-        <div className="panel" style={{ width: "min(1120px, calc(100vw - 36px))", margin: "0 auto" }}>
+      <div className="appShell" style={{ width: "min(1120px, 100%)", margin: "0 auto" }}>
+        <div className="panel" style={{ width: "min(1120px, 100%)", margin: "0 auto" }}>
           <div className="metaRow">
             <div style={{ minWidth: 0, maxWidth: 1120, flex: "1 1 620px" }}>
               <Header
@@ -325,13 +325,6 @@ export default function NeedsPage({ goHome, needsSupplement, purposeDropdown = [
         </SectionCard>
       </div>
 
-      <style>{`
-        @keyframes needsSeaDrift {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-2px); }
-          100% { transform: translateY(0px); }
-        }
-      `}</style>
     </div>
   );
 }

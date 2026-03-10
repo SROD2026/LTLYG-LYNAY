@@ -1,5 +1,5 @@
 // src/pages/CommunicationSinPage.jsx
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../components/layout/Header.jsx";
 import TopNav from "../components/layout/TopNav.jsx";
 import Panel from "../components/ui/Panel.jsx";
@@ -21,6 +21,7 @@ function compactPhrase(s) {
     .trim();
 }
 
+
 function SummaryBanner({ item }) {
   const common = Array.isArray(item?.common_forms) ? item.common_forms : [];
   const harm = Array.isArray(item?.harm_impact) ? item.harm_impact : [];
@@ -33,7 +34,7 @@ function SummaryBanner({ item }) {
         borderRadius: 16,
         border: "1px solid rgba(255,255,255,0.14)",
         background:
-          "linear-gradient(180deg, rgba(116,129,214,0.22), rgba(135,114,209,0.16))",
+          "linear-gradient(180deg, rgb(116, 129, 214), rgb(174, 164, 211))",
         padding: 14,
         display: "grid",
         gap: 12,
@@ -66,10 +67,15 @@ function SummaryBanner({ item }) {
 background: "rgba(255,210,120,0.18)",
           }}
         >
-          <div style={{ fontWeight: 900, marginBottom: 6 }}>What it often looks like</div>
+ <div style={{ fontWeight: 900, marginBottom: 6 }}>What repair sounds like when this communication pattern is present</div>
           <div style={{ lineHeight: 1.5, fontSize: 14, opacity: 0.94 }}>
-            {common.length ? compactPhrase(common[0]) : "A harmful communication pattern that needs to be named clearly."}
+            {repair.length
+              ? compactPhrase(repair[0])
+              : empathy.length
+                ? compactPhrase(empathy[0])
+                : "Move toward ownership, empathy, clarity, and love-led repair."}
           </div>
+
         </div>
 
         <div
@@ -80,7 +86,7 @@ background: "rgba(255,210,120,0.18)",
             background: "rgba(255,120,120,0.18)",
           }}
         >
-          <div style={{ fontWeight: 900, marginBottom: 6 }}>Why it matters</div>
+          <div style={{ fontWeight: 900, marginBottom: 6 }}>Why this pattern matters</div>
           <div style={{ lineHeight: 1.5, fontSize: 14, opacity: 0.94 }}>
             {harm.length ? compactPhrase(harm[0]) : "It can damage trust, clarity, dignity, and safety."}
           </div>
@@ -94,14 +100,12 @@ background: "rgba(255,210,120,0.18)",
             background: "rgba(120,220,160,0.18)",
           }}
         >
-          <div style={{ fontWeight: 900, marginBottom: 6 }}>What repair sounds like</div>
+                    <div style={{ fontWeight: 900, marginBottom: 6 }}>What this harmful pattern often looks like</div>
           <div style={{ lineHeight: 1.5, fontSize: 14, opacity: 0.94 }}>
-            {repair.length
-              ? compactPhrase(repair[0])
-              : empathy.length
-                ? compactPhrase(empathy[0])
-                : "Move toward ownership, empathy, clarity, and love-led repair."}
+            {common.length ? compactPhrase(common[0]) : "A harmful communication pattern that needs to be named clearly."}
           </div>
+
+         
         </div>
       </div>
     </div>
@@ -227,6 +231,7 @@ function SectionList({ title, intro, emoji, subtitle, items, onOpen }) {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
             gap: 10,
+            
           }}
         >
           {items.map((item) => (
@@ -246,7 +251,7 @@ function TheologyMiniCard({ title, body, verses = [] }) {
       style={{
         borderRadius: 16,
         border: "1px solid rgba(255,255,255,0.18)",
-        background: "linear-gradient(180deg, rgba(255,255,255,0.20), rgba(255,255,255,0.10))",
+        background: "linear-gradient(180deg, rgba(21, 50, 101, 0.82), rgba(197, 8, 162, 0.62))",
         padding: 14,
         display: "grid",
         gap: 10,
@@ -281,41 +286,41 @@ function getSectionTone(type) {
   switch (type) {
     case "scripture":
       return {
-        bg: "linear-gradient(180deg, rgba(96,104,168,0.88), rgba(128,118,190,0.88))",
+        bg: "linear-gradient(180deg, rgba(120, 133, 230, 0.99), rgba(20, 169, 27, 0.88))",
         border: "rgba(96,104,168,0.35)",
         color: "#ffffff",
       };
     case "forms":
       return {
-        bg: "linear-gradient(180deg, rgba(210,170,95,0.34), rgba(232,200,130,0.34))",
+        bg: "linear-gradient(180deg, rgba(251, 187, 67, 0.94), rgba(241, 226, 52, 0.95))",
         border: "rgba(210,170,95,0.35)",
         color: "#ffffff",
       };
     case "harm":
       return {
-        bg: "linear-gradient(180deg, rgba(188,94,94,0.40), rgba(212,120,120,0.40))",
+        bg: "linear-gradient(180deg, rgba(255, 68, 68, 0.97), rgba(91, 4, 4, 0.95))",
         border: "rgba(188,94,94,0.35)",
         color: "#ffffff",
       };
     case "conviction":
       return {
-        bg: "linear-gradient(180deg, rgba(70,140,96,0.42), rgba(120,176,120,0.38))",
+        bg: "linear-gradient(180deg, rgba(26, 255, 110, 0.42), rgba(247, 188, 12, 0.93))",
         border: "rgba(70,140,96,0.35)",
         color: "#ffffff",
       };
     case "empathy":
       return {
-        bg: "linear-gradient(180deg, rgba(78,146,170,0.38), rgba(126,187,202,0.34))",
+        bg: "linear-gradient(180deg, rgba(90, 206, 249, 0.77), rgba(4, 125, 155, 0.95))",
         border: "rgba(78,146,170,0.35)",
         color: "#ffffff",
       };
     case "love":
-      return {
-        bg: "linear-gradient(180deg, rgba(120,180,90,0.40), rgba(180,220,120,0.36))",
-        border: "rgba(120,180,90,0.35)",
-        color: "#ffffff",
-      };
-    default:
+  return {
+    bg: "linear-gradient(180deg, rgba(221, 74, 251, 0.73), rgb(205, 215, 112))",
+    border: "rgb(170, 220, 90)",
+    color: "#ffffff",
+  };
+  default:
       return {
         bg: "rgba(255,255,255,0.08)",
         border: "rgba(255,255,255,0.12)",
@@ -562,6 +567,15 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
           <SummaryBanner item={item} />
 
           <SectionCard
+            type="love"
+            title="What love does instead"
+            isOpen={openSection === "love"}
+            onToggle={() => setOpenSection(openSection === "love" ? null : "love")}
+          >
+            <BulletList items={loveRepair} />
+          </SectionCard>
+
+          <SectionCard
             type="scripture"
             title="Scripture"
             isOpen={openSection === "scripture"}
@@ -592,7 +606,7 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
 
           <SectionCard
             type="conviction"
-            title="Conviction, not shame"
+            title="LOVE motivation: Conviction, not shame"
             isOpen={openSection === "conviction"}
             onToggle={() =>
               setOpenSection(openSection === "conviction" ? null : "conviction")
@@ -612,14 +626,6 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
             <BulletList items={empathy} />
           </SectionCard>
 
-          <SectionCard
-            type="love"
-            title="What love does instead"
-            isOpen={openSection === "love"}
-            onToggle={() => setOpenSection(openSection === "love" ? null : "love")}
-          >
-            <BulletList items={loveRepair} />
-          </SectionCard>
         </div>
       </div>
     </div>
@@ -630,6 +636,9 @@ export default function CommunicationSinPage({ goHome }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
   const [selectedItem, setSelectedItem] = useState(null);
+const detailRef = useRef(null);
+
+
 
   useEffect(() => {
     let alive = true;
@@ -657,6 +666,11 @@ export default function CommunicationSinPage({ goHome }) {
       alive = false;
     };
   }, []);
+
+useEffect(() => {
+  if (!selectedItem) return;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, [selectedItem]);
 
   const speechItems = useMemo(() => normalizeItems(data?.speech_sins), [data]);
   const relationalItems = useMemo(() => normalizeItems(data?.relational_sins), [data]);
@@ -714,7 +728,7 @@ export default function CommunicationSinPage({ goHome }) {
         </div>
 
         <div className="theologyPanel">
-          <div style={{ display: "grid", gap: 12 }}>
+          <div style={{ display: "grid", gap: 12,  }}>
             <div style={{ fontWeight: 900, fontSize: 20 }}>Purpose</div>
             <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55 }}>
               {(meta.purpose || []).map((x, i) => (

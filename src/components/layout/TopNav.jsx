@@ -1,4 +1,24 @@
-// src/components/TopNav.jsx
+// src/components/layout/TopNav.jsx
+import { useMemo } from "react";
+import { getTopNavTone } from "../../utils/pageThemes.js";
+
+function itemStyle(targetKey) {
+  const tone = getTopNavTone(targetKey);
+
+  return {
+    borderRadius: 14,
+    whiteSpace: "nowrap",
+    fontSize: 14,
+    padding: "10px 14px",
+    borderColor: tone.border,
+    color: tone.text,
+    background: `
+      linear-gradient(180deg, rgba(255,255,255,0.20), rgba(255,255,255,0.06)),
+      ${tone.bg}
+    `,
+    boxShadow: tone.shadow,
+  };
+}
 
 export default function TopNav({
   goHome,
@@ -11,28 +31,76 @@ export default function TopNav({
   goLog,
   onExport,
 }) {
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.matchMedia &&
+    window.matchMedia("(max-width: 760px)").matches;
+
+  const items = useMemo(
+    () =>
+      [
+        goHome && {
+          key: "home",
+          label: isMobile ? "Home" : "Back to the Homepage",
+          onClick: goHome,
+        },
+        goGrid && {
+          key: "grid",
+          label: isMobile ? "Respectful" : "Express need respectfully",
+          onClick: goGrid,
+        },
+        goViolent && {
+          key: "violent",
+          label: isMobile ? "Accusatory" : "I feel accusatory",
+          onClick: goViolent,
+        },
+        goCheckin && {
+          key: "checkin",
+          label: isMobile ? "Gratitude" : "Positive Check-In / Gratitude",
+          onClick: goCheckin,
+        },
+        goNeeds && {
+          key: "needs",
+          label: isMobile ? "Needs" : "Needs and theology",
+          onClick: goNeeds,
+        },
+        goPrayer && {
+          key: "prayer",
+          label: isMobile ? "Prayer" : "Emotional prayer",
+          onClick: goPrayer,
+        },
+        goCommunication && {
+          key: "communication",
+          label: isMobile ? "Repair" : "Communication and repair",
+          onClick: goCommunication,
+        },
+        goLog && {
+          key: "log",
+          label: isMobile ? "Log" : "View past reflections",
+          onClick: goLog,
+        },
+        onExport && {
+          key: "export",
+          label: "Export",
+          onClick: onExport,
+        },
+      ].filter(Boolean),
+    [goHome, goGrid, goViolent, goCheckin, goNeeds, goPrayer, goCommunication, goLog, onExport, isMobile]
+  );
+
   return (
-    <div
-      style={{
-        display: "flex",
-        fontSize: 22,
-        gap: 10,
-        alignItems: "center",
-        flexWrap: "wrap",
-        "--btn-bg": "rgba(24, 16, 18, 0.78)",
-        "--btn-border": "rgba(255,255,255,0.14)",
-        "--btn-text": "rgba(255,255,255,0.96)",
-      }}
-    >
-      {goHome && <button className="btn" onClick={goHome}>Back to the Homepage</button>}
-      {goGrid && <button className="btn" onClick={goGrid}>I want to express my need respectfully</button>}
-      {goViolent && <button className="btn" onClick={goViolent}>I feel accusatory</button>}
-      {goCheckin && <button className="btn" onClick={goCheckin}>Positive Check-In / I am grateful</button>}
-      {goNeeds && <button className="btn" onClick={goNeeds}>Needs and theology</button>}
-      {goPrayer && <button className="btn" onClick={goPrayer}>Emotional prayer</button>}
-      {goCommunication && <button className="btn" onClick={goCommunication}>Communication and repair</button>}
-      {goLog && <button className="btn" onClick={goLog}>View past reflections</button>}
-      {onExport && <button className="btn" onClick={onExport}>Export</button>}
+    <div className={`topNav ${isMobile ? "topNav--mobile" : "topNav--desktop"}`}>
+      {items.map((item) => (
+        <button
+          key={item.label}
+          className="btn topNav__btn"
+          onClick={item.onClick}
+          type="button"
+          style={itemStyle(item.key)}
+        >
+          {item.label}
+        </button>
+      ))}
     </div>
   );
 }

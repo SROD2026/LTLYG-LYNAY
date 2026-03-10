@@ -1,8 +1,8 @@
 // src/pages/PurposePage.jsx
-
 import { useEffect, useState } from "react";
 import Header from "../components/layout/Header.jsx";
 import PurposeDropdown from "../components/purpose/PurposeDropdown.jsx";
+import Panel from "../components/ui/Panel.jsx";
 
 const PURPOSE_KEY = "blameless_purpose_text_v1";
 const CONTENT_CANVAS_WIDTH = 1200;
@@ -55,21 +55,24 @@ function tileStyle(type) {
     };
   }
 
-  if (type === "checkin") {
-    return {
-      ...tileBase,
-      color: "#213627",
-      border: "1px solid rgba(90, 145, 96, 0.18)",
-      background: `
-        linear-gradient(
-          180deg,
-          #76b67c 0%,
-          #c6d88e 52%,
-          #efd19e 100%
-        )
-      `,
-    };
-  }
+ if (type === "checkin") {
+  return {
+    ...tileBase,
+    color: "#3f2f36",
+    border: "1px solid rgba(214, 150, 152, 0.22)",
+    background: `
+      linear-gradient(
+        180deg,
+        #efd6a5 0%,
+        #f4c2a1 16%,
+        #f3aab2 34%,
+        #e59bc8 54%,
+        #cda6ea 76%,
+        #9cc0f6 100%
+      )
+    `,
+  };
+}
 
 if (type === "communication") {
   return {
@@ -342,6 +345,29 @@ export default function PurposePage({
         <div className="panel">
           <div style={{ display: "grid", gap: 14 }}>
             <div className="sectionTitle">Choose a path</div>
+
+<Panel style={{ display: "grid", gap: 12 }}>
+  <div style={{ fontSize: 24, fontWeight: 900, lineHeight: 1.12 }}>
+    What love really is
+  </div>
+
+  <div style={{ fontSize: 15, lineHeight: 1.6, color: "var(--text)" }}>
+    Love respects personhood. It does not erase individuality, collapse boundaries,
+    or demand emotional sameness. Healthy love honors another person’s needs, pace,
+    limits, dignity, and distinct inner world.
+  </div>
+
+  <div style={{ fontSize: 15, lineHeight: 1.6, color: "var(--text)" }}>
+    This tool can help you track your emotional responses to behaviors over time,
+    not just accusations in the moment. That makes it easier to identify recurring
+    patterns that most affect safety, trust, clarity, and repair.
+  </div>
+
+  <div style={{ fontSize: 15, lineHeight: 1.6, color: "var(--text)" }}>
+    If a relationship repeatedly does not respond to honest feedback, empathy, or
+    repair, that pattern may be a sign that protective personal boundaries are needed.
+  </div>
+</Panel>
 
 <div className="purposeHubGrid">
   <div className="hubCell hubViolent">

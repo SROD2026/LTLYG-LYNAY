@@ -30,28 +30,33 @@ const bgStyle = useMemo(() => getViolentPageBackground(selected), [selected]);
     return getReplacementEmotions({ violentCell: selected, nnmGrid, count: 15 });
   }, [selected, nnmGrid]);
 
-  return (
+ return (
+  <div
+    className="container"
+    style={{
+      "--page-bg": "#2a3f74",
+      "--page-bg-gradient": "none",
+      ...(bgStyle || {}),
+      position: "relative",
+      minHeight: "100dvh",
+    }}
+  >
     <div
-      className="container"
+      className="appShell"
       style={{
-        "--page-bg": "#17070b",
-        "--page-bg-gradient": "none",
-        ...(bgStyle || {}),
+        width: "min(1120px, 100%)",
+        margin: "0 auto",
       }}
     >
- <div
-  className="appShell"
-  style={{
-    animation: "violentSunsetDrift 18s ease-in-out infinite",
-    width: "fit-content",
-    margin: "0 auto",
-  }}
->
-      
-<div className="panel textOutlineRed" style={{  width: "min(1120px, calc(100vw - 36px))",
- margin: "0 auto"  }}>
-            <div className="metaRow">
-                <div style={{ minWidth: 0, maxWidth: 1120, flex: "1 1 620px" }}>
+      <div
+        className="panel textOutlineRed"
+        style={{
+          width: "min(1120px, 100%)",
+margin: "0 auto",
+        }}
+      >
+        <div className="metaRow">
+          <div style={{ minWidth: 0, maxWidth: 1120, flex: "1 1 620px" }}>
             <Header
               title="I'm Feeling Violent"
               subtitle={
@@ -63,78 +68,71 @@ const bgStyle = useMemo(() => getViolentPageBackground(selected), [selected]);
                 </>
               }
             />
-</div>
-            <div
-              style={{
-                display: "flex",
-                fontSize: 22,
-                gap: 10,
-                alignItems: "center",
-                flexWrap: "wrap",
-              }}
-            >
-              <div className="smallMuted">
-                {loading
-                  ? "Loading…"
-                  : error
-                    ? `Error: ${String(error.message || error)}`
-                    : `Loaded ${grid.length} entries`}
-              </div>
+          </div>
 
-              <TopNav
-                goHome={goHome}
-                goGrid={() => (window.location.hash = "#/grid")}
-                goCheckin={() => (window.location.hash = "#/checkin")}
-                goNeeds={() => (window.location.hash = "#/needs")}
-                goPrayer={() => (window.location.hash = "#/prayer")}
-                goCommunication={() => (window.location.hash = "#/communication-sins")}
-                goLog={() => (window.location.hash = "#/log")}
-              />
+          <div
+            style={{
+              display: "flex",
+              gap: 10,
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <div className="smallMuted">
+              {loading
+                ? "Loading…"
+                : error
+                ? `Error: ${String(error.message || error)}`
+                : `Loaded ${grid.length} entries`}
             </div>
+
+            <TopNav
+              goHome={goHome}
+              goGrid={() => (window.location.hash = "#/grid")}
+              goCheckin={() => (window.location.hash = "#/checkin")}
+              goNeeds={() => (window.location.hash = "#/needs")}
+              goPrayer={() => (window.location.hash = "#/prayer")}
+              goCommunication={() => (window.location.hash = "#/communication-sins")}
+              goLog={() => (window.location.hash = "#/log")}
+            />
           </div>
         </div>
-<div className="panel textOutlineRed" style={{ width: "fit-content", margin: "0 auto" }}>
-  <div className="gridScroll">
-    <EmotionGrid
-      grid={grid}
-      meta={meta}
-      onPick={setSelected}
-      axisLabels={{
-        tl: "RED (activated)",
-        tr: "YELLOW (surprised)",
-        bl: "PURPLE (shame)",
-        br: "BLUE (low)",
-      }}
-    />
-  </div>
-</div>
-
-<EmotionModal
-          open={!!selected}
-          onClose={() => setSelected(null)}
-          cell={selected}
-          mode="violent"
-          master={master}
-          meta={meta}
-          causeIndex={causeIndex}
-          replacementOptions={replacements}
-          needsSupplement={needsSupplement}
-        />
       </div>
 
-      <style>{`
-        @keyframes violentSunsetDrift {
-          0% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-2px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
-        }
-      `}</style>
+      <div
+        className="panel textOutlineRed gridPanel"
+        style={{
+          width: "100%",
+          margin: "0 auto",
+        }}
+      >
+        <EmotionGrid
+          grid={grid}
+          meta={meta}
+          onPick={setSelected}
+          axisLabels={{
+            tl: "RED (activated)",
+            tr: "YELLOW (surprised)",
+            bl: "PURPLE (shame)",
+            br: "BLUE (low)",
+          }}
+          tileSize={78}
+          labelScale={1.10}
+        />
+      </div>
     </div>
-  );
+
+    <EmotionModal
+      open={!!selected}
+      onClose={() => setSelected(null)}
+      cell={selected}
+      mode="violent"
+      master={master}
+      meta={meta}
+      causeIndex={causeIndex}
+      replacementOptions={replacements}
+      needsSupplement={needsSupplement}
+    />
+  </div>
+);
 }

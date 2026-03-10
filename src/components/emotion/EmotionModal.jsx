@@ -32,9 +32,7 @@ function loadLog() {
     return [];
   }
 }
-function saveLog(next) {
-  localStorage.setItem(LOG_KEY, JSON.stringify(next));
-}
+
 function clearLog() {
   localStorage.removeItem(LOG_KEY);
 }
@@ -143,6 +141,7 @@ const BODY_MAP = {
 
 const blankIntero = () => ({ region: "", sensation: "" });
 
+
 function isCompleteIntero(x) {
   return !!(x && x.region && x.sensation);
 }
@@ -154,7 +153,7 @@ function interoSentences(interoArr) {
 }
 
 
-function emotionDefinition(emotion, meta) {
+function EmotionDefinition(emotion, meta) {
   const key = String(emotion || "").trim();
   const lower = key.toLowerCase();
 
@@ -237,8 +236,8 @@ const entryForSelectedWord = useMemo(() => {
   const [selectedCause, setSelectedCause] = useState("");
   const [selectedReplacement, setSelectedReplacement] = useState("");
   const [selectedNeed, setSelectedNeed] = useState("");
-
-    const modalScrollRef = useRef(null);
+const modalCardRef = useRef(null);
+const [spacerHeight, setSpacerHeight] = useState(0);
 
   // Violent: violation key + observation pick
   const [selectedViolationKey, setSelectedViolationKey] = useState("");
@@ -251,6 +250,8 @@ const entryForSelectedWord = useMemo(() => {
   // Interoception
   const [intero, setIntero] = useState([blankIntero(), blankIntero(), blankIntero()]);
   const [activeInteroTab, setActiveInteroTab] = useState(0);
+  const [editingIndex, setEditingIndex] = useState(null);
+
 
   // Local log
   const [logCount, setLogCount] = useState(0);
@@ -267,7 +268,7 @@ const definitionTitle = mode === "violent" && selectedReplacement
   ? selectedReplacement
   : emotion;
 
-const emotionDefinition =
+const definitionText =
   mode === "violent"
     ? (entryForSelectedWord?.definition || replacementEntry?.definition || "")
     : (entryForSelectedWord?.definition || "");
@@ -275,14 +276,26 @@ const emotionDefinition =
 useEffect(() => {
   if (!open) return;
   setLogCount(loadLog().length);
-
-  requestAnimationFrame(() => {
-    if (modalScrollRef.current) {
-      modalScrollRef.current.scrollTop = 0;
-    }
-  });
 }, [open]);
 
+useEffect(() => {
+  if (!open) return;
+
+  function measure() {
+    if (!modalCardRef.current) return;
+    const rect = modalCardRef.current.getBoundingClientRect();
+    setSpacerHeight(rect.height + 64);
+  }
+
+  measure();
+  const id = requestAnimationFrame(measure);
+  window.addEventListener("resize", measure);
+
+  return () => {
+    cancelAnimationFrame(id);
+    window.removeEventListener("resize", measure);
+  };
+}, [open, showLog, selectedCause, selectedReplacement, selectedNeed, selectedViolationKey, selectedAccountableKey, intero]);
 
   // Reset when emotion changes
   useEffect(() => {
@@ -361,26 +374,54 @@ const allNeeds = useMemo(() => {
     return v;
   }, [intero]);
 
-  useEffect(() => {
-    if (activeInteroTab === 0 && isCompleteIntero(intero[0])) setActiveInteroTab(1);
-    if (activeInteroTab === 1 && isCompleteIntero(intero[1])) setActiveInteroTab(2);
-  }, [intero, activeInteroTab]);
+useEffect(() => {
+  if (editingIndex !== null) return;
 
-  function setInteroRegion(idx, region) {
-    setIntero((prev) => {
-      const next = prev.slice();
-      next[idx] = { region, sensation: "" };
-      return next;
-    });
-  }
+  if (activeInteroTab === 0 && isCompleteIntero(intero[0])) setActiveInteroTab(1);
+  if (activeInteroTab === 1 && isCompleteIntero(intero[1])) setActiveInteroTab(2);
+}, [intero, activeInteroTab, editingIndex]);
 
-  function setInteroSensation(idx, sensation) {
-    setIntero((prev) => {
-      const next = prev.slice();
-      next[idx] = { ...next[idx], sensation };
-      return next;
-    });
+function setInteroRegion(idx, region) {
+  setIntero((prev) => {
+    const next = prev.slice();
+    const prior = next[idx] || blankIntero();
+
+    next[idx] = {
+      region,
+      sensation: prior.region === region ? prior.sensation : "",
+    };
+
+    return next;
+  });
+}
+
+function setInteroSensation(idx, sensation) {
+  setIntero((prev) => {
+    const next = prev.slice();
+    next[idx] = { ...next[idx], sensation };
+    return next;
+  });
+
+  if (editingIndex === idx) {
+    setEditingIndex(null);
   }
+}
+
+function editInteroSlot(idx) {
+  setActiveInteroTab(idx);
+  setEditingIndex(idx);
+}
+
+function clearInteroSlot(idx) {
+  setIntero((prev) => {
+    const next = prev.slice();
+    next[idx] = blankIntero();
+    return next;
+  });
+
+  setEditingIndex((prev) => (prev === idx ? null : prev));
+  setActiveInteroTab(idx);
+}
 
   const interoLines = useMemo(() => interoSentences(intero), [intero]);
   const hasIntero = interoLines.length > 0;
@@ -462,7 +503,7 @@ async function handleSaveEntry() {
     });
 
     setLogCount(loadReflectionLog().length);
-    setSaveStatus("Saved ✓");
+    setSaveStatus("Emotional State Saved ✓");
     setTimeout(() => setSaveStatus(""), 900);
   } catch (e) {
     setSaveStatus("Save failed");
@@ -581,38 +622,55 @@ async function handleSaveEntry() {
   // Don't render until open (after hooks)
   if (!open) return null;
 
-  return (
-           <div
-             ref={modalScrollRef}
+return (
+  <>
+    <div
+      aria-hidden="true"
+      style={{
+        width: "min(920px, 100%)",
+        margin: "24px auto 40px",
+        height: spacerHeight,
+        visibility: "hidden",
+        pointerEvents: "none",
+      }}
+    />
 
+    <div
       role="dialog"
       aria-modal="true"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose?.();
       }}
       style={{
-        position: "fixed",
-        inset: 0,
-background: "transparent",
-backdropFilter: "none",
-overflowY: "auto",
-        padding: 16,
-        zIndex: 9999,
-      }}
+  position: "fixed",
+  inset: 0,
+  zIndex: 9999,
+  overflowY: "auto",
+  padding:
+    "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
+  background: "rgba(10,12,20,0.52)",
+  backdropFilter: "blur(3px)",
+  WebkitBackdropFilter: "blur(3px)",
+}}
     >
-          <div
+      <div
+  ref={modalCardRef}
   style={{
     width: "min(920px, 100%)",
-    margin: "40px auto",
+    margin: "0 auto",
+  position: "relative",
     borderRadius: 18,
-    border: `1px solid ${overlayHex || "rgba(255,255,255,0.12)"}`,
+    border: `2px solid ${overlayHex || "rgba(255,255,255,0.12)"}`,
     background: "rgba(16,22,30,0.96)",
     color: "rgba(255,255,255,0.94)",
     boxShadow: overlayHex
       ? `0 20px 60px rgba(0,0,0,0.55), 0 0 0 2px ${overlayHex}44`
       : "0 20px 60px rgba(0,0,0,0.55)",
-    overflow: "hidden",
-    position: "relative",
+    overflow: "visible",
+    top: 0,
+    left: 0,
+    right: 0,
+    pointerEvents: "auto",
   }}
 >
   
@@ -647,7 +705,7 @@ overflowY: "auto",
   {definitionTitle}
 </div>
 
-{emotionDefinition ? (
+{definitionText ? (
   <div
     style={{
       fontSize: 14,
@@ -657,7 +715,7 @@ overflowY: "auto",
       marginTop: 4,
     }}
   >
-    {emotionDefinition}
+    {definitionText}
   </div>
 ) : null} 
 
@@ -746,10 +804,11 @@ overflowY: "auto",
         {/* Body */}
         <div
           style={{
-            padding: 16,
+            padding: "0 18px 18px",
             display: "grid",
             gap: 14,
-                    }}
+            overflow: "visible",
+          }}
         >          {/* Optional log panel */}
           {showLog && (
             <Panel style={{ display: "grid", gap: 10 }}>
@@ -832,38 +891,53 @@ overflowY: "auto",
               {/* Left controls */}
               <div style={{ display: "grid", gap: 10 }}>
                 {/* Tabs */}
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  {Array.from({ length: visibleInteroTabs }).map((_, i) => {
-                    const done = isCompleteIntero(intero[i]);
-                    const activeTab = i === activeInteroTab;
-                    return (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => setActiveInteroTab(i)}
-                        style={{
-                          borderRadius: 999,
-                          border: "1px solid rgba(255,255,255,0.14)",
-                          background: activeTab ? "rgba(255,255,255,0.14)" : "rgba(255,255,255,0.06)",
-                          padding: "6px 10px",
-                          fontSize: 13,
-                          color: "rgba(255,255,255,0.90)",
-                          cursor: "pointer",
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: 6,
-                        }}
-                        title={done ? "Completed" : "In progress"}
-                      >
-                        {i + 1}
-                        <span style={{ opacity: done ? 1 : 0.55 }}>{done ? "✓" : "…"}</span>
-                      </button>
-                    );
-                  })}
-                </div>
+               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+  {Array.from({ length: visibleInteroTabs }).map((_, idx) => {
+    const slot = intero[idx];
+    const complete = isCompleteIntero(slot);
+    const activeTab = activeInteroTab === idx;
+    const editing = editingIndex === idx;
+
+    return (
+      <button
+        key={idx}
+        className="btn"
+        onClick={() => editInteroSlot(idx)}
+        style={{
+          padding: "8px 12px",
+          fontSize: 13,
+          borderRadius: 999,
+          background: activeTab
+            ? "rgba(255,255,255,0.24)"
+            : complete
+            ? "rgba(255,255,255,0.14)"
+            : "rgba(255,255,255,0.08)",
+          border: editing
+            ? "1px solid rgba(255,255,255,0.34)"
+            : "1px solid rgba(255,255,255,0.12)",
+        }}
+      >
+        {editing ? `Editing ${idx + 1}` : `Sensation ${idx + 1}`}
+      </button>
+    );
+  })}
+</div>
+
 
                 {/* Dropdowns */}
                 <div style={{ display: "grid", gap: 8 }}>
+                  {editingIndex !== null ? (
+  <div
+    style={{
+      fontSize: 12,
+      fontWeight: 700,
+      color: "rgba(255,255,255,0.76)",
+    }}
+  >
+    Editing sensation {editingIndex + 1}
+  </div>
+) : null}
+                  
                   <Select
                     value={active.region}
                     onChange={(v) => setInteroRegion(activeInteroTab, v)}
@@ -888,15 +962,59 @@ overflowY: "auto",
                 </div>
 
                 {/* Summary */}
-                {hasIntero && (
-                  <div style={{ marginTop: 4, display: "grid", gap: 6 }}>
-                    {interoLines.map((line, idx) => (
-                      <div key={idx} style={{ color: "rgba(255,255,255,0.80)", fontSize: 13 }}>
-                        {line}
-                      </div>
-                    ))}
-                  </div>
-                )}
+{interoLines.length ? (
+  <div style={{ display: "grid", gap: 8 }}>
+    <div style={{ fontWeight: 900, fontSize: 13 }}>Named body experience</div>
+
+    <div style={{ display: "grid", gap: 8 }}>
+      {intero.map((item, idx) => {
+        if (!isCompleteIntero(item)) return null;
+
+        return (
+          <div
+            key={`${item.region}-${item.sensation}-${idx}`}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr auto auto",
+              gap: 8,
+              alignItems: "center",
+              padding: "8px 10px",
+              borderRadius: 12,
+              border: "1px solid rgba(255,255,255,0.10)",
+              background: "rgba(255,255,255,0.05)",
+            }}
+          >
+            <div
+              style={{
+                fontSize: 13,
+                lineHeight: 1.45,
+                color: "rgba(255,255,255,0.92)",
+              }}
+            >
+              <strong>{idx + 1}.</strong> {item.region.replaceAll("_", " ")} — {item.sensation}
+            </div>
+
+            <button
+              className="btn"
+              onClick={() => editInteroSlot(idx)}
+              style={{ padding: "6px 10px", fontSize: 12, borderRadius: 10 }}
+            >
+              Edit
+            </button>
+
+            <button
+              className="btn"
+              onClick={() => clearInteroSlot(idx)}
+              style={{ padding: "6px 10px", fontSize: 12, borderRadius: 10 }}
+            >
+              Clear
+            </button>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+) : null}
 
                 <div style={{ fontSize: 12, color: "rgba(255,255,255,0.62)" }}>
                   Body sensations are not proof of meaning. They are signals that help identify needs.
@@ -916,7 +1034,7 @@ overflowY: "auto",
                   minHeight: 260,
                 }}
               >
-                <InteroStickFigure intero={intero} />
+<InteroStickFigure intero={intero} theme="emotion" />
               </div>
             </div>
           </Panel>
@@ -1054,35 +1172,27 @@ overflowY: "auto",
 )}        </div>
 
         {/* Sticky bottom action bar */}
-        <div
-          style={{
-            position: "sticky",
-            bottom: 0,
-            zIndex: 5,
-            paddingTop: 10,
-            paddingBottom: 10,
-            borderTop: "1px solid rgba(255,255,255,0.10)",
-            background: "rgba(16,22,30,0.96)",
-            display: "flex",
-            justifyContent: "flex-end",
-            gap: 10,
-          }}
-        >
-          <button
-            onClick={handleSaveEntry}
-            style={{
-              borderRadius: 12,
-              border: "1px solid rgba(255,255,255,0.18)",
-              background: "rgba(255,255,255,0.10)",
-              color: "rgba(255,255,255,0.92)",
-              padding: "10px 12px",
-              fontSize: 14,
-              cursor: "pointer",
-            }}
-          >
-            Save entry
-          </button>
-        </div>
+       <div
+  style={{
+    padding: "10px 16px",
+    borderTop: "1px solid rgba(255,255,255,0.10)",
+    background: "rgba(16,22,30,0.96)",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: 10,
+    flexWrap: "wrap",
+  }}
+>
+  <div style={{ fontSize: 13, color: "rgba(255,255,255,0.78)" }}>
+    {saveStatus || ""}
+  </div>
+
+  <button className="btn" onClick={handleSaveEntry}>
+    Save entry
+  </button>
+</div>
+
 
         {/* Footer note */}
         <div style={{ padding: 16, borderTop: "1px solid rgba(255,255,255,0.10)" }}>
@@ -1094,5 +1204,6 @@ overflowY: "auto",
         </div>
       </div>
     </div>
+    </>
   );
 }

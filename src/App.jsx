@@ -110,13 +110,12 @@ function HomePage({
       <div
         className="appShell"
         style={{
-          animation: "gridSunsetDrift 18s ease-in-out infinite",
-          width: "fit-content",
+    width: "min(1120px, 100%)",
           margin: "0 auto",
         }}
       >
-        <div className="panel textOutlineGreen" style={{ width: "fit-content", margin: "0 auto" }}>
-          <div style={{ display: "grid", gap: 14 }}>
+<div className="panel textOutlineGreen" style={{ width: "100%", margin: "0 auto" }}>
+            <div style={{ display: "grid", gap: 14 }}>
             <div
               style={{
                 display: "grid",
@@ -167,20 +166,22 @@ function HomePage({
 
         <div className="panel textOutlineGreen" style={{ width: "fit-content", margin: "0 auto" }}>
           <EmotionGrid
-            grid={grid}
-            onPick={setSelected}
-            meta={meta}
-            axisLabels={{
-              tl: "RED (activated)",
-              tr: "YELLOW (surprised)",
-              bl: "BLUE (low)",
-              br: "PURPLE (shame)",
-              xNeg: "Lower intensity",
-              xPos: "Higher intensity",
-              yPos: "Activated",
-              yNeg: "Low / heavy",
-            }}
-          />
+  grid={grid}
+  onPick={setSelected}
+  meta={meta}
+  tileSize={78}
+  labelScale={1.2}
+  axisLabels={{
+    tl: "RED (activated)",
+    tr: "YELLOW (surprised)",
+    bl: "BLUE (low)",
+    br: "PURPLE (shame)",
+    xNeg: "Lower intensity",
+    xPos: "Higher intensity",
+    yPos: "Activated",
+    yNeg: "Low / heavy",
+  }}
+/>
         </div>
 
         <EmotionModal
@@ -193,14 +194,6 @@ function HomePage({
           needsSupplement={needsSupplement}
         />
       </div>
-
-      <style>{`
-        @keyframes gridSunsetDrift {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-2px); }
-          100% { transform: translateY(0px); }
-        }
-      `}</style>
     </div>
   );
 }

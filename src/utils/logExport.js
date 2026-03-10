@@ -10,7 +10,7 @@ function csvEscape(v) {
 }
 
 export function buildReflectionCsv(entries) {
-  const header = [
+    const header = [
     "id",
     "ts",
     "type",
@@ -28,7 +28,8 @@ export function buildReflectionCsv(entries) {
     "observation",
     "theology_key",
     "gratitude_prompt",
-    "gratitude_text"
+    "gratitude_text",
+    "written_prayer"
   ];
 
   const lines = [header.join(",")];
@@ -37,8 +38,7 @@ export function buildReflectionCsv(entries) {
     lines.push(
       header
         .map((k) => csvEscape(e[k] ?? ""))
-        .join(",")
-    );
+        .join(",")    );
   }
 
   return lines.join("\n");

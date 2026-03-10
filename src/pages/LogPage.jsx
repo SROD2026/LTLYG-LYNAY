@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import Header from "../components/layout/Header.jsx";
 import TopNav from "../components/layout/TopNav.jsx";
 import { getLogPageBackground } from "../utils/pageThemes.js";
+import InteroStickFigure from "../components/interoception/InteroStickFigure.jsx";
 
 import {
   loadReflectionLog,
@@ -58,44 +59,48 @@ function getTypeLabel(type) {
 function getTypeTheme(type) {
   if (type === "violent") {
     return {
-      badgeBg: "rgba(255,120,100,0.16)",
-      badgeText: "rgba(136,40,28,0.94)",
-      badgeBorder: "rgba(220,92,70,0.26)",
-      cardBorder: "rgba(216,104,90,0.18)",
+      badgeBg: "rgba(255,120,100,0.12)",
+      badgeText: "rgba(126,42,32,0.94)",
+      badgeBorder: "rgba(220,92,70,0.22)",
+      cardBorder: "rgba(216,104,90,0.20)",
+      cardBg: "rgba(255, 236, 230, 0.82)",
       topBar:
-        "linear-gradient(90deg, rgba(219,88,57,0.95), rgba(244,161,94,0.92))",
+        "linear-gradient(90deg, rgba(219,88,57,0.92), rgba(244,161,94,0.88))",
     };
   }
 
   if (type === "gratitude") {
     return {
-      badgeBg: "rgba(110,185,110,0.16)",
+      badgeBg: "rgba(110,185,110,0.12)",
       badgeText: "rgba(41,99,54,0.96)",
-      badgeBorder: "rgba(92,156,96,0.24)",
-      cardBorder: "rgba(104,166,112,0.18)",
+      badgeBorder: "rgba(92,156,96,0.22)",
+      cardBorder: "rgba(104,166,112,0.20)",
+      cardBg: "rgba(235, 247, 232, 0.84)",
       topBar:
-        "linear-gradient(90deg, rgba(79,166,100,0.95), rgba(202,186,77,0.92))",
+        "linear-gradient(90deg, rgba(79,166,100,0.92), rgba(202,186,77,0.88))",
     };
   }
 
   if (type === "prayer") {
     return {
-      badgeBg: "rgba(108,126,214,0.16)",
+      badgeBg: "rgba(108,126,214,0.12)",
       badgeText: "rgba(54,68,146,0.96)",
-      badgeBorder: "rgba(98,119,210,0.24)",
-      cardBorder: "rgba(106,124,214,0.18)",
+      badgeBorder: "rgba(98,119,210,0.22)",
+      cardBorder: "rgba(106,124,214,0.20)",
+      cardBg: "rgba(236, 240, 255, 0.84)",
       topBar:
-        "linear-gradient(90deg, rgba(86,104,214,0.95), rgba(120,160,255,0.92))",
+        "linear-gradient(90deg, rgba(86,104,214,0.92), rgba(120,160,255,0.88))",
     };
   }
 
   return {
-    badgeBg: "rgba(111,132,232,0.14)",
+    badgeBg: "rgba(111,132,232,0.10)",
     badgeText: "rgba(53,68,146,0.96)",
-    badgeBorder: "rgba(98,119,210,0.22)",
-    cardBorder: "rgba(106,124,214,0.18)",
+    badgeBorder: "rgba(98,119,210,0.20)",
+    cardBorder: "rgba(106,124,214,0.20)",
+    cardBg: "rgba(239, 243, 255, 0.84)",
     topBar:
-      "linear-gradient(90deg, rgba(92,114,214,0.95), rgba(143,168,255,0.92))",
+      "linear-gradient(90deg, rgba(92,114,214,0.92), rgba(143,168,255,0.88))",
   };
 }
 
@@ -339,16 +344,13 @@ function ReflectionCard({ entry, expanded, onToggle }) {
     entry.request
       ? { label: "Request", value: entry.request }
       : null,
-    entry.written_prayer
-      ? { label: "Written prayer", value: entry.written_prayer }
-      : null,
     entry.gratitude_text
       ? { label: "Gratitude", value: entry.gratitude_text }
       : null,
     entry.theology_key
       ? { label: "Theology", value: entry.theology_key }
       : null,
-    body
+    body && entry.type !== "prayer"
       ? { label: "Body", value: body }
       : null,
   ].filter(Boolean);
@@ -358,11 +360,12 @@ function ReflectionCard({ entry, expanded, onToggle }) {
       style={{
         border: `1px solid ${theme.cardBorder}`,
         borderRadius: 16,
-        background: "rgba(255,255,255,0.36)",
+        background: theme.cardBg,
         color: "rgba(42, 44, 76, 0.94)",
         boxShadow: "0 8px 20px rgba(110, 118, 190, 0.08)",
         overflow: "hidden",
         display: "grid",
+        minWidth: 0,
       }}
     >
       <div
@@ -373,7 +376,7 @@ function ReflectionCard({ entry, expanded, onToggle }) {
         }}
       />
 
-      <div style={{ padding: 14, display: "grid", gap: 12 }}>
+      <div style={{ padding: 14, display: "grid", gap: 12, minWidth: 0 }}>
         <div
           style={{
             display: "grid",
@@ -382,7 +385,7 @@ function ReflectionCard({ entry, expanded, onToggle }) {
             alignItems: "start",
           }}
         >
-          <div style={{ display: "grid", gap: 6 }}>
+          <div style={{ display: "grid", gap: 6, minWidth: 0 }}>
             <div
               style={{
                 display: "flex",
@@ -397,6 +400,8 @@ function ReflectionCard({ entry, expanded, onToggle }) {
                   fontSize: 18,
                   lineHeight: 1.15,
                   color: "rgba(54, 56, 92, 0.98)",
+                  minWidth: 0,
+                  overflowWrap: "anywhere",
                 }}
               >
                 {toSentenceCase(title)}
@@ -447,22 +452,135 @@ function ReflectionCard({ entry, expanded, onToggle }) {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: expanded ? "1fr" : "1fr 120px",
+            gridTemplateColumns: expanded ? "1fr" : "minmax(0, 1fr) 120px",
             gap: 12,
             alignItems: "start",
           }}
         >
-          <div style={{ display: "grid", gap: 10 }}>
+          <div style={{ display: "grid", gap: 10, minWidth: 0 }}>
             <div
               style={{
                 fontSize: expanded ? 14 : 13,
                 lineHeight: 1.48,
                 color: "rgba(60, 62, 95, 0.94)",
                 fontWeight: expanded ? 700 : 600,
+                overflowWrap: "anywhere",
               }}
             >
               {expanded ? displayReframe || compactSummary : compactSummary}
             </div>
+
+            {expanded && entry.type === "prayer" ? (
+              <div
+                style={{
+                  display: "grid",
+                  gap: 12,
+                  marginTop: 4,
+                }}
+              >
+                {Array.isArray(entry.scriptures) && entry.scriptures.length > 0 ? (
+                  <div
+                    style={{
+                      borderRadius: 14,
+                      border: "1px solid rgba(255,255,255,0.14)",
+                      background: `
+                        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02)),
+                        radial-gradient(circle at 30% 22%, rgba(255,255,255,0.12), transparent 42%),
+                        rgba(108,126,214,0.18)
+                      `,
+                      boxShadow: "inset 0 0 6px rgba(0,0,0,0.14), 0 6px 18px rgba(0,0,0,0.12)",
+                      padding: 12,
+                      display: "grid",
+                      gap: 8,
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: 12,
+                        fontWeight: 800,
+                        color: "rgba(80, 86, 126, 0.88)",
+                      }}
+                    >
+                      Supporting scripture
+                    </div>
+
+                    {entry.scriptures.map((s, idx) => (
+                      <div
+                        key={`${s?.ref || "scripture"}-${idx}`}
+                        style={{
+                          display: "grid",
+                          gap: 4,
+                          padding: 10,
+                          borderRadius: 12,
+                          border: "1px solid rgba(255,255,255,0.12)",
+                          background: "rgba(255,255,255,0.08)",
+                          boxShadow: "inset 0 0 4px rgba(0,0,0,0.10)",
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: 13,
+                            fontWeight: 800,
+                            color: "rgba(58, 64, 108, 0.96)",
+                          }}
+                        >
+                          {s?.ref || ""}
+                        </div>
+
+                        <div
+                          style={{
+                            fontSize: 13,
+                            lineHeight: 1.5,
+                            color: "rgba(52, 56, 92, 0.90)",
+                          }}
+                        >
+                          {s?.principle || ""}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+
+                {Array.isArray(entry.intero) && entry.intero.length > 0 ? (
+                  <div
+                    style={{
+                      borderRadius: 14,
+                      border: "1px solid rgba(255,255,255,0.10)",
+                      background: "rgba(255,255,255,0.34)",
+                      boxShadow: "inset 0 0 6px rgba(255,255,255,0.03), 0 8px 18px rgba(0,0,0,0.10)",
+                      padding: 12,
+                      display: "grid",
+                      gap: 10,
+                      justifyItems: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        justifySelf: "stretch",
+                        fontSize: 12,
+                        fontWeight: 800,
+                        color: "rgba(80, 86, 126, 0.88)",
+                      }}
+                    >
+                      Interoception
+                    </div>
+
+<InteroStickFigure intero={entry.intero} theme="log" />
+
+                    <div
+                      style={{
+                        fontSize: 12,
+                        lineHeight: 1.45,
+                        color: "rgba(52, 56, 92, 0.84)",
+                        textAlign: "center",
+                      }}
+                    >
+                      {renderBodyText(entry.intero)}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
 
             {expanded && detailRows.length ? (
               <div style={{ display: "grid", gap: 8 }}>
@@ -471,7 +589,7 @@ function ReflectionCard({ entry, expanded, onToggle }) {
                     key={`${row.label}-${row.value}`}
                     style={{
                       display: "grid",
-                      gridTemplateColumns: "100px 1fr",
+                      gridTemplateColumns: "100px minmax(0, 1fr)",
                       gap: 10,
                       alignItems: "start",
                     }}
@@ -502,7 +620,7 @@ function ReflectionCard({ entry, expanded, onToggle }) {
             ) : null}
           </div>
 
-          {entry.pngDataUrl ? (
+          {entry.pngDataUrl && !(expanded && entry.type === "prayer") ? (
             <button
               type="button"
               onClick={onToggle}
@@ -525,8 +643,8 @@ function ReflectionCard({ entry, expanded, onToggle }) {
                   height: expanded ? "auto" : 96,
                   objectFit: "cover",
                   borderRadius: 12,
-                  border: "1px solid rgba(98, 110, 176, 0.14)",
-                  background: "rgba(233,238,255,0.78)",
+                  border: "1px solid rgba(255,255,255,0.10)",
+                  background: "rgba(0,0,0,0.10)",
                   padding: 6,
                   boxSizing: "border-box",
                 }}
@@ -599,22 +717,50 @@ export default function LogPage({ goHome }) {
 
   return (
     <div className="container" style={pageStyle}>
+      <style>{`
+        .logCardsGrid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+          align-items: start;
+        }
+
+        @media (max-width: 1100px) {
+          .logCardsGrid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 720px) {
+          .logCardsGrid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 820px) {
+          .logHeaderGrid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+
       <div
         className="appShell"
         style={{
           animation: "logTwilightDrift 18s ease-in-out infinite",
           width: "100%",
-          maxWidth: 1200,
+          maxWidth: 1000,
           margin: "0 auto",
         }}
       >
         <div className="panel">
-          <div style={{ display: "grid", gap: 16 }}>
+          <div style={{ display: "grid", gap: 12 }}>
             <div
+              className="logHeaderGrid"
               style={{
                 display: "grid",
-                gridTemplateColumns: "1fr auto",
-                gap: 16,
+                gridTemplateColumns: "minmax(280px, 340px) 1fr",
+                gap: 14,
                 alignItems: "start",
               }}
             >
@@ -654,11 +800,8 @@ export default function LogPage({ goHome }) {
             <div style={{ display: "grid", gap: 12 }}>
               <div
                 style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 10,
-                  alignItems: "center",
-                  justifyContent: "space-between",
+                  display: "grid",
+                  gap: 8,
                 }}
               >
                 <FilterTabs value={filter} onChange={setFilter} />
@@ -725,13 +868,7 @@ export default function LogPage({ goHome }) {
                 : "No entries match this filter."}
             </div>
           ) : (
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-                gap: 14,
-              }}
-            >
+            <div className="logCardsGrid">
               {filteredEntries.map((entry, idx) => {
                 const key = entry.id || `row-${idx}`;
                 return (
@@ -747,20 +884,6 @@ export default function LogPage({ goHome }) {
           )}
         </div>
       </div>
-
-      <style>{`
-        @keyframes logTwilightDrift {
-          0% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-2px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
-        }
-      `}</style>
     </div>
   );
 }

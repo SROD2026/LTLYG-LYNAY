@@ -18,7 +18,6 @@ const THEOLOGY_ALIASES = {
   lying_by_omission: "no_lying_or_omission",
   omission_of_truth: "no_lying_or_omission",
   concealed_truth: "no_lying_or_omission",
-  concealment: "no_lying_or_omission",
   half_truth: "no_lying_or_omission",
   half_truths: "no_lying_or_omission",
 
@@ -54,17 +53,14 @@ const THEOLOGY_ALIASES = {
   coercion: "no_manipulation",
 
   lying_or_omission: "no_lying_or_omission",
-lying_by_omission: "no_lying_or_omission",
-omission: "no_lying_or_omission",
 concealment: "no_lying_or_omission",
-half_truth: "no_lying_or_omission",
 
   respect_boundaries: "respect_boundaries",
   boundaries: "respect_boundaries",
 };
 
 function TheologyDropdownList({ keys, theologyLookup }) {
-  const [openKeys, setOpenKeys] = useState(null);
+  const [openKey, setOpenKey] = useState(null);
 
 function toggle(k) {
   setOpenKey((prev) => (prev === k ? null : k));
@@ -362,7 +358,9 @@ const theologyKeys = useMemo(() => {
             </div>
           ) : null}
 
-          <TheologyDropdownList keys={theologyKeys} theologyLookup={theologyLookup} />
+{theologyKeys.length > 0 ? (
+  <TheologyDropdownList keys={theologyKeys} theologyLookup={theologyLookup} />
+) : null}
 
           {copyBlock ? (
             <div style={{ display: "grid", gap: 6 }}>

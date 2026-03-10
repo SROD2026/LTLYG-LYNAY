@@ -27,7 +27,7 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  background: var(--bg);
+  background: #0b0f14;
   color: var(--text);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   -webkit-tap-highlight-color: transparent;
@@ -58,6 +58,10 @@ button {
   padding: 16px;
   padding-bottom: calc(16px + env(safe-area-inset-bottom));
   padding-top: calc(16px + env(safe-area-inset-top));
-  overflow-x: hidden;
+  overflow-x: visible;
   overflow-y: visible;
+}
+
+.gridScroll {
+  width: 100%;
 }

@@ -1,5 +1,4 @@
 // src/utils/pageThemes.js
-
 import { cellColor } from "./color.js";
 
 export function getGridPageBackground(selected) {
@@ -77,7 +76,10 @@ export function getViolentPageBackground(selected) {
   }
 
   const { x = 0, y = 0 } = selected || {};
-  const quadrant = x >= 0 && y >= 0 ? "Q1" : x < 0 && y >= 0 ? "Q2" : x < 0 && y < 0 ? "Q3" : "Q4";
+  const quadrant =
+    x >= 0 && y >= 0 ? "Q1" :
+    x < 0 && y >= 0 ? "Q2" :
+    x < 0 && y < 0 ? "Q3" : "Q4";
 
   const QUADRANT_COLORS = {
     Q1: "#f2a13f",
@@ -100,6 +102,29 @@ export function getViolentPageBackground(selected) {
     `,
     backgroundSize: "170% 170%, 180% 180%, 180% 180%, 160% 160%, 150% 150%, 100% 100%",
     backgroundPosition: "0% 0%, 0% 0%, 100% 0%, 50% 50%, 50% 50%, 0 0",
+  };
+}
+
+export function getCheckInPageBackground() {
+  const sunsetBase = `
+    linear-gradient(
+      to top,
+      #efd6a5 0%,
+      #f4c2a1 16%,
+      #f3aab2 34%,
+      #e59bc8 54%,
+      #cda6ea 76%,
+      #9cc0f6 100%
+    )
+  `;
+
+  return {
+    "--page-bg": "#f3c9a8",
+    "--page-bg-gradient": `
+      radial-gradient(circle at 50% 78%, rgba(255, 226, 170, 0.55) 0%, transparent 26%),
+      radial-gradient(circle at 50% 38%, rgba(255, 176, 196, 0.28) 0%, transparent 34%),
+      ${sunsetBase}
+    `,
   };
 }
 
@@ -153,7 +178,7 @@ export function getPurposePageBackground() {
   };
 }
 
-  export function getCommunicationPageBackground() {
+export function getCommunicationPageBackground() {
   return {
     "--page-bg": "#7b6bd1",
     "--page-bg-gradient": `
@@ -173,6 +198,7 @@ export function getPurposePageBackground() {
     backgroundPosition: "0% 0%, 100% 0%, 100% 100%, 0% 100%, 0 0",
   };
 }
+
 export function getNeedsPageBackground() {
   return {
     "--page-bg": "#4ea8a9",
@@ -217,10 +243,14 @@ export function getPrayerPageBackground(selected) {
   }
 
   const { x = 0, y = 0 } = selected || {};
-  const tint = x < 0 && y >= 0 ? "rgba(201,60,60,0.24)"
-    : x < 0 && y < 0 ? "rgba(65,112,212,0.24)"
-    : x >= 0 && y >= 0 ? "rgba(220,190,68,0.24)"
-    : "rgba(72,176,100,0.24)";
+  const tint =
+    x < 0 && y >= 0
+      ? "rgba(201,60,60,0.24)"
+      : x < 0 && y < 0
+      ? "rgba(65,112,212,0.24)"
+      : x >= 0 && y >= 0
+      ? "rgba(220,190,68,0.24)"
+      : "rgba(72,176,100,0.24)";
 
   return {
     "--page-bg": "#2a3f74",
@@ -235,4 +265,143 @@ export function getPrayerPageBackground(selected) {
     backgroundSize: "150% 150%, 170% 170%, 170% 170%, 170% 170%, 170% 170%, 100% 100%",
     backgroundPosition: "50% 50%, 0% 0%, 0% 100%, 100% 0%, 100% 100%, 0 0",
   };
+}
+
+export function getTopNavTone(targetKey) {
+  switch (targetKey) {
+    case "home":
+      return {
+        bg: `
+          linear-gradient(
+            180deg,
+            rgba(247,248,247,0.92) 0%,
+            rgba(241,244,242,0.88) 48%,
+            rgba(247,248,247,0.92) 100%
+          )
+        `,
+        border: "rgba(108, 118, 110, 0.18)",
+        text: "rgba(35, 48, 40, 0.94)",
+        shadow: "0 10px 22px rgba(90, 98, 92, 0.10)",
+      };
+
+    case "grid":
+      return {
+        bg: `
+          linear-gradient(
+            180deg,
+            rgba(138,164,234,0.86) 0%,
+            rgba(185,199,240,0.84) 52%,
+            rgba(235,224,210,0.84) 100%
+          )
+        `,
+        border: "rgba(102, 120, 194, 0.22)",
+        text: "rgba(37, 49, 77, 0.96)",
+        shadow: "0 10px 22px rgba(108, 124, 196, 0.12)",
+      };
+
+    case "violent":
+      return {
+        bg: `
+          linear-gradient(
+            180deg,
+            rgba(201,90,72,0.88) 0%,
+            rgba(162,74,91,0.86) 38%,
+            rgba(122,53,91,0.84) 68%,
+            rgba(226,154,88,0.84) 100%
+          )
+        `,
+        border: "rgba(183, 88, 71, 0.26)",
+        text: "rgba(255, 248, 245, 0.98)",
+        shadow: "0 10px 22px rgba(132, 70, 40, 0.14)",
+      };
+
+    case "checkin":
+      return {
+        bg: `
+          linear-gradient(
+            180deg,
+            rgba(239,214,165,0.88) 0%,
+            rgba(244,194,161,0.86) 16%,
+            rgba(243,170,178,0.84) 34%,
+            rgba(229,155,200,0.82) 54%,
+            rgba(205,166,234,0.82) 76%,
+            rgba(156,192,246,0.84) 100%
+          )
+        `,
+        border: "rgba(214, 150, 152, 0.24)",
+        text: "rgba(70, 46, 58, 0.96)",
+        shadow: "0 10px 22px rgba(170, 124, 140, 0.14)",
+      };
+
+    case "needs":
+      return {
+        bg: `
+          linear-gradient(
+            180deg,
+            rgba(47,123,139,0.86) 0%,
+            rgba(78,168,169,0.84) 42%,
+            rgba(143,209,198,0.82) 76%,
+            rgba(223,241,215,0.82) 100%
+          )
+        `,
+        border: "rgba(61, 137, 145, 0.26)",
+        text: "rgba(255,255,255,0.98)",
+        shadow: "0 10px 22px rgba(47, 109, 110, 0.14)",
+      };
+
+    case "prayer":
+      return {
+        bg: `
+          linear-gradient(
+            135deg,
+            rgba(141,47,67,0.86) 0%,
+            rgba(57,94,168,0.84) 34%,
+            rgba(216,184,71,0.80) 68%,
+            rgba(92,168,103,0.82) 100%
+          )
+        `,
+        border: "rgba(82, 97, 170, 0.28)",
+        text: "rgba(255,255,255,0.98)",
+        shadow: "0 10px 22px rgba(86, 100, 152, 0.14)",
+      };
+
+    case "communication":
+      return {
+        bg: `
+          linear-gradient(
+            180deg,
+            rgba(91,95,199,0.88) 0%,
+            rgba(123,107,209,0.86) 40%,
+            rgba(156,139,228,0.84) 72%,
+            rgba(199,196,244,0.82) 100%
+          )
+        `,
+        border: "rgba(92, 96, 172, 0.28)",
+        text: "rgba(255,255,255,0.98)",
+        shadow: "0 10px 22px rgba(94, 82, 172, 0.14)",
+      };
+
+    case "log":
+      return {
+        bg: `
+          linear-gradient(
+            180deg,
+            rgba(185,181,236,0.88) 0%,
+            rgba(216,212,242,0.84) 52%,
+            rgba(238,241,251,0.82) 100%
+          )
+        `,
+        border: "rgba(126, 132, 199, 0.22)",
+        text: "rgba(52, 57, 93, 0.96)",
+        shadow: "0 10px 22px rgba(92, 102, 162, 0.12)",
+      };
+
+    default:
+      return {
+        bg: "linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.12))",
+        border: "rgba(255,255,255,0.16)",
+        text: "rgba(40,44,78,0.92)",
+        shadow: "0 10px 22px rgba(92, 102, 162, 0.10)",
+      };
+  }
 }

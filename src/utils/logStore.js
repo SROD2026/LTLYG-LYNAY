@@ -52,6 +52,17 @@ export function appendReflectionEntry(entry) {
     gratitude_prompt: entry.gratitude_prompt || "",
     gratitude_text: entry.gratitude_text || "",
 
+    written_prayer: entry.written_prayer || "",
+
+    scriptures: Array.isArray(entry.scriptures) ? entry.scriptures : [],
+    philippians_trait: entry.philippians_trait || "",
+    philippians_needs: Array.isArray(entry.philippians_needs)
+      ? entry.philippians_needs
+      : [],
+    philippians_shifts: Array.isArray(entry.philippians_shifts)
+      ? entry.philippians_shifts
+      : [],
+
     intero: Array.isArray(entry.intero) ? entry.intero : [],
     pngDataUrl: entry.pngDataUrl || "",
   };
