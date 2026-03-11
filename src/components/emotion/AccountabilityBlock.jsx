@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Panel from "../ui/Panel.jsx";
 import Select from "../ui/Select.jsx";
 import { guessViolationKeyFromText } from "../../utils/data.js";
+import ScriptureRotator from "../ui/ScriptureRotator.jsx";
 
 const THEOLOGY_ALIASES = {
   corrupt_harmful_speech: "respectful_language",
@@ -169,19 +170,20 @@ border: "1px solid rgba(255,255,255,0.08)",
                     ) : null}
 
                     {Array.isArray(t?.scriptures) && t.scriptures.length ? (
-                      <div style={{ fontSize: 13, color: "rgba(255,255,255,0.86)", lineHeight: 1.45 }}>
-                        <b>Scripture:</b>
-                        <ul style={{ margin: "6px 0 0 18px", padding: 0 }}>
-                          {t.scriptures.map((s, i) => (
-                            <li key={i}>
-                              <b>{s.ref}</b>: {s.principle}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ) : (
-                      <div style={{ fontSize: 13, color: "rgba(255,255,255,0.70)" }}>(No scriptures found.)</div>
-                    )}
+  <ScriptureRotator
+    scriptures={t.scriptures}
+    perPage={2}
+    title="Scripture"
+    buttonLabel="Show more"
+    emptyText="(No scriptures found.)"
+    containerStyle={{
+      marginTop: 4,
+    }}
+  />
+) : (
+  <div style={{ fontSize: 13, color: "rgba(255,255,255,0.70)" }}>(No scriptures found.)</div>
+)}
+
                   </>
                 )}
               </div>

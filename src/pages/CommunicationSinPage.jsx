@@ -4,6 +4,7 @@ import Header from "../components/layout/Header.jsx";
 import TopNav from "../components/layout/TopNav.jsx";
 import Panel from "../components/ui/Panel.jsx";
 import { getCommunicationPageBackground } from "../utils/pageThemes.js";
+import ScriptureRotator from "../components/ui/ScriptureRotator.jsx";
 
 function normalizeItems(obj) {
   if (!obj || typeof obj !== "object") return [];
@@ -199,14 +200,14 @@ color: "#1b1f3b",
 function SectionList({ title, intro, emoji, subtitle, items, onOpen }) {
   return (
     <Panel
-      style={{
-        display: "grid",
-        gap: 14,
-        background: "rgba(255,255,255,0.12)",
-        border: "1px solid rgba(255,255,255,0.16)",
-        boxShadow: "0 10px 24px rgba(35, 32, 82, 0.08)",
-      }}
-    >
+  style={{
+    display: "grid",
+    gap: 14,
+    background: "linear-gradient(180deg, rgba(244, 207, 249, 0.62), rgba(93, 57, 184, 0.64))",
+    border: "1px solid rgba(255,255,255,0.16)",
+    boxShadow: "0 10px 24px rgba(35, 32, 82, 0.08)",
+  }}
+>
       <div style={{ display: "grid", gap: 8 }}>
         <div style={{ fontSize: 28, fontWeight: 900, color: "#ffffff" }}>
           {title}
@@ -217,6 +218,7 @@ function SectionList({ title, intro, emoji, subtitle, items, onOpen }) {
       </div>
 
       <div
+      className="mobileStack"
         style={{
           display: "grid",
           gridTemplateColumns: "320px 1fr",
@@ -261,23 +263,20 @@ function TheologyMiniCard({ title, body, verses = [] }) {
       <div style={{ fontSize: 18, fontWeight: 900, color: "#ffffff", lineHeight: 1.2 }}>{title}</div>
       <div style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.95)" }}>{body}</div>
       {verses.length ? (
-        <div style={{ display: "grid", gap: 8 }}>
-          {verses.map((verse) => (
-            <div
-              key={verse.ref}
-              style={{
-                borderRadius: 12,
-                border: "1px solid rgba(255,255,255,0.14)",
-                background: "rgba(27,31,59,0.20)",
-                padding: 10,
-              }}
-            >
-              <div style={{ fontWeight: 900, color: "rgba(255,255,255,0.98)", marginBottom: 4 }}>{verse.ref}</div>
-              <div style={{ fontSize: 13, lineHeight: 1.5, color: "rgba(255,255,255,0.92)" }}>{verse.principle}</div>
-            </div>
-          ))}
-        </div>
-      ) : null}
+  <ScriptureRotator
+    scriptures={verses}
+    perPage={2}
+    title=""
+    buttonLabel="Show more"
+    containerStyle={{ gap: 8 }}
+    cardStyle={{
+      borderRadius: 12,
+      border: "1px solid rgba(255,255,255,0.14)",
+      background: "rgba(27,31,59,0.20)",
+      padding: 10,
+    }}
+  />
+) : null}
     </div>
   );
 }
@@ -409,32 +408,6 @@ function BulletList({ items, compact = false, textColor = "#ffffff" }) {
   );
 }
 
-function ScriptureList({ items }) {
-  if (!Array.isArray(items) || items.length === 0) return null;
-
-  return (
-    <div style={{ display: "grid", gap: 10 }}>
-      {items.map((s, i) => (
-        <div
-          key={i}
-          style={{
-            border: "1px solid rgba(255,255,255,0.16)",
-            borderRadius: 12,
-            padding: 12,
-            background: "rgba(255,255,255,0.06)",
-          }}
-        >
-          <div style={{ fontWeight: 900, marginBottom: 6, color: "rgba(255,255,255,0.98)" }}>
-            {s.ref}
-          </div>
-          <div style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(255,255,255,0.94)" }}>
-            {s.principle}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 function ConvictionColumns({ block }) {
   if (!block || typeof block !== "object") return null;
@@ -508,14 +481,19 @@ function SinModal({ item, onClose }) {
         if (e.target === e.currentTarget) onClose?.();
       }}
       style={{
-        position: "fixed",
-        inset: 0,
-background: "rgba(10,12,20,0.74)",
-backdropFilter: "blur(2px)",
-        overflowY: "auto",
-        padding: 18,
-        zIndex: 9999,
-      }}
+  position: "fixed",
+  inset: 0,
+  zIndex: 9999,
+  overflowY: "auto",
+  display: "grid",
+  justifyItems: "center",
+  alignItems: "start",
+  padding:
+    "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
+  background: "rgba(10,12,20,0.52)",
+  backdropFilter: "blur(3px)",
+  WebkitBackdropFilter: "blur(3px)",
+}}
     >
       <div
         style={{
@@ -583,8 +561,13 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
               setOpenSection(openSection === "scripture" ? null : "scripture")
             }
           >
-            <ScriptureList items={item.scriptures} />
-          </SectionCard>
+<ScriptureRotator
+  scriptures={item.scriptures || []}
+  perPage={2}
+  title=""
+  buttonLabel="Show more"
+  emptyText="(No scriptures available.)"
+/>          </SectionCard>
 
           <SectionCard
             type="forms"
@@ -726,6 +709,11 @@ useEffect(() => {
             goLog={() => (window.location.hash = "#/log")}
           />
         </div>
+<Panel
+  style={{
+        background:           "linear-gradient(180deg, rgb(242, 242, 243), rgb(164, 107, 203))",
+  }}
+>
 
         <div className="theologyPanel">
           <div style={{ display: "grid", gap: 12,  }}>
@@ -744,7 +732,13 @@ useEffect(() => {
             </ul>
           </div>
         </div>
-
+</Panel>
+<Panel
+  style={{
+        background: "linear-gradient(180deg, rgba(244, 207, 249, 0.62), rgba(156, 118, 253, 0.64))",
+    border: "1px solid rgba(255,255,255,0.12)",
+  }}
+>
         <div className="theologyPanel">
           <div style={{ display: "grid", gap: 14 }}>
             <div style={{ fontWeight: 900, fontSize: 24, color: "#0e0d0d" }}>Theological foundations for communication</div>
@@ -786,6 +780,7 @@ useEffect(() => {
             </div>
           </div>
         </div>
+</Panel>
 
         {error ? (
           <div className="panel">
@@ -796,6 +791,7 @@ useEffect(() => {
         ) : null}
 
         <SectionList
+        
           title={categories?.speech_sins?.title || "Speech sins"}
           intro={
             categories?.speech_sins?.intro ||

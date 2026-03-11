@@ -117,7 +117,7 @@ color: "rgba(24,28,34,0.96)"                }}
   meta={prayerMeta}
   colorFn={prayerColor}
   onPick={setSelected}
-  tileSize={78}
+  tileSize={Math.min(78, (window.innerWidth - 40) / 12)}
   labelScale={1.15}
   axisLabels={{
     tl: "Painful + activated",

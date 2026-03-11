@@ -164,12 +164,12 @@ function HomePage({
           </div>
         </div>
 
-        <div className="panel textOutlineGreen" style={{ width: "fit-content", margin: "0 auto" }}>
+        <div className="panel textOutlineGreen" style={{ width: "100%", margin: "0 auto", minWidth: 0 }}>
           <EmotionGrid
   grid={grid}
   onPick={setSelected}
   meta={meta}
-  tileSize={78}
+  tileSize={Math.min(78, (window.innerWidth - 40) / 12)}
   labelScale={1.2}
   axisLabels={{
     tl: "RED (activated)",

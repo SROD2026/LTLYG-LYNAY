@@ -16,6 +16,7 @@ import {
 
 import { cellColor } from "../../utils/color.js";
 import { uniqStrings } from "../../utils/data.js";
+import { buildRequestFlow } from "../../utils/flowEngine.js";
 import { appendReflectionEntry, loadReflectionLog } from "../../utils/logStore.js";
 
 import JSZip from "jszip";
@@ -141,7 +142,6 @@ const BODY_MAP = {
 
 const blankIntero = () => ({ region: "", sensation: "" });
 
-
 function isCompleteIntero(x) {
   return !!(x && x.region && x.sensation);
 }
@@ -198,7 +198,7 @@ export default function EmotionModal({
   causeIndex = {},
   replacementOptions = [],
   needsSupplement = { global: [] },
-}) {
+  }) {
   // -------------------------
   // UI coloring
   // -------------------------
@@ -348,7 +348,7 @@ useEffect(() => {
 
   const needsList = mode === "violent" ? replacementNeeds : needsForSelectedWord;
 
-const allNeeds = useMemo(() => {
+  const allNeeds = useMemo(() => {
   const global = Array.isArray(needsSupplement?.global) ? needsSupplement.global : [];
 
   const primary = Array.isArray(needsList) ? needsList.map(String) : [];
@@ -356,7 +356,9 @@ const allNeeds = useMemo(() => {
 
   // Keep the emotion-specific needs first, then fill with supplemental needs.
   return merged.slice(0, 10);
-}, [needsList, needsSupplement]);
+  }, [needsList, needsSupplement]);
+
+
   // Auto-set selectedNeed
   useEffect(() => {
     if (!allNeeds || allNeeds.length === 0) return;
@@ -366,6 +368,19 @@ const allNeeds = useMemo(() => {
     }
   }, [allNeeds, selectedNeed]);
 
+
+const requestFlow = useMemo(() => {
+  return buildRequestFlow(selectedNeed);
+}, [selectedNeed]);
+
+const suggestedRequests = requestFlow.requests || [];
+const suggestedAgreements = requestFlow.agreements || [];
+const suggestedRepairSteps = requestFlow.repairSteps || [];
+const requestFlowCategory = requestFlow.category || "";
+const requestFlowCategoryDescription = requestFlow.categoryDescription || "";
+const requestFlowRationale = requestFlow.counselingRationale || "";
+const requestFlowScripture = requestFlow.scriptureSupport || [];
+  
   // Intero tab visibility + auto-advance
   const visibleInteroTabs = useMemo(() => {
     let v = 1;
@@ -627,7 +642,8 @@ return (
     <div
       aria-hidden="true"
       style={{
-        width: "min(920px, 100%)",
+width: "100%",
+maxWidth: 920,
         margin: "24px auto 40px",
         height: spacerHeight,
         visibility: "hidden",
@@ -641,11 +657,14 @@ return (
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose?.();
       }}
-      style={{
+     style={{
   position: "fixed",
   inset: 0,
   zIndex: 9999,
   overflowY: "auto",
+  display: "grid",
+  justifyItems: "center",
+  alignItems: "start",
   padding:
     "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
   background: "rgba(10,12,20,0.52)",
@@ -656,8 +675,10 @@ return (
       <div
   ref={modalCardRef}
   style={{
-    width: "min(920px, 100%)",
-    margin: "0 auto",
+    width: "100%",
+maxWidth: 920,
+margin: 0,
+justifySelf: "center",
   position: "relative",
     borderRadius: 18,
     border: `2px solid ${overlayHex || "rgba(255,255,255,0.12)"}`,
@@ -1116,10 +1137,56 @@ return (
       )}
 
       {/* 7) Optional request */}
-      <div style={{ fontWeight: 900, marginTop: 8 }}>7) Optional request</div>
-      <div style={{ color: "rgba(255,255,255,0.90)", fontSize: 14, lineHeight: 1.45 }}>
-        {requestText}
-      </div>
+      <div style={{ display: "grid", gap: 12 }}>
+  <div style={{ fontWeight: 900 }}>7) Suggested requests</div>
+
+  {suggestedRequests.length ? (
+    <div style={{ display: "grid", gap: 8 }}>
+      {suggestedRequests.map((req) => (
+        <div
+          key={req}
+          style={{
+            border: "1px solid rgba(255,255,255,0.10)",
+            borderRadius: 12,
+            padding: 10,
+            background: "rgba(255,255,255,0.05)",
+            color: "rgba(255,255,255,0.92)",
+            fontSize: 14,
+            lineHeight: 1.45,
+          }}
+        >
+          {req}
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div style={{ color: "rgba(255,255,255,0.90)", fontSize: 14, lineHeight: 1.45 }}>
+      {requestText}
+    </div>
+  )}
+
+  {suggestedAgreements.length ? (
+    <div style={{ display: "grid", gap: 8 }}>
+      <div style={{ fontWeight: 900 }}>8) Possible agreements</div>
+      <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55, color: "rgba(255,255,255,0.92)" }}>
+        {suggestedAgreements.map((agreement) => (
+          <li key={agreement}>{agreement}</li>
+        ))}
+      </ul>
+    </div>
+  ) : null}
+
+  {suggestedRepairSteps.length ? (
+    <div style={{ display: "grid", gap: 8 }}>
+      <div style={{ fontWeight: 900 }}>9) Stepwise repair</div>
+      <ol style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55, color: "rgba(255,255,255,0.92)" }}>
+        {suggestedRepairSteps.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+    </div>
+  ) : null}
+</div>
     </Panel>
   </>
 )}
@@ -1164,10 +1231,56 @@ return (
     )}
 
     {/* 4) Request */}
-    <div style={{ fontWeight: 900 }}>4) Optional request</div>
+    <div style={{ display: "grid", gap: 12 }}>
+  <div style={{ fontWeight: 900, marginTop: 8 }}>4) Suggested requests</div>
+
+  {suggestedRequests.length ? (
+    <div style={{ display: "grid", gap: 8 }}>
+      {suggestedRequests.map((req) => (
+        <div
+          key={req}
+          style={{
+            border: "1px solid rgba(255,255,255,0.10)",
+            borderRadius: 12,
+            padding: 10,
+            background: "rgba(255,255,255,0.05)",
+            color: "rgba(255,255,255,0.92)",
+            fontSize: 14,
+            lineHeight: 1.45,
+          }}
+        >
+          {req}
+        </div>
+      ))}
+    </div>
+  ) : (
     <div style={{ color: "rgba(255,255,255,0.90)", fontSize: 14, lineHeight: 1.45 }}>
       {requestText}
     </div>
+  )}
+
+  {suggestedAgreements.length ? (
+    <div style={{ display: "grid", gap: 8 }}>
+      <div style={{ fontWeight: 900 }}>5) Possible agreements</div>
+      <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55, color: "rgba(255,255,255,0.92)" }}>
+        {suggestedAgreements.map((agreement) => (
+          <li key={agreement}>{agreement}</li>
+        ))}
+      </ul>
+    </div>
+  ) : null}
+
+  {suggestedRepairSteps.length ? (
+    <div style={{ display: "grid", gap: 8 }}>
+      <div style={{ fontWeight: 900 }}>6) Stepwise repair</div>
+      <ol style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55, color: "rgba(255,255,255,0.92)" }}>
+        {suggestedRepairSteps.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+    </div>
+  ) : null}
+</div>
   </Panel>
 )}        </div>
 

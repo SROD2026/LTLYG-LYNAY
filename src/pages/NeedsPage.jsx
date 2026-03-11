@@ -122,7 +122,9 @@ function SectionCard({ title, subtitle, emoji, children }) {
         {subtitle ? <div style={{ fontSize: 14, lineHeight: 1.55, color: "#ffffff" }}>{subtitle}</div> : null}
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: 14, alignItems: "start" }}>
+      <div 
+      className="mobileStack"
+      style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: 14, alignItems: "start" }}>
         <div
           style={{
             minHeight: 168,
@@ -216,7 +218,7 @@ export default function NeedsPage({ goHome, needsSupplement, purposeDropdown = [
             <div style={{ minWidth: 0, maxWidth: 1120, flex: "1 1 620px" }}>
               <Header
                 title="Needs: what they are, why they matter, and how Scripture supports them"
-                subtitle={<>Needs are not selfish demands. In this tool, needs are the human conditions that help a person live, relate, regulate, tell the truth, and love well. Naming them helps people move from accusation into clarity.</>}
+                subtitle={<></>}
               />
             </div>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", "--btn-bg": "rgba(12, 44, 50, 0.76)", "--btn-border": "rgba(255,255,255,0.14)", "--btn-text": "rgba(255,255,255,0.96)" }}>
@@ -229,12 +231,12 @@ export default function NeedsPage({ goHome, needsSupplement, purposeDropdown = [
         <div className="panel">
           <div style={{ display: "grid", gap: 12 }}>
             <div style={{ fontWeight: 900, fontSize: 20 }}>How this page works</div>
-            <div style={{ lineHeight: 1.6, color: "rgba(255,255,255,0.94)" }}>These categories are organized from the shared global needs list used throughout the app. They are grouped to make it easier to see that needs are broader than one moment of emotion: they include safety, truth, pace, care, agency, and embodied stewardship.</div>
-            <div style={{ lineHeight: 1.6, color: "rgba(255,255,255,0.94)" }}>Theologically, Scripture supports naming real needs without excusing sin. Love seeks the good of the neighbor, truth protects reality, wisdom honors limits, and mutual care helps carry burdens without removing personal responsibility.</div>
+            <div style={{ lineHeight: 1.6, color: "rgba(18, 18, 18, 0.94)" }}>These needs are grouped to make it easier to see that they are broader than one moment of emotion: they include safety, truth, pace, care, agency, and embodied stewardship.</div>
+            <div style={{ lineHeight: 1.6, color: "rgba(0, 0, 0, 0.94)" }}>Scripture supports naming our own real needs without excusing sin. Love seeks the good of the neighbor, truth protects reality, wisdom honors limits, and mutual care helps carry burdens without removing personal responsibility.</div>
           </div>
         </div>
 
-        <SectionCard title="Needs grouped from the app’s global list" subtitle="Select a category to see the needs that belong to it." emoji="🧩">
+        <SectionCard title="List of Needs" subtitle="Select a category to view associated needs." emoji="🧩">
           <div style={{ display: "grid", gap: 14 }}>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {categories.map((group) => {
@@ -261,7 +263,7 @@ export default function NeedsPage({ goHome, needsSupplement, purposeDropdown = [
           </div>
         </SectionCard>
 
-        <SectionCard title="Theological support for needs" subtitle="Scripture does not use modern NVC language, but it clearly supports the human realities that needs language is trying to name." emoji="✝️">
+        <SectionCard title="Theological support for needs" subtitle="Scripture clearly supports the human needs listed. We are content in all circumstances through our hope of eternal life with God. On this earth, our needs are not a given, but through these needs we can learn to love and show compassion to others as Christ did. Putting others needs above our own is the definition of compassion." emoji="✝️">
           <div style={{ display: "grid", gap: 12 }}>
             <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.14)", background: "linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08))", padding: 14, display: "grid", gap: 10 }}>
               <div style={{ fontWeight: 900, fontSize: 18, color: "#ffffff" }}>{theologyBlock.title}</div>
@@ -280,7 +282,7 @@ export default function NeedsPage({ goHome, needsSupplement, purposeDropdown = [
           </div>
         </SectionCard>
 
-        <SectionCard title="Why needs language helps" subtitle="This page exists to keep the app grounded in clarity rather than vague emotionality." emoji="🪜">
+        <SectionCard title="Why needs language helps" subtitle="Needs are not selfish demands. Needs are the human conditions that help a person live, relate, regulate, tell the truth, and love well. Naming our needs in a situation guides the one stating them away from accusation towards a path of mutual understanding" emoji="🪜">
           <div style={{ display: "grid", gap: 12 }}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10 }}>
               {[
@@ -300,9 +302,9 @@ export default function NeedsPage({ goHome, needsSupplement, purposeDropdown = [
         <SectionCard title="Biblical grounding: needs are human, but how we pursue them matters" subtitle="Scripture affirms creaturely need while still requiring love, repentance, and mutual care." emoji="📖">
           <div style={{ display: "grid", gap: 14 }}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10 }}>
-              <TeachingCard title="Human need is not a moral defect" body="People are finite, embodied, relational creatures. Needing safety, honesty, belonging, rest, understanding, and help is not sin. Creaturely dependence is built into human life." />
-              <TeachingCard title="Sin often enters at the strategy level" body="The need may be real while the pursuit becomes distorted. A person can seek belonging through control, seek safety through deception, or seek understanding through accusation instead of truth and love." />
-              <TeachingCard title="Love carries both care and responsibility" body="Biblical care does not deny need, but it also does not erase ownership. We are called to bear burdens together while still refusing manipulation, coercion, and blame-shifting." />
+              <TeachingCard title="Human need is not a moral defect" body="People are finite (limited), embodied, relational creatures. Needing safety, honesty, belonging, rest, understanding, and help is not sin, nor are these needs signs of weakness." />
+              <TeachingCard title="Sin often enters at the strategy level" body="CS Lewis said in Mere Christianity that all persons are trying to get their needs met, the ones who we would call evil are attempting to meet their needs in distorted ways. A person can seek belonging through control, seek safety through deception, or seek understanding through accusation instead of truth and love." />
+              <TeachingCard title="Love carries both care and responsibility" body="Compassion and respect is the pursuit of meeting both others and our own needs (not necessarily wants). We are called to bear burdens together while still refusing manipulation, coercion, and blame-shifting." />
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
@@ -310,16 +312,15 @@ export default function NeedsPage({ goHome, needsSupplement, purposeDropdown = [
                 { refText: "Genesis 2:18", principle: "It is not good for man to be alone; relational need is part of creation, not proof of weakness." },
                 { refText: "Matthew 22:37-39", principle: "Love of God and neighbor frames how needs are pursued and how another person's needs are treated." },
                 { refText: "1 Corinthians 12:21-26", principle: "The body needs every part; dependence and mutual care are normal in God's design." },
-                { refText: "Galatians 6:2-5", principle: "We bear one another's burdens while also bearing our own load; care and responsibility belong together." },
               ].map((item) => (
                 <TheologyCard key={item.refText} refText={item.refText} principle={item.principle} />
               ))}
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10 }}>
-              <TeachingCard title="Example: safety" body="The need for safety is legitimate. Pursuing it through lies, domination, or punishing control is not. Pursuing it through truth, boundaries, support, and wise pace is consistent with love." />
-              <TeachingCard title="Example: belonging" body="The need for belonging is legitimate. Pursuing it through guilt, pressure, or emotional fusion is not. Pursuing it through honesty, mutuality, and faithful presence is more aligned with Scripture." />
-              <TeachingCard title="Example: understanding" body="The need for understanding is legitimate. Pursuing it through accusation, mind-reading, or endless demand is not. Pursuing it through clarification, patient listening, and stepwise explanation protects dignity." />
+              <TeachingCard title="Example: safety" body="Safety is ruineed through lies, domination, or punishing control. Pursuing safety through truth, boundaries, support, and wise pace is consistent with love and godliness." />
+              <TeachingCard title="Example: belonging" body="Guilt, pressure, or emotional fusion is not how we are to get our need of belonging met. Accommodating the need of belonging through honesty, mutuality, and faithful presence is more aligned with Scripture." />
+              <TeachingCard title="Example: understanding" body="Pursuing understanding through accusation, mind-reading, or endless demand is not loving. Pursuing understanding through clarification, patient listening, and stepwise explanation protects dignity." />
             </div>
           </div>
         </SectionCard>

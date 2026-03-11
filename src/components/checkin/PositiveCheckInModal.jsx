@@ -398,9 +398,9 @@ const [spacerHeight, setSpacerHeight] = useState(0);
         modalBodyRef.current.scrollTop = 0;
       }
     });
-  }, [open]);
-
-  useEffect(() => {
+}, [open, showLog, intero, gratitudeText, selectedObservation, selectedTheologyKey, selectedNeedMet]);''
+  
+useEffect(() => {
   if (!open) return;
 
   function measure() {
@@ -516,7 +516,12 @@ function setInteroSensation(idx, sensation) {
     return next;
   });
 
-  function editInteroSlot(idx) {
+  if (editingIndex === idx) {
+    setEditingIndex(null);
+  }
+}
+
+function editInteroSlot(idx) {
   setActiveInteroTab(idx);
   setEditingIndex(idx);
 }
@@ -530,11 +535,6 @@ function clearInteroSlot(idx) {
 
   setEditingIndex((prev) => (prev === idx ? null : prev));
   setActiveInteroTab(idx);
-}
-
-  if (editingIndex === idx) {
-    setEditingIndex(null);
-  }
 }
 
   const interoLines = useMemo(() => interoSentences(intero), [intero]);
@@ -749,7 +749,8 @@ return (
     <div
       aria-hidden="true"
       style={{
-        width: "min(920px, 100%)",
+width: "100%",
+maxWidth: 920,
         margin: "24px auto 40px",
         height: spacerHeight,
         visibility: "hidden",
@@ -767,6 +768,9 @@ style={{
   inset: 0,
   zIndex: 9999,
   overflowY: "auto",
+  display: "grid",
+  justifyItems: "center",
+  alignItems: "start",
   padding:
     "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
   background: "rgba(10,12,20,0.52)",
@@ -778,8 +782,10 @@ style={{
 <div
   ref={modalCardRef}
   style={{
-    width: "min(920px, 100%)",
-    margin: "0 auto",
+   width: "100%",
+maxWidth: 920,
+margin: 0,
+justifySelf: "center",
     position: "relative",
     borderRadius: 18,
     border: `2px solid ${overlayHex || "rgba(255,255,255,0.12)"}`,

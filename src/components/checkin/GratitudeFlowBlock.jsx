@@ -4,6 +4,7 @@
 import { useMemo } from "react";
 import Panel from "../ui/Panel.jsx";
 import Select from "../ui/Select.jsx";
+import ScriptureRotator from "../ui/ScriptureRotator.jsx";
 
 function toTitle(s) {
   return String(s || "")
@@ -168,24 +169,33 @@ export default function GratitudeFlowBlock({
           <div style={{ marginTop: 10, display: "grid", gap: 8 }}>
             <div style={{ fontWeight: 900 }}>{selectedTheology.title || toTitle(selectedTheology.key)}</div>
 
-            {theologyText ? (
-              <div
-                style={{
-                  margin: 0,
-                  whiteSpace: "pre-wrap",
-                  fontSize: 13,
-                  opacity: 0.92,
-                  lineHeight: 1.5,
-                  padding: 10,
-                  borderRadius: 12,
-                  background: "rgba(0,0,0,0.12)",
-                }}
-              >
-                {theologyText}
-              </div>
-            ) : (
-              <div style={{ fontSize: 13, opacity: 0.75 }}>(No verses/body for this theology entry yet.)</div>
-            )}
+           {Array.isArray(selectedTheology?.verses) && selectedTheology.verses.length ? (
+  <ScriptureRotator
+    scriptures={selectedTheology.verses}
+    perPage={2}
+    title="Scripture"
+    buttonLabel="Show more"
+    emptyText="(No scriptures available.)"
+  />
+) : theologyText ? (
+  <div
+    style={{
+      margin: 0,
+      whiteSpace: "pre-wrap",
+      fontSize: 13,
+      opacity: 0.92,
+      lineHeight: 1.5,
+      padding: 10,
+      borderRadius: 12,
+      background: "rgba(0,0,0,0.12)",
+    }}
+  >
+    {theologyText}
+  </div>
+) : (
+  <div style={{ fontSize: 13, opacity: 0.75 }}>(No verses/body for this theology entry yet.)</div>
+)}
+
           </div>
         ) : (
           <div style={{ marginTop: 10, fontSize: 13, opacity: 0.75 }}>(Choose a header to show the associated verses.)</div>

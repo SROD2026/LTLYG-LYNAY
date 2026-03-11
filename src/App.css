@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .container {
   min-height: 100vh;
   padding: 18px;
@@ -92,14 +97,31 @@ button,
 
 .topNav {
   display: flex;
-  align-items: center;
   gap: 8px;
-  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .topNav--desktop {
   flex-wrap: wrap;
   row-gap: 10px;
+}
+
+.topNav--mobile {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+}
+
+.topNav--mobile .topNav__btn {
+  width: 100%;
+  min-width: 0;
+  white-space: normal;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 8px 8px;
+  border-radius: 12px;
 }
 
   /* global font */
@@ -146,7 +168,11 @@ button,
   display: none;
 }
 
-
+@media (max-width: 760px) {
+  .mobileStack {
+    grid-template-columns: 1fr !important;
+  }
+}
 
 @media (max-width: 640px) {
   .gridScroll {
@@ -769,24 +795,41 @@ body:has(.btn-checkin:hover) .container {
 
 @media (max-width: 520px) {
   .purposeHubGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 108px 116px 108px;
     grid-template-areas:
-      "violent"
-      "nonviolent"
-      "prayer"
-      "center"
-      "checkin"
-      "needs"
-      "communication"
-      "log";
+      ". violent ."
+      "nonviolent center prayer"
+      ". checkin ."
+      "needs communication log";
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
     justify-items: center;
   }
 
   .hubCell,
-  .hubTile,
+  .hubTile {
+    width: 108px;
+    height: 108px;
+    min-height: 108px;
+    max-width: 108px;
+  }
+
   .hubCenterCard {
-    width: min(150px, 100%);
-    max-width: 150px;
+    width: 116px;
+    height: 116px;
+    min-height: 116px;
+    max-width: 116px;
+    padding: 8px;
+  }
+
+  .hubCenterCard .centerTitle {
+    font-size: 14px;
+  }
+
+  .hubCenterCard .centerSubtitle {
+    font-size: 10px;
+    line-height: 1.25;
   }
 }
 

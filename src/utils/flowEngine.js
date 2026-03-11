@@ -1,9 +1,39 @@
 import { uniqStrings, guessViolationKeyFromText } from "./data.js";
+import { REQUEST_FLOWS } from "../data/requestFlows.js";
 
 export function normalizeTheologyMap(theologyMap) {
   if (!theologyMap || typeof theologyMap !== "object") return {};
   if (theologyMap.theology && typeof theologyMap.theology === "object") return theologyMap.theology;
   return theologyMap;
+}
+
+export function buildRequestFlow(selectedNeed) {
+  const need = String(selectedNeed || "").trim();
+  const flow = REQUEST_FLOWS?.defaultsByNeed?.[need] || null;
+
+  if (!flow) {
+    return {
+      requests: [],
+      agreements: [],
+      repairSteps: [],
+      category: "",
+      categoryDescription: "",
+      counselingRationale: "",
+      scriptureSupport: [],
+    };
+  }
+
+  return {
+    requests: Array.isArray(flow.requests) ? flow.requests : [],
+    agreements: Array.isArray(flow.agreements) ? flow.agreements : [],
+    repairSteps: Array.isArray(flow.repair_steps) ? flow.repair_steps : [],
+    category: flow.category || "",
+    categoryDescription: flow.category_description || "",
+    counselingRationale: flow.counseling_rationale || "",
+    scriptureSupport: Array.isArray(flow.scripture_support)
+      ? flow.scripture_support
+      : [],
+  };
 }
 
 export function normalizeProtocols(accountabilityProtocols) {

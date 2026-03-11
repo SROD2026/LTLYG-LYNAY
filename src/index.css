@@ -58,10 +58,17 @@ button {
   padding: 16px;
   padding-bottom: calc(16px + env(safe-area-inset-bottom));
   padding-top: calc(16px + env(safe-area-inset-top));
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: visible;
 }
 
 .gridScroll {
   width: 100%;
+}
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
 }

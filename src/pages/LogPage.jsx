@@ -1,5 +1,5 @@
 // src/pages/LogPage.jsx
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Header from "../components/layout/Header.jsx";
 import TopNav from "../components/layout/TopNav.jsx";
 import { getLogPageBackground } from "../utils/pageThemes.js";
@@ -675,6 +675,26 @@ export default function LogPage({ goHome }) {
   }, [entries, filter]);
 
   const filterCount = filteredEntries.length;
+
+  useEffect(() => {
+  function refreshFromStorage() {
+    setEntries(loadReflectionLog());
+  }
+
+  refreshFromStorage();
+
+  window.addEventListener("focus", refreshFromStorage);
+  window.addEventListener("pageshow", refreshFromStorage);
+  window.addEventListener("hashchange", refreshFromStorage);
+  window.addEventListener("storage", refreshFromStorage);
+
+  return () => {
+    window.removeEventListener("focus", refreshFromStorage);
+    window.removeEventListener("pageshow", refreshFromStorage);
+    window.removeEventListener("hashchange", refreshFromStorage);
+    window.removeEventListener("storage", refreshFromStorage);
+  };
+}, []);
 
   const pageStyle = {
     "--text": "#2b2b46",

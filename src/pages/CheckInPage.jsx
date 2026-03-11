@@ -114,7 +114,7 @@
   onPick={setSelected}
   colorFn={checkinColor}
   meta={checkinMeta}
-  tileSize={78}
+  tileSize={Math.min(78, (window.innerWidth - 40) / 12)}
   labelScale={1.2}
   axisLabels={{
     tl: "Internally fulfilled (energized)",

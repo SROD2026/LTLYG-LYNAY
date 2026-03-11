@@ -74,12 +74,12 @@ const [fitScale, setFitScale] = useState(null);
 const COLS = 15;
 const ROWS = 15;
 
-const MOBILE_TILE = Math.min(tileSize, 74);
+const MOBILE_TILE = Math.min(tileSize, 62);
 const TILE = mobile ? MOBILE_TILE : tileSize;
 
-const GAP = mobile ? 3 : 5;
-const PAD = mobile ? 6 : 10;
-const CROSS_THICKNESS = mobile ? 7 : 10;
+const GAP = mobile ? 2 : 5;
+const PAD = mobile ? 4 : 10;
+const CROSS_THICKNESS = mobile ? 6 : 10;
 
 const boardWidth = COLS * TILE + (COLS - 1) * GAP + PAD * 2;
 const boardHeight = ROWS * TILE + (ROWS - 1) * GAP + PAD * 2;
@@ -115,7 +115,7 @@ const rootWidth =
   Math.max(180, window.innerWidth - 20);
 
 const availableWidth = Math.max(180, rootWidth - (mobile ? 4 : 8));
-const minScale = mobile ? 0.34 : 0.72;
+const minScale = mobile ? 0.26 : 0.72;
 
 
     const rawScale = clamp(availableWidth / boardWidth, minScale, 1);
@@ -437,9 +437,9 @@ transform: isHovered
 
       {axisLabels?.xNeg || axisLabels?.xPos ? (
         <div className="gridAxisFoot">
-          <div>{axisLabels.xNeg || ""}</div>
-          <div>{axisLabels.xPos || ""}</div>
-        </div>
+  <div style={{ textAlign: "left" }}>{axisLabels.xNeg || ""}</div>
+  <div style={{ textAlign: "right" }}>{axisLabels.xPos || ""}</div>
+</div>
       ) : null}
     </div>
   );

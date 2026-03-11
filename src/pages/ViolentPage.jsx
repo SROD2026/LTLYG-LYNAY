@@ -116,7 +116,7 @@ margin: "0 auto",
             bl: "PURPLE (shame)",
             br: "BLUE (low)",
           }}
-          tileSize={78}
+  tileSize={Math.min(78, (window.innerWidth - 40) / 12)}
           labelScale={1.10}
         />
       </div>

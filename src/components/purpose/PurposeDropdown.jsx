@@ -2,6 +2,7 @@
 // modular-ready version: prefers items passed from useAppData, falls back to fetch only if needed
 
 import { useEffect, useMemo, useState } from "react";
+import ScriptureRotator from "../ui/ScriptureRotator.jsx";
 
 function safeArray(x) {
   return Array.isArray(x) ? x : [];
@@ -335,44 +336,17 @@ color: "rgba(255,255,255,0.96)",
                       Scriptures
                     </div>
 
-                    <div className="purposeDD__scriptureGrid" style={{ display: "grid", gap: 10 }}>
-                      {scriptures.map((sc, scIdx) => (
-                        <div
-                          key={scIdx}
-                          className="purposeDD__scriptureRow"
-                          style={{
-                            display: "grid",
-                            gridTemplateColumns: "160px 1fr",
-                            gap: 12,
-                            alignItems: "start",
-                          }}
-                        >
-                          <div
-                            className="purposeDD__ref"
-                            style={{
-                              fontWeight: 900,
-color: "rgba(255,255,255,0.98)",
-                              fontSize: 14,
-                              lineHeight: 1.35,
-                            }}
-                          >
-                            {String(sc?.ref || "")}
-                          </div>
-
-                          <div
-                            className="purposeDD__principle"
-                            style={{
-color: "rgba(255,255,255,0.98)",
-                              lineHeight: 1.5,
-                              fontSize: 14,
-                              opacity: 0.98,
-                            }}
-                          >
-                            {String(sc?.principle || "")}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                   <ScriptureRotator
+  scriptures={scriptures}
+  perPage={2}
+  title=""
+  buttonLabel="Show more"
+  containerStyle={{ gap: 12 }}
+  cardStyle={{
+    background: "rgba(255,255,255,0.08)",
+    border: "1px solid rgba(255,255,255,0.14)",
+  }}
+/>
                   </div>
                 )}
               </div>
