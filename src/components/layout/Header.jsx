@@ -4,8 +4,13 @@
 export default function Header({ title, subtitle, right }) {
   return (
     <div className="headerWrap">
-      <div className="headerLeft">
-        {title ? <div className="pageTitle">{title}</div> : null}
+<div
+  className="headerLeft"
+  style={{
+    display: "grid",
+    gap: 12,
+  }}
+>        {title ? <div className="pageTitle">{title}</div> : null}
 
         {subtitle ? (
           <div
@@ -13,7 +18,7 @@ export default function Header({ title, subtitle, right }) {
             style={{
               fontSize: 16,
               lineHeight: 1.28,
-              maxWidth: 1120,
+              maxWidth: 1000,
             }}
           >
             {subtitle}

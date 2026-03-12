@@ -72,3 +72,161 @@ body,
   max-width: 100%;
   overflow-x: hidden;
 }
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .emotionGridRoot {
+    gap: 6px !important;
+  }
+
+  .gridAxisLabels,
+  .gridAxisFoot {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+  }
+
+  .purposeHubGrid {
+    gap: 10px !important;
+  }
+
+  .hubTile {
+    min-height: 112px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .modalHeaderActions {
+    min-width: 0 !important;
+    justify-content: stretch !important;
+  }
+
+  .modalHeaderActions > button,
+  .modalHeaderActions .btn {
+    flex: 1 1 140px;
+  }
+}
+/* ---------- Modal header polish (iPhone-like spacing) ---------- */
+
+.modalHeader { 
+  padding: 22px 20px 16px;
+  font-synthesis-weight: none;
+}
+
+.modalTitle {
+  letter-spacing: -0.02em;
+}
+
+.modalSubtitle {
+  margin-top: 4px;
+  opacity: 0.85;
+}
+
+.modalHeaderActions button,
+.modalHeaderActions .btn {
+  height: 36px;
+}
+
+/* ---------- iPhone sheet-style modal polish ---------- */
+
+.modalBackdrop {
+  align-items: start;
+  justify-items: center;
+  padding:
+    max(14px, env(safe-area-inset-top))
+    max(14px, env(safe-area-inset-right))
+    max(18px, env(safe-area-inset-bottom))
+    max(14px, env(safe-area-inset-left));
+}
+
+.modalCard {
+  width: min(920px, calc(100vw - 28px));
+  margin-top: 8px;
+  border-radius: 22px;
+  touch-action: manipulation;
+}
+
+@media (max-width: 640px) {
+  .modalBackdrop {
+    padding:
+      max(10px, env(safe-area-inset-top))
+      14px
+      max(16px, env(safe-area-inset-bottom))
+      14px;
+  }
+
+  .modalCard {
+    width: calc(100vw - 28px);
+    max-width: 560px;
+    border-radius: 22px;
+    margin-top: 6px;
+    box-shadow:
+      0 18px 40px rgba(0,0,0,0.38),
+      0 0 0 1px rgba(255,255,255,0.05);
+    animation: modalSheetIn 180ms ease-out;
+  }
+}
+
+@keyframes modalSheetIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 760px) {
+  .pageMetaRow {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    align-items: start !important;
+  }
+
+  .pageMetaRow > * {
+    min-width: 0;
+  }
+
+  .pageTopNavWrap {
+    justify-content: stretch !important;
+    width: 100%;
+  }
+
+  .pageTopNavWrap .btn,
+  .pageTopNavWrap button {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .pageHeaderTitle {
+    max-width: 100% !important;
+  }
+
+  .pageHeaderTitle h1,
+  .pageHeaderTitle .title {
+    font-size: clamp(34px, 10vw, 56px) !important;
+    line-height: 0.95 !important;
+  }
+
+  .pageHeaderSubtitle {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+}
+
+/* Needs page header adjustments */
+
+.needsPage .headerWrap .pageTitle {
+  font-size: clamp(28px, 6vw, 46px);
+  line-height: 1.05;
+}
+
+.needsPage .headerWrap .pageSubtitle {
+  font-size: clamp(14px, 2.8vw, 18px);
+  line-height: 1.45;
+}

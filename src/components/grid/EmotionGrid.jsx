@@ -19,29 +19,30 @@ const touch =
   return touch || smallScreen;
 }
 
-function fontForLabel(label, tileSize = 92) {
+function fontForLabel(label, tileSize = 92, mobile = false) {
   const s = String(label || "").trim();
-  if (!s) return 14;
+  if (!s) return mobile ? 9 : 14;
 
   const words = s.split(/\s+/).filter(Boolean);
   const longest = words.reduce((m, w) => Math.max(m, w.length), 0);
   const chars = s.length;
 
-  let size = tileSize * 0.18;
-  if (longest >= 18) size *= 0.52;
-  else if (longest >= 16) size *= 0.58;
-  else if (longest >= 14) size *= 0.66;
-  else if (longest >= 12) size *= 0.74;
-  else if (longest >= 10) size *= 0.82;
-  else if (longest >= 8) size *= 0.9;
+  let size = tileSize * (mobile ? 0.155 : 0.18);
 
-  if (chars >= 34) size *= 0.72;
-  else if (chars >= 30) size *= 0.78;
-  else if (chars >= 26) size *= 0.84;
-  else if (chars >= 22) size *= 0.9;
-  else if (chars >= 18) size *= 0.96;
+  if (longest >= 18) size *= 0.46;
+  else if (longest >= 16) size *= 0.52;
+  else if (longest >= 14) size *= 0.60;
+  else if (longest >= 12) size *= 0.68;
+  else if (longest >= 10) size *= 0.78;
+  else if (longest >= 8) size *= 0.88;
 
-  return Math.round(clamp(size, 8, 21) * 10) / 10;
+  if (chars >= 34) size *= 0.66;
+  else if (chars >= 30) size *= 0.72;
+  else if (chars >= 26) size *= 0.79;
+  else if (chars >= 22) size *= 0.86;
+  else if (chars >= 18) size *= 0.93;
+
+  return Math.round(clamp(size, mobile ? 6.8 : 8, mobile ? 13 : 21) * 10) / 10;
 }
 
 export default function EmotionGrid({
@@ -74,12 +75,13 @@ const [fitScale, setFitScale] = useState(null);
 const COLS = 15;
 const ROWS = 15;
 
-const MOBILE_TILE = Math.min(tileSize, 62);
+const MOBILE_TILE = Math.min(tileSize, 54);
 const TILE = mobile ? MOBILE_TILE : tileSize;
 
 const GAP = mobile ? 2 : 5;
-const PAD = mobile ? 4 : 10;
-const CROSS_THICKNESS = mobile ? 6 : 10;
+const PAD = mobile ? 3 : 10;
+const CROSS_THICKNESS = mobile ? 5 : 10;
+const TILE_RADIUS = mobile ? 9 : 14;
 
 const boardWidth = COLS * TILE + (COLS - 1) * GAP + PAD * 2;
 const boardHeight = ROWS * TILE + (ROWS - 1) * GAP + PAD * 2;
@@ -313,7 +315,7 @@ margin: "0 auto",  }}
               style={{
                 width: TILE,
                 height: TILE,
-                borderRadius: 14,
+                borderRadius: TILE_RADIUS,
                 border: "1px solid rgba(255,255,255,0.06)",
                 background: "transparent",
               }}
@@ -360,7 +362,7 @@ onClick={() => handleTileActivate(cell, key)}
             style={{
               width: TILE,
               height: TILE,
-              borderRadius: 14,
+              borderRadius: TILE_RADIUS,
 border: `1px solid ${
   isHovered || isPressed || isTouchArmed
     ? "rgba(255,255,255,0.38)"
@@ -409,14 +411,15 @@ transform: isHovered
   padding: 0,
   textAlign: "center",
   whiteSpace: "normal",
-  lineHeight: 0.92,
-  letterSpacing: labelLetterSpacing,
-  maxWidth: "100%",
-  overflowWrap: "normal",
-  wordBreak: "keep-all",
-  hyphens: "none",
-  overflow: "hidden",
-  fontSize: `${fontForLabel(label, TILE) * labelScale}px`,
+  lineHeight: mobile? 0.86 : 0.92,
+  letterSpacing: mobile ? "-0.04em" : labelLetterSpacing,
+maxWidth: "100%",
+overflowWrap: "anywhere",
+wordBreak: "break-word",
+hyphens: "none",
+overflow: "hidden",
+padding: mobile ? "1px" : "0",
+fontSize: `${fontForLabel(label, TILE, mobile) * labelScale}px`,
 }}
             >
               {label || "—"}

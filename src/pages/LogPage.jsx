@@ -236,8 +236,8 @@ function ToolbarGroup({ label, children, danger = false }) {
       style={{
         display: "grid",
         gap: 8,
-        padding: 10,
-        minWidth: danger ? 150 : 0,
+        padding: 8,
+        minWidth: danger ? 110 : 0,
         borderRadius: 14,
         border: danger
           ? "1px solid rgba(182, 92, 126, 0.24)"
@@ -264,8 +264,9 @@ function ToolbarGroup({ label, children, danger = false }) {
       <div
         style={{
           display: "flex",
-          flexWrap: "wrap",
+          flexWrap: "nowrap",
           gap: 8,
+          alignItems: "center",
         }}
       >
         {children}
@@ -282,7 +283,7 @@ function SummaryStat({ label, value }) {
         border: "1px solid rgba(84, 92, 146, 0.12)",
         background: "rgba(255,255,255,0.18)",
         padding: "10px 12px",
-        minWidth: 120,
+        minWidth: 108,
       }}
     >
       <div
@@ -299,7 +300,7 @@ function SummaryStat({ label, value }) {
       </div>
       <div
         style={{
-          fontSize: 20,
+          fontSize: 18,
           fontWeight: 900,
           lineHeight: 1.1,
           color: "rgba(50, 54, 88, 0.98)",
@@ -790,31 +791,32 @@ export default function LogPage({ goHome }) {
                   subtitle="Saved emotional reflections on this device"
                 />
 
-                <div
-                  style={{
-                    display: "flex",
-                    gap: 10,
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <SummaryStat label="Total entries" value={count} />
-                  <SummaryStat label="Today" value={todayCount} />
-                  <SummaryStat
-                    label={filter === "all" ? "Showing" : `${toSentenceCase(filter)} shown`}
-                    value={filterCount}
-                  />
-                </div>
+                <div style={{ display: "grid", gap: 12 }}>
+  <ToolbarGroup label="Navigate">
+    <TopNav
+      goHome={goHome}
+  goGrid={() => (window.location.hash = "#/grid")}
+  goViolent={() => (window.location.hash = "#/violent")}
+  goCheckin={() => (window.location.hash = "#/checkin")}
+  goPrayer={() => (window.location.hash = "#/prayer")}
+  goNeeds={() => (window.location.hash = "#/needs")}
+  goCommunication={() => (window.location.hash = "#/communication-sins")}
+    />
+  </ToolbarGroup>
+
+  <div
+    style={{
+      display: "flex",
+      gap: 10,
+      flexWrap: "wrap",
+    }}
+  >
+    <SummaryStat label="Total entries" value={count} />
+    <SummaryStat label="Today" value={todayCount} />
+  </div>
+</div>
               </div>
 
-              <ToolbarGroup label="Navigate">
-                <TopNav
-                  goHome={goHome}
-                  goGrid={() => (window.location.hash = "#/grid")}
-                  goViolent={() => (window.location.hash = "#/violent")}
-                  goCheckin={() => (window.location.hash = "#/checkin")}
-                  goPrayer={() => (window.location.hash = "#/prayer")}
-                />
-              </ToolbarGroup>
             </div>
 
             <div style={{ display: "grid", gap: 12 }}>
@@ -831,51 +833,46 @@ export default function LogPage({ goHome }) {
                 </div>
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 10,
-                  alignItems: "start",
-                }}
-              >
-                <ToolbarGroup label="View">
-                  <button className="btn" onClick={refresh}>
-                    Refresh
-                  </button>
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "nowrap",
+                    gap: 10,
+                    alignItems: "stretch",
+                  }}
+                >
+                  <ToolbarGroup label="Export">
+                    <button
+                      className="btn"
+                      onClick={() => downloadCsv(entries)}
+                      style={{ whiteSpace: "nowrap" }}
+                    >
+                      Export CSV
+                    </button>
 
-                  <button className="btn" onClick={expandAll}>
-                    Expand all
-                  </button>
+                    <button
+                      className="btn"
+                      onClick={() => exportZip(entries)}
+                      style={{ whiteSpace: "nowrap" }}
+                    >
+                      Export ZIP
+                    </button>
+                  </ToolbarGroup>
 
-                  <button className="btn" onClick={collapseAll}>
-                    Collapse all
-                  </button>
-                </ToolbarGroup>
-
-                <ToolbarGroup label="Export">
-                  <button className="btn" onClick={() => downloadCsv(entries)}>
-                    Export CSV
-                  </button>
-
-                  <button className="btn" onClick={() => exportZip(entries)}>
-                    Export ZIP
-                  </button>
-                </ToolbarGroup>
-
-                <ToolbarGroup label="Danger" danger>
-                  <button
-                    className="btn"
-                    onClick={handleClear}
-                    style={{
-                      borderColor: "rgba(160, 78, 120, 0.28)",
-                      background: "rgba(255, 120, 170, 0.14)",
-                    }}
-                  >
-                    Clear log
-                  </button>
-                </ToolbarGroup>
-              </div>
+                  <ToolbarGroup label="Danger" danger>
+                    <button
+                      className="btn"
+                      onClick={handleClear}
+                      style={{
+                        whiteSpace: "nowrap",
+                        borderColor: "rgba(160, 78, 120, 0.28)",
+                        background: "rgba(255, 120, 170, 0.14)",
+                      }}
+                    >
+                      Clear log
+                    </button>
+                  </ToolbarGroup>
+                </div>
             </div>
           </div>
         </div>

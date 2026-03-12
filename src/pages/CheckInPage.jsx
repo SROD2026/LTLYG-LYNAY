@@ -19,7 +19,6 @@
     const [selected, setSelected] = useState(null);
 
     const grid = Array.isArray(checkinGrid) ? checkinGrid : [];
-    const count = grid.length;
 
     const bgStyle = useMemo(() => {
       const sunsetBase = `
@@ -48,8 +47,6 @@
       <div
     className="container"
     style={{
-      "--page-bg": "#2a3f74",
-      "--page-bg-gradient": "none",
       ...(bgStyle || {}),
       position: "relative",
       minHeight: "100dvh",
@@ -63,8 +60,8 @@
     }}
   >
   <div className="panel" style={{    width: "min(1120px, 100%)", margin: "0 auto" }}>
-              <div className="metaRow">
-                  <div style={{ minWidth: 0, maxWidth: 1120, flex: "1 1 620px" }}>
+              <div className="pageMetaRow">
+                  <div className= "pageHeaderTitle" style={{ minWidth: 0, maxWidth: 1120, flex: "1 1 620px" }}>
 
               <Header
                 title="Positive Emotion Check-In: Interoception and Gratitude"
@@ -76,24 +73,16 @@
               />
   </div>
             <div
-    style={{
-      display: "flex",
-      gap: 10,
-      alignItems: "center",
-      flexWrap: "wrap",
-      "--btn-bg": "rgba(28, 34, 32, 0.78)",
-      "--btn-border": "rgba(255,255,255,0.14)",
-      "--btn-text": "rgba(255,255,255,0.96)",
-    }}
-  >
+  className="pageTopNavWrap"
+  style={{
+    display: "flex",
+    gap: 10,
+    alignItems: "center",
+    flexWrap: "wrap",
+    marginTop: 12
+  }}
+>
     
-                <div className="smallMuted">
-                  {loading
-                    ? "Loading…"
-                    : error
-                      ? `Error: ${String(error.message || error)}`
-                      : `Loaded ${count} entries`}
-                </div>
 
                 <TopNav
                   goHome={goHome}
@@ -114,8 +103,8 @@
   onPick={setSelected}
   colorFn={checkinColor}
   meta={checkinMeta}
-  tileSize={Math.min(78, (window.innerWidth - 40) / 12)}
-  labelScale={1.2}
+  tileSize={78}
+  labelScale={1.1}
   axisLabels={{
     tl: "Internally fulfilled (energized)",
     tr: "Externally grateful (energized)",

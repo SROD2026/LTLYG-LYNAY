@@ -2949,7 +2949,7 @@ export const prayerMeta = {
     "scriptures": [
       {
         "ref": "James 1:19-20",
-        "principle": "Human anger does not produce God's righteousness and must be slowed down."
+        "principle": "Human wrath does not produce God's righteousness and must be slowed down."
       },
       {
         "ref": "Proverbs 19:11",
@@ -3014,7 +3014,7 @@ export const prayerMeta = {
     "scriptures": [
       {
         "ref": "James 1:19-20",
-        "principle": "Human anger does not produce God's righteousness and must be slowed down."
+        "principle": "Human wrath does not produce God's righteousness and must be slowed down."
       },
       {
         "ref": "Proverbs 19:11",
@@ -3079,7 +3079,7 @@ export const prayerMeta = {
     "scriptures": [
       {
         "ref": "James 1:19-20",
-        "principle": "Human anger does not produce God's righteousness and must be slowed down."
+        "principle": "Human wrath does not produce God's righteousness and must be slowed down."
       },
       {
         "ref": "Proverbs 19:11",
@@ -3144,7 +3144,7 @@ export const prayerMeta = {
     "scriptures": [
       {
         "ref": "James 1:19-20",
-        "principle": "Human anger does not produce God's righteousness and must be slowed down."
+        "principle": "Human wrath does not produce God's righteousness and must be slowed down."
       },
       {
         "ref": "Proverbs 19:11",
@@ -3209,7 +3209,7 @@ export const prayerMeta = {
     "scriptures": [
       {
         "ref": "James 1:19-20",
-        "principle": "Human anger does not produce God's righteousness and must be slowed down."
+        "principle": "Human wrath does not produce God's righteousness and must be slowed down."
       },
       {
         "ref": "Proverbs 19:11",
@@ -5744,7 +5744,7 @@ export const prayerMeta = {
     "scriptures": [
       {
         "ref": "James 1:19-20",
-        "principle": "Human anger does not produce God's righteousness and must be slowed down."
+        "principle": "Human wrath does not produce God's righteousness and must be slowed down."
       },
       {
         "ref": "Proverbs 19:11",

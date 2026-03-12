@@ -108,10 +108,11 @@ function randomIndex(max) {
 
 export default function PrayerModal({ open, onClose, cell, meta = {} }) {
   const emotion = useMemo(() => String(cell?.emotion || "").trim(), [cell]);
+  const nextStepRef = useRef(null);
   const entry = useMemo(() => meta?.[emotion] || null, [meta, emotion]);
   
-const [prayerPromptIndex, setPrayerPromptIndex] = useState(0);
-const [scriptureStartIndex, setScriptureStartIndex] = useState(0);
+  const [prayerPromptIndex, setPrayerPromptIndex] = useState(0);
+  const [scriptureStartIndex, setScriptureStartIndex] = useState(0);
   const prayerPromptOptions = useMemo(() => {
   const prompts = safeArray(entry?.prayer_prompts).filter(Boolean);
   if (prompts.length) return prompts;
@@ -137,6 +138,7 @@ const [spacerHeight, setSpacerHeight] = useState(0);
 
   const [writtenPrayer, setWrittenPrayer] = useState("");
 const [saveStatus, setSaveStatus] = useState("");
+const [showLog, setShowLog] = useState(false);
 const [logCount, setLogCount] = useState(0);
 const modalCardRef = useRef(null);
 
@@ -164,7 +166,20 @@ const modalCardRef = useRef(null);
 useEffect(() => {
   setPrayerPromptIndex(0);
   setScriptureStartIndex(0);
-}, [emotion]);
+  }, [emotion]);
+
+  useEffect(() => {
+  if (!open || !emotion) return;
+
+  const id = setTimeout(() => {
+    nextStepRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, 120);
+
+  return () => clearTimeout(id);
+}, [open, emotion]);
 
   useEffect(() => {
     function onKey(e) {
@@ -510,11 +525,11 @@ prayer_prompt: activePrayerPrompt || entry?.prayer_prompt || "",
 
   return (
   <>
+  
    <div
   aria-hidden="true"
   style={{
     width: "100%",
-    maxWidth: 920,
     margin: "24px auto 40px",
     height: spacerHeight,
     visibility: "hidden",
@@ -522,33 +537,29 @@ prayer_prompt: activePrayerPrompt || entry?.prayer_prompt || "",
 />
 
     <div
-      role="dialog"
-      aria-modal="true"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose?.();
-      }}
-     style={{
-  position: "fixed",
-  inset: 0,
-  zIndex: 9999,
-  overflowY: "auto",
-  display: "grid",
-  justifyItems: "center",
-  alignItems: "start",
-  padding:
-    "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
-  background: "rgba(10,12,20,0.52)",
-  backdropFilter: "blur(3px)",
-  WebkitBackdropFilter: "blur(3px)",
-}}>
+  className="modalBackdrop"
+  role="dialog"
+  aria-modal="true"
+  onClick={(e) => {
+    if (e.target === e.currentTarget) onClose?.();
+  }}
+  style={{
+    position: "fixed",
+    inset: 0,
+    zIndex: 9999,
+    overflowY: "auto",
+    display: "grid",
+    background: "rgba(10,12,20,0.52)",
+    backdropFilter: "blur(3px)",
+    WebkitBackdropFilter: "blur(3px)",
+  }}
+>
 
       
 <div
   ref={modalCardRef}
+  className="modalCard"
   style={{
-    width: "100%",
-maxWidth: 920,
-margin: 0,
 justifySelf: "center",
     position: "relative",
     borderRadius: 18,
@@ -571,24 +582,25 @@ justifySelf: "center",
 >
 
          <div aria-hidden="true" style={{ height: 4, width: "100%", background: tone.bar }} />
+<div ref={nextStepRef}>
 
 <div
+  className="modalHeader"
   style={{
-    padding: 18,
-    display: "flex",
-    justifyContent: "space-between",
+    display: "grid",
+    gridTemplateColumns: "minmax(0, 1fr) auto",
     gap: 16,
-    alignItems: "flex-start",
+    alignItems: "start",
     background: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
     borderBottom: "1px solid rgba(255,255,255,0.08)",
   }}
 >
 <div style={{ display: "grid", gap: 8, maxWidth: 620 }}>
-  <div style={{ fontSize: 26, fontWeight: 800, lineHeight: 1.05, color: tone.bar }}>
+  <div className="modalTitle" style={{ fontSize: 26, fontWeight: 800, lineHeight: 1.05, color: tone.bar }}>
     {emotion}
   </div>
 
-  <div
+  <div className="modalSubtitle" 
     style={{
       fontSize: 14,
       lineHeight: 1.45,
@@ -611,8 +623,28 @@ justifySelf: "center",
   </div>
           </div>
 
-          <button className="btn" onClick={onClose} style={{ whiteSpace: "nowrap" }}>Close</button>
-        </div>
+<div className="modalHeaderActions" 
+  style={{
+    display: "flex",
+    gap: 10,
+    flexWrap: "wrap",
+    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    minWidth: 0,
+  }}
+>
+  <button className="btn" onClick={() => setShowLog((v) => !v)} style={{ minWidth: 132 }}>
+    {showLog ? "Hide log" : "View log"}
+  </button>
+
+  <button className="btn" onClick={handleSavePrayer} style={{ minWidth: 132 }}>
+    Save prayer
+  </button>
+
+  <button className="btn" onClick={onClose} style={{ minWidth: 132 }}>
+    Close
+  </button>
+</div>        </div>
 
         <div style={{
   padding: "0 18px 18px",
@@ -620,10 +652,22 @@ justifySelf: "center",
   gap: 14,
   overflow: "visible",
 }}>
-          
-          
-<Panel
-  title="1) Prayer"
+
+  {showLog ? (
+    <Panel
+      title="Saved prayer reflections"
+      style={{ background: "rgba(255,255,255,0.04)" }}
+    >
+      <div style={{ display: "grid", gap: 10 }}>
+        <div style={{ fontSize: 13, color: "rgba(255,255,255,0.72)" }}>
+          {logCount} saved reflections on this device
+        </div>
+      </div>
+    </Panel>
+  ) : null}
+
+  <Panel
+    title="1) Prayer"
   style={{
     background: "rgba(255,255,255,0.04)",
     color: "rgba(255,255,255,0.94)"
@@ -690,6 +734,7 @@ justifySelf: "center",
 </div>
   </div>
 </Panel>
+</div>
 
  <Panel
   title="2) God's communication method to us"
@@ -941,21 +986,39 @@ justifySelf: "center",
       }}
     />
 
-    <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-      <button className="btn" onClick={handleSavePrayer}>
-        Save prayer
-      </button>
-
-      <div style={{ fontSize: 13, color: "rgba(255,255,255,0.70)" }}>
-        {logCount} saved reflections
-      </div>
-
-      {saveStatus ? (
-        <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)" }}>
-          {saveStatus}
-        </div>
-      ) : null}
+   <div
+  style={{
+    display: "flex",
+    gap: 10,
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "space-between",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      gap: 10,
+      flexWrap: "wrap",
+      alignItems: "center",
+      minWidth: 0,
+    }}
+  >
+    <div style={{ fontSize: 13, color: "rgba(255,255,255,0.70)" }}>
+      {logCount} saved reflections
     </div>
+
+    {saveStatus ? (
+      <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)" }}>
+        {saveStatus}
+      </div>
+    ) : null}
+  </div>
+
+  <button className="btn" onClick={handleSavePrayer}>
+    Save prayer
+  </button>
+</div>
   </div>
 </Panel>
 

@@ -13,13 +13,73 @@ const tileBase = {
   padding: 0,
   overflow: "hidden",
   position: "relative",
-  minHeight: 132,
-  minWidth: 132,
+  minHeight: 112,
+  minWidth: 112,
   textAlign: "left",
   cursor: "pointer",
   boxShadow: "0 12px 24px rgba(0,0,0,0.08)",
   transition: "transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease",
 };
+
+function CollapsiblePanel({ title, children, defaultOpen = false, background }) {
+  const [open, setOpen] = useState(defaultOpen);
+
+  return (
+    <Panel
+      style={{
+        background:
+          background ||
+          "linear-gradient(180deg, rgba(242, 242, 243, 0.92), rgba(164, 107, 203, 0.72))",
+        border: "1px solid rgba(255,255,255,0.12)",
+        width: "min(1120px, 100%)",
+        margin: "0 auto",
+        marginTop: 2,
+        borderRadius: 18,
+      }}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        style={{
+          width: "100%",
+          border: "none",
+          background: "transparent",
+          padding: "1px 16px",
+          borderRadius: 5,
+          transition: "background 0.15ms ease",
+          margin: 0,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 12,
+          cursor: "pointer",
+          textAlign: "left",
+          color: "#111111",
+          fontWeight: 900,
+          fontSize: 22,
+        }}
+      >
+        <span>{title}</span>
+        <span
+          style={{
+            fontSize: 22,
+            lineHeight: 1,
+            transform: open ? "rotate(90deg)" : "rotate(0deg)",
+            transition: "transform 160ms ease",
+          }}
+        >
+          ›
+        </span>
+      </button>
+
+      {open ? (
+        <div style={{ marginTop: 14, display: "grid", gap: 12 }}>
+          {children}
+        </div>
+      ) : null}
+    </Panel>
+  );
+}
 
 function tileStyle(type) {
   if (type === "violent") {
@@ -166,16 +226,18 @@ function HomeTile({ label, onClick, type }) {
           position: "relative",
           zIndex: 2,
           display: "grid",
-          minHeight: 132,
-          alignItems: "center",
-          padding: isPrayer ? "8px" : "14px 14px",
+          minHeight: 112,
+          height: "100%",
+          alignItems: "stretch",
+          padding: isPrayer ? "6px" : "10px 10px",
           background:
-            type === "communication"
-              ? "linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04))"
-              : isDark
-                ? "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))"
-                : "linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04))",
-          backdropFilter: "blur(2px)",
+  type === "prayer"
+    ? "none"
+    : type === "communication"
+      ? "linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04))"
+      : isDark
+        ? "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))"
+        : "linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04))",
         }}
       >
         {isPrayer ? (
@@ -190,61 +252,50 @@ function HomeTile({ label, onClick, type }) {
               }}
             >
               <div
-                style={{
-                  fontSize: 84,
-                  lineHeight: 1,
-                  display: "inline-block",
-                }}
-              >
+  className="hubPrayerEmoji"
+  style={{
+    fontSize: 64,
+    lineHeight: 1,
+    display: "inline-block",
+  }}
+>
                 {label}
               </div>
             </div>
 
-            <div
-              style={{
-                position: "absolute",
-                right: 14,
-                bottom: 12,
-                fontSize: 18,
-                opacity: 0.42,
-                lineHeight: 1,
-              }}
-            >
-              ›
-            </div>
           </>
         ) : (
           <div
             style={{
               display: "grid",
-              alignContent: "space-between",
-              minHeight: 100,
-              gap: 8,
+              gridTemplateRows: "1fr auto",
+              minHeight: 0,
+              height: "100%",
+              gap: 2,
             }}
           >
-            <div
-              style={{
-                fontSize: 15,
-                fontWeight: 800,
-                lineHeight: 1.18,
-                letterSpacing: "-0.01em",
-                color: isDark ? "rgba(255,250,247,0.98)" : "inherit",
-                textShadow: isDark ? "0 1px 1px rgba(0,0,0,0.12)" : "none",
-              }}
-            >
-              {label}
-            </div>
+<div
+  className="hubTileLabel"
+  style={{
+    fontSize: 16,
+    fontWeight: 900,
+    lineHeight: 1.02,
+    letterSpacing: "-0.02em",
+    color: "#111",
+    WebkitTextStroke: "1px rgba(255,255,255,0.48)",
+    textShadow: `
+      -.5px -.5px 0 rgba(255,255,255,0.48),
+       .5px -.5px 0 rgba(255,255,255,0.48),
+      -.5px  .5px 0 rgba(255,255,255,0.48),
+       .5px  .5px 0 rgba(255,255,255,0.48)
+    `,
+    display: "block",
+  }}
+>
+  {label}
+</div>
 
-            <div
-              style={{
-                justifySelf: "end",
-                fontSize: 18,
-                opacity: isDark ? 0.7 : 0.42,
-                lineHeight: 1,
-              }}
-            >
-              ›
-            </div>
+            
           </div>
         )}
       </div>
@@ -256,7 +307,7 @@ const centerCardStyle = {
   borderRadius: 18,
   border: "1px solid rgba(73, 82, 78, 0.10)",
   background: "rgba(255,255,255,0.62)",
-  boxShadow: "0 8px 18px rgba(0,0,0,0.06)",
+  boxShadow: "0 8px 18px hsla(0, 0%, 0%, 0.06)",
   minHeight: 132,
   aspectRatio: "1 / 1",
   width: "100%",
@@ -331,7 +382,10 @@ export default function PurposePage({
     maxWidth: CONTENT_CANVAS_WIDTH,
     margin: "0 auto",
   }}
->   <div className="panel">
+> 
+
+
+  <div className="panel">
           <Header
             title="Accountability, Christian Edification, Gratitude, and Emotional Awareness Tool"
             subtitle={
@@ -342,32 +396,13 @@ export default function PurposePage({
           />
         </div>
 
+
+
         <div className="panel">
           <div style={{ display: "grid", gap: 14 }}>
             <div className="sectionTitle">Choose a path</div>
 
-<Panel style={{ display: "grid", gap: 12 }}>
-  <div style={{ fontSize: 24, fontWeight: 900, lineHeight: 1.12 }}>
-    What love really is
-  </div>
 
-  <div style={{ fontSize: 15, lineHeight: 1.6, color: "var(--text)" }}>
-    Love respects personhood. It does not erase individuality, collapse boundaries,
-    or demand emotional sameness. Healthy love honors another person’s needs, pace,
-    limits, dignity, and distinct inner world.
-  </div>
-
-  <div style={{ fontSize: 15, lineHeight: 1.6, color: "var(--text)" }}>
-    This tool can help you track your emotional responses to behaviors over time,
-    not just accusations in the moment. That makes it easier to identify recurring
-    patterns that most affect safety, trust, clarity, and repair.
-  </div>
-
-  <div style={{ fontSize: 15, lineHeight: 1.6, color: "var(--text)" }}>
-    If a relationship repeatedly does not respond to honest feedback, empathy, or
-    repair, that pattern may be a sign that protective personal boundaries are needed.
-  </div>
-</Panel>
 
 <div className="purposeHubGrid">
   <div className="hubCell hubViolent">
@@ -407,6 +442,7 @@ export default function PurposePage({
       </div>
 
       <div
+        className="centerTitle"
         style={{
           fontSize: 15,
           fontWeight: 900,
@@ -418,6 +454,7 @@ export default function PurposePage({
       </div>
 
       <div
+        className="centerSubtitle"
         style={{
           fontSize: 11.5,
           lineHeight: 1.22,
@@ -476,7 +513,273 @@ export default function PurposePage({
   </div>
 </div>
           </div>
+
+         <CollapsiblePanel
+  title="Lets get it straight: What Love Really Is"
+  defaultOpen={false}
+  background="linear-gradient(180deg, rgba(255,255,255,0.9), rgba(210,197,245,0.85))"
+>
+  <div style={{ display: "grid", gap: 14 }}>
+
+    <div
+      style={{
+        padding: 14,
+        borderLeft: "4px solid rgba(108, 108, 255, 0.72)",
+        background: "rgba(255,255,255,0.58)",
+        borderRadius: 10,
+        display: "grid",
+        gap: 6,
+      }}
+    >
+      <div style={{ fontWeight: 900, color: "#111" }}>John 14</div>
+      <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+        Jesus says that he is the way, the truth, and the life, and that love for him is shown in keeping his word.
+        He does not leave his people as orphans, but gives the Holy Spirit, the Spirit of truth, to guide, teach,
+        and bring peace.
+      </div>
+    </div>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+        gap: 12,
+      }}
+    >
+      <div
+        style={{
+          background: "rgba(255,255,255,0.55)",
+          padding: 14,
+          borderRadius: 12,
+          border: "1px solid rgba(0,0,0,0.08)",
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div style={{ fontWeight: 900, fontSize: 16, color: "#111" }}>
+          Love begins with God
+        </div>
+        <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+          Scripture teaches that “God is love,” and Jesus shows what that love looks like in real life. Love is not
+          merely emotion or performance — it is living in truth, remaining connected to God, and allowing his Spirit
+          to guide our lives and relationships.
+        </div>
+      </div>
+
+      <div
+        style={{
+          background: "rgba(255,255,255,0.55)",
+          padding: 14,
+          borderRadius: 12,
+          border: "1px solid rgba(0,0,0,0.08)",
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div style={{ fontWeight: 900, fontSize: 16, color: "#111" }}>
+          Human beings were created for love
+        </div>
+        <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+          Jesus commanded his followers to love one another and said this would mark his disciples. Love is therefore
+          not optional for healthy relationships — it is foundational. Because many people grow up with love absent,
+          distorted, or confused, learning love is a journey of growth, maturity, and healing.
+        </div>
+      </div>
+    </div>
+
+    <hr
+      style={{
+        border: "none",
+        borderTop: "1px solid rgba(0,0,0,0.12)",
+        margin: "2px 0",
+      }}
+    />
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+        gap: 12,
+      }}
+    >
+      <div
+        style={{
+          background: "rgba(255,255,255,0.55)",
+          padding: 14,
+          borderRadius: 12,
+          border: "1px solid rgba(0,0,0,0.08)",
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div style={{ fontWeight: 900, fontSize: 16, color: "#111" }}>
+          Love moves toward relationship
+        </div>
+        <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+          Love welcomes connection instead of hiding, blame, or withdrawal. Healthy love honors another person’s needs,
+          pace, limits, dignity, and unique inner world. It does not erase individuality or demand emotional sameness.
+          Instead, it creates space for truth, growth, and repair.
+        </div>
+      </div>
+
+      <div
+        style={{
+          background: "rgba(255,255,255,0.55)",
+          padding: 14,
+          borderRadius: 12,
+          border: "1px solid rgba(0,0,0,0.08)",
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div style={{ fontWeight: 900, fontSize: 16, color: "#111" }}>
+          We learn love by receiving it first
+        </div>
+        <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+          “We love because he first loved us.” Receiving God’s love changes how we see ourselves and others. Instead of
+          performing for acceptance or trying to earn love, we begin from a place of being known and welcomed. From that
+          foundation, love starts shaping our thoughts, emotions, words, and actions.
+        </div>
+      </div>
+    </div>
+
+    <hr
+      style={{
+        border: "none",
+        borderTop: "1px solid rgba(0,0,0,0.12)",
+        margin: "2px 0",
+      }}
+    />
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+        gap: 12,
+      }}
+    >
+      <div
+        style={{
+          background: "rgba(255,255,255,0.55)",
+          padding: 14,
+          borderRadius: 12,
+          border: "1px solid rgba(0,0,0,0.08)",
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div style={{ fontWeight: 900, fontSize: 16, color: "#111" }}>
+          Love includes affection and emotional maturity
+        </div>
+        <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+          Love includes care, comfort, kindness, patience, and presence. Scripture describes the fruit of the Spirit —
+          love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control — as visible signs
+          of a maturing heart. Emotional growth and relational maturity are therefore part of spiritual growth.
+        </div>
+      </div>
+
+      <div
+        style={{
+          background: "rgba(255,255,255,0.55)",
+          padding: 14,
+          borderRadius: 12,
+          border: "1px solid rgba(0,0,0,0.08)",
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div style={{ fontWeight: 900, fontSize: 16, color: "#111" }}>
+          Distortions of love damage connection
+        </div>
+        <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+          When love is absent or distorted, people often turn toward substitutes such as control, fear, addiction,
+          obsession, or lust. These may feel powerful, but they damage trust and connection. God’s love, by contrast,
+          brings clarity, peace, and restoration, and the Holy Spirit guides hearts back toward truth and healthy
+          relationship.
+        </div>
+      </div>
+    </div>
+
+    <hr
+      style={{
+        border: "none",
+        borderTop: "1px solid rgba(0,0,0,0.12)",
+        margin: "2px 0",
+      }}
+    />
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+        gap: 12,
+      }}
+    >
+      <div
+        style={{
+          background: "rgba(255,255,255,0.55)",
+          padding: 14,
+          borderRadius: 12,
+          border: "1px solid rgba(0,0,0,0.08)",
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div style={{ fontWeight: 900, fontSize: 16, color: "#111" }}>
+          Why this tool exists
+        </div>
+        <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+          This tool is meant to support that journey. By helping you observe situations, name emotions, and identify
+          underlying needs, it encourages honest reflection and healthier communication. Over time, patterns become
+          clearer, making it easier to respond with truth, compassion, boundaries, and repair.
+        </div>
+      </div>
+
+      <div
+        style={{
+          background: "rgba(255,255,255,0.55)",
+          padding: 14,
+          borderRadius: 12,
+          border: "1px solid rgba(0,0,0,0.08)",
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div style={{ fontWeight: 900, fontSize: 16, color: "#111" }}>
+          Love tells the truth and seeks restoration
+        </div>
+        <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+          Love does not ignore harm or erase responsibility. It seeks truth, accountability, and restoration. When
+          relationships repeatedly refuse empathy, honesty, or repair, wise boundaries may be necessary. Healthy love
+          protects dignity while still keeping a posture of compassion and hope.
+        </div>
+      </div>
+    </div>
+
+    <div
+      style={{
+        padding: 14,
+        borderLeft: "4px solid rgba(126, 86, 234, 0.72)",
+        background: "rgba(255,255,255,0.58)",
+        borderRadius: 10,
+        display: "grid",
+        gap: 6,
+      }}
+    >
+      <div style={{ fontWeight: 900, color: "#111" }}>Final takeaway</div>
+      <div style={{ fontSize: 15, lineHeight: 1.6, color: "#111" }}>
+        Learning love is a lifelong process. As we remain connected to Christ — the way, the truth, and the life —
+        we grow deeper in our ability to love God, ourselves, and others with honesty, humility, and grace.
+      </div>
+    </div>
+
+  </div>
+</CollapsiblePanel>
+
+
         </div>  
+
+        
         <div className="panel">
           <div style={{ display: "grid", gap: 12 }}>
             <PurposeDropdown items={purposeDropdown} />

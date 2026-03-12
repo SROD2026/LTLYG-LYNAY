@@ -225,7 +225,7 @@ export default function EmotionModal({
 }, [cell]);
 
 const lower = String(emotion || "").toLowerCase();
-
+const nextStepRef = useRef(null);
 const entryForSelectedWord = useMemo(() => {
   return meta?.[emotion] || meta?.[lower] || null;
 }, [meta, emotion, lower]);
@@ -275,8 +275,21 @@ const definitionText =
 
 useEffect(() => {
   if (!open) return;
-  setLogCount(loadLog().length);
+  setLogCount(loadReflectionLog().length);
 }, [open]);
+
+useEffect(() => {
+  if (!open || !cell) return;
+
+  const id = setTimeout(() => {
+    nextStepRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, 120);
+
+  return () => clearTimeout(id);
+}, [open, cell]);
 
 useEffect(() => {
   if (!open) return;
@@ -611,7 +624,7 @@ async function handleSaveEntry() {
     setTimeout(() => setSaveStatus(""), 900);
   }
 
-  const logEntries = useMemo(() => (showLog ? loadLog() : []), [showLog, logCount]);
+const logEntries = useMemo(() => (showLog ? loadReflectionLog() : []), [showLog, logCount]);
 
   // active intero tab item
   const active = useMemo(() => intero[activeInteroTab] || blankIntero(), [intero, activeInteroTab]);
@@ -643,7 +656,6 @@ return (
       aria-hidden="true"
       style={{
 width: "100%",
-maxWidth: 920,
         margin: "24px auto 40px",
         height: spacerHeight,
         visibility: "hidden",
@@ -651,33 +663,28 @@ maxWidth: 920,
       }}
     />
 
-    <div
-      role="dialog"
-      aria-modal="true"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose?.();
-      }}
-     style={{
-  position: "fixed",
-  inset: 0,
-  zIndex: 9999,
-  overflowY: "auto",
-  display: "grid",
-  justifyItems: "center",
-  alignItems: "start",
-  padding:
-    "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
-  background: "rgba(10,12,20,0.52)",
-  backdropFilter: "blur(3px)",
-  WebkitBackdropFilter: "blur(3px)",
-}}
-    >
+   <div
+  className="modalBackdrop"
+  role="dialog"
+  aria-modal="true"
+  onClick={(e) => {
+    if (e.target === e.currentTarget) onClose?.();
+  }}
+  style={{
+    position: "fixed",
+    inset: 0,
+    zIndex: 9999,
+    overflowY: "auto",
+    display: "grid",
+    background: "rgba(10,12,20,0.52)",
+    backdropFilter: "blur(3px)",
+    WebkitBackdropFilter: "blur(3px)",
+  }}
+>
       <div
   ref={modalCardRef}
+    className="modalCard"
   style={{
-    width: "100%",
-maxWidth: 920,
-margin: 0,
 justifySelf: "center",
   position: "relative",
     borderRadius: 18,
@@ -703,20 +710,21 @@ justifySelf: "center",
     background: overlayHex || "rgba(255,255,255,0.18)",
   }}
 />
+  <div ref={nextStepRef}> 
         {/* Header */}
-        <div
+       <div
+  className="modalHeader"
   style={{
-    padding: 18,
-    display: "flex",
-    justifyContent: "space-between",
+    display: "grid",
+    gridTemplateColumns: "minmax(0, 1fr) auto",
     gap: 16,
-    alignItems: "flex-start",
+    alignItems: "start",
   }}
 >
-  <div style={{ display: "grid", gap: 8, maxWidth: 560 }}>
-  <div
+<div style={{ display: "grid", gap: 8, minWidth: 0, maxWidth: 620 }}>
+    <div className="modalTitle"
   style={{
-    fontSize: 32,
+fontSize: "clamp(28px, 7vw, 32px)",
     fontWeight: 900,
     lineHeight: 1.05,
     letterSpacing: 0.2,
@@ -727,7 +735,7 @@ justifySelf: "center",
 </div>
 
 {definitionText ? (
-  <div
+  <div className="modalSubtitle"
     style={{
       fontSize: 14,
       lineHeight: 1.45,
@@ -744,82 +752,64 @@ justifySelf: "center",
     </div>
   </div>
 
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
-            <button
-              onClick={() => setShowLog((v) => !v)}
-              style={{
-                borderRadius: 12,
-                border: "1px solid rgba(255,255,255,0.18)",
-                background: "rgba(255,255,255,0.06)",
-                color: "rgba(255,255,255,0.92)",
-                padding: "10px 12px",
-                fontSize: 14,
-                cursor: "pointer",
-              }}
-            >
-              {showLog ? "Hide log" : "View log"}
-            </button>
+<div  className="modalHeaderActions"
+  style={{
+    display: "flex",
+    gap: 10,
+    flexWrap: "wrap",
+    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    minWidth: 0,
+  }}
+>
+  <button
+    onClick={() => setShowLog((v) => !v)}
+    style={{
+      borderRadius: 12,
+      border: "1px solid rgba(255,255,255,0.18)",
+      background: "rgba(255,255,255,0.06)",
+      color: "rgba(255,255,255,0.92)",
+      padding: "10px 14px",
+      fontSize: 14,
+      cursor: "pointer",
+      minWidth: 132,
+    }}
+  >
+    {showLog ? "Hide log" : "View log"}
+  </button>
 
-            <button
-              onClick={handleSaveEntry}
-              style={{
-                borderRadius: 12,
-                border: "1px solid rgba(255,255,255,0.18)",
-                background: "rgba(255,255,255,0.10)",
-                color: "rgba(255,255,255,0.92)",
-                padding: "10px 12px",
-                fontSize: 14,
-                cursor: "pointer",
-              }}
-            >
-              Save entry
-            </button>
+  <button
+    onClick={handleSaveEntry}
+    style={{
+      borderRadius: 12,
+      border: "1px solid rgba(255,255,255,0.18)",
+      background: "rgba(255,255,255,0.10)",
+      color: "rgba(255,255,255,0.92)",
+      padding: "10px 14px",
+      fontSize: 14,
+      cursor: "pointer",
+      minWidth: 132,
+    }}
+  >
+    Save entry
+  </button>
 
-            <button
-              onClick={handleExportZip}
-              style={{
-                borderRadius: 12,
-                border: "1px solid rgba(255,255,255,0.18)",
-                background: "rgba(255,255,255,0.06)",
-                color: "rgba(255,255,255,0.92)",
-                padding: "10px 12px",
-                fontSize: 14,
-                cursor: "pointer",
-              }}
-            >
-              Export ZIP
-            </button>
-
-            <button
-              onClick={handleClearLog}
-              style={{
-                borderRadius: 12,
-                border: "1px solid rgba(255,255,255,0.18)",
-                background: "rgba(255,120,120,0.12)",
-                color: "rgba(255,255,255,0.92)",
-                padding: "10px 12px",
-                fontSize: 14,
-                cursor: "pointer",
-              }}
-            >
-              Clear log (device)
-            </button>
-
-            <button
-              onClick={onClose}
-              style={{
-                borderRadius: 12,
-                border: "1px solid rgba(255,255,255,0.18)",
-                background: "rgba(255,255,255,0.06)",
-                color: "rgba(255,255,255,0.92)",
-                padding: "10px 12px",
-                fontSize: 14,
-                cursor: "pointer",
-              }}
-            >
-              Close
-            </button>
-          </div>
+  <button
+    onClick={onClose}
+    style={{
+      borderRadius: 12,
+      border: "1px solid rgba(255,255,255,0.18)",
+      background: "rgba(255,255,255,0.06)",
+      color: "rgba(255,255,255,0.92)",
+      padding: "10px 14px",
+      fontSize: 14,
+      cursor: "pointer",
+      minWidth: 132,
+    }}
+  >
+    Close
+  </button>
+</div>
         </div>
 
         {/* Body */}
@@ -830,7 +820,9 @@ justifySelf: "center",
             gap: 14,
             overflow: "visible",
           }}
-        >          {/* Optional log panel */}
+        > 
+        
+            {/* Optional log panel */}
           {showLog && (
             <Panel style={{ display: "grid", gap: 10 }}>
               <div style={{ fontWeight: 900 }}>Log (this device)</div>
@@ -895,7 +887,9 @@ justifySelf: "center",
                 </div>
               )}
             </Panel>
+        
           )}
+</div>
 
           {/* 1) Somatic awareness */}
           <Panel style={{ display: "grid", gap: 10 }}>

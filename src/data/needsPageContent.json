@@ -1,0 +1,87 @@
+{
+  "pageTitle": "Needs: what they are, why they matter, and how Scripture supports them",
+  "pageSubtitle": "",
+  "intro": {
+    "title": "How this page works",
+    "paragraphs": [
+      "These needs are grouped to make it easier to see that they are broader than one moment of emotion: they include safety, truth, pace, care, agency, and embodied stewardship.",
+      "Scripture supports naming our own real needs without excusing sin. Love seeks the good of the neighbor, truth protects reality, wisdom honors limits, and mutual care helps carry burdens without removing personal responsibility."
+    ]
+  },
+  "needsSection": {
+    "title": "List of Needs",
+    "subtitle": "Select a category to view associated needs.",
+    "emoji": "🧩"
+  },
+  "whyNeedsHelp": {
+    "title": "Why needs language helps",
+    "subtitle": "Needs are not selfish demands. Needs are the human conditions that help a person live, relate, regulate, tell the truth, and love well. Naming our needs in a situation guides the one stating them away from accusation toward a path of mutual understanding.",
+    "emoji": "🪜",
+    "cards": [
+      {
+        "title": "Needs are not demands",
+        "body": "A need is a human good such as safety, clarity, care, or rest. A demand is a controlling insistence on one particular outcome or person."
+      },
+      {
+        "title": "Needs do not erase accountability",
+        "body": "Naming a need explains what matters; it does not justify coercion, contempt, manipulation, or harm."
+      },
+      {
+        "title": "Needs help translate emotion",
+        "body": "An emotion often becomes more understandable when the person can say what feels threatened, missing, or newly met."
+      }
+    ]
+  },
+  "biblicalGrounding": {
+    "title": "Biblical grounding: needs are human, but how we pursue them matters",
+    "subtitle": "Scripture affirms creaturely need while still requiring love, repentance, and mutual care.",
+    "emoji": "📖",
+    "teachings": [
+      {
+        "title": "Human need is not a moral defect",
+        "body": "People are finite, embodied, relational creatures. Needing safety, honesty, belonging, rest, understanding, and help is not sin, nor are these needs signs of weakness."
+      },
+      {
+        "title": "Sin often enters at the strategy level",
+        "body": "A person may try to meet a real need in a distorted way: seeking belonging through control, safety through deception, or understanding through accusation instead of truth and love."
+      },
+      {
+        "title": "Love carries both care and responsibility",
+        "body": "Compassion and respect involve pursuing the good of both others and ourselves without manipulation, coercion, or blame-shifting."
+      }
+    ],
+    "scriptures": [
+      {
+        "ref": "Genesis 2:18",
+        "principle": "It is not good for man to be alone; relational need is part of creation, not proof of weakness."
+      },
+      {
+        "ref": "Matthew 22:37-39",
+        "principle": "Love of God and neighbor frames how needs are pursued and how another person's needs are treated."
+      },
+      {
+        "ref": "1 Corinthians 12:21-26",
+        "principle": "The body needs every part; dependence and mutual care are normal in God's design."
+      }
+    ],
+    "examples": [
+      {
+        "title": "Example: safety",
+        "body": "Safety is ruined through lies, domination, or punishing control. Pursuing safety through truth, boundaries, support, and wise pace is consistent with love and godliness."
+      },
+      {
+        "title": "Example: belonging",
+        "body": "Guilt, pressure, or emotional fusion is not how the need for belonging should be met. Belonging is better pursued through honesty, mutuality, and faithful presence."
+      },
+      {
+        "title": "Example: understanding",
+        "body": "Pursuing understanding through accusation, mind-reading, or endless demand is not loving. Pursuing understanding through clarification, patient listening, and stepwise explanation protects dignity."
+      }
+    ]
+  },
+  "theologySupport": {
+    "title": "Theological support for needs",
+    "subtitle": "Scripture clearly supports the human needs listed. We are content in all circumstances through our hope of eternal life with God. On this earth, our needs are not a given, but through these needs we can learn to love and show compassion to others as Christ did. Putting others' needs above our own is part of compassion.",
+    "emoji": "✝️"
+  }
+}

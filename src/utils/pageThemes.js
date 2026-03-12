@@ -207,7 +207,7 @@ export function getNeedsPageBackground() {
       radial-gradient(circle at 80% 22%, rgba(70,136,166,0.24) 0%, transparent 30%),
       radial-gradient(circle at 18% 84%, rgba(143,219,201,0.20) 0%, transparent 26%),
       radial-gradient(circle at 78% 82%, rgba(223,241,215,0.18) 0%, transparent 24%),
-      linear-gradient(180deg, #2f7b8b 0%, #4ea8a9 42%, #8fd1c6 76%, #dff1d7 100%)
+      linear-gradient(180deg, #2f7b8b 0%, #4ea8a9 42%, #8fd1c6 76%, #c5f4b0 100%)
     `,
     backgroundSize: "170% 170%, 180% 180%, 170% 170%, 170% 170%, 100% 100%",
     backgroundPosition: "0% 0%, 100% 0%, 0% 100%, 100% 100%, 0 0",
@@ -338,14 +338,14 @@ export function getTopNavTone(targetKey) {
         bg: `
           linear-gradient(
             180deg,
-            rgba(47,123,139,0.86) 0%,
+            rgba(117, 224, 246, 0.86) 0%,
             rgba(78,168,169,0.84) 42%,
             rgba(143,209,198,0.82) 76%,
-            rgba(223,241,215,0.82) 100%
+            rgba(145, 243, 103, 0.82) 100%
           )
         `,
         border: "rgba(61, 137, 145, 0.26)",
-        text: "rgba(255,255,255,0.98)",
+        text: "rgba(0, 0, 0, 0.98)",
         shadow: "0 10px 22px rgba(47, 109, 110, 0.14)",
       };
 

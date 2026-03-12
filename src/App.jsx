@@ -115,16 +115,10 @@ function HomePage({
         }}
       >
 <div className="panel textOutlineGreen" style={{ width: "100%", margin: "0 auto" }}>
-            <div style={{ display: "grid", gap: 14 }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr auto",
-                gap: 16,
-                alignItems: "start",
-              }}
-            >
-              <div style={{ minWidth: 0, maxWidth: 1120 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16 }}>
+          <div className="pageMetaRow">
+              <div className="pageHeaderTitle" style={{ minWidth: 0, maxWidth: 1120 }}>
+
                 <Header
                   title="Owning your emotions: no blame, just awareness and growth"
                   subtitle={
@@ -136,21 +130,19 @@ function HomePage({
                   }
                 />
               </div>
+           
 
-              <div
-                style={{
-                  fontSize: 14,
-                  fontWeight: 800,
-                  color: "var(--muted)",
-                  whiteSpace: "nowrap",
-                  paddingTop: 8,
-                }}
-              >
-                Loaded {grid.length} entries
-              </div>
-            </div>
-
-            <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+            <div
+  className="pageTopNavWrap"
+  style={{
+    display: "flex",
+    gap: 10,
+    alignItems: "center",
+    flexWrap: "wrap",
+    marginTop: 12
+  }}
+>
+  
               <TopNav
                 goHome={goPurpose}
                 goViolent={goViolent}
@@ -161,16 +153,26 @@ function HomePage({
                 goLog={goLog}
               />
             </div>
+            </div>
           </div>
         </div>
 
         <div className="panel textOutlineGreen" style={{ width: "100%", margin: "0 auto", minWidth: 0 }}>
           <EmotionGrid
   grid={grid}
-  onPick={setSelected}
-  meta={meta}
-  tileSize={Math.min(78, (window.innerWidth - 40) / 12)}
-  labelScale={1.2}
+onPick={(value) => {
+    setSelected(value);
+
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 80);
+  }}
+    meta={meta}
+  tileSize={78}
+  labelScale={1.0}
   axisLabels={{
     tl: "RED (activated)",
     tr: "YELLOW (surprised)",

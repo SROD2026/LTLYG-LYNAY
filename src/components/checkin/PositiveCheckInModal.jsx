@@ -357,7 +357,7 @@ export default function PositiveCheckInModal({
 
   const title = entry?.title ? entry.title : emotionKey;
   const definition = entry?.definition || "";
-
+const nextStepRef = useRef(null);
   const overlayHex = useMemo(() => {
     if (!cell) return null;
     return checkinColor(cell.x, cell.y);
@@ -398,7 +398,7 @@ const [spacerHeight, setSpacerHeight] = useState(0);
         modalBodyRef.current.scrollTop = 0;
       }
     });
-}, [open, showLog, intero, gratitudeText, selectedObservation, selectedTheologyKey, selectedNeedMet]);''
+}, [open, showLog, intero, gratitudeText, selectedObservation, selectedTheologyKey, selectedNeedMet]);
   
 useEffect(() => {
   if (!open) return;
@@ -418,7 +418,7 @@ useEffect(() => {
     cancelAnimationFrame(id);
     window.removeEventListener("resize", measure);
   };
-}, [open]);
+  }, [open]);
 
 
   useEffect(() => {
@@ -435,13 +435,20 @@ useEffect(() => {
     setShowLog(false);
   }, [emotionKey]);
 
-  useEffect(() => {
-    function onKey(e) {
-      if (e.key === "Escape") onClose?.();
-    }
-    if (open) window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open, onClose]);
+  
+
+useEffect(() => {
+  if (!open || !cell) return;
+
+  const id = setTimeout(() => {
+    nextStepRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, 120);
+
+  return () => clearTimeout(id);
+}, [open, cell]);
 
   // -------------------------
   // Derived: needs + side + reframe
@@ -456,6 +463,14 @@ useEffect(() => {
     return [...primaryLimited, ...filler].slice(0, 10);
   }, [entry, needsSupplement]);
 
+useEffect(() => {
+    function onKey(e) {
+      if (e.key === "Escape") onClose?.();
+    }
+    if (open) window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
+
   useEffect(() => {
     if (!allNeedsMet.length) return;
     if (!selectedNeedMet || !allNeedsMet.includes(selectedNeedMet)) {
@@ -466,7 +481,7 @@ useEffect(() => {
   const side = entry?.side === "external" ? "external" : "internal";
 const reframe = useMemo(() => {
   const needSlot = selectedNeedMet || "____";
-
+  
   const t = String(title || "").trim();
   const lower = t.toLowerCase();
 
@@ -750,43 +765,39 @@ return (
       aria-hidden="true"
       style={{
 width: "100%",
-maxWidth: 920,
         margin: "24px auto 40px",
         height: spacerHeight,
         visibility: "hidden",
       }}
     />
 
-    <div
-      role="dialog"
-      aria-modal="true"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose?.();
-      }}
-style={{
-  position: "fixed",
-  inset: 0,
-  zIndex: 9999,
-  overflowY: "auto",
-  display: "grid",
-  justifyItems: "center",
-  alignItems: "start",
-  padding:
-    "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
-  background: "rgba(10,12,20,0.52)",
-  backdropFilter: "blur(3px)",
-  WebkitBackdropFilter: "blur(3px)",
-}}
+   <div
+  className="modalBackdrop"
+  role="dialog"
+  aria-modal="true"
+  onClick={(e) => {
+    if (e.target === e.currentTarget) onClose?.();
+  }}
+  style={{
+    position: "fixed",
+    inset: 0,
+    zIndex: 9999,
+    overflowY: "auto",
+    display: "grid",
+    background: "rgba(10,12,20,0.52)",
+    backdropFilter: "blur(3px)",
+    WebkitBackdropFilter: "blur(3px)",
+  }}
+>
 
-    >
 <div
   ref={modalCardRef}
+    className="modalCard"
   style={{
-   width: "100%",
-maxWidth: 920,
-margin: 0,
-justifySelf: "center",
+    margin: 0,
+    justifySelf: "center",
     position: "relative",
+    width: "min(1040px, calc(100vw - 24px))",
     borderRadius: 18,
     border: `2px solid ${overlayHex || "rgba(255,255,255,0.12)"}`,
     background: "rgba(16,22,30,0.96)",
@@ -801,19 +812,21 @@ justifySelf: "center",
     pointerEvents: "auto",
   }}
 >
+          <div ref={nextStepRef}>
 
         {/* Header */}
-        <div
-          style={{
-            padding: 18,
-            display: "flex",
-            justifyContent: "space-between",
-            gap: 16,
-            alignItems: "flex-start",
-          }}
-        >
-          <div style={{ display: "grid", gap: 8, maxWidth: 560 }}>
-            <div
+       <div
+  className="modalHeader"
+  style={{
+    padding: 18,
+    display: "grid",
+    gridTemplateColumns: "minmax(0, 1fr) auto",
+    gap: 16,
+    alignItems: "start",
+  }}
+>
+          <div style={{ display: "grid", gap: 8, minWidth: 0, maxWidth: 560 }}>
+            <div className="modalTitle"
               style={{
                 fontSize: 32,
                 fontWeight: 900,
@@ -826,7 +839,7 @@ justifySelf: "center",
             </div>
 
             {definition ? (
-              <div
+              <div  className="modalSubtitle"
                 style={{
                   fontSize: 14,
                   lineHeight: 1.45,
@@ -844,31 +857,29 @@ justifySelf: "center",
             </div>
           </div>
 
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
-            <button className="btn" onClick={() => setShowLog((v) => !v)}>
-              {showLog ? "Hide log" : "View log"}
-            </button>
+        <div
+  className="modalHeaderActions"
+  style={{
+    display: "flex",
+    gap: 10,
+    flexWrap: "wrap",
+    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    minWidth: 0,
+  }}
+>
+  <button className="btn" onClick={() => setShowLog((v) => !v)} style={{ minWidth: 110, flex: "0 1 auto" }}>
+    {showLog ? "Hide log" : "View log"}
+  </button>
 
-            <button className="btn" onClick={handleSaveEntry}>
-              Save entry
-            </button>
+  <button className="btn" onClick={handleSaveEntry} style={{ minWidth: 110, flex: "0 1 auto"  }}>
+    Save entry
+  </button>
 
-            <button className="btn" onClick={handleExportZip}>
-              Export ZIP
-            </button>
-
-            <button
-              className="btn"
-              onClick={handleClearLog}
-              style={{ background: "rgba(255,120,120,0.12)" }}
-            >
-              Clear log (device)
-            </button>
-
-            <button className="btn" onClick={onClose}>
-              Close
-            </button>
-          </div>
+  <button className="btn" onClick={onClose} style={{ minWidth: 110, flex: "0 1 auto"  }}>
+    Close
+  </button>
+</div>
         </div>
 
         {/* Body */}
@@ -882,7 +893,8 @@ justifySelf: "center",
           }}
         >
                     {showLog && (
-            <Panel style={{ display: "grid", gap: 10 }}>
+         
+         <Panel style={{ display: "grid", gap: 10 }}>
               <div style={{ fontWeight: 900 }}>Log (this device)</div>
 
               {logEntries.length === 0 ? (
@@ -943,19 +955,23 @@ justifySelf: "center",
                 </div>
               )}
             </Panel>
-          )}
+         )}
+
+         </div>
+
 
           <Panel style={{ display: "grid", gap: 10 }}>
             <div style={{ fontWeight: 900 }}>1) I feel this in my body by…</div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-                gap: 12,
-                alignItems: "start",
-              }}
-            >
+           <div
+  className="mobileStack"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "minmax(0, 1fr) 280px",
+    gap: 16,
+    alignItems: "start",
+  }}
+>
               <div style={{ display: "grid", gap: 10 }}>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
   {Array.from({ length: visibleInteroTabs }).map((_, idx) => {
@@ -1086,21 +1102,24 @@ justifySelf: "center",
               </div>
 
               <div
-                id="checkinStickCapture"
-                style={{
-                  border: "1px solid rgba(255,255,255,0.10)",
-                  borderRadius: 14,
-                  padding: 10,
-                  background: "rgba(0,0,0,0.20)",
-                  display: "grid",
-                  placeItems: "center",
-                  minHeight: 260,
-                }}
-              >
+  id="checkinStickCapture"
+  style={{
+    border: "1px solid rgba(255,255,255,0.10)",
+    borderRadius: 14,
+    padding: 10,
+    background: "rgba(0,0,0,0.20)",
+    display: "grid",
+    placeItems: "center",
+    minHeight: 260,
+    width: "100%",
+    minWidth: 0,
+  }}
+>
 <InteroStickFigure intero={intero} theme="gratitude" />
               </div>
             </div>
           </Panel>
+
 
           <Panel style={{ display: "grid", gap: 10 }}>
             <div style={{ fontWeight: 900 }}>2) Need that was met / value that was supported</div>

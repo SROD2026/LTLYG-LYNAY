@@ -78,7 +78,7 @@ useEffect(() => {
       <div
         style={{
           display: "grid",
-          gap: 10,
+          gap: 8,
           ...containerStyle,
         }}
       >
@@ -106,21 +106,23 @@ useEffect(() => {
 
   return (
     <div
-      style={{
-        display: "grid",
-        gap: 10,
-        ...containerStyle,
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: 10,
-          flexWrap: "wrap",
-        }}
-      >
+  style={{
+    display: "grid",
+    gap: 6,
+    width: "100%",
+    ...containerStyle,
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      gap: 8,
+      flexWrap: "wrap",
+      marginBottom: -2,
+    }}
+  >
         <div
           style={{
             fontWeight: 900,
@@ -136,9 +138,11 @@ useEffect(() => {
             className="btn"
             onClick={handleNext}
             style={{
-              padding: "8px 12px",
+              padding: "7px 11px",
               fontSize: 12,
               borderRadius: 10,
+              alignSelf: "flex-start",
+              marginTop: -2,
             }}
           >
             {buttonLabel}
@@ -146,26 +150,40 @@ useEffect(() => {
         ) : null}
       </div>
 
-      <div style={{ display: "grid", gap: 10 }}>
-        {currentPage.map((s, idx) => (
-          <div
-            key={`${s.ref}-${s.principle}-${idx}`}
-            style={{
-              border: "1px solid rgba(255,255,255,0.14)",
-              borderRadius: 12,
-              padding: 12,
-              background: "rgba(255,255,255,0.05)",
-              ...cardStyle,
-            }}
-          >
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns:
+      typeof window !== "undefined" && window.innerWidth <= 640
+        ? "1fr"
+        : "repeat(2, minmax(0, 1fr))",
+    gap: 10,
+    width: "100%",
+    alignItems: "stretch",
+  }}
+>
+
+  {currentPage.map((s, idx) => (
+    <div
+      key={`${s.ref}-${s.principle}-${idx}`}
+      style={{
+        border: "1px solid rgba(255,255,255,0.14)",
+        borderRadius: 12,
+        padding: 12,
+        background: "rgba(255,255,255,0.05)",
+        ...cardStyle,
+      }}
+    >
             {s.ref ? (
               <div
-                style={{
-                  fontWeight: 900,
-                  marginBottom: 6,
-                  color: "rgba(255,255,255,0.96)",
-                }}
-              >
+  style={{
+    fontWeight: 900,
+    marginBottom: 6,
+    fontSize: 18,
+    lineHeight: 1.2,
+    color: "rgba(255,255,255,0.96)",
+  }}
+>
                 {s.ref}
               </div>
             ) : null}

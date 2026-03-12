@@ -6,6 +6,7 @@ import Panel from "../components/ui/Panel.jsx";
 import { getCommunicationPageBackground } from "../utils/pageThemes.js";
 import ScriptureRotator from "../components/ui/ScriptureRotator.jsx";
 
+
 function normalizeItems(obj) {
   if (!obj || typeof obj !== "object") return [];
   return Object.entries(obj).map(([key, value]) => ({
@@ -26,8 +27,12 @@ function compactPhrase(s) {
 function SummaryBanner({ item }) {
   const common = Array.isArray(item?.common_forms) ? item.common_forms : [];
   const harm = Array.isArray(item?.harm_impact) ? item.harm_impact : [];
-  const repair = Array.isArray(item?.love_repair) ? item.love_repair : [];
-  const empathy = Array.isArray(item?.empathy_prompts) ? item.empathy_prompts : [];
+const repair = Array.isArray(item?.repair_steps) && item.repair_steps.length
+    ? item.repair_steps
+    : Array.isArray(item?.love_repair)
+      ? item.love_repair
+      : [];
+        const empathy = Array.isArray(item?.empathy_prompts) ? item.empathy_prompts : [];
 
   return (
     <div
@@ -136,7 +141,7 @@ background:
           style={{
             fontSize: 18,
             fontWeight: 900,
-            color: "#ffffff",
+            color: "#000000",
           }}
         >
           {title}
@@ -145,7 +150,7 @@ background:
           style={{
             fontSize: 13,
             lineHeight: 1.45,
-            color: "#ffffff",
+            color: "#000000",
           }}
         >
           {subtitle}
@@ -209,10 +214,10 @@ function SectionList({ title, intro, emoji, subtitle, items, onOpen }) {
   }}
 >
       <div style={{ display: "grid", gap: 8 }}>
-        <div style={{ fontSize: 28, fontWeight: 900, color: "#ffffff" }}>
+        <div style={{ fontSize: 28, fontWeight: 900, color: "#000000" }}>
           {title}
         </div>
-        <div style={{ fontSize: 14, lineHeight: 1.55, color: "#ffffff" }}>
+        <div style={{ fontSize: 14, lineHeight: 1.55, color: "#000000" }}>
           {intro}
         </div>
       </div>
@@ -252,16 +257,16 @@ function TheologyMiniCard({ title, body, verses = [] }) {
     <div
       style={{
         borderRadius: 16,
-        border: "1px solid rgba(255,255,255,0.18)",
-        background: "linear-gradient(180deg, rgba(21, 50, 101, 0.82), rgba(197, 8, 162, 0.62))",
+        border: "1px solid rgb(0, 0, 0)",
+        background: "linear-gradient(180deg, rgba(254, 253, 255, 0.92), rgb(112, 47, 216))",
         padding: 14,
         display: "grid",
         gap: 10,
-        boxShadow: "0 8px 18px rgba(35, 32, 82, 0.10)",
+        boxShadow: "0 8px 18px rgba(35, 32, 82, 0.29)",
       }}
     >
-      <div style={{ fontSize: 18, fontWeight: 900, color: "#ffffff", lineHeight: 1.2 }}>{title}</div>
-      <div style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.95)" }}>{body}</div>
+      <div style={{ fontSize: 18, fontWeight: 900, color: "#000000", lineHeight: 1.2 }}>{title}</div>
+      <div style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(0, 0, 0, 0.95)" }}>{body}</div>
       {verses.length ? (
   <ScriptureRotator
     scriptures={verses}
@@ -319,6 +324,36 @@ function getSectionTone(type) {
     border: "rgb(170, 220, 90)",
     color: "#ffffff",
   };
+  case "repair":
+      return {
+        bg: "linear-gradient(180deg, rgba(104, 225, 170, 0.96), rgba(17, 132, 88, 0.95))",
+        border: "rgba(70,160,120,0.35)",
+        color: "#ffffff",
+      };
+    case "application":
+      return {
+        bg: "linear-gradient(180deg, rgba(255, 205, 96, 0.96), rgba(196, 122, 16, 0.95))",
+        border: "rgba(190,140,55,0.35)",
+        color: "#ffffff",
+      };
+    case "interrupts":
+      return {
+        bg: "linear-gradient(180deg, rgba(186, 145, 255, 0.96), rgba(95, 54, 166, 0.95))",
+        border: "rgba(132,102,188,0.35)",
+        color: "#ffffff",
+      };
+    case "reflection":
+      return {
+        bg: "linear-gradient(180deg, rgba(140, 201, 255, 0.96), rgba(36, 103, 180, 0.95))",
+        border: "rgba(82,132,188,0.35)",
+        color: "#ffffff",
+      };
+    case "needs":
+      return {
+        bg: "linear-gradient(180deg, rgba(255, 182, 193, 0.96), rgba(173, 74, 108, 0.95))",
+        border: "rgba(185,100,130,0.35)",
+        color: "#ffffff",
+      };
   default:
       return {
         bg: "rgba(255,255,255,0.08)",
@@ -392,7 +427,7 @@ function SectionCard({ type, title, children, isOpen, onToggle }) {
   );
 }
 
-function BulletList({ items, compact = false, textColor = "#ffffff" }) {
+function BulletList({ items, compact = false, textColor = "#000000" }) {
   if (!Array.isArray(items) || items.length === 0) return null;
 
   const shown = compact ? items.slice(0, 4) : items;
@@ -459,11 +494,105 @@ function ConvictionColumns({ block }) {
   );
 }
 
+function MiniHeading({ children }) {
+  return (
+    <div
+      style={{
+        marginTop: 4,
+        marginBottom: 4,
+        fontSize: 14,
+        fontWeight: 900,
+        color: "rgba(255,255,255,0.98)",
+        textTransform: "uppercase",
+        letterSpacing: 0.2,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+function CollapsiblePanel({ title, children, defaultOpen = false, background }) {
+  const [open, setOpen] = useState(defaultOpen);
+
+  return (
+    <Panel
+      style={{
+        background:
+          background ||
+          "linear-gradient(180deg, rgba(242, 242, 243, 0.92), rgba(164, 107, 203, 0.72))",
+        border: "1px solid rgba(255,255,255,0.12)",
+        width: "min(1120px, 100%)",
+        margin: "0 auto",
+        marginTop: 2,
+        borderRadius: 18,
+      }}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        style={{
+          width: "100%",
+          border: "none",
+          background: "transparent",
+          padding: "1px 16px",
+          borderRadius: 5,
+          transition: "background 0.15ms ease",
+          margin: 0,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 12,
+          cursor: "pointer",
+          textAlign: "left",
+          color: "#111111",
+          fontWeight: 900,
+          fontSize: 22,
+        }}
+      >
+        <span>{title}</span>
+        <span
+          style={{
+            fontSize: 22,
+            lineHeight: 1,
+            transform: open ? "rotate(90deg)" : "rotate(0deg)",
+            transition: "transform 160ms ease",
+          }}
+        >
+          ›
+        </span>
+      </button>
+
+      {open ? (
+        <div style={{ marginTop: 14, display: "grid", gap: 12 }}>
+          {children}
+        </div>
+      ) : null}
+    </Panel>
+  );
+}
+
 function SinModal({ item, onClose }) {
-  const [openSection, setOpenSection] = useState("scripture");
+  const [openSection, setOpenSection] = useState(null);
+const repairSteps = item?.repair_steps || [];
+const empathyVisibility =
+  item?.empathy_visibility &&
+  (
+    item.empathy_visibility.summary ||
+    (Array.isArray(item.empathy_visibility.hidden_reactions) &&
+      item.empathy_visibility.hidden_reactions.length > 0) ||
+    (Array.isArray(item.empathy_visibility.processed_later) &&
+      item.empathy_visibility.processed_later.length > 0)
+  )
+    ? item.empathy_visibility
+    : null;
+const conversationApplication = item?.conversation_application || null;
+const practiceInterrupts = item?.practice_interrupts || [];
+const reflectionQuestions = item?.reflection_questions || [];
+const requestFlowNeeds = item?.request_flow_needs || [];
 
   useEffect(() => {
-    setOpenSection("scripture");
+    setOpenSection(null);
   }, [item]);
 
   if (!item) return null;
@@ -472,6 +601,11 @@ function SinModal({ item, onClose }) {
   const loveRepair = Array.isArray(item.love_repair) ? item.love_repair : [];
   const commonForms = Array.isArray(item.common_forms) ? item.common_forms : [];
   const harmImpact = Array.isArray(item.harm_impact) ? item.harm_impact : [];
+   const scriptures = Array.isArray(item.scriptures)
+    ? item.scriptures
+    : Array.isArray(item.scripture)
+      ? item.scripture
+      : [];
 
   return (
     <div
@@ -489,8 +623,10 @@ function SinModal({ item, onClose }) {
   justifyItems: "center",
   alignItems: "start",
   padding:
-    "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
-  background: "rgba(10,12,20,0.52)",
+  window.innerWidth <= 520
+    ? "max(12px, env(safe-area-inset-top)) max(22px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(22px, env(safe-area-inset-left))"
+    : "max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))",
+    background: "rgba(10,12,20,0.52)",
   backdropFilter: "blur(3px)",
   WebkitBackdropFilter: "blur(3px)",
 }}
@@ -553,6 +689,19 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
             <BulletList items={loveRepair} />
           </SectionCard>
 
+ {repairSteps.length > 0 ? (
+            <SectionCard
+              type="repair"
+              title="Repair steps"
+              isOpen={openSection === "repair"}
+              onToggle={() =>
+                setOpenSection(openSection === "repair" ? null : "repair")
+              }
+            >
+              <BulletList items={repairSteps} textColor="rgba(255,255,255,0.97)" />
+            </SectionCard>
+          ) : null}
+
           <SectionCard
             type="scripture"
             title="Scripture"
@@ -562,8 +711,8 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
             }
           >
 <ScriptureRotator
-  scriptures={item.scriptures || []}
-  perPage={2}
+  scriptures={scriptures}
+    perPage={2}
   title=""
   buttonLabel="Show more"
   emptyText="(No scriptures available.)"
@@ -587,6 +736,43 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
             <BulletList items={harmImpact} />
           </SectionCard>
 
+{empathyVisibility ? (
+            <SectionCard
+              type="empathy"
+              title="Unseen impact"
+              isOpen={openSection === "unseen-impact"}
+              onToggle={() =>
+                setOpenSection(openSection === "unseen-impact" ? null : "unseen-impact")
+              }
+            >
+              {empathyVisibility.summary ? (
+                <div style={{ lineHeight: 1.6 }}>{empathyVisibility.summary}</div>
+              ) : null}
+
+              {Array.isArray(empathyVisibility.hidden_reactions) &&
+              empathyVisibility.hidden_reactions.length > 0 ? (
+                <>
+                  <MiniHeading>Hidden reactions</MiniHeading>
+                  <BulletList
+                    items={empathyVisibility.hidden_reactions}
+                    textColor="rgba(255,255,255,0.97)"
+                  />
+                </>
+              ) : null}
+
+              {Array.isArray(empathyVisibility.processed_later) &&
+              empathyVisibility.processed_later.length > 0 ? (
+                <>
+                  <MiniHeading>Often processed later</MiniHeading>
+                  <BulletList
+                    items={empathyVisibility.processed_later}
+                    textColor="rgba(255,255,255,0.97)"
+                  />
+                </>
+              ) : null}
+            </SectionCard>
+          ) : null}
+
           <SectionCard
             type="conviction"
             title="LOVE motivation: Conviction, not shame"
@@ -606,14 +792,136 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
               setOpenSection(openSection === "empathy" ? null : "empathy")
             }
           >
-            <BulletList items={empathy} />
-          </SectionCard>
+            
+            <BulletList items={empathy} textColor="rgba(255,255,255,0.97)" />
+                      </SectionCard>
+
+            {conversationApplication ? (
+            <SectionCard
+              type="application"
+              title="Conversation application"
+              isOpen={openSection === "application"}
+              onToggle={() =>
+                setOpenSection(openSection === "application" ? null : "application")
+              }
+            >
+              
+              {conversationApplication.before ? (
+                <>
+                  <MiniHeading>Before speaking</MiniHeading>
+                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.before}</div>
+                </>
+              ) : null}
+
+              {conversationApplication.during ? (
+                <>
+                  <MiniHeading>While speaking</MiniHeading>
+                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.during}</div>
+                </>
+              ) : null}
+
+              {conversationApplication.after ? (
+                <>
+                  <MiniHeading>After harm happens</MiniHeading>
+                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.after}</div>
+                </>
+              ) : null}
+            </SectionCard>
+          ) : null}
+
+          {practiceInterrupts.length > 0 ? (
+            <SectionCard
+              type="interrupts"
+              title="Practice interrupts"
+              isOpen={openSection === "interrupts"}
+              onToggle={() =>
+                setOpenSection(openSection === "interrupts" ? null : "interrupts")
+              }
+            >
+              <BulletList
+                items={practiceInterrupts}
+                textColor="rgba(255,255,255,0.97)"
+              />
+            </SectionCard>
+          ) : null}
+          
+           {reflectionQuestions.length > 0 ? (
+            <SectionCard
+              type="reflection"
+              title="Reflection questions"
+              isOpen={openSection === "reflection"}
+              onToggle={() =>
+                setOpenSection(openSection === "reflection" ? null : "reflection")
+              }
+            >
+              <BulletList
+                items={reflectionQuestions}
+                textColor="rgba(255,255,255,0.97)"
+              />
+            </SectionCard>
+          ) : null}
+{requestFlowNeeds.length > 0 ? (
+            <SectionCard
+              type="needs"
+              title="Needs underneath this pattern"
+              isOpen={openSection === "needs"}
+              onToggle={() =>
+                setOpenSection(openSection === "needs" ? null : "needs")
+              }
+            >
+              <BulletList
+                items={requestFlowNeeds}
+                textColor="rgba(255,255,255,0.97)"
+              />
+            </SectionCard>
+          ) : null}
 
         </div>
       </div>
     </div>
   );
 }
+
+const THEOLOGY_FOUNDATION_VERSES = {
+  correction: [
+    { ref: "Matthew 23:4", principle: "Jesus rebukes leaders who burden others without helping them." },
+    { ref: "Matthew 23:13", principle: "Jesus confronts leaders whose actions block others from God." },
+    { ref: "Matthew 23:23-28", principle: "Jesus names hypocrisy concretely and calls for inward and outward integrity." },
+    { ref: "John 8:10-11", principle: "Jesus refuses condemnation while still calling the woman to leave sin." },
+    { ref: "Luke 19:8-10", principle: "Jesus' presence leads Zacchaeus toward restitution and changed behavior." },
+    { ref: "Mark 10:21", principle: "Jesus speaks truth in love, exposing what must change." },
+    { ref: "Revelation 3:19", principle: "The Lord rebukes and disciplines those he loves, calling them to repent." },
+    { ref: "Luke 22:61-62", principle: "Jesus' truthful look brings Peter to conviction, not mere humiliation." },
+    { ref: "John 21:15-17", principle: "Jesus restores Peter through direct questions and renewed calling." },
+    { ref: "Matthew 18:15", principle: "Sin is to be addressed directly and specifically for restoration." },
+  ],
+
+  emotions: [
+    { ref: "Galatians 6:5", principle: "Each person bears their own load; responsibility remains personal." },
+    { ref: "James 1:19-20", principle: "Human anger does not produce God's righteousness." },
+    { ref: "Ephesians 4:26-29", principle: "Emotion must not become sinful speech; words must still build up." },
+    { ref: "Proverbs 29:11", principle: "A fool vents fully, but wisdom restrains and orders emotion." },
+    { ref: "Proverbs 16:32", principle: "Self-control is better than raw emotional force." },
+    { ref: "1 Peter 5:7", principle: "Anxiety is to be brought to God rather than used to control others." },
+    { ref: "Psalm 62:8", principle: "God invites honest emotional pouring-out before him." },
+    { ref: "Genesis 4:6-7", principle: "Strong feeling does not excuse sin; it must be ruled rightly." },
+    { ref: "Ecclesiastes 7:9", principle: "Quick anger leads toward foolishness." },
+    { ref: "Philippians 4:6-7", principle: "Distress is to be redirected through prayer, thanksgiving, and peace in God." },
+  ],
+
+  thoughts: [
+    { ref: "Romans 12:2", principle: "Transformation comes through renewal of the mind." },
+    { ref: "2 Corinthians 10:5", principle: "Thoughts are to be taken captive in obedience to Christ." },
+    { ref: "Matthew 15:18-19", principle: "Words and corrupt actions flow out of the heart." },
+    { ref: "James 1:14-15", principle: "Disordered inner desire grows outward into sin." },
+    { ref: "Luke 6:45", principle: "The mouth speaks from what fills the heart." },
+    { ref: "Proverbs 4:23", principle: "The heart must be guarded because life flows from it." },
+    { ref: "Philippians 4:8", principle: "Thought life should be directed toward what is true and excellent." },
+    { ref: "Colossians 3:2", principle: "The mind is to be set on higher things, not ruled by impulse." },
+    { ref: "Ephesians 4:22-24", principle: "Repentance includes putting off the old self and renewing the mind." },
+    { ref: "Psalm 19:14", principle: "Both meditation and speech are to be acceptable before God." },
+  ],
+};
 
 export default function CommunicationSinPage({ goHome }) {
   const [data, setData] = useState(null);
@@ -685,102 +993,70 @@ useEffect(() => {
     margin: "0 auto",
   }}
 >
-          <div className="panel textOutlineGreen">
-          <Header
-            title={meta.title || "How words can harm, and how love repairs"}
-            subtitle={
-              <>
-                This section helps name harmful communication patterns honestly,
-                compare them with Scripture, understand their impact, and move
-                toward conviction, empathy, repentance, repair, and love-led change.
-              </>
-            }
-          />
-        </div>
+    <div className="panel textOutlineGreen">
+  <div style={{ display: "grid", gap: 16 }}>
+    <div className="pageMetaRow">
+      <div className="pageHeaderTitle" style={{ minWidth: 0, maxWidth: 1120 }}>
+        <Header
+          title={meta.title || "How words can harm, and how love repairs"}
+          subtitle={
+            <>
+              This section helps name harmful communication patterns honestly,
+              compare them with Scripture, understand their impact, and move
+              toward conviction, empathy, repentance, repair, and love-led change.
+            </>
+          }
+        />
+      </div>
 
-        <div className="panel">
-          <TopNav
-            goHome={goHome}
-            goGrid={() => (window.location.hash = "#/grid")}
-            goViolent={() => (window.location.hash = "#/violent")}
-            goCheckin={() => (window.location.hash = "#/checkin")}
-            goNeeds={() => (window.location.hash = "#/needs")}
-            goPrayer={() => (window.location.hash = "#/prayer")}
-            goLog={() => (window.location.hash = "#/log")}
-          />
-        </div>
-<Panel
+      <div
+  className="pageTopNavWrap"
   style={{
-        background:           "linear-gradient(180deg, rgb(242, 242, 243), rgb(164, 107, 203))",
+    display: "flex",
+    gap: 10,
+    alignItems: "center",
+    flexWrap: "wrap",
+    marginTop: 12
   }}
 >
+        <TopNav
+          goHome={goHome}
+          goGrid={() => (window.location.hash = "#/grid")}
+          goViolent={() => (window.location.hash = "#/violent")}
+          goCheckin={() => (window.location.hash = "#/checkin")}
+          goNeeds={() => (window.location.hash = "#/needs")}
+          goPrayer={() => (window.location.hash = "#/prayer")}
+          goLog={() => (window.location.hash = "#/log")}
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
-        <div className="theologyPanel">
-          <div style={{ display: "grid", gap: 12,  }}>
-            <div style={{ fontWeight: 900, fontSize: 20 }}>Purpose</div>
-            <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55 }}>
-              {(meta.purpose || []).map((x, i) => (
-                <li key={i}>{String(x)}</li>
-              ))}
-            </ul>
-
-            <div style={{ fontWeight: 900, fontSize: 20, marginTop: 8 }}>Framing</div>
-            <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55 }}>
-              {(meta.framing || []).map((x, i) => (
-                <li key={i}>{String(x)}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-</Panel>
-<Panel
-  style={{
-        background: "linear-gradient(180deg, rgba(244, 207, 249, 0.62), rgba(156, 118, 253, 0.64))",
-    border: "1px solid rgba(255,255,255,0.12)",
-  }}
+<CollapsiblePanel
+  title="Purpose"
+  defaultOpen={false}
+  background="linear-gradient(180deg, rgb(242, 242, 243), rgb(167, 107, 250))"
 >
-        <div className="theologyPanel">
-          <div style={{ display: "grid", gap: 14 }}>
-            <div style={{ fontWeight: 900, fontSize: 24, color: "#0e0d0d" }}>Theological foundations for communication</div>
-            <div style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(28, 26, 26, 0.94)" }}>
-              This page names sinful communication patterns, but it also grounds communication in a biblical framework: Jesus corrects toward repentance, emotions do not excuse sin, and inner thought patterns shape the words that eventually come out.
-            </div>
+  <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55, color: "#111111" }}>
+    {(meta.purpose || []).map((x, i) => (
+      <li key={i}>{String(x)}</li>
+    ))}
+  </ul>
+</CollapsiblePanel>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 12 }}>
-              <TheologyMiniCard
-                title="Jesus corrects actions to call people toward change"
-                body="Behavior-based correction makes repair possible. Identity attacks usually trap people in shame and defensiveness. Jesus' strongest public rebukes were aimed at leaders who burdened others and blocked access to God, while many individual encounters followed a pattern of truthful exposure plus invitation to repent."
-                verses={[
-                  { ref: "Matthew 23:4, 13, 23-28", principle: "Jesus rebukes hypocritical leaders who burden others and block the way to God." },
-                  { ref: "John 8:10-11", principle: "Jesus refuses condemnation while still calling the woman to leave sin." },
-                  { ref: "Luke 19:8-10", principle: "Jesus' presence leads Zacchaeus toward restitution and changed behavior." },
-                ]}
-              />
+<CollapsiblePanel
+  title="Framing"
+  defaultOpen={false}
+  background="linear-gradient(180deg, rgb(242, 242, 243), rgb(167, 107, 250))"
+>
+  <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55, color: "#111111" }}>
+    {(meta.framing || []).map((x, i) => (
+      <li key={i}>{String(x)}</li>
+    ))}
+  </ul>
+</CollapsiblePanel>
 
-              <TheologyMiniCard
-                title="Emotions are real signals, not moral permission"
-                body="This tool takes emotions seriously, but it does not treat emotion as final authority. Feeling angry, afraid, ashamed, or hurt may reveal something true about need, threat, or loss; it does not justify contempt, deception, manipulation, or blame-shifting. Biblical maturity asks not only what I feel, but what I am doing with what I feel."
-                verses={[
-                  { ref: "Galatians 6:5", principle: "Each person bears their own load; responsibility remains personal." },
-                  { ref: "James 1:19-20", principle: "Human anger does not produce God's righteousness." },
-                  { ref: "Ephesians 4:26-29", principle: "Emotion must not become sinful speech; words must still build up." },
-                ]}
-              />
-
-              <TheologyMiniCard
-                title="Thoughts become words, and words become patterns"
-                body="Communication does not begin at the mouth. Rehearsed thoughts shape emotional intensity; emotions influence tone and impulse; repeated speech and action become habits that either strengthen love or reinforce sin. That is why repentance includes mind renewal, truthfulness, and earlier interruption of distortion."
-                verses={[
-                  { ref: "Romans 12:2", principle: "Transformation comes through renewal of the mind." },
-                  { ref: "2 Corinthians 10:5", principle: "Thoughts are to be taken captive in obedience to Christ." },
-                  { ref: "Matthew 15:18-19", principle: "Words and corrupt actions flow out of the heart." },
-                  { ref: "James 1:14-15", principle: "Disordered inner desire grows outward into sin." },
-                ]}
-              />
-            </div>
-          </div>
-        </div>
-</Panel>
 
         {error ? (
           <div className="panel">
@@ -792,7 +1068,7 @@ useEffect(() => {
 
         <SectionList
         
-          title={categories?.speech_sins?.title || "Speech sins"}
+          title={categories?.speech_sins?.title || "Speech "}
           intro={
             categories?.speech_sins?.intro ||
             "Words can wound, distort reality, strip dignity, and damage safety."
@@ -826,9 +1102,53 @@ useEffect(() => {
           items={heartItems}
           onOpen={setSelectedItem}
         />
+
+<CollapsiblePanel
+  title="Theological foundations for communication"
+  defaultOpen={false}
+  background="linear-gradient(180deg, rgba(254, 247, 255, 0.75), rgba(120, 31, 215, 0.64))"
+  
+>
+  <div className="theologyPanel">
+    <div style={{ display: "grid", gap: 14 }}>
+      <div style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(28, 26, 26, 0.94)" }}>
+        This page names sinful communication patterns, but it also grounds communication in a biblical framework:
+        Jesus corrects toward repentance, emotions do not excuse sin, and inner thought patterns shape the words
+        that eventually come out.
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          gap: 12,
+        }}
+      >
+       <TheologyMiniCard
+  title="Jesus corrects actions to call people toward change"
+  body="Behavior-based correction makes repair possible. Identity attacks usually trap people in shame and defensiveness. Jesus' strongest public rebukes were aimed at leaders who burdened others and blocked access to God, while many individual encounters followed a pattern of truthful exposure plus invitation to repent."
+  verses={THEOLOGY_FOUNDATION_VERSES.correction}
+/>
+
+<TheologyMiniCard
+  title="Emotions are real signals, not moral permission"
+  body="This tool takes emotions seriously, but it does not treat emotion as final authority. Feeling angry, afraid, ashamed, or hurt may reveal something true about need, threat, or loss; it does not justify contempt, deception, manipulation, or blame-shifting. Biblical maturity asks not only what I feel, but what I am doing with what I feel."
+  verses={THEOLOGY_FOUNDATION_VERSES.emotions}
+/>
+
+<TheologyMiniCard
+  title="Thoughts become words, and words become patterns"
+  body="Communication does not begin at the mouth. Rehearsed thoughts shape emotional intensity; emotions influence tone and impulse; repeated speech and action become habits that either strengthen love or reinforce sin. That is why repentance includes mind renewal, truthfulness, and earlier interruption of distortion."
+  verses={THEOLOGY_FOUNDATION_VERSES.thoughts}
+/>
+      </div>
+    </div>
+  </div>
+</CollapsiblePanel>
       </div>
 
       <SinModal item={selectedItem} onClose={() => setSelectedItem(null)} />
     </div>
+    
   );
 }

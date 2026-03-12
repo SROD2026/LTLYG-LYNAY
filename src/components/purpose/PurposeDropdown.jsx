@@ -205,7 +205,7 @@ export default function PurposeDropdown({ items: itemsProp = [] }) {
         </div>
       </div>
 
-      <div className="purposeDD__list">
+      <div className="frameworkWrapper">
         {items.map((item, i) => {
 const isOpen = !!openMap[i];
 const title = String(item?.title || `Section ${i + 1}`);
@@ -215,96 +215,76 @@ const tone = getPurposeTone(i, items.length);
           return (
             <div
               key={i}
-              className={`purposeDD__card ${isOpen ? "isOpen" : ""}`}
-              style={{
-  borderRadius: 18,
-  border: isOpen
-    ? `1px solid ${tone.cardOpenBorder}`
-    : `1px solid ${tone.cardBorder}`,
-  background: tone.cardBg,
-  boxShadow: isOpen
-    ? "0 10px 22px rgba(88, 98, 160, 0.08)"
-    : "0 4px 10px rgba(88, 98, 160, 0.03)",
+              className={`frameworkDropdown ${isOpen ? "isOpen" : ""}`}
+             style={{
+  borderColor: isOpen ? tone.cardOpenBorder : tone.cardBorder,
 }}
 
             >
               <button
-                className="purposeDD__header"
-                onClick={() => toggle(i)}
-                aria-expanded={isOpen}
-                style={{
-                  width: "100%",
-                  textAlign: "left",
-                  background: "transparent",
-                  border: "none",
-                  color: tone.headerText,
-                  cursor: "pointer",
-                  padding: "14px 14px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 10,
-                }}
-              >
+  className="frameworkHeader"
+  onClick={() => toggle(i)}
+  aria-expanded={isOpen}
+  style={{
+    color: tone.headerText,
+    opacity: 1,
+  }}
+>
                 <div
-                  className="purposeDD__title"
-                  style={{
-                    fontSize: 16,
-                    fontWeight: 800,
-                    lineHeight: 1.28,
-                    color: tone.headerText,
-                  }}
-                >
-                  {title}
-                </div>
+  className="purposeDD__title"
+  style={{
+    color: tone.headerText,
+    fontSize: 18,
+    lineHeight: 1.2,
+    fontWeight: 900,
+  }}
+>
+  {title}
+</div>
 
                 <div
-                  className={`purposeDD__chev ${isOpen ? "isOpen" : ""}`}
-                  style={{
-                    opacity: 0.7,
-                    fontSize: 18,
-                    transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",
-                    transition: "transform 160ms ease, opacity 160ms ease",
-                    color: tone.bodyText,
-                  }}
-                >
-                  ›
-                </div>
+  className={`purposeDD__chev ${isOpen ? "isOpen" : ""}`}
+  style={{
+    opacity: 0.72,
+    fontSize: 18,
+    fontWeight: 900,
+    transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",
+    transition: "transform 160ms ease, opacity 160ms ease",
+    color: tone.bodyText,
+    marginLeft: 12,
+    flex: "0 0 auto",
+  }}
+>
+  ›
+</div>
               </button>
 
               <div
-                className="purposeDD__body"
+                className="frameworkBody"
                 style={{
-                  display: isOpen ? "block" : "none",
-                  padding: "0 14px 14px",
-                }}
+  display: isOpen ? "block" : "none",
+}}
               >
                 {sections.map((sec, sIdx) => (
-                  <div key={sIdx} className="purposeDD__section" style={{ marginTop: 12 }}>
+                  <div key={sIdx} className="purposeDD__section" style={{ marginTop: 2 }}>
                     <div
-                      className="purposeDD__label"
+                      className="frameworkSectionTitle"
                       style={{
-                        fontWeight: 800,
-                        marginBottom: 8,
-                        color: tone.labelText,
-                        fontSize: 14,
-                      }}
+  color: tone.labelText,
+}}
                     >
-                      {String(sec?.label || "Notes")}
+                      {String(sec?.label || "")}
                     </div>
 
                     <ul
-                      className="purposeDD__bullets"
+                      className="frameworkList"
                       style={{
-                        margin: 0,
-                        paddingLeft: 18,
-                        color: tone.bodyText,
-                        lineHeight: 1.55,
-                        fontSize: 14,
-                      }}
+  color: tone.bodyText,
+  fontSize: 14,
+}}
                     >
                       {safeArray(sec?.bullets).map((b, bIdx) => (
-                        <li key={bIdx} style={{ margin: "6px 0" }}>
+                        <li key={bIdx} style={{ margin: "1px 0" }}>
                           {String(b)}
                         </li>
                       ))}
@@ -314,38 +294,43 @@ const tone = getPurposeTone(i, items.length);
 
                 {scriptures.length > 0 && (
                   <div
-                    className="purposeDD__scriptureBox"
+                    className="scriptureBlock"
                     style={{
-  marginTop: 14,
-  borderRadius: 14,
-  border: `1px solid ${tone.scriptureBorder}`,
-  background: tone.scriptureBg,
-  padding: 12,
-  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.08)",
+  borderColor: tone.scriptureBorder,
 }}
                   >
-                    <div
-                      className="purposeDD__label"
-                      style={{
-                        marginBottom: 10,
-                        fontWeight: 800,
-color: "rgba(255,255,255,0.96)",
-                        fontSize: 15,
-                      }}
-                    >
-                      Scriptures
-                    </div>
+<div
+  className="frameworkSectionTitle"
+  style={{
+    color: tone.labelText,
+    fontSize: 16,
+    lineHeight: 1.2,
+    fontWeight: 900,
+    marginBottom: 2,
+    marginTop: 0,
+  }}
+>
+  Scriptures
+</div>
 
-                   <ScriptureRotator
+<ScriptureRotator
   scriptures={scriptures}
   perPage={2}
   title=""
   buttonLabel="Show more"
-  containerStyle={{ gap: 12 }}
-  cardStyle={{
-    background: "rgba(255,255,255,0.08)",
-    border: "1px solid rgba(255,255,255,0.14)",
-  }}
+ containerStyle={{
+  width: "100%",
+}}
+ cardStyle={{
+  background: "linear-gradient(180deg, rgba(37, 45, 66, 0.92), rgba(77, 104, 174, 0.92))",
+  border: "1px solid rgba(120,128,170,0.18)",
+  color: "#24324a",
+  borderRadius: 14,
+  padding: 14,
+  fontSize: 15,
+  lineHeight: 1.45,
+  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.55)",
+}}
 />
                   </div>
                 )}

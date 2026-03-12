@@ -49,55 +49,49 @@ const bgStyle = useMemo(() => getViolentPageBackground(selected), [selected]);
       }}
     >
       <div
-        className="panel textOutlineRed"
-        style={{
-          width: "min(1120px, 100%)",
-margin: "0 auto",
-        }}
-      >
-        <div className="metaRow">
-          <div style={{ minWidth: 0, maxWidth: 1120, flex: "1 1 620px" }}>
-            <Header
-              title="I'm Feeling Violent"
-              subtitle={
-                <>
-                  We all feel this way sometimes. However, these emotions are
-                  rarely helpful in getting our needs met. After you pick one,
-                  consider alternatives that foster connection, and speak the
-                  truth in love.
-                </>
-              }
-            />
-          </div>
+  className="panel textOutlineRed"
+  style={{
+    width: "min(1120px, 100%)",
+    margin: "0 auto",
+  }}
+>
+  <div className="pageMetaRow">
+    <div className="pageHeaderTitle" style={{ minWidth: 0, maxWidth: 1120 }}>
+      <Header
+        title="I'm Feeling Violent"
+        subtitle={
+          <>
+            We all feel this way sometimes. However, these emotions are
+            rarely helpful in getting our needs met. After you pick one,
+            consider alternatives that foster connection, and speak the
+            truth in love.
+          </>
+        }
+      />
+    </div>
 
-          <div
-            style={{
-              display: "flex",
-              gap: 10,
-              alignItems: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <div className="smallMuted">
-              {loading
-                ? "Loading…"
-                : error
-                ? `Error: ${String(error.message || error)}`
-                : `Loaded ${grid.length} entries`}
-            </div>
-
-            <TopNav
-              goHome={goHome}
-              goGrid={() => (window.location.hash = "#/grid")}
-              goCheckin={() => (window.location.hash = "#/checkin")}
-              goNeeds={() => (window.location.hash = "#/needs")}
-              goPrayer={() => (window.location.hash = "#/prayer")}
-              goCommunication={() => (window.location.hash = "#/communication-sins")}
-              goLog={() => (window.location.hash = "#/log")}
-            />
-          </div>
-        </div>
-      </div>
+    <div
+  className="pageTopNavWrap"
+  style={{
+    display: "flex",
+    gap: 10,
+    alignItems: "center",
+    flexWrap: "wrap",
+    marginTop: 12
+  }}
+>
+      <TopNav
+        goHome={goHome}
+        goGrid={() => (window.location.hash = "#/grid")}
+        goCheckin={() => (window.location.hash = "#/checkin")}
+        goNeeds={() => (window.location.hash = "#/needs")}
+        goPrayer={() => (window.location.hash = "#/prayer")}
+        goCommunication={() => (window.location.hash = "#/communication-sins")}
+        goLog={() => (window.location.hash = "#/log")}
+      />
+    </div>
+  </div>
+</div>
 
       <div
         className="panel textOutlineRed gridPanel"
@@ -109,15 +103,24 @@ margin: "0 auto",
         <EmotionGrid
           grid={grid}
           meta={meta}
-          onPick={setSelected}
-          axisLabels={{
+onPick={(value) => {
+    setSelected(value);
+
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 80);
+  }}
+            axisLabels={{
             tl: "RED (activated)",
             tr: "YELLOW (surprised)",
             bl: "PURPLE (shame)",
             br: "BLUE (low)",
           }}
-  tileSize={Math.min(78, (window.innerWidth - 40) / 12)}
-          labelScale={1.10}
+  tileSize={78}
+          labelScale={1.05}
         />
       </div>
     </div>
