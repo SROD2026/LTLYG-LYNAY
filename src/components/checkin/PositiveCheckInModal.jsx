@@ -370,6 +370,7 @@ const nextStepRef = useRef(null);
   const [selectedNeedMet, setSelectedNeedMet] = useState("");
 const modalCardRef = useRef(null);
 const [spacerHeight, setSpacerHeight] = useState(0);
+const [contextNotes, setContextNotes] = useState("");
 
 
   const [gratitudeText, setGratitudeText] = useState("");
@@ -393,6 +394,8 @@ const [spacerHeight, setSpacerHeight] = useState(0);
     if (!open) return;
     setLogCount(loadReflectionLog().length);
 
+
+    
     requestAnimationFrame(() => {
       if (modalBodyRef.current) {
         modalBodyRef.current.scrollTop = 0;
@@ -420,6 +423,21 @@ useEffect(() => {
   };
   }, [open]);
 
+  useEffect(() => {
+  if (!open) return;
+
+  function handleKey(e) {
+    if (e.key === "Escape") {
+      onClose?.();
+    }
+  }
+
+  window.addEventListener("keydown", handleKey);
+
+  return () => {
+    window.removeEventListener("keydown", handleKey);
+  };
+}, [open, onClose]);
 
   useEffect(() => {
     setSelectedNeedMet("");
@@ -627,33 +645,34 @@ return `${
     const pngDataUrl = await captureElementPng("#checkinStickCapture");
 
     appendReflectionEntry({
-      type: "gratitude",
+  type: "gratitude",
 
-      emotion: emotionKey,
-      title,
-      side,
+  emotion: emotionKey,
+  title,
+  side,
 
-      need: "",
-      needs_met: selectedNeedMet || "",
+  need: "",
+  needs_met: selectedNeedMet || "",
 
-      reframe: reframe || "",
-      request: "",
+  reframe: reframe || "",
+  request: "",
+  context_notes: contextNotes.trim(),
 
-      cause: "",
-      replacement: "",
+  cause: "",
+  replacement: "",
 
-      violationKey: "",
-      accountableViolationKey: "",
+  violationKey: "",
+  accountableViolationKey: "",
 
-      observation: selectedObservation || "",
-      theology_key: selectedTheologyKey || "",
+  observation: selectedObservation || "",
+  theology_key: selectedTheologyKey || "",
 
-      gratitude_prompt: selectedGratPrompt || "",
-      gratitude_text: gratitudeText || "",
+  gratitude_prompt: selectedGratPrompt || "",
+  gratitude_text: gratitudeText || "",
 
-      intero: intero.filter((x) => x?.region && x?.sensation),
-      pngDataUrl,
-    });
+  intero: intero.filter((x) => x?.region && x?.sensation),
+  pngDataUrl,
+});
 
     setLogCount(loadReflectionLog().length);
     setSaveStatus("Emotional State Saved ✓");
@@ -1157,6 +1176,34 @@ width: "100%",
             onChangeTheologyKey={setSelectedTheologyKey}
             copyText={gratitudeSummaryText}
           />
+
+          <Panel style={{ display: "grid", gap: 12 }}>
+  <div style={{ fontWeight: 900 }}>5) Context or what was happening</div>
+
+  <div style={{ fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,0.86)" }}>
+    Add any situational details you want saved with this gratitude entry.
+  </div>
+
+  <textarea
+    value={contextNotes}
+    onChange={(e) => setContextNotes(e.target.value)}
+    placeholder="What was happening in the moment that made this feel meaningful?"
+    style={{
+      width: "100%",
+      minHeight: 140,
+      resize: "vertical",
+      borderRadius: 14,
+      padding: "14px 16px",
+      border: "1px solid rgba(255,255,255,0.14)",
+      background: "rgba(255,255,255,0.06)",
+      color: "rgba(255,255,255,0.96)",
+      fontSize: 14,
+      lineHeight: 1.55,
+      outline: "none",
+      boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)",
+    }}
+  />
+</Panel>
         </div>
 
 <div

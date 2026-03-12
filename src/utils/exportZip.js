@@ -27,11 +27,18 @@ function csvEscape(v) {
 function buildCsv(entries) {
   const header = [
     "timestamp",
-    "emotion",
-    "need",
-    "body_sensations",
-    "image_file",
-  ].join(",");
+  "mode",
+  "emotion",
+  "need",
+  "body_sensations",
+  "violent_trigger",
+  "violent_replacement",
+  "violation_key",
+  "accountable_violation_key",
+  "request",
+  "context_notes",
+  "image_file",
+].join(",");
 
   const lines = entries.map((e, idx) => {
     const imageFile = `entry-${String(idx + 1).padStart(4, "0")}.png`;
@@ -40,13 +47,20 @@ function buildCsv(entries) {
       .join(" | ");
 
     return [
-      csvEscape(e.ts),
-      csvEscape(e.emotion),
-      csvEscape(e.need),
-      csvEscape(body),
-      csvEscape(imageFile),
-    ].join(",");
-  });
+  csvEscape(e?.ts || ""),
+  csvEscape(e?.mode || ""),
+  csvEscape(e?.emotion || ""),
+  csvEscape(e?.need || ""),
+  csvEscape(body),
+  csvEscape(e?.cause || ""),
+  csvEscape(e?.replacement || ""),
+  csvEscape(e?.violationKey || ""),
+  csvEscape(e?.accountableViolationKey || ""),
+  csvEscape(e?.request || ""),
+  csvEscape(e?.context_notes || ""),
+  csvEscape(imageFile),
+].join(",");
+});
 
   return [header, ...lines].join("\n");
 }

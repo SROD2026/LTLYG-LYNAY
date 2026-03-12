@@ -10,27 +10,28 @@ function csvEscape(v) {
 }
 
 export function buildReflectionCsv(entries) {
-    const header = [
-    "id",
-    "ts",
-    "type",
-    "emotion",
-    "title",
-    "side",
-    "need",
-    "needs_met",
-    "reframe",
-    "request",
-    "cause",
-    "replacement",
-    "violationKey",
-    "accountableViolationKey",
-    "observation",
-    "theology_key",
-    "gratitude_prompt",
-    "gratitude_text",
-    "written_prayer"
-  ];
+   const header = [
+  "id",
+  "ts",
+  "type",
+  "emotion",
+  "title",
+  "side",
+  "need",
+  "needs_met",
+  "reframe",
+  "request",
+  "cause",
+  "replacement",
+  "violationKey",
+  "accountableViolationKey",
+  "observation",
+  "theology_key",
+  "gratitude_prompt",
+  "gratitude_text",
+  "context_notes",
+  "written_prayer"
+];
 
   const lines = [header.join(",")];
 

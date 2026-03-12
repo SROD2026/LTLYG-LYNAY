@@ -8,21 +8,34 @@ export function csvEscape(v) {
 
 export function buildCSV(entries) {
   const header = [
-    "timestamp",
-    "mode",
-    "emotion",
-    "need",
-    "body_sensations",
-    "violent_trigger",
-    "violent_replacement",
-  ].join(",");
+  "timestamp",
+  "mode",
+  "emotion",
+  "need",
+  "body_sensations",
+  "violent_trigger",
+  "violent_replacement",
+  "violation_key",
+  "accountable_violation_key",
+  "request",
+  "context_notes",
+  "image_file",
+].join(",");
 
   const rows = entries.map(e =>
     [
-      csvEscape(e.ts),
-      csvEscape(e.mode),
-      csvEscape(e.emotion),
-      csvEscape(e.need)
+       csvEscape(e?.ts || ""),
+  csvEscape(e?.mode || ""),
+  csvEscape(e?.emotion || ""),
+  csvEscape(e?.need || ""),
+  csvEscape(body),
+  csvEscape(e?.cause || ""),
+  csvEscape(e?.replacement || ""),
+  csvEscape(e?.violationKey || ""),
+  csvEscape(e?.accountableViolationKey || ""),
+  csvEscape(e?.request || ""),
+  csvEscape(e?.context_notes || ""),
+  csvEscape(imageFile),
     ].join(",")
   );
 

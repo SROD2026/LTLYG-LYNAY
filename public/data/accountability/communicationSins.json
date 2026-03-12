@@ -106,9 +106,7 @@
       "empathy_prompts": [
         "How might my words have felt in the other person's body?",
         "Did my tone make honesty feel safer or more dangerous?",
-        "Did my speech preserve dignity while addressing the issue?",
-        "Even when the content was true, harsh delivery can land like danger in the body.",
-        "The other person may still be carrying chest-tightness, vigilance, or dread after the words are over."
+        "Did my speech preserve dignity while addressing the issue?"
       ],
       "love_repair": [
         "lower verbal intensity and slow down",
@@ -219,9 +217,7 @@
       "empathy_prompts": [
         "How might contempt have affected the other person's sense of worth or safety?",
         "Did my words feel like correction, or like being looked down on?",
-        "Would I feel emotionally safe receiving my own words?",
-        "Contempt often makes a person feel disgusting, beneath you, or unsafe to exist around you.",
-        "Some people respond outwardly; others go numb, go quiet, or privately replay the contempt for hours or days."
+        "Would I feel emotionally safe receiving my own words?"
       ],
       "love_repair": [
         "name the contempt plainly",
@@ -328,9 +324,7 @@
       "empathy_prompts": [
         "How might it feel to be described unfairly?",
         "Did my words make the other person feel known or trapped inside my interpretation?",
-        "Did I protect shared reality or bend it?",
-        "False accusation can make a person feel trapped inside a story they did not create.",
-        "Even if they stay calm, they may be internally fighting panic, disbelief, or helplessness."
+        "Did I protect shared reality or bend it?"
       ],
       "love_repair": [
         "separate facts from interpretation",
@@ -437,9 +431,7 @@
       "empathy_prompts": [
         "What happens to another person's nervous system when truth keeps changing?",
         "How might concealment affect their trust in the relationship?",
-        "What would it feel like to discover that important truth was withheld from me?",
-        "Omission often leaves the harmed person questioning their memory, judgment, and safety.",
-        "A calm exterior may hide racing thoughts, distrust, or a compulsion to keep checking for what is still hidden."
+        "What would it feel like to discover that important truth was withheld from me?"
       ],
       "love_repair": [
         "tell the whole truth clearly",
@@ -549,9 +541,7 @@
       "empathy_prompts": [
         "Did my words make the other person feel fairly described?",
         "Did exaggeration help clarity or just heighten force?",
-        "Would I feel safe being addressed in these same exaggerated terms?",
-        "Exaggeration can make the other person feel impossible to understand or permanently condemned.",
-        "They may not protest outwardly, but internally they may feel crushed by an unfair scale of blame."
+        "Would I feel safe being addressed in these same exaggerated terms?"
       ],
       "love_repair": [
         "replace absolute language with concrete specifics",
@@ -661,9 +651,7 @@
       "empathy_prompts": [
         "What might it feel like to be made into a joke during something painful?",
         "Did my humor make honesty feel safe or dangerous?",
-        "Would I feel respected if someone joked about me this way?",
-        "Mockery can make someone feel suddenly alone in the room, even if others laugh.",
-        "A person may smile, freeze, or go blank while privately feeling humiliated or unsafe."
+        "Would I feel respected if someone joked about me this way?"
       ],
       "love_repair": [
         "name the mockery directly",
@@ -773,9 +761,7 @@
       "empathy_prompts": [
         "What would it feel like to know someone is shaping others' view of me unfairly?",
         "How might this affect the other person's trust and safety?",
-        "Did I protect truth or amplify injury?",
-        "Slander can make a person feel socially exposed, vulnerable, and unable to defend themselves.",
-        "Even if they never hear every detail, the relational environment may become unsafe around them."
+        "Did I protect truth or amplify injury?"
       ],
       "love_repair": [
         "correct false impressions clearly",
@@ -881,9 +867,7 @@
       "empathy_prompts": [
         "How would I feel if someone shared this about me without necessity?",
         "Did my words enlarge safety or enlarge exposure?",
-        "Was I serving truth and help, or just relieving myself?",
-        "Gossip can create a hidden environment where the harmed person no longer knows where they are safe.",
-        "They may seem composed while internally scanning for who knows what and how they are being discussed."
+        "Was I serving truth and help, or just relieving myself?"
       ],
       "love_repair": [
         "stop unnecessary disclosure",
@@ -993,9 +977,7 @@
       "empathy_prompts": [
         "Did my words leave real room for a different answer?",
         "How might it feel to be pressured by language instead of invited honestly?",
-        "Did I seek clarity, or control?",
-        "Manipulative wording can leave a person feeling trapped, foggy, or guilty without knowing why.",
-        "The impact may be confusion in the moment and shame later when they realize how pressured they felt."
+        "Did I seek clarity, or control?"
       ],
       "love_repair": [
         "remove loaded wording",
@@ -1101,9 +1083,7 @@
       "empathy_prompts": [
         "What might it feel like to receive pain hidden inside humor?",
         "Did my sarcasm clarify, or did it make the other person feel ridiculed?",
-        "Would I feel emotionally safe if someone spoke to me this way?",
-        "Sarcasm often makes the other person do double work: absorb the sting and decode the hidden message.",
-        "They may laugh outwardly while inwardly feeling cut, confused, or relationally unsafe."
+        "Would I feel emotionally safe if someone spoke to me this way?"
       ],
       "love_repair": [
         "name the sarcasm directly",
@@ -1213,9 +1193,7 @@
       "empathy_prompts": [
         "How might my tone or force have felt in the other person's body?",
         "Did my communication invite honesty, or did it push them into survival mode?",
-        "Would I feel emotionally safe with someone speaking to me this way?",
-        "Intimidation can trigger freeze, fawn, panic, or shutdown even if the person says very little.",
-        "Silence after intimidation is not proof of peace; it may be a survival response."
+        "Would I feel emotionally safe with someone speaking to me this way?"
       ],
       "love_repair": [
         "lower volume and intensity",
@@ -1321,9 +1299,7 @@
       "empathy_prompts": [
         "How might it feel to have true things used in a wounding way?",
         "Did my truth-telling invite growth, or did it mainly expose and injure?",
-        "Would I want truth brought to me in this same manner?",
-        "A true statement delivered without love can still wound, expose, and destabilize.",
-        "The harmed person may agree with the content while also feeling emotionally injured by the way it was wielded."
+        "Would I want truth brought to me in this same manner?"
       ],
       "love_repair": [
         "acknowledge the unloving use of truth",
@@ -1430,9 +1406,7 @@
       "empathy_prompts": [
         "What might it feel like to have real pain treated as small?",
         "Did my words help the other person feel understood or doubted?",
-        "Would I feel safe sharing pain with someone who responded this way?",
-        "Minimization often creates loneliness: the person feels both hurt and unseen in the hurt.",
-        "They may stop showing emotion externally because past attempts were reduced or brushed aside."
+        "Would I feel safe sharing pain with someone who responded this way?"
       ],
       "love_repair": [
         "acknowledge that you minimized the pain or impact",
@@ -1539,9 +1513,7 @@
       "empathy_prompts": [
         "What might it feel like to bring up something painful and be brushed off?",
         "Did my words communicate that the other person mattered?",
-        "Would I feel respected if my concern were answered this way?",
-        "Dismissiveness can make a person feel cognitively and relationally erased.",
-        "Some people get louder when dismissed; others go quiet because speaking no longer feels worth the cost."
+        "Would I feel respected if my concern were answered this way?"
       ],
       "love_repair": [
         "acknowledge the dismissive response plainly",
@@ -1647,9 +1619,7 @@
       "empathy_prompts": [
         "What would it feel like to be told my feelings are wrong?",
         "Did my response invite deeper honesty or shut it down?",
-        "Would I feel emotionally safe if my own distress were handled this way?",
-        "Invalidation can force a person to hide their inner world in order to stay connected.",
-        "They may appear regulated while actually stuffing grief, fear, or panic because prior disclosure was not safe."
+        "Would I feel emotionally safe if my own distress were handled this way?"
       ],
       "love_repair": [
         "acknowledge the invalidating effect clearly",
@@ -1759,9 +1729,7 @@
       "empathy_prompts": [
         "What might it feel like to have my identity attacked instead of my behavior addressed?",
         "Did my words call for repentance or push toward collapse and hiding?",
-        "Would I feel safe being corrected this way?",
-        "Shaming speech can leave a person feeling dirty, trapped, and afraid to be fully seen.",
-        "Even when outward emotion is small, shame may be operating internally for a long time afterward."
+        "Would I feel safe being corrected this way?"
       ],
       "love_repair": [
         "name the degrading or identity-targeting speech directly",
@@ -1867,9 +1835,7 @@
       "empathy_prompts": [
         "How might cold correction feel in the other person's body?",
         "Did my truth arrive as care, or as emotional ice?",
-        "Would I feel safe being corrected with this same posture?",
-        "Cold correction can make a person feel like a case to fix instead of someone to love.",
-        "They may comply outwardly while internally feeling abandoned, small, or emotionally unsafe."
+        "Would I feel safe being corrected with this same posture?"
       ],
       "love_repair": [
         "acknowledge the cold or punishing delivery",
@@ -1980,9 +1946,7 @@
       "empathy_prompts": [
         "What might it feel like to be questioned in a way that already assumes guilt?",
         "Did my questions create room for honesty, or did they create fear?",
-        "Would I feel safe answering questions delivered this way?",
-        "Accusatory questions can make a person feel cross-examined instead of understood.",
-        "Even if they answer every question, their body may still register threat and entrapment."
+        "Would I feel safe answering questions delivered this way?"
       ],
       "love_repair": [
         "acknowledge the interrogating or cornering effect directly",
@@ -2089,9 +2053,7 @@
       "empathy_prompts": [
         "What does it feel like to hear words of confession that still do not feel fully real?",
         "Did my confession make trust easier or harder?",
-        "Would I feel safe resting in the kind of confession I offered?",
-        "A badly handled confession can leave the other person flooded, responsible for your relief, or trapped without preparation.",
-        "They may look composed while internally trying to metabolize shock, grief, or disorientation."
+        "Would I feel safe resting in the kind of confession I offered?"
       ],
       "love_repair": [
         "confess specifically and concretely",
@@ -2204,9 +2166,7 @@
       "empathy_prompts": [
         "What might my silence have felt like to the other person?",
         "Did my withdrawal communicate regulation, or punishment, or disappearance?",
-        "Would I feel safe if someone left me this way?",
-        "Stonewalling often creates panic, abandonment, and disorientation in the other person.",
-        "Their distress may be invisible if they have learned to process abandonment quietly."
+        "Would I feel safe if someone left me this way?"
       ],
       "love_repair": [
         "state clearly that you need a pause",
@@ -2313,9 +2273,7 @@
       "empathy_prompts": [
         "How might blame-shifting land on someone already hurt by my behavior?",
         "Did my response make repair easier or harder to trust?",
-        "What would it feel like to have someone move away from ownership while I was in pain?",
-        "Blame-shifting makes the harmed person carry both the original wound and your refusal to own it.",
-        "They may begin doubting themselves or over-examining their role to make sense of the distortion."
+        "What would it feel like to have someone move away from ownership while I was in pain?"
       ],
       "love_repair": [
         "name what you did first",
@@ -2426,9 +2384,7 @@
       "empathy_prompts": [
         "What did my defensiveness require the other person to carry?",
         "Did my response invite honesty or shut it down?",
-        "How hard did I make it for the other person to feel heard?",
-        "Defensiveness tells the other person that your self-image is taking priority over their pain.",
-        "They may stop bringing concerns because each attempt becomes a battle just to be heard."
+        "How hard did I make it for the other person to feel heard?"
       ],
       "love_repair": [
         "reflect impact before explaining intent",
@@ -2538,9 +2494,7 @@
       "empathy_prompts": [
         "What might it feel like to hurt next to me and still feel alone?",
         "Did I communicate care through attention and follow-through?",
-        "Would I feel emotionally held if I were in their place?",
-        "Neglect often produces a quiet grief: the person learns not to expect care.",
-        "Because the wound is cumulative, they may struggle to show you how many small moments added up to real pain."
+        "Would I feel emotionally held if I were in their place?"
       ],
       "love_repair": [
         "acknowledge the loneliness or pain left unaddressed",
@@ -2650,9 +2604,7 @@
       "empathy_prompts": [
         "Did the other person have real room to say no?",
         "What might it feel like to be pressured into agreement?",
-        "Did I protect freedom, or control it?",
-        "Coercion can leave the body saying yes while the nervous system is saying danger.",
-        "The person may not openly resist, but they may feel trapped, small, and powerless."
+        "Did I protect freedom, or control it?"
       ],
       "love_repair": [
         "remove leverage and pressure",
@@ -2758,9 +2710,7 @@
       "empathy_prompts": [
         "What might it feel like if my limit was treated as something to push through?",
         "Did I make boundaries safer or less safe to express?",
-        "Would I trust someone who kept testing my no?",
-        "Boundary violation can make a person feel exposed and unable to relax around you.",
-        "Even if they say little, their body may begin scanning for the next intrusion."
+        "Would I trust someone who kept testing my no?"
       ],
       "love_repair": [
         "stop immediately when a limit is named",
@@ -2870,9 +2820,7 @@
       "empathy_prompts": [
         "What might my silence have done to the other person's nervous system?",
         "Did my silence communicate regulation or punishment?",
-        "Would I feel safe if someone used silence on me this way?",
-        "Weaponized silence can feel like relational disappearance with intent behind it.",
-        "The other person may become hypervigilant, trying to read the room and repair alone."
+        "Would I feel safe if someone used silence on me this way?"
       ],
       "love_repair": [
         "acknowledge the punitive or controlling use of silence",
@@ -2978,9 +2926,7 @@
       "empathy_prompts": [
         "What is it like to wait for repair that never fully comes?",
         "Did my avoidance leave the other person carrying unresolved pain alone?",
-        "What would it feel like if my own hurt were treated this way?",
-        "Withheld repair leaves a person stuck in unresolved injury with no signal that restoration matters to you.",
-        "They may look functional while internally learning not to hope for repair anymore."
+        "What would it feel like if my own hurt were treated this way?"
       ],
       "love_repair": [
         "acknowledge what remains unrepaired",
@@ -3090,10 +3036,7 @@
       "empathy_prompts": [
         "How might it feel to have Scripture or spiritual language used against pain instead of for healing?",
         "Did my words bring light, or did they create pressure and confusion?",
-        "Would I feel spiritually safe receiving these words in this way?",
-        "Spiritual deflection can make the harmed person feel doubly unseen: hurt relationally and then spiritually overruled.",
-        "They may become hesitant to share pain if every concern is met with generalized God-talk instead of concrete repair."
-      ],
+        "Would I feel spiritually safe receiving these words in this way?"],
       "love_repair": [
         "acknowledge the deflecting use of spiritual language",
         "stop using theology to avoid concrete ownership",
@@ -3198,9 +3141,7 @@
       "empathy_prompts": [
         "What might it feel like to have my own experience overridden?",
         "Did I make the other person feel more clear and known, or more erased and unstable?",
-        "Would I trust someone who treated my experience this way?",
-        "Invalidating someone's experience can destabilize their sense of reality and safety.",
-        "The person may stop trying to explain themselves if prior efforts were repeatedly overruled."
+        "Would I trust someone who treated my experience this way?"
       ],
       "love_repair": [
         "acknowledge that you invalidated their experience",
@@ -3306,9 +3247,7 @@
       "empathy_prompts": [
         "What does it feel like to bring concern to someone who refuses correction?",
         "Did my response invite honesty or punish it?",
-        "Would I feel hopeful trying to repair with someone in my posture?",
-        "Refusal to be corrected can leave the other person feeling hopeless and unsafe bringing truth.",
-        "Over time they may grieve not only the original harm but the closed door to meaningful change."
+        "Would I feel hopeful trying to repair with someone in my posture?"
       ],
       "love_repair": [
         "acknowledge the resistant posture directly",
@@ -3414,9 +3353,7 @@
       "empathy_prompts": [
         "What might it feel like to be held highly accountable by someone who avoids the same standard?",
         "Did my posture communicate shared humility or protected superiority?",
-        "Would I feel safe and hopeful in a relationship where accountability worked this way?",
-        "One-sided accountability creates exhaustion and futility; the other person feels perpetually under review while you remain protected.",
-        "They may appear compliant while privately feeling resentment, despair, or injustice."
+        "Would I feel safe and hopeful in a relationship where accountability worked this way?"
       ],
       "love_repair": [
         "confess where accountability has been one-sided",
@@ -3523,9 +3460,7 @@
       "empathy_prompts": [
         "What might it feel like to be pushed toward closeness before safety has returned?",
         "Did my urgency serve healing, or mainly my own relief?",
-        "Would I feel safe if reconciliation were demanded from me this way?",
-        "Forced reconciliation can make a person feel that your comfort matters more than their healing.",
-        "They may say yes to reunion while internally feeling overridden and unfinished."
+        "Would I feel safe if reconciliation were demanded from me this way?"
       ],
       "love_repair": [
         "acknowledge the pressure or rushing directly",
@@ -3631,10 +3566,8 @@
       "empathy_prompts": [
         "What might it feel like to be treated through a hidden ledger I cannot see?",
         "Did my posture toward the other person feel transparent and fair, or quietly punishing?",
-        "Would I feel safe in a relationship shaped by unspoken bookkeeping?",
-        "Silent scorekeeping keeps the other person in a relationship with hidden terms and unspoken debt.",
-        "They may feel blindsided when the stored list appears, and unsafe because the real state of the relationship was concealed."
-      ],
+        "Would I feel safe in a relationship shaped by unspoken bookkeeping?"
+            ],
       "love_repair": [
         "acknowledge the hidden ledger honestly",
         "separate present issues from accumulated resentment",
@@ -3737,9 +3670,7 @@
       "empathy_prompts": [
         "How might my pride make the other person feel unseen or unsafe?",
         "Did my need to be right make it harder to love well?",
-        "Would I feel emotionally safe raising concerns with someone in my posture?",
-        "Pride often makes others feel reduced to supporting characters in your self-story.",
-        "They may not name pride directly, but they feel its effects as dismissal, pressure, or smallness."
+        "Would I feel emotionally safe raising concerns with someone in my posture?"
       ],
       "love_repair": [
         "choose humility over self-protection",
@@ -3845,9 +3776,7 @@
       "empathy_prompts": [
         "What burden did my self-protection place on the other person?",
         "Did my comfort become more important than their safety or clarity?",
-        "What might love have required from me in that moment?",
-        "Self-protection often leaves the harmed person carrying the consequences of your avoidance.",
-        "They may feel that your safety matters in practice while theirs remains negotiable."
+        "What might love have required from me in that moment?"
       ],
       "love_repair": [
         "tell the truth without curating it",
@@ -3953,9 +3882,7 @@
       "empathy_prompts": [
         "How might my hardness feel to the person trying to reach me?",
         "Did my posture communicate care or emotional stonewalling?",
-        "Would I feel safe bringing pain to someone in my posture?",
-        "Hardness can feel chilling to the other person: they may sense they are suffering near someone unmoved.",
-        "Visible calm on your side may be experienced as painful indifference on theirs."
+        "Would I feel safe bringing pain to someone in my posture?"
       ],
       "love_repair": [
         "ask God for tenderness and humility",
@@ -4061,9 +3988,7 @@
       "empathy_prompts": [
         "What burden does my hiding place on the other person?",
         "How might repeated concealment affect their sense of safety and trust?",
-        "Did I make them work to uncover what I should have brought into the light myself?",
-        "Fear of exposure often makes the other person live with partial realities and recurring surprise.",
-        "They may feel repeatedly destabilized by learning truth only after pressure or discovery."
+        "Did I make them work to uncover what I should have brought into the light myself?"
       ],
       "love_repair": [
         "tell the truth without waiting to be cornered",
@@ -4169,9 +4094,7 @@
       "empathy_prompts": [
         "How might my control feel to the other person?",
         "Did I leave room for their freedom and dignity?",
-        "Would I feel safe with someone who approached me this way?",
-        "Control can make the other person feel there is no safe room for their own mind, pace, or boundary.",
-        "They may comply outwardly while inwardly shrinking or bracing."
+        "Would I feel safe with someone who approached me this way?"
       ],
       "love_repair": [
         "name the controlling posture honestly",
@@ -4273,9 +4196,7 @@
       "empathy_prompts": [
         "How might resentment make the other person feel in my presence?",
         "Did my words reflect current reality, or stored-up grievance?",
-        "Would I feel safe if someone spoke to me from quiet bitterness?",
-        "Resentment often makes the relational climate colder long before the other person knows why.",
-        "They may sense hostility without being given a truthful path to address it."
+        "Would I feel safe if someone spoke to me from quiet bitterness?"
       ],
       "love_repair": [
         "acknowledge the bitterness honestly",
@@ -4377,9 +4298,7 @@
       "empathy_prompts": [
         "How might my posture feel to the other person?",
         "Did my communication invite humility, or did it mainly project superiority?",
-        "Would I feel safe being corrected by someone in my posture?",
-        "Self-righteousness makes the other person feel judged from above rather than approached in shared need of grace.",
-        "It can create shame, defensiveness, or hopelessness even when some correction is valid."
+        "Would I feel safe being corrected by someone in my posture?"
       ],
       "love_repair": [
         "confess superiority or moral pride directly",
@@ -4489,9 +4408,7 @@
       "empathy_prompts": [
         "What might it feel like to hurt near me and sense that I do not really care?",
         "Did my posture communicate that the other person mattered?",
-        "Would I feel emotionally safe being vulnerable with someone in my posture?",
-        "Indifference wounds quietly: the message is that the person's pain is not weighty enough to move you.",
-        "They may stop reaching because repeated non-response taught them not to hope."
+        "Would I feel emotionally safe being vulnerable with someone in my posture?"
       ],
       "love_repair": [
         "acknowledge the coldness or lack of response",
@@ -4597,9 +4514,7 @@
       "empathy_prompts": [
         "How might envy change the way I speak to or about this person?",
         "Did my words honor their dignity, or try to reduce it?",
-        "Would I feel safe around someone reacting to me from envy?",
-        "Envy can make the other person feel strangely resisted or unsupported when they should have been welcomed.",
-        "They may not understand the source, only the repeated undercurrent of rivalry or coldness."
+        "Would I feel safe around someone reacting to me from envy?"
       ],
       "love_repair": [
         "confess envy honestly before God",
@@ -4705,9 +4620,7 @@
       "empathy_prompts": [
         "How might my fear-driven control feel to the other person?",
         "Did my anxiety become something they had to carry in the form of pressure?",
-        "Would I feel free and safe under this kind of management?",
-        "Fear-driven control can feel chaotic to the one being controlled because your inner panic becomes their external pressure.",
-        "They may experience your fear as surveillance, micromanagement, or unpredictability."
+        "Would I feel free and safe under this kind of management?"
       ],
       "love_repair": [
         "acknowledge the controlling effect of fear",
@@ -4809,9 +4722,7 @@
       "empathy_prompts": [
         "How might hidden truth affect the other person's trust if they later discover it?",
         "Did my pleasantness serve love, or did it mainly protect me from discomfort?",
-        "Would I want agreement from someone who was not being fully truthful with me?",
-        "People-pleasing can feel kind on the surface but destabilizing underneath because reality keeps shifting.",
-        "The harmed person may feel misled, unprepared, or unable to trust your words."
+        "Would I want agreement from someone who was not being fully truthful with me?"
       ],
       "love_repair": [
         "acknowledge where approval-seeking replaced honesty",
@@ -4921,9 +4832,7 @@
       "empathy_prompts": [
         "How might my cold superiority feel to the person in front of me?",
         "Did my posture communicate honor, or did it mainly communicate distance and judgment?",
-        "Would I feel safe receiving correction from someone standing over me like this?",
-        "Cold superiority makes the other person feel studied, graded, or beneath you rather than companioned.",
-        "Even without overt insults, the relational atmosphere can become icy and humiliating."
+        "Would I feel safe receiving correction from someone standing over me like this?"
       ],
       "love_repair": [
         "confess the superior posture honestly",
@@ -5029,9 +4938,7 @@
       "empathy_prompts": [
         "What might it feel like if the person who hurt me quickly made their own pain the center?",
         "Did my response require the other person to comfort me instead of being cared for themselves?",
-        "Would I feel safe bringing pain to someone who responded this way?",
-        "Self-pity can reverse the emotional burden so the harmed person ends up caring for the one who hurt them.",
-        "They may suppress their own pain because the room became organized around your distress instead."
+        "Would I feel safe bringing pain to someone who responded this way?"
       ],
       "love_repair": [
         "acknowledge where self-focused sorrow displaced ownership",

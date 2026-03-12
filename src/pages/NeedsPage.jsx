@@ -513,27 +513,12 @@ onClick={() => {
   <NeedChip
     key={need}
     text={need}
-    armed={armedNeedName === need}
-    requireDoubleTap={requireDoubleTap}
-    onArm={setArmedNeedName}
     onOpen={(name) => {
       setSelectedNeedName(name);
-      setArmedNeedName("");
     }}
   />
-))}
-                </div>
-{requireDoubleTap && (
-  <div
-    style={{
-      fontSize: 12,
-      color: "rgba(20,20,20,0.68)",
-      marginTop: 6,
-    }}
-  >
-    Tap once to select a need, tap again to open details.
-  </div>
-)}
+))}                </div>
+
 
               </div>
             ) : null}

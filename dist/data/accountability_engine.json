@@ -1,0 +1,82 @@
+{
+  "emotions": {
+    "violent": {
+      "anger": {
+        "needs": ["respect", "honesty", "safety"],
+        "similar_nonviolent": [
+          "concerned",
+          "hurt",
+          "protective",
+          "overwhelmed"
+        ]
+      }
+    },
+
+    "nonviolent": {
+      "concerned": {
+        "needs": ["clarity", "safety"]
+      }
+    },
+
+    "gratitude": {
+      "grateful": {
+        "needs_met": [
+          "support",
+          "care",
+          "understanding"
+        ]
+      }
+    }
+  },
+
+  "needs": {
+    "safety": {
+      "definition": "Freedom from harm or threat"
+    },
+    "honesty": {
+      "definition": "Truthful communication"
+    }
+  },
+
+  "violations": {
+    "blame_shifting": {
+      "category": "accountability_failure",
+      "behaviors": [
+        "responsibility redirected",
+        "focus moved to other person's faults"
+      ],
+      "protocol_links": [
+        "repair_without_defensiveness"
+      ],
+      "promise_links": [
+        "own_my_actions"
+      ]
+    }
+  },
+
+  "protocols": {
+    "repair_without_defensiveness": {
+      "steps": [
+        "pause",
+        "name the action",
+        "acknowledge impact",
+        "commit change"
+      ]
+    }
+  },
+
+  "promises": {
+    "own_my_actions": {
+      "statement": "I will take responsibility for my behavior."
+    }
+  },
+
+  "theology": {
+    "truthful_communication": {
+      "verses": [
+        "Ephesians 4:25",
+        "Ephesians 4:29"
+      ]
+    }
+  }
+}

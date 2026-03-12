@@ -26,7 +26,6 @@ export default function PrayerPage({ goHome }) {
           width: "100%",
           maxWidth: 1120,
           margin: "0 auto",
-          minHeight: "100dvh",
         }}
       >
         <div
@@ -34,20 +33,14 @@ export default function PrayerPage({ goHome }) {
           style={{
             width: "min(1120px, 100%)",
             margin: "0 auto",
-            background: "rgba(231, 197, 197, 0.85)",
-            border: "1px solid rgba(255,255,255,0.14)",
+            background: "linear-gradient(135deg, rgba(236, 25, 57, 0.85), rgba(140, 123, 206, 0.85), rgba(79, 223, 47, 0.85))",
+            border: "2px solid rgba(77, 255, 23, 0.14)",
+              padding: "8px 8px 10px",
+
           }}
         >
           <div className="pageMetaRow">
-            <div className="pageHeaderTitle"
-              style={{
-                minWidth: 0,
-                maxWidth: 1120,
-                display: "grid",
-                gap: 10,
-              }}
-            >
-             <div
+           <div
   className="pageHeaderTitle"
   style={{
     minWidth: 0,
@@ -59,16 +52,17 @@ export default function PrayerPage({ goHome }) {
   <Header
     title="Emotional Prayer"
     subtitle={
+      <span style={{ color: "rgba(255,255,255,0.94)" }}>
       <>
         Left side: painful emotions • Right side: restorative emotions •
         Top: more activated • Bottom: more grounded. Select an emotion to
         turn it into prayer, Scripture, body awareness, and a Philippians
         4:8 redirection.
       </>
-    }
+      </span>
+      }
   />
 </div>
-            </div>
 
             <div
   className="pageTopNavWrap"
@@ -77,7 +71,7 @@ export default function PrayerPage({ goHome }) {
     gap: 10,
     alignItems: "center",
     flexWrap: "wrap",
-    marginTop: 12
+    marginTop: 4
   }}
 >
 
@@ -99,8 +93,9 @@ export default function PrayerPage({ goHome }) {
           style={{
             width: "100%",
             margin: "0 auto",
-            background: "rgb(214, 205, 202)", 
+            background: "linear-gradient(135deg, rgba(242, 95, 95, 0.85), rgba(77, 98, 232, 0.85), rgba(118, 198, 83, 0.85))",
             border: "1px solid rgba(255,255,255,0.10)",
+    padding: "10px 10px 8px",
           }}
         >
         <EmotionGrid

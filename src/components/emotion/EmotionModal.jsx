@@ -238,6 +238,7 @@ const entryForSelectedWord = useMemo(() => {
   const [selectedNeed, setSelectedNeed] = useState("");
 const modalCardRef = useRef(null);
 const [spacerHeight, setSpacerHeight] = useState(0);
+const [contextNotes, setContextNotes] = useState("");
 
   // Violent: violation key + observation pick
   const [selectedViolationKey, setSelectedViolationKey] = useState("");
@@ -278,6 +279,8 @@ useEffect(() => {
   setLogCount(loadReflectionLog().length);
 }, [open]);
 
+
+
 useEffect(() => {
   if (!open || !cell) return;
 
@@ -290,6 +293,22 @@ useEffect(() => {
 
   return () => clearTimeout(id);
 }, [open, cell]);
+
+useEffect(() => {
+  if (!open) return;
+
+  function handleKey(e) {
+    if (e.key === "Escape") {
+      onClose?.();
+    }
+  }
+
+  window.addEventListener("keydown", handleKey);
+
+  return () => {
+    window.removeEventListener("keydown", handleKey);
+  };
+}, [open, onClose]);
 
 useEffect(() => {
   if (!open) return;
@@ -312,22 +331,24 @@ useEffect(() => {
 
   // Reset when emotion changes
   useEffect(() => {
-    setSelectedCause("");
-    setSelectedReplacement("");
-    setSelectedNeed("");
+  setSelectedCause("");
+  setSelectedReplacement("");
+  setSelectedNeed("");
 
-    setSelectedViolationKey("");
-    setSelectedViolentObs("");
+  setSelectedViolationKey("");
+  setSelectedViolentObs("");
 
-    setSelectedAccountableKey("");
-    setSelectedAccountableObs("");
+  setSelectedAccountableKey("");
+  setSelectedAccountableObs("");
 
-    setIntero([blankIntero(), blankIntero(), blankIntero()]);
-    setActiveInteroTab(0);
+  setIntero([blankIntero(), blankIntero(), blankIntero()]);
+  setActiveInteroTab(0);
 
-    setSaveStatus("");
-    setShowLog(false);
-  }, [emotion]);
+  setContextNotes("");
+
+  setSaveStatus("");
+  setShowLog(false);
+}, [emotion]);
 
   // When changing violation, clear observation pick
   useEffect(() => {
@@ -490,46 +511,50 @@ function clearInteroSlot(idx) {
     const parts = v.split("::");
     return parts.length >= 2 ? parts.slice(1).join("::") : v;
   }, [selectedAccountableObs]);
-async function handleSaveEntry() {
+  
+  async function handleSaveEntry() {
   try {
     setSaveStatus("Saving…");
     const pngDataUrl = await captureElementPng("#stickCapture");
 
     appendReflectionEntry({
-      type: mode === "violent" ? "violent" : "nonviolent",
+  type: mode === "violent" ? "violent" : "nonviolent",
 
-      emotion,
-      title: "",
-      side: "",
+  emotion,
+  title: "",
+  side: "",
 
-      need: selectedNeed || "",
-      needs_met: "",
+  need: selectedNeed || "",
+  needs_met: "",
 
-      reframe:
-        mode === "violent"
-          ? (violentReframeSentence || "")
-          : (accountableObsText
-              ? `When ${accountableObsText}, I feel ${emotion} because I need ${selectedNeed || "____"}.`
-              : nonviolentReframeSentence || ""),
+  reframe:
+    mode === "violent"
+      ? (violentReframeSentence || "")
+      : (accountableObsText
+          ? `When ${accountableObsText}, I feel ${emotion} because I need ${selectedNeed || "____"}.`
+          : nonviolentReframeSentence || ""),
 
-      request: requestText || "",
+  request: requestText || "",
+  context_notes: contextNotes.trim(),
 
-      cause: mode === "violent" ? selectedCause || "" : "",
-      replacement: mode === "violent" ? selectedReplacement || "" : "",
+  cause: mode === "violent" ? selectedCause || "" : "",
+  replacement: mode === "violent" ? selectedReplacement || "" : "",
 
-      violationKey: mode === "violent" ? selectedViolationKey || "" : "",
-      accountableViolationKey: mode !== "violent" ? selectedAccountableKey || "" : "",
+  violationKey: mode === "violent" ? selectedViolationKey || "" : "",
+  accountableViolationKey: mode !== "violent" ? selectedAccountableKey || "" : "",
 
-      observation: mode !== "violent" ? accountableObsText || "" : "",
-      theology_key: "",
+  observation: mode !== "violent" ? accountableObsText || "" : "",
+  theology_key: "",
 
-      gratitude_prompt: "",
-      gratitude_text: "",
+  gratitude_prompt: "",
+  gratitude_text: "",
 
-      intero: intero.filter((x) => x?.region && x?.sensation),
-      pngDataUrl,
-    });
+  intero: intero.filter((x) => x?.region && x?.sensation),
+  pngDataUrl,
+});
 
+
+    
     setLogCount(loadReflectionLog().length);
     setSaveStatus("Emotional State Saved ✓");
     setTimeout(() => setSaveStatus(""), 900);
@@ -556,18 +581,19 @@ async function handleSaveEntry() {
       };
 
       const header = [
-        "timestamp",
-        "mode",
-        "emotion",
-        "need",
-        "body_sensations",
-        "violent_trigger",
-        "violent_replacement",
-        "violation_key",
-        "accountable_violation_key",
-        "request",
-        "image_file",
-      ].join(",");
+  "timestamp",
+  "mode",
+  "emotion",
+  "need",
+  "body_sensations",
+  "violent_trigger",
+  "violent_replacement",
+  "violation_key",
+  "accountable_violation_key",
+  "request",
+  "context_notes",
+  "image_file",
+].join(",");
 
       const lines = entries.map((e, idx) => {
         const imageFile = makeImageName(e, idx);
@@ -578,18 +604,19 @@ async function handleSaveEntry() {
           .join(" | ");
 
         return [
-          csvEscape(e?.ts || ""),
-          csvEscape(e?.mode || ""),
-          csvEscape(e?.emotion || ""),
-          csvEscape(e?.need || ""),
-          csvEscape(body),
-          csvEscape(e?.cause || ""),
-          csvEscape(e?.replacement || ""),
-          csvEscape(e?.violationKey || ""),
-          csvEscape(e?.accountableViolationKey || ""),
-          csvEscape(e?.request || ""),
-          csvEscape(imageFile),
-        ].join(",");
+  csvEscape(e?.ts || ""),
+  csvEscape(e?.mode || ""),
+  csvEscape(e?.emotion || ""),
+  csvEscape(e?.need || ""),
+  csvEscape(body),
+  csvEscape(e?.cause || ""),
+  csvEscape(e?.replacement || ""),
+  csvEscape(e?.violationKey || ""),
+  csvEscape(e?.accountableViolationKey || ""),
+  csvEscape(e?.request || ""),
+  csvEscape(e?.context_notes || ""),
+  csvEscape(imageFile),
+].join(",");
       });
 
       const csv = [header, ...lines].join("\n");
@@ -1183,6 +1210,7 @@ fontSize: "clamp(28px, 7vw, 32px)",
 </div>
     </Panel>
   </>
+  
 )}
 
           {mode !== "violent" && (
@@ -1276,7 +1304,34 @@ fontSize: "clamp(28px, 7vw, 32px)",
   ) : null}
 </div>
   </Panel>
-)}        </div>
+  
+)}<Panel style={{ display: "grid", gap: 12 }}>
+  <div style={{ fontWeight: 900 }}>Context and details</div>
+
+  <div style={{ fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,0.86)" }}>
+    Add any concrete details, sequence of events, or clarifying context you want saved with this entry.
+  </div>
+
+  <textarea
+    value={contextNotes}
+    onChange={(e) => setContextNotes(e.target.value)}
+    placeholder="What happened before, during, or after this moment?"
+    style={{
+      width: "100%",
+      minHeight: 140,
+      resize: "vertical",
+      borderRadius: 14,
+      padding: "14px 16px",
+      border: "1px solid rgba(255,255,255,0.14)",
+      background: "rgba(255,255,255,0.06)",
+      color: "rgba(255,255,255,0.96)",
+      fontSize: 14,
+      lineHeight: 1.55,
+      outline: "none",
+      boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)",
+    }}
+  />
+</Panel>        </div>
 
         {/* Sticky bottom action bar */}
        <div

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ScriptureRotator from "../ui/ScriptureRotator.jsx";
 
 function SectionBlock({ title, children }) {
@@ -41,39 +41,77 @@ function BulletList({ items }) {
 }
 
 export default function NeedModal({ open, onClose, detail }) {
-
   const modalBackdropRef = useRef(null);
-const modalCardRef = useRef(null);
+  const modalCardRef = useRef(null);
+  const [spacerHeight, setSpacerHeight] = useState(0);
 
   useEffect(() => {
-  if (!open || !detail) return;
+    if (!open) return;
 
-  const id = window.setTimeout(() => {
-    if (modalBackdropRef.current) {
-      modalBackdropRef.current.scrollTop = 0;
+    function measure() {
+      if (!modalCardRef.current) return;
+      const rect = modalCardRef.current.getBoundingClientRect();
+      setSpacerHeight(rect.height + 64);
     }
 
-    if (modalCardRef.current) {
-      modalCardRef.current.scrollIntoView({
+    measure();
+    const id = requestAnimationFrame(measure);
+    window.addEventListener("resize", measure);
+
+    return () => {
+      cancelAnimationFrame(id);
+      window.removeEventListener("resize", measure);
+    };
+  }, [open, detail]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function handleKey(e) {
+      if (e.key === "Escape") {
+        onClose?.();
+      }
+    }
+
+    window.addEventListener("keydown", handleKey);
+
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [open, onClose]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    requestAnimationFrame(() => {
+      modalBackdropRef.current?.scrollTo({
+        top: 0,
         behavior: "auto",
-        block: "start",
-        inline: "nearest",
       });
-    }
-  }, 0);
-
-  return () => window.clearTimeout(id);
-}, [open, detail]);
+    });
+  }, [open, detail]);
 
 
   if (!open || !detail) return null;
 
+
+  
   return (
+  <>
     <div
-      ref={modalBackdropRef}
+      aria-hidden="true"
+      style={{
+        width: "100%",
+        margin: "24px auto 40px",
+        height: spacerHeight,
+        visibility: "hidden",
+      }}
+    />
+<div
+  ref={modalBackdropRef}
+  className="modalBackdrop"
       role="dialog"
       aria-modal="true"
-      className="modalBackdrop"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose?.();
       }}
@@ -89,7 +127,7 @@ const modalCardRef = useRef(null);
       }}
     >
       <div
-      ref={modalCardRef}
+        ref={modalCardRef}
         className="modalCard"
         style={{
           justifySelf: "center",
@@ -101,6 +139,9 @@ const modalCardRef = useRef(null);
           color: "rgba(255,255,255,0.96)",
           boxShadow: "0 20px 60px rgba(0,0,0,0.50)",
           overflow: "visible",
+          top: 0,
+          left: 0,
+          right: 0,
           pointerEvents: "auto",
         }}
       >
@@ -162,7 +203,12 @@ const modalCardRef = useRef(null);
         </div>
 
         <div
-          style={{ padding: "18px", display: "grid", gap: 14 }}
+          style={{
+            padding: "18px",
+            display: "grid",
+            gap: 14,
+            overflow: "visible",
+          }}
         >
           <SectionBlock title="Biblical examples">
             <BulletList items={detail.biblicalExamples} />
@@ -192,5 +238,5 @@ const modalCardRef = useRef(null);
         </div>
       </div>
     </div>
-  );
-}
+  </>
+); }

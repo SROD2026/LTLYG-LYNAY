@@ -49,7 +49,7 @@ export function getViolentPageBackground(selected) {
   const emberSunsetBase = `
     linear-gradient(
       to top,
-      #17070b 0%,
+      #9a1a3a 0%,
       #261018 14%,
       #3c1620 30%,
       #5a1f24 46%,
@@ -306,8 +306,8 @@ export function getTopNavTone(targetKey) {
             180deg,
             rgba(201,90,72,0.88) 0%,
             rgba(162,74,91,0.86) 38%,
-            rgba(122,53,91,0.84) 68%,
-            rgba(226,154,88,0.84) 100%
+            rgba(225, 110, 173, 0.84) 68%,
+            rgba(241, 208, 177, 0.84) 100%
           )
         `,
         border: "rgba(183, 88, 71, 0.26)",

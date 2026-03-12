@@ -14,45 +14,243 @@ import ScriptureRotator from "../ui/ScriptureRotator.jsx";
 
 
 
-const BODY_MAP = {
+const NEGATIVE_BODY_MAP = {
   Chest: [
     "Tightness",
+    "Stabbing pain",
     "Pressure",
     "Warmth",
     "Fluttering",
     "Racing heartbeat",
     "Heavy weight",
+    "Crushing sensation",
+    "Painful tension",
+    "Shallow breathing",
+    "Buzzing or vibrating",
+    "Cold, hollow overwhelming sensation",
     "Expanding / opening up",
   ],
   Abdomen: [
+    "Nausea",
     "Butterflies",
     "Knotted up",
+    "Cramping",
     "Sinking feeling",
     "Heat",
+    "Coldness",
     "Empty or hollow feeling",
     "Clenching",
-    "Settled",
+    "Sudden dropping sensation",
+    "Intense discomfort",
+    "Gnawing pain",
+    "Stabbing pain",
   ],
   Head: [
     "Stabbing pressure",
+    "Dull tension",
+    "Throbbing headache",
     "Foggy thinking",
     "Racing thoughts",
     "Lightheaded",
     "Sharp focus",
     "Confusion",
-    "Clear headed",
+    "Dizziness",
+    "Heat / flushing / warmth",
+    "Coldness",
+    "Tightness",
   ],
-  Throat: ["Lump", "Tightness", "Difficulty speaking", "Dryness", "Open", "Relaxed"],
-  Arms_and_Hands: ["Tingling", "Restlessness", "Clenching", "Shaking", "Warm", "Steady"],
-  Legs_and_Feet: ["Restless", "Weak / collapsing", "Frozen / stuck", "Grounded heaviness", "Stable", "Anchored"],
+  Throat: [
+    "Lump",
+    "Tightness",
+    "Difficulty speaking",
+    "Dryness",
+    "Choking sensations",
+    "Strained voice",
+  ],
+  Arms_and_Hands: [
+    "Tingling",
+    "Restlessness",
+    "Clenching",
+    "Shaking",
+    "Coldness",
+    "Urge to move",
+    "Numbness",
+  ],
+  Legs_and_Feet: [
+    "Restless",
+    "Weak / collapsing",
+    "Frozen / stuck",
+    "Urge to flee",
+    "Grounded heaviness",
+    "Instability",
+  ],
   Whole_Body: [
     "Adrenaline surge",
     "Shutdown / collapse",
     "Numbness",
     "Overstimulation",
+    "Hypersensitivity to sound/light",
+    "Muscle tension everywhere",
+    "Sudden fatigue",
     "Energy spike",
-    "Calm throughout",
+    "Body buzzing",
+    "Emotional wave passing through",
+  ],
+};
+
+const POSITIVE_BODY_MAP = {
+  Head: [
+    "Clear",
+    "Quiet mind",
+    "Light",
+    "Focused",
+    "Mentally open",
+    "Mentally settled",
+    "Clear headed",
+    "Bright",
+    "Alert in a calm way",
+    "Ease in my thoughts",
+    "Mental spaciousness",
+    "Stillness in my mind",
+    "Soft focus",
+    "Calm attention",
+    "Clarity",
+    "Relief in my mind",
+    "Less mental pressure",
+    "Organized thoughts",
+    "Steady thoughts",
+    "Gentle mental energy",
+  ],
+  Throat: [
+    "Open",
+    "Unclenched",
+    "Easy voice",
+    "Loose",
+    "Soft",
+    "Relaxed",
+    "Clear voice",
+    "Freedom to speak",
+    "Steady voice",
+    "Warmth",
+    "Ease speaking",
+    "Less tightness",
+    "Less pressure",
+    "Gentle openness",
+    "Smooth breathing through my throat",
+    "Release",
+    "More vocal ease",
+    "Calm expression",
+  ],
+  Chest: [
+    "Open",
+    "Warm",
+    "Steady",
+    "Light",
+    "Easy breathing",
+    "Full breath",
+    "Soft expansion",
+    "Relaxed",
+    "Unclenched",
+    "Calm",
+    "Ease",
+    "Quiet strength",
+    "Gentle energy",
+    "Warm fullness",
+    "Steady heartbeat",
+    "Looseness",
+    "Relief",
+    "Comfort",
+    "Openness spreading",
+    "Soft flutter",
+    "Emotional warmth",
+    "Protected",
+    "Restful",
+  ],
+  Abdomen: [
+    "Settled",
+    "Soft",
+    "Quiet",
+    "Comfortable",
+    "Warm",
+    "Loose",
+    "Unclenched",
+    "Stable",
+    "Grounded",
+    "At ease",
+    "Full but calm",
+    "Relaxed",
+    "Less knotted",
+    "Less tension",
+    "Steady",
+    "Supported",
+    "Safe",
+    "Calm fullness",
+    "Deep ease",
+    "Soft heaviness in a good way",
+  ],
+  Arms_and_Hands: [
+    "Relaxed",
+    "Warm",
+    "Steady",
+    "Loose",
+    "Light",
+    "Open",
+    "Soft",
+    "Still",
+    "Gentle energy",
+    "Less restless",
+    "Calm movement",
+    "Ease",
+    "Supported",
+    "Release",
+    "Comfortable",
+    "Flexible",
+    "Unclenched",
+    "Quiet strength",
+  ],
+  Legs_and_Feet: [
+    "Grounded",
+    "Stable",
+    "Planted",
+    "Supported",
+    "Steady",
+    "Strong",
+    "Relaxed",
+    "Light but rooted",
+    "Balanced",
+    "Safe",
+    "Calm readiness",
+    "Ease",
+    "Anchored",
+    "Connected to the ground",
+    "Secure",
+    "Firm in a good way",
+    "Less wobbly",
+    "More settled",
+  ],
+  Whole_Body: [
+    "Ease",
+    "Regulated",
     "Rested",
+    "Calm energy",
+    "Lightness",
+    "Peace",
+    "Warmth throughout",
+    "Softness throughout",
+    "Steadiness",
+    "Integrated",
+    "Whole",
+    "Balanced",
+    "Restoration",
+    "Calm aliveness",
+    "Relief throughout",
+    "Deep exhale feeling",
+    "Gentle vitality",
+    "Settled all over",
+    "Safe in my body",
+    "Nourished",
+    "Restored",
+    "Quiet joy",
   ],
 };
 
@@ -110,6 +308,10 @@ export default function PrayerModal({ open, onClose, cell, meta = {} }) {
   const emotion = useMemo(() => String(cell?.emotion || "").trim(), [cell]);
   const nextStepRef = useRef(null);
   const entry = useMemo(() => meta?.[emotion] || null, [meta, emotion]);
+  const interoBodyMap = useMemo(() => {
+  const x = Number(cell?.x || 0);
+  return x < 0 ? NEGATIVE_BODY_MAP : POSITIVE_BODY_MAP;
+}, [cell]);
   
   const [prayerPromptIndex, setPrayerPromptIndex] = useState(0);
   const [scriptureStartIndex, setScriptureStartIndex] = useState(0);
@@ -147,6 +349,8 @@ const modalCardRef = useRef(null);
     if (!open) return;
     setLogCount(loadReflectionLog().length);
 
+
+
     function measure() {
       if (!modalCardRef.current) return;
       const rect = modalCardRef.current.getBoundingClientRect();
@@ -162,6 +366,22 @@ const modalCardRef = useRef(null);
       window.removeEventListener("resize", measure);
     };
 }, [open, writtenPrayer, intero, redirectIndex]);
+
+useEffect(() => {
+  if (!open) return;
+
+  function handleKey(e) {
+    if (e.key === "Escape") {
+      onClose?.();
+    }
+  }
+
+  window.addEventListener("keydown", handleKey);
+
+  return () => {
+    window.removeEventListener("keydown", handleKey);
+  };
+}, [open, onClose]);
 
 useEffect(() => {
   setPrayerPromptIndex(0);
@@ -202,6 +422,12 @@ useEffect(() => {
   if (activeInteroTab === 0 && isCompleteIntero(intero[0])) setActiveInteroTab(1);
   if (activeInteroTab === 1 && isCompleteIntero(intero[1])) setActiveInteroTab(2);
 }, [intero, activeInteroTab, editingIndex]);
+
+useEffect(() => {
+  setIntero([blankIntero(), blankIntero(), blankIntero()]);
+  setActiveInteroTab(0);
+  setEditingIndex(null);
+}, [emotion, cell?.x]);
 
 function setInteroRegion(idx, region) {
   setIntero((prev) => {
@@ -246,14 +472,26 @@ function clearInteroSlot(idx) {
   }
 
   const active = useMemo(() => intero[activeInteroTab] || blankIntero(), [intero, activeInteroTab]);
-  const regionOptions = useMemo(
-    () => Object.keys(BODY_MAP).map((r) => ({ value: r, label: r.replaceAll("_", " ") })),
-    []
-  );
-  const sensationOptions = useMemo(
-    () => (!active.region ? [] : (BODY_MAP[active.region] || []).map((s) => ({ value: s, label: s }))),
-    [active.region]
-  );
+ const regionOptions = useMemo(
+  () =>
+    Object.keys(interoBodyMap).map((r) => ({
+      value: r,
+      label: r.replaceAll("_", " "),
+    })),
+  [interoBodyMap]
+);
+
+const sensationOptions = useMemo(
+  () =>
+    !active.region
+      ? []
+      : (interoBodyMap[active.region] || []).map((s) => ({
+          value: s,
+          label: s,
+        })),
+  [active.region, interoBodyMap]
+);
+
   const interoLines = useMemo(() => interoSentences(intero), [intero]);
 
  const traitLabel = entry?.philippians_trait?.label || "TRUE";

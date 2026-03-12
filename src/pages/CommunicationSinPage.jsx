@@ -576,16 +576,20 @@ function SinModal({ item, onClose }) {
   const [openSection, setOpenSection] = useState(null);
 const repairSteps = item?.repair_steps || [];
 const empathyVisibility =
-  item?.empathy_visibility &&
-  (
-    item.empathy_visibility.summary ||
-    (Array.isArray(item.empathy_visibility.hidden_reactions) &&
-      item.empathy_visibility.hidden_reactions.length > 0) ||
-    (Array.isArray(item.empathy_visibility.processed_later) &&
-      item.empathy_visibility.processed_later.length > 0)
-  )
-    ? item.empathy_visibility
-    : null;
+  Array.isArray(item?.empathy_visibility)
+    ? item.empathy_visibility.length > 0
+      ? item.empathy_visibility
+      : null
+    : item?.empathy_visibility &&
+      (
+        item.empathy_visibility.summary ||
+        (Array.isArray(item.empathy_visibility.hidden_reactions) &&
+          item.empathy_visibility.hidden_reactions.length > 0) ||
+        (Array.isArray(item.empathy_visibility.processed_later) &&
+          item.empathy_visibility.processed_later.length > 0)
+      )
+        ? item.empathy_visibility
+        : null;
 const conversationApplication = item?.conversation_application || null;
 const practiceInterrupts = item?.practice_interrupts || [];
 const reflectionQuestions = item?.reflection_questions || [];
@@ -609,6 +613,7 @@ const requestFlowNeeds = item?.request_flow_needs || [];
 
   return (
     <div
+    className="modalBackdrop"
       role="dialog"
       aria-modal="true"
       onClick={(e) => {
@@ -653,6 +658,7 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
         />
 
         <div
+          className="modalHeader"
           style={{
             padding: 18,
             display: "flex",
@@ -672,10 +678,12 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
             ) : null}
           </div>
 
+<div className="modalHeaderActions" style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           <button className="btn" onClick={onClose}>
             Close
           </button>
         </div>
+</div>
 
         <div style={{ padding: "0 18px 18px", display: "grid", gap: 14 }}>
           <SummaryBanner item={item} />
@@ -737,41 +745,50 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
           </SectionCard>
 
 {empathyVisibility ? (
-            <SectionCard
-              type="empathy"
-              title="Unseen impact"
-              isOpen={openSection === "unseen-impact"}
-              onToggle={() =>
-                setOpenSection(openSection === "unseen-impact" ? null : "unseen-impact")
-              }
-            >
-              {empathyVisibility.summary ? (
-                <div style={{ lineHeight: 1.6 }}>{empathyVisibility.summary}</div>
-              ) : null}
+  <SectionCard
+    type="empathy"
+    title="Unseen impact"
+    isOpen={openSection === "unseen-impact"}
+    onToggle={() =>
+      setOpenSection(openSection === "unseen-impact" ? null : "unseen-impact")
+    }
+  >
+    {Array.isArray(empathyVisibility) ? (
+      <BulletList
+        items={empathyVisibility}
+        textColor="rgba(255,255,255,0.97)"
+      />
+    ) : (
+      <>
+        {empathyVisibility.summary ? (
+          <div style={{ lineHeight: 1.6 }}>{empathyVisibility.summary}</div>
+        ) : null}
 
-              {Array.isArray(empathyVisibility.hidden_reactions) &&
-              empathyVisibility.hidden_reactions.length > 0 ? (
-                <>
-                  <MiniHeading>Hidden reactions</MiniHeading>
-                  <BulletList
-                    items={empathyVisibility.hidden_reactions}
-                    textColor="rgba(255,255,255,0.97)"
-                  />
-                </>
-              ) : null}
+        {Array.isArray(empathyVisibility.hidden_reactions) &&
+        empathyVisibility.hidden_reactions.length > 0 ? (
+          <>
+            <MiniHeading>Hidden reactions</MiniHeading>
+            <BulletList
+              items={empathyVisibility.hidden_reactions}
+              textColor="rgba(255,255,255,0.97)"
+            />
+          </>
+        ) : null}
 
-              {Array.isArray(empathyVisibility.processed_later) &&
-              empathyVisibility.processed_later.length > 0 ? (
-                <>
-                  <MiniHeading>Often processed later</MiniHeading>
-                  <BulletList
-                    items={empathyVisibility.processed_later}
-                    textColor="rgba(255,255,255,0.97)"
-                  />
-                </>
-              ) : null}
-            </SectionCard>
-          ) : null}
+        {Array.isArray(empathyVisibility.processed_later) &&
+        empathyVisibility.processed_later.length > 0 ? (
+          <>
+            <MiniHeading>Often processed later</MiniHeading>
+            <BulletList
+              items={empathyVisibility.processed_later}
+              textColor="rgba(255,255,255,0.97)"
+            />
+          </>
+        ) : null}
+      </>
+    )}
+  </SectionCard>
+) : null}
 
           <SectionCard
             type="conviction"
@@ -806,24 +823,24 @@ background: "linear-gradient(180deg, rgba(33,40,58,0.98), rgba(24,30,44,0.98))",
               }
             >
               
-              {conversationApplication.before ? (
+              {conversationApplication.before_conversation ? (
                 <>
                   <MiniHeading>Before speaking</MiniHeading>
-                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.before}</div>
+                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.before_conversation}</div>
                 </>
               ) : null}
 
-              {conversationApplication.during ? (
+              {conversationApplication.during_conversation ? (
                 <>
                   <MiniHeading>While speaking</MiniHeading>
-                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.during}</div>
+                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.during_conversation}</div>
                 </>
               ) : null}
 
-              {conversationApplication.after ? (
+              {conversationApplication.after_conversation ? (
                 <>
                   <MiniHeading>After harm happens</MiniHeading>
-                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.after}</div>
+                  <div style={{ lineHeight: 1.6 }}>{conversationApplication.after_conversation}</div>
                 </>
               ) : null}
             </SectionCard>

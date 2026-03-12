@@ -120,10 +120,10 @@ function HomePage({
               <div className="pageHeaderTitle" style={{ minWidth: 0, maxWidth: 1120 }}>
 
                 <Header
-                  title="Owning your emotions: no blame, just awareness and growth"
+                  title="I want to Communicate How I Feel"
                   subtitle={
                     <>
-                      Observe the situation at hand, and explore what you feel. This will guide what you may need from another person:
+                      Observe the situation, and explore what you feel. Then you can communicate your need to another person:
                       <br />
                       When I notice/observe ___, I feel ___ because I need ___.
                     </>
@@ -210,6 +210,21 @@ export default function App() {
       behavior: "instant"
     });
   }, [route]);
+
+useEffect(() => {
+  function handleEscape(e) {
+    if (e.key === "Escape") {
+      const closeBtn = document.querySelector(".modalHeaderActions .btn");
+      if (closeBtn) closeBtn.click();
+    }
+  }
+
+  window.addEventListener("keydown", handleEscape);
+
+  return () => {
+    window.removeEventListener("keydown", handleEscape);
+  };
+}, []);
 
   const { master, loading, error, checkinGrid, checkinMeta, purposeDropdown } = useAppData();
   const { supplement: needsSupplement } = getNeeds(master);

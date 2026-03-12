@@ -1,6 +1,7 @@
 // src/components/grid/EmotionGrid.jsx
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { cellColor } from "../../utils/color.js";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));
@@ -62,9 +63,8 @@ const boardRef = useRef(null);
   const [mobile, setMobile] = useState(isMobileLikeViewport);
   const [hoveredKey, setHoveredKey] = useState("");
   const [pressedKey, setPressedKey] = useState("");
-  const [touchArmedKey, setTouchArmedKey] = useState("");
-const touchArmTimerRef = useRef(null);
-const [fitScale, setFitScale] = useState(null);
+  const [focusedKey, setFocusedKey] = useState("");
+  const [fitScale, setFitScale] = useState(null);
 
 
   const coords = [];
@@ -98,16 +98,8 @@ const boardHeight = ROWS * TILE + (ROWS - 1) * GAP + PAD * 2;
     };
   }, []);
 
-useEffect(() => {
-  return () => {
-    if (touchArmTimerRef.current) {
-      clearTimeout(touchArmTimerRef.current);
-    }
-  };
-}, []);
-  
-useLayoutEffect(() => {
-  let frame = 0;
+  useLayoutEffect(() => {
+    let frame = 0;
 
   const updateScale = () => {
     if (typeof window === "undefined") return;
@@ -117,7 +109,7 @@ const rootWidth =
   Math.max(180, window.innerWidth - 20);
 
 const availableWidth = Math.max(180, rootWidth - (mobile ? 4 : 8));
-const minScale = mobile ? 0.26 : 0.72;
+const minScale = mobile ? 0.26 : 0.5;
 
 
     const rawScale = clamp(availableWidth / boardWidth, minScale, 1);
@@ -156,33 +148,9 @@ const minScale = mobile ? 0.26 : 0.72;
   };
 }, [mobile, boardWidth]);
 
-function handleTileActivate(cell, key) {
+function handleTileActivate(cell) {
   if (!cell) return;
-
-  const isTouch =
-    "ontouchstart" in window ||
-    navigator.maxTouchPoints > 0;
-
-  if (!isTouch) {
-    onPick?.(cell);
-    return;
-  }
-
-  if (touchArmedKey === key) {
-    if (touchArmTimerRef.current) clearTimeout(touchArmTimerRef.current);
-    touchArmTimerRef.current = null;
-    setTouchArmedKey("");
-    onPick?.(cell);
-    return;
-  }
-
-  setTouchArmedKey(key);
-
-  if (touchArmTimerRef.current) clearTimeout(touchArmTimerRef.current);
-  touchArmTimerRef.current = setTimeout(() => {
-    setTouchArmedKey((prev) => (prev === key ? "" : prev));
-    touchArmTimerRef.current = null;
-  }, 700);
+  onPick?.(cell);
 }
 
 
@@ -211,27 +179,49 @@ const fittedHeight = boardHeight * scale;
         </div>
       ) : null}
 
-      <div
+        <div
+  className="gridZoomShell"
   style={{
     position: "relative",
     width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    height: fittedHeight,
-    minHeight: fittedHeight,
-    overflow: "visible",
     minWidth: 0,
+    overflow: "hidden",
+    touchAction: "manipulation",
   }}
 >
-  
-  <div
-    style={{
-      position: "relative",
-      width: fittedWidth,
-      height: fittedHeight,
-margin: "0 auto",  }}
-  >
-    <div
+  <TransformWrapper
+ minScale={1}
+maxScale={mobile ? 4 : 4}
+wheel={{ step: mobile ? 0.08 : 0.12 }}
+pinch={{ step: mobile ? 3 : 4 }}
+ initialScale={1}
+  limitToBounds={true}
+  centerOnInit
+  centerZoomedOut
+  doubleClick={{ disabled: true }}
+  panning={{ velocityDisabled: true }}
+  disablePadding
+>
+    <TransformComponent
+      wrapperStyle={{
+        width: "100%",
+        overflow: "hidden",
+      }}
+      contentStyle={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          width: fittedWidth,
+          height: fittedHeight,
+          margin: "0 auto",
+        }}
+      >
+<div
       aria-hidden="true"
       className="gridCrossOverlay"
       style={{
@@ -251,8 +241,9 @@ margin: "0 auto",  }}
           width: CROSS_THICKNESS * scale,
           borderRadius: 999,
           background: "rgba(0,0,0,0.35)",
-          boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.10), 0 10px 22px rgba(0,0,0,0.35)",
-        }}
+boxShadow: mobile
+  ? "inset 0 0 0 1px rgba(255,255,255,0.08)"
+  : "inset 0 0 0 1px rgba(255,255,255,0.10), 0 10px 22px rgba(0,0,0,0.35)",        }}
       />
       <div
         style={{
@@ -288,8 +279,7 @@ margin: "0 auto",  }}
         ✝
       </div>
     </div>
-
-    <div
+        <div
       ref={boardRef}
       style={{
         display: "grid",
@@ -297,13 +287,14 @@ margin: "0 auto",  }}
         gridTemplateRows: `repeat(${ROWS}, ${TILE}px)`,
         gap: GAP,
         padding: PAD,
+        transform: `scale(${scale})`,
+transformOrigin: "top left",
+willChange: "transform",
         boxSizing: "border-box",
         width: boardWidth,
         height: boardHeight,
-        transform: `scale(${scale})`,
-        transformOrigin: "top left",
-      opacity: fitScale == null ? 0 : 1,
-      }}
+        opacity: fitScale == null ? 0 : 1,
+        }}
     >
       {coords.map(({ x, y }) => {
         const key = `${x},${y}`;
@@ -326,36 +317,37 @@ margin: "0 auto",  }}
         const cell = map.get(key);
         const label = cell?.emotion ?? "";
         const words = String(label || "").trim().split(/\s+/).filter(Boolean);
-const longestWord = words.reduce((m, w) => Math.max(m, w.length), 0);
+        const longestWord = words.reduce((m, w) => Math.max(m, w.length), 0);
 
-const labelLetterSpacing =
-  longestWord >= 16
-    ? "-0.07em"
-    : longestWord >= 13
-    ? "-0.05em"
-    : longestWord >= 10
-    ? "-0.03em"
-    : "-0.015em";
-    
-    const isEmpty = !cell;
-const isHovered = !mobile && hoveredKey === key;
-const isPressed = pressedKey === key;
-const isTouchArmed =
-  ("ontouchstart" in window || navigator.maxTouchPoints > 0) &&
-  touchArmedKey === key;
+        const labelLetterSpacing =
+          longestWord >= 16
+            ? "-0.07em"
+            : longestWord >= 13
+            ? "-0.05em"
+            : longestWord >= 10
+            ? "-0.03em"
+            : "-0.015em";
 
-
+        const isEmpty = !cell;
+        const isHovered = !mobile && hoveredKey === key;
+        const isPressed = pressedKey === key;
+        const isFocused = focusedKey === key;
         return (
           <button
             key={key}
             type="button"
             disabled={isEmpty}
-onClick={() => handleTileActivate(cell, key)}
+            onClick={() => handleTileActivate(cell)}
             onMouseEnter={() => !mobile && !isEmpty && setHoveredKey(key)}
             onMouseLeave={() => !mobile && setHoveredKey((prev) => (prev === key ? "" : prev))}
             onMouseDown={() => !isEmpty && setPressedKey(key)}
             onMouseUp={() => setPressedKey((prev) => (prev === key ? "" : prev))}
-            onTouchStart={() => !isEmpty && setPressedKey(key)}
+onTouchStart={() => {
+  if (!isEmpty) {
+    setPressedKey(key);
+    setFocusedKey(key);
+  }
+}}
             onTouchEnd={() => setPressedKey((prev) => (prev === key ? "" : prev))}
             onTouchCancel={() => setPressedKey((prev) => (prev === key ? "" : prev))}
             title={label || ""}
@@ -363,64 +355,72 @@ onClick={() => handleTileActivate(cell, key)}
               width: TILE,
               height: TILE,
               borderRadius: TILE_RADIUS,
-border: `1px solid ${
-  isHovered || isPressed || isTouchArmed
-    ? "rgba(255,255,255,0.38)"
-    : "rgba(255,255,255,0.14)"
-}`,
+              border: `1px solid ${
+                isHovered || isPressed || isFocused
+                  ? "rgba(255,255,255,0.38)"
+                  : "rgba(255,255,255,0.14)"
+              }`,
               background: `
                 linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02)),
                 radial-gradient(circle at 30% 22%, rgba(255,255,255,0.18), transparent 42%),
                 ${colorFn(x, y)}
               `,
               color: "#ffffff",
-padding: 2,
+              padding: 2,
               minWidth: 0,
               display: "grid",
               placeItems: "center",
               cursor: isEmpty ? "default" : "pointer",
               WebkitTapHighlightColor: "transparent",
               transformOrigin: "center",
-              touchAction: "manipulation",
-              boxShadow: isHovered || isPressed || isTouchArmed
+              touchAction: "none",
+             boxShadow: mobile
+  ? "inset 0 0 4px rgba(0,0,0,0.14)"
+  : isHovered || isPressed || isFocused
   ? "inset 0 0 10px rgba(0,0,0,0.18), 0 18px 34px rgba(0,0,0,0.30)"
   : "inset 0 0 6px rgba(0,0,0,0.18), 0 6px 18px rgba(0,0,0,0.22)",
-  
-  filter: isHovered || isPressed || isTouchArmed
+
+filter: mobile
+  ? "none"
+  : isHovered || isPressed || isFocused
   ? "brightness(1.08) saturate(1.10)"
   : "brightness(1) saturate(1)",
-  
-transform: isHovered
+
+transition: mobile
+  ? "border-color 120ms ease"
+  : "transform 150ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 150ms ease, filter 150ms ease, border-color 150ms ease",
+   transform: mobile
+  ? isPressed
+    ? "scale(1.02)"
+    : "scale(1)"
+  : isHovered
   ? "translateY(-6px) scale(1.08)"
   : isPressed
   ? "translateY(-2px) scale(1.06)"
-  : isTouchArmed
+  : isFocused
   ? "translateY(-3px) scale(1.07)"
   : "translateY(0) scale(1)",
-
-  transition: "transform 150ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 150ms ease, filter 150ms ease, border-color 150ms ease",
-            }}
+          }}
           >
             <div
               style={{
-  width: "100%",
-  height: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: 0,
-  textAlign: "center",
-  whiteSpace: "normal",
-  lineHeight: mobile? 0.86 : 0.92,
-  letterSpacing: mobile ? "-0.04em" : labelLetterSpacing,
-maxWidth: "100%",
-overflowWrap: "anywhere",
-wordBreak: "break-word",
-hyphens: "none",
-overflow: "hidden",
-padding: mobile ? "1px" : "0",
-fontSize: `${fontForLabel(label, TILE, mobile) * labelScale}px`,
-}}
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+                whiteSpace: "normal",
+                lineHeight: mobile ? 0.86 : 0.92,
+                letterSpacing: mobile ? "-0.04em" : labelLetterSpacing,
+                maxWidth: "100%",
+                overflowWrap: "anywhere",
+                wordBreak: "break-word",
+                hyphens: "none",
+                overflow: "hidden",
+                padding: mobile ? "1px" : "0",
+                fontSize: `${fontForLabel(label, TILE, mobile) * labelScale}px`,
+              }}
             >
               {label || "—"}
             </div>
@@ -428,9 +428,11 @@ fontSize: `${fontForLabel(label, TILE, mobile) * labelScale}px`,
         );
       })}
     </div>
-  </div>
-</div>
-
+    </div>
+    </TransformComponent>
+  </TransformWrapper>
+  </div >
+      
       {axisLabels ? (
         <div className="gridAxisLabels gridAxisLabels--bottom">
           <div style={{ textAlign: "left" }}>{axisLabels.bl || ""}</div>

@@ -1,0 +1,2752 @@
+{
+  "meta": {
+    "schema": "communication_sins_v1",
+    "title": "How words can harm, and how love repairs",
+    "purpose": [
+      "Help users identify sinful communication patterns clearly and concretely.",
+      "Show how words and relational patterns can wound safety, dignity, trust, and clarity.",
+      "Keep the focus on conviction, empathy, love, repentance, and repair rather than accusation alone.",
+      "Support self-examination and constructive conversations rooted in Scripture."
+    ],
+    "framing": [
+      "This section is not meant to weaponize Scripture against another person.",
+      "It is meant to help name harmful patterns honestly, understand their impact, and move toward truth, love, repentance, and repair.",
+      "The goal is not condemnation, but sober clarity about sin and a practical path toward love."
+    ]
+  },
+
+  "categories": {
+    "speech_sins": {
+      "title": "Ways we harm in our Speech",
+      "intro": "Words matter deeply. Speech can clarify, dignify, and heal—or distort, humiliate, pressure, and wound. These entries focus on sinful patterns expressed through words, tone, framing, and verbal force."
+    },
+    "relational_sins": {
+      "title": "Relational patterns that harm",
+      "intro": "Some patterns are not just about words themselves but about how a person handles relationship: presence, repair, ownership, safety, attention, and follow-through."
+    },
+    "heart_sins": {
+      "title": "Heart patterns that drive harmful communication",
+      "intro": "Behind sinful communication are deeper motives and heart patterns. These entries help identify the inward roots that often drive harmful words and relational conduct."
+    }
+  },
+
+  "speech_sins": {
+    "harsh_words": {
+      "title": "Harsh words",
+      "definition": "Speech that is sharp, forceful, cutting, or verbally punishing in a way that wounds instead of restoring.",
+      "scriptures": [
+        {
+          "ref": "Proverbs 12:18",
+          "principle": "Rash words pierce like a sword, but the tongue of the wise brings healing."
+        },
+        {
+          "ref": "Ephesians 4:29",
+          "principle": "Speech should build up and give grace rather than corrupt or rot relationship."
+        },
+        {
+          "ref": "Colossians 4:6",
+          "principle": "Words should be gracious and fitting."
+        }
+      ],
+      "common_forms": [
+        "sharp tone",
+        "biting phrasing",
+        "aggressive word choice",
+        "verbal force used to overpower",
+        "emotionally punishing wording"
+      ],
+      "harm_impact": [
+        "can make the other person brace or shut down",
+        "can make truth harder to receive",
+        "can replace safety with fear",
+        "can leave the other person feeling small, tense, or verbally overrun"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "I spoke in a way that likely caused harm.",
+          "The force of my words mattered, not only the correctness of my point.",
+          "I need to take responsibility for how I communicated."
+        ],
+        "shame": [
+          "I am hopeless, so there is no point changing.",
+          "Because I feel exposed, I should defend myself or minimize the impact.",
+          "My discomfort matters more than the harm done."
+        ],
+        "love_led_reframe": [
+          "Conviction should move me toward honest repair, not self-protective collapse.",
+          "I can face the harm in my words without hiding from responsibility.",
+          "Love tells the truth without using verbal force as a weapon."
+        ]
+      },
+      "empathy_prompts": [
+        "How might my words have felt in the other person's body?",
+        "Did my tone make honesty feel safer or more dangerous?",
+        "Did my speech preserve dignity while addressing the issue?"
+      ],
+      "love_repair": [
+        "lower verbal intensity and slow down",
+        "name the issue without punishing the person",
+        "acknowledge the effect of your tone directly",
+        "repair dignity explicitly"
+      ]
+    },
+
+    "contempt": {
+      "title": "Contempt / degrading speech",
+      "definition": "Speech that treats the other person as beneath respect through mocking, scorning, sneering, degrading, belittling, or reducing them to a defect.",
+      "scriptures": [
+        {
+          "ref": "Genesis 1:27",
+          "principle": "Every person bears God's image and must be treated with dignity."
+        },
+        {
+          "ref": "James 3:9-10",
+          "principle": "It is inconsistent to bless God and curse people made in His likeness."
+        },
+        {
+          "ref": "1 Corinthians 13:4-5",
+          "principle": "Love is patient and kind, not rude or self-exalting."
+        }
+      ],
+      "common_forms": [
+        "mocking tone",
+        "eye-rolling verbal energy",
+        "sarcastic belittling",
+        "scornful phrasing",
+        "talking as though the other person is ridiculous or beneath respect"
+      ],
+      "harm_impact": [
+        "can strip dignity from the interaction",
+        "can make the other person feel despised instead of addressed",
+        "can produce shame, fear, or emotional collapse",
+        "can destroy trust and safety quickly"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "I spoke in a way that likely degraded the other person.",
+          "Even if I felt justified, contempt is not love.",
+          "I need to repair the attack on dignity, not only the topic."
+        ],
+        "shame": [
+          "Because I used contempt, I am beyond repair.",
+          "If I feel exposed, I should deny that contempt was present.",
+          "If my intention was not hatred, the impact does not matter."
+        ],
+        "love_led_reframe": [
+          "Love never requires contempt to make truth clear.",
+          "I can reject degrading speech and still address serious wrongdoing.",
+          "Real repentance includes restoring dignity where I stripped it."
+        ]
+      },
+      "empathy_prompts": [
+        "How might contempt have affected the other person's sense of worth or safety?",
+        "Did my words feel like correction, or like being looked down on?",
+        "Would I feel emotionally safe receiving my own words?"
+      ],
+      "love_repair": [
+        "name the contempt plainly",
+        "acknowledge the degrading impact without excuse",
+        "repair dignity directly and specifically",
+        "replace scorning language with truthful and respectful language"
+      ]
+    },
+
+    "false_accusation": {
+      "title": "False accusation / distorted framing",
+      "definition": "Assigning motives, meanings, or wrongdoing without adequate basis, or describing events in a way that bends reality unfairly.",
+      "scriptures": [
+        {
+          "ref": "Exodus 20:16",
+          "principle": "God forbids bearing false witness."
+        },
+        {
+          "ref": "Ephesians 4:25",
+          "principle": "Put away falsehood and speak truth with your neighbor."
+        },
+        {
+          "ref": "Zechariah 8:16-17",
+          "principle": "Speak truth and do not devise evil in your heart."
+        }
+      ],
+      "common_forms": [
+        "mind-reading motives",
+        "global labels instead of observations",
+        "turning suspicions into certainties",
+        "framing events unfairly",
+        "using selective facts to imply something false"
+      ],
+      "harm_impact": [
+        "can destabilize shared reality",
+        "can make the other person feel trapped or misrepresented",
+        "can produce confusion, fear, and helplessness",
+        "can damage trust in communication itself"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "I may have spoken beyond what I actually knew.",
+          "I need to distinguish observation from interpretation.",
+          "If I distorted reality, I need to correct the record."
+        ],
+        "shame": [
+          "If I admit distortion, I lose all credibility forever.",
+          "It is safer to double down than to correct myself.",
+          "My certainty matters more than fairness."
+        ],
+        "love_led_reframe": [
+          "Love is careful with reality.",
+          "I can be honest about uncertainty without becoming passive.",
+          "Repair includes correcting misrepresentation clearly."
+        ]
+      },
+      "empathy_prompts": [
+        "How might it feel to be described unfairly?",
+        "Did my words make the other person feel known or trapped inside my interpretation?",
+        "Did I protect shared reality or bend it?"
+      ],
+      "love_repair": [
+        "separate facts from interpretation",
+        "correct overstatements explicitly",
+        "ask questions where certainty is missing",
+        "name behavior without falsely assigning motive"
+      ]
+    },
+
+    "lying_or_omission": {
+      "title": "Lying or omission",
+      "definition": "Hiding, curating, withholding, or distorting truth in a way that misleads another person and damages trust.",
+      "scriptures": [
+        {
+          "ref": "Colossians 3:9",
+          "principle": "Do not lie to one another."
+        },
+        {
+          "ref": "Proverbs 28:13",
+          "principle": "Concealing wrongdoing blocks mercy; confession opens the door to healing."
+        },
+        {
+          "ref": "Luke 8:17",
+          "principle": "What is hidden will eventually be disclosed."
+        }
+      ],
+      "common_forms": [
+        "partial truth",
+        "selective disclosure",
+        "leaving out the part that changes the meaning",
+        "concealment to avoid consequences",
+        "telling the least damaging version only"
+      ],
+      "harm_impact": [
+        "can shatter trust when discovered",
+        "can make the other person question reality and history",
+        "can make safety and stability feel impossible",
+        "can turn relationship into guesswork"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "I did not tell the whole truth.",
+          "Concealment is not neutral; it has relational impact.",
+          "Repair requires more than being found out—it requires full honesty."
+        ],
+        "shame": [
+          "Since I concealed, I might as well keep hiding.",
+          "Exposure means there is no path forward.",
+          "If I admit the whole truth, I will lose all hope."
+        ],
+        "love_led_reframe": [
+          "Love protects trust with truth, not image management.",
+          "Conviction should lead to full disclosure, ownership, and repair.",
+          "Honesty is part of safety."
+        ]
+      },
+      "empathy_prompts": [
+        "What happens to another person's nervous system when truth keeps changing?",
+        "How might concealment affect their trust in the relationship?",
+        "What would it feel like to discover that important truth was withheld from me?"
+      ],
+      "love_repair": [
+        "tell the whole truth clearly",
+        "correct concealment without waiting to be cornered",
+        "acknowledge the effect on trust and safety",
+        "accept that rebuilding trust may take time and consistency"
+      ]
+    },
+
+    "exaggeration": {
+      "title": "Exaggeration / overstatement",
+      "definition": "Using overstated or inflated language that makes the situation sound larger, more global, or more final than is truthful.",
+      "scriptures": [
+        {
+          "ref": "Matthew 12:36",
+          "principle": "People will give account for careless words."
+        },
+        {
+          "ref": "Ephesians 4:25",
+          "principle": "Speak truth with your neighbor."
+        },
+        {
+          "ref": "Proverbs 18:21",
+          "principle": "Words carry real life-and-death weight."
+        }
+      ],
+      "common_forms": [
+        "always/never language",
+        "inflating one event into a total pattern",
+        "overstating intent or impact unfairly",
+        "using emotionally loaded absolutes"
+      ],
+      "harm_impact": [
+        "can make the other person feel misrepresented",
+        "can intensify conflict unnecessarily",
+        "can reduce clarity and fairness",
+        "can make repair harder because reality feels unstable"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "I made it sound bigger or more absolute than was fair.",
+          "Exaggeration made clarity worse, not better.",
+          "I need to restate the issue accurately."
+        ],
+        "shame": [
+          "If I admit exaggeration, my concern no longer matters.",
+          "It is safer to keep defending the inflated version.",
+          "My fear of losing my point matters more than telling the truth well."
+        ],
+        "love_led_reframe": [
+          "Love does not need inflation to be heard.",
+          "Truth spoken accurately is stronger than emotionally swollen language.",
+          "Repair includes making my language smaller and more precise when needed."
+        ]
+      },
+      "empathy_prompts": [
+        "Did my words make the other person feel fairly described?",
+        "Did exaggeration help clarity or just heighten force?",
+        "Would I feel safe being addressed in these same exaggerated terms?"
+      ],
+      "love_repair": [
+        "replace absolute language with concrete specifics",
+        "restate the concern with precision",
+        "acknowledge where language became inflated",
+        "protect fairness even when upset"
+      ]
+    }, 
+    "mockery": {
+  "title": "Mockery",
+  "definition": "Using humor, imitation, exaggeration, or derision to belittle another person rather than understand, correct, or love them.",
+  "scriptures": [
+    {
+      "ref": "Proverbs 14:21",
+      "principle": "Despising a neighbor is sin."
+    },
+    {
+      "ref": "Ephesians 4:29",
+      "principle": "Speech should build up and give grace."
+    },
+    {
+      "ref": "James 3:9-10",
+      "principle": "People made in God's likeness must not be verbally degraded."
+    }
+  ],
+  "common_forms": [
+    "imitating someone to shame them",
+    "sarcastic joking that cuts instead of heals",
+    "making their weakness into entertainment",
+    "using humor to avoid accountability for cruelty"
+  ],
+  "harm_impact": [
+    "can make the other person feel exposed and unsafe",
+    "can create humiliation rather than clarity",
+    "can teach them that vulnerability will be punished",
+    "can make repair harder because pain is hidden under 'just joking'"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have used humor to degrade rather than love.",
+      "My joking may have protected me while wounding the other person.",
+      "I need to own the humiliating impact, not hide behind playfulness."
+    ],
+    "shame": [
+      "If I was mocking, I am beyond change.",
+      "Since I was joking, the other person should just move on.",
+      "My intention to be funny cancels out the pain caused."
+    ],
+    "love_led_reframe": [
+      "Love does not need humiliation to make a point.",
+      "I can be playful without turning another person into the target.",
+      "Repair means acknowledging that mockery wounds dignity."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to be made into a joke during something painful?",
+    "Did my humor make honesty feel safe or dangerous?",
+    "Would I feel respected if someone joked about me this way?"
+  ],
+  "love_repair": [
+    "name the mockery directly",
+    "acknowledge the humiliation without minimizing it",
+    "restore dignity explicitly",
+    "stop using humor as cover for contempt"
+  ]
+},
+
+"slander": {
+  "title": "Slander",
+  "definition": "Speaking about another person in a way that damages their name unfairly through false, distorted, or malicious communication.",
+  "scriptures": [
+    {
+      "ref": "Exodus 20:16",
+      "principle": "God forbids bearing false witness."
+    },
+    {
+      "ref": "Proverbs 10:18",
+      "principle": "Slander is folly and brings harm."
+    },
+    {
+      "ref": "Ephesians 4:31",
+      "principle": "Slander must be put away along with malice."
+    }
+  ],
+  "common_forms": [
+    "damaging another person's reputation unfairly",
+    "repeating allegations carelessly",
+    "presenting distorted impressions as fact",
+    "using moral framing to discredit another person"
+  ],
+  "harm_impact": [
+    "can injure trust and reputation deeply",
+    "can isolate the person socially or relationally",
+    "can make the person feel defenseless against distorted narratives",
+    "can multiply harm beyond the original relationship"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "My words may have damaged another person's name unfairly.",
+      "I may have spread distortion rather than truth.",
+      "Repair may require correcting what I said to others."
+    ],
+    "shame": [
+      "If I admit slander, all credibility is gone forever.",
+      "It is easier to let the false impression remain.",
+      "Because I felt justified, the damage to their name matters less."
+    ],
+    "love_led_reframe": [
+      "Love protects truth and refuses to injure a person's name carelessly.",
+      "Repentance may require public correction when public harm was done.",
+      "Truth and fairness matter even when I am hurt."
+    ]
+  },
+  "empathy_prompts": [
+    "What would it feel like to know someone is shaping others' view of me unfairly?",
+    "How might this affect the other person's trust and safety?",
+    "Did I protect truth or amplify injury?"
+  ],
+  "love_repair": [
+    "correct false impressions clearly",
+    "stop repeating distorted versions",
+    "repair reputation where possible",
+    "refuse to use speech as a weapon beyond the immediate conflict"
+  ]
+},
+
+"gossip": {
+  "title": "Gossip",
+  "definition": "Sharing another person's private matters, weaknesses, or failures in a way that is unnecessary, disloyal, or not oriented toward help, safety, or righteous accountability.",
+  "scriptures": [
+    {
+      "ref": "Proverbs 11:13",
+      "principle": "A gossip betrays confidence, but a trustworthy person keeps a matter covered."
+    },
+    {
+      "ref": "Proverbs 16:28",
+      "principle": "A whisperer separates close friends."
+    },
+    {
+      "ref": "Ephesians 4:29",
+      "principle": "Speech should build up and give grace."
+    }
+  ],
+  "common_forms": [
+    "sharing private details for emotional release",
+    "passing along personal weakness without necessity",
+    "talking about someone's failure to people who cannot help",
+    "using disclosure to gain validation or alliance"
+  ],
+  "harm_impact": [
+    "can violate privacy and trust",
+    "can make the other person feel exposed and unsafe",
+    "can damage closeness and relational security",
+    "can spread injury beyond the original moment"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have shared what was not mine to share.",
+      "I may have looked for relief or alliance at the expense of another person's safety.",
+      "I need to consider whether my speech was truly necessary and loving."
+    ],
+    "shame": [
+      "Since I already shared it, there is no point repairing.",
+      "If I felt overwhelmed, disclosure was automatically justified.",
+      "The other person's privacy matters less than my need to vent."
+    ],
+    "love_led_reframe": [
+      "Love guards what is private unless truth, safety, or rightful accountability requires disclosure.",
+      "I can seek support without unnecessarily exposing another person.",
+      "Repair may require acknowledging the breach of trust."
+    ]
+  },
+  "empathy_prompts": [
+    "How would I feel if someone shared this about me without necessity?",
+    "Did my words enlarge safety or enlarge exposure?",
+    "Was I serving truth and help, or just relieving myself?"
+  ],
+  "love_repair": [
+    "stop unnecessary disclosure",
+    "acknowledge the privacy breach",
+    "repair trust directly where possible",
+    "be more intentional about who needs to know and why"
+  ]
+},
+
+"manipulative_wording": {
+  "title": "Manipulative wording",
+  "definition": "Using language to pressure, corner, guilt, confuse, or control another person rather than inviting honest and free response.",
+  "scriptures": [
+    {
+      "ref": "1 Corinthians 13:5",
+      "principle": "Love does not insist on its own way."
+    },
+    {
+      "ref": "2 Corinthians 1:24",
+      "principle": "We do not domineer over others, but work with them for joy."
+    },
+    {
+      "ref": "Philippians 2:3-4",
+      "principle": "Love seeks the other's good rather than self-advantage."
+    }
+  ],
+  "common_forms": [
+    "guilt-laden phrasing",
+    "cornering questions",
+    "stacking the language so only one answer feels allowed",
+    "emotional pressure disguised as honesty"
+  ],
+  "harm_impact": [
+    "can make the other person feel trapped instead of free",
+    "can replace consent with pressure",
+    "can create confusion about what is actually being asked",
+    "can train the relationship toward fear rather than trust"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "My wording may have pressured rather than invited.",
+      "I may have used language to steer the outcome instead of honoring freedom.",
+      "I need to own where my words tried to control the other person's response."
+    ],
+    "shame": [
+      "If I was manipulative, I am irredeemable.",
+      "Because I wanted a good outcome, the pressure does not matter.",
+      "If the other person finally gave in, the method was acceptable."
+    ],
+    "love_led_reframe": [
+      "Love makes room for freedom, clarity, and consent.",
+      "I can ask honestly without forcing the answer.",
+      "Repair includes removing pressure and naming it honestly."
+    ]
+  },
+  "empathy_prompts": [
+    "Did my words leave real room for a different answer?",
+    "How might it feel to be pressured by language instead of invited honestly?",
+    "Did I seek clarity, or control?"
+  ],
+  "love_repair": [
+    "remove loaded wording",
+    "ask clearly and simply",
+    "accept no without punishment or pressure",
+    "repair the sense of being cornered"
+  ]
+}, 
+"sarcasm": {
+  "title": "Sarcasm",
+  "definition": "Using cutting, indirect, or ironic language to wound, expose, belittle, or avoid straightforward truth-telling.",
+  "scriptures": [
+    {
+      "ref": "Ephesians 4:29",
+      "principle": "Speech should build up and give grace rather than rot relationship."
+    },
+    {
+      "ref": "Proverbs 26:18-19",
+      "principle": "It is destructive to wound someone and then dismiss it as joking."
+    },
+    {
+      "ref": "Colossians 4:6",
+      "principle": "Words should be gracious and fitting."
+    }
+  ],
+  "common_forms": [
+    "saying something cutting under the cover of humor",
+    "using irony to express contempt indirectly",
+    "making painful points through mocking tone",
+    "avoiding direct truth by using sharp wit"
+  ],
+  "harm_impact": [
+    "can make the other person feel mocked rather than addressed",
+    "can create confusion because intent is disguised",
+    "can make honesty feel unsafe",
+    "can hide hostility inside plausible deniability"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "My sarcasm may have carried contempt or hostility.",
+      "Indirect sharpness may have caused more harm than direct honesty would have.",
+      "I need to own the wound, not hide behind cleverness."
+    ],
+    "shame": [
+      "If I was sarcastic, I am only cruel and beyond repair.",
+      "Because I did not say it literally, the pain does not count.",
+      "If I can explain the joke, I do not need to acknowledge the harm."
+    ],
+    "love_led_reframe": [
+      "Love does not need indirect cruelty to communicate truth.",
+      "I can be direct, honest, and gentle instead of sharp and disguised.",
+      "Repair includes naming the hidden hostility in sarcastic speech."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to receive pain hidden inside humor?",
+    "Did my sarcasm clarify, or did it make the other person feel ridiculed?",
+    "Would I feel emotionally safe if someone spoke to me this way?"
+  ],
+  "love_repair": [
+    "name the sarcasm directly",
+    "acknowledge the cutting effect without minimizing it",
+    "replace indirect hostility with clear truth",
+    "choose honesty without verbal edge"
+  ]
+},
+
+"verbal_intimidation": {
+  "title": "Verbal intimidation",
+  "definition": "Using tone, volume, force, or words in a way that pressures, overwhelms, or frightens another person into submission rather than inviting truthful and safe engagement.",
+  "scriptures": [
+    {
+      "ref": "2 Timothy 2:24-25",
+      "principle": "The Lord's servant must not be quarrelsome, but kind and gentle."
+    },
+    {
+      "ref": "Proverbs 15:1",
+      "principle": "A gentle answer turns away wrath."
+    },
+    {
+      "ref": "1 Corinthians 13:4-5",
+      "principle": "Love is patient and kind, not rude or forceful."
+    }
+  ],
+  "common_forms": [
+    "loudness used to overpower",
+    "threatening verbal energy",
+    "rapid-fire force meant to overwhelm",
+    "speaking in a way that makes disagreement feel dangerous"
+  ],
+  "harm_impact": [
+    "can make the other person freeze, collapse, or comply out of fear",
+    "can replace truth with survival responses",
+    "can make communication feel physically or emotionally unsafe",
+    "can train the relationship toward appeasement instead of honesty"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "My speech may have felt overpowering or frightening.",
+      "The force of my communication may have silenced truth rather than serving it.",
+      "I need to own the fear or pressure my words created."
+    ],
+    "shame": [
+      "If my tone was intimidating, I am permanently dangerous with no path to change.",
+      "Because I felt intensely, force was unavoidable.",
+      "If I was making a true point, the intimidation does not matter."
+    ],
+    "love_led_reframe": [
+      "Love does not require fear to be effective.",
+      "I can speak strongly without making the other person feel unsafe.",
+      "Repair includes reducing force and restoring safety."
+    ]
+  },
+  "empathy_prompts": [
+    "How might my tone or force have felt in the other person's body?",
+    "Did my communication invite honesty, or did it push them into survival mode?",
+    "Would I feel emotionally safe with someone speaking to me this way?"
+  ],
+  "love_repair": [
+    "lower volume and intensity",
+    "acknowledge the intimidating effect directly",
+    "slow down and create room for response",
+    "restore a sense of safety before pressing the point further"
+  ]
+},
+
+"weaponized_truth": {
+  "title": "Weaponized truth",
+  "definition": "Using true information in a way that is harsh, humiliating, timed to wound, or aimed at domination rather than restoration.",
+  "scriptures": [
+    {
+      "ref": "Ephesians 4:15",
+      "principle": "Truth must be spoken in love."
+    },
+    {
+      "ref": "James 3:17",
+      "principle": "Wisdom from above is pure, peaceable, gentle, and open to reason."
+    },
+    {
+      "ref": "1 Corinthians 13:6",
+      "principle": "Love rejoices with the truth, not with harm."
+    }
+  ],
+  "common_forms": [
+    "using truth to win rather than heal",
+    "bringing up true things at the most wounding moment",
+    "using true details to humiliate",
+    "treating accuracy as permission for cruelty"
+  ],
+  "harm_impact": [
+    "can make the other person fear truth instead of trust it",
+    "can mix honesty with humiliation",
+    "can produce shame rather than repentance",
+    "can make correction feel like attack"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "Even if what I said was true, I may have used truth in an unloving way.",
+      "I may have cared more about force or exposure than restoration.",
+      "I need to own not just whether I was right, but how I handled truth."
+    ],
+    "shame": [
+      "If I used truth badly, I should avoid hard truths altogether.",
+      "As long as it was accurate, love is secondary.",
+      "If the other person was wrong, the wounding delivery does not matter."
+    ],
+    "love_led_reframe": [
+      "Truth and love must stay together.",
+      "Love aims for restoration, not domination through accuracy.",
+      "I can tell the truth in a way that preserves dignity and invites repentance."
+    ]
+  },
+  "empathy_prompts": [
+    "How might it feel to have true things used in a wounding way?",
+    "Did my truth-telling invite growth, or did it mainly expose and injure?",
+    "Would I want truth brought to me in this same manner?"
+  ],
+  "love_repair": [
+    "acknowledge the unloving use of truth",
+    "repair the humiliating effect directly",
+    "bring truth with gentleness and timing that serves restoration",
+    "separate honesty from verbal force"
+  ]
+}, 
+"minimization": {
+  "title": "Minimization",
+  "definition": "Using language that reduces, shrinks, softens, or dismisses the seriousness of another person's pain, concern, or the impact of harmful behavior.",
+  "scriptures": [
+    {
+      "ref": "Romans 12:15",
+      "principle": "Love enters another person's grief rather than reducing it."
+    },
+    {
+      "ref": "Philippians 2:4",
+      "principle": "Attend to the interests and experience of the other person."
+    },
+    {
+      "ref": "Proverbs 18:13",
+      "principle": "Responding before truly understanding is folly."
+    }
+  ],
+  "common_forms": [
+    "it wasn't that bad",
+    "you're overreacting",
+    "that shouldn't have hurt you so much",
+    "focusing on intent to shrink impact",
+    "calling real harm small, minor, or insignificant"
+  ],
+  "harm_impact": [
+    "can make the other person feel unseen or foolish for hurting",
+    "can intensify pain by removing validation",
+    "can block repair by shrinking the actual problem",
+    "can train the relationship toward self-doubt and silence"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have reduced something that felt large and real to the other person.",
+      "My need for comfort may have led me to make the harm sound smaller than it was.",
+      "Repair requires naming impact honestly, not shrinking it."
+    ],
+    "shame": [
+      "If I minimized, I must be incapable of empathy forever.",
+      "Because I did not mean to dismiss them, the minimizing does not matter.",
+      "My discomfort with their pain is more important than understanding it."
+    ],
+    "love_led_reframe": [
+      "Love does not need to reduce pain in order to stay present with it.",
+      "I can let the other person's experience be real without collapsing.",
+      "Repair includes expanding my understanding rather than shrinking their pain."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to have real pain treated as small?",
+    "Did my words help the other person feel understood or doubted?",
+    "Would I feel safe sharing pain with someone who responded this way?"
+  ],
+  "love_repair": [
+    "acknowledge that you minimized the pain or impact",
+    "restate the harm more honestly and specifically",
+    "let the other person describe the weight of it without interruption",
+    "repair the invalidating effect directly"
+  ]
+},
+
+"dismissiveness": {
+  "title": "Dismissiveness",
+  "definition": "Responding in a way that brushes off, waves away, or treats another person's concern as unworthy of serious attention.",
+  "scriptures": [
+    {
+      "ref": "Philippians 2:3-4",
+      "principle": "Humility treats others and their concerns as significant."
+    },
+    {
+      "ref": "James 1:19",
+      "principle": "Be quick to hear and slow to speak."
+    },
+    {
+      "ref": "Romans 12:10",
+      "principle": "Love honors the other person."
+    }
+  ],
+  "common_forms": [
+    "that's not important",
+    "you're making too much of this",
+    "quickly brushing away concerns",
+    "responding with annoyance instead of curiosity",
+    "treating the issue as beneath serious attention"
+  ],
+  "harm_impact": [
+    "can make the other person feel unimportant",
+    "can discourage future honesty",
+    "can communicate disrespect or emotional carelessness",
+    "can deepen isolation in conflict"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have treated the other person's concern as less important than it was.",
+      "My response may have communicated annoyance rather than care.",
+      "Love pays attention instead of brushing people off."
+    ],
+    "shame": [
+      "If I was dismissive, I should avoid hard conversations altogether.",
+      "Because I thought the issue was small, my tone does not matter.",
+      "The other person's concern matters less than my irritation."
+    ],
+    "love_led_reframe": [
+      "Love makes room for what matters to the other person.",
+      "I can stay curious even when I do not yet understand the weight of the concern.",
+      "Repair includes treating their concern with more seriousness and honor."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to bring up something painful and be brushed off?",
+    "Did my words communicate that the other person mattered?",
+    "Would I feel respected if my concern were answered this way?"
+  ],
+  "love_repair": [
+    "acknowledge the dismissive response plainly",
+    "invite the other person to restate the concern fully",
+    "respond with curiosity instead of brushing it aside",
+    "repair the disrespect communicated by the dismissal"
+  ]
+},
+
+"emotional_invalidation": {
+  "title": "Emotional invalidation",
+  "definition": "Telling, implying, or communicating that another person's emotional experience is wrong, excessive, irrational, or not meaningful enough to take seriously.",
+  "scriptures": [
+    {
+      "ref": "Romans 12:15",
+      "principle": "Enter another person's sorrow instead of denying it."
+    },
+    {
+      "ref": "Galatians 6:2",
+      "principle": "Bear one another's burdens."
+    },
+    {
+      "ref": "Proverbs 18:13",
+      "principle": "Understanding must come before response."
+    }
+  ],
+  "common_forms": [
+    "you shouldn't feel that way",
+    "that feeling doesn't make sense",
+    "telling someone their emotional response is wrong",
+    "arguing against their inner experience instead of trying to understand it"
+  ],
+  "harm_impact": [
+    "can make the other person feel crazy or alone",
+    "can block emotional safety and honesty",
+    "can create self-doubt and confusion",
+    "can turn vulnerable disclosure into danger"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have argued against the other person's emotional reality instead of understanding it.",
+      "My response may have made their inner world feel unsafe to share.",
+      "Love listens to emotional experience before trying to interpret it."
+    ],
+    "shame": [
+      "If I invalidated someone, I should stop speaking at all.",
+      "Because I disagreed with their interpretation, their emotion did not need care.",
+      "Correcting their feelings was more important than understanding them."
+    ],
+    "love_led_reframe": [
+      "Love does not require full agreement before offering understanding.",
+      "I can acknowledge another person's emotional experience without surrendering truth.",
+      "Repair includes making their internal reality safer to express."
+    ]
+  },
+  "empathy_prompts": [
+    "What would it feel like to be told my feelings are wrong?",
+    "Did my response invite deeper honesty or shut it down?",
+    "Would I feel emotionally safe if my own distress were handled this way?"
+  ],
+  "love_repair": [
+    "acknowledge the invalidating effect clearly",
+    "reflect back the emotion before analyzing it",
+    "make room for their experience without immediate correction",
+    "repair the loneliness or confusion created"
+  ]
+},
+
+"shaming_speech": {
+  "title": "Shaming speech",
+  "definition": "Using words that target identity, worth, dignity, or personhood in a way that produces humiliation, exposure, or a sense of being fundamentally bad rather than called to repentance.",
+  "scriptures": [
+    {
+      "ref": "Genesis 1:27",
+      "principle": "Every person bears God's image and must be treated with dignity."
+    },
+    {
+      "ref": "Ephesians 4:29",
+      "principle": "Speech should build up and give grace."
+    },
+    {
+      "ref": "2 Timothy 2:24-25",
+      "principle": "Correction should be gentle and aimed toward repentance."
+    }
+  ],
+  "common_forms": [
+    "attacking character instead of addressing behavior",
+    "using labels meant to degrade identity",
+    "exposing weakness in a humiliating way",
+    "speaking as though the person's worth is the real issue"
+  ],
+  "harm_impact": [
+    "can produce collapse, hiding, or despair rather than repentance",
+    "can strip dignity and safety from the conversation",
+    "can make correction feel unbearable",
+    "can wound identity rather than clarify wrongdoing"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "My words may have targeted identity rather than behavior.",
+      "I may have produced humiliation where truthful correction was needed.",
+      "Love calls sin out without making personhood itself the target."
+    ],
+    "shame": [
+      "If I used shaming speech, I am beyond change.",
+      "If the behavior was serious, humiliation was justified.",
+      "The other person's collapse is just proof they should feel bad."
+    ],
+    "love_led_reframe": [
+      "Love corrects without degrading.",
+      "Conviction points to wrongdoing; shame attacks the self.",
+      "Repair includes restoring dignity where my words damaged it."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to have my identity attacked instead of my behavior addressed?",
+    "Did my words call for repentance or push toward collapse and hiding?",
+    "Would I feel safe being corrected this way?"
+  ],
+  "love_repair": [
+    "name the degrading or identity-targeting speech directly",
+    "distinguish behavior from personhood clearly",
+    "repair the humiliation and loss of dignity",
+    "restate the concern in a way that preserves worth"
+  ]
+},
+
+"stone_cold_correction": {
+  "title": "Stone-cold correction",
+  "definition": "Delivering correction with factual accuracy but emotional coldness, lack of tenderness, or detached force that leaves truth feeling hard, unsafe, or punishing.",
+  "scriptures": [
+    {
+      "ref": "Ephesians 4:15",
+      "principle": "Truth must be spoken in love."
+    },
+    {
+      "ref": "James 3:17",
+      "principle": "Wisdom from above is gentle and open to reason."
+    },
+    {
+      "ref": "2 Timothy 2:24-25",
+      "principle": "Correction should be kind and gentle."
+    }
+  ],
+  "common_forms": [
+    "correcting accurately but without tenderness",
+    "using emotionally cold tone in serious moments",
+    "speaking truth with detachment that feels punishing",
+    "valuing correctness over care"
+  ],
+  "harm_impact": [
+    "can make truth feel hostile instead of healing",
+    "can cause the other person to brace even when the content is valid",
+    "can create emotional distance in the middle of correction",
+    "can turn needed truth into an experience of coldness"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have spoken accurately but without love.",
+      "My delivery may have made truth harder to receive.",
+      "Correction without tenderness can still do harm."
+    ],
+    "shame": [
+      "If I was cold, I should never correct anything again.",
+      "Because the content was true, the tone does not matter.",
+      "Care is optional as long as I am factually right."
+    ],
+    "love_led_reframe": [
+      "Truth and tenderness belong together.",
+      "Love does not remove correction; it changes how correction is delivered.",
+      "Repair includes acknowledging the coldness that accompanied the truth."
+    ]
+  },
+  "empathy_prompts": [
+    "How might cold correction feel in the other person's body?",
+    "Did my truth arrive as care, or as emotional ice?",
+    "Would I feel safe being corrected with this same posture?"
+  ],
+  "love_repair": [
+    "acknowledge the cold or punishing delivery",
+    "restate truth with warmth and humanity",
+    "show that the person's dignity matters while correcting",
+    "repair the distance created by emotional coldness"
+  ]
+}, 
+"accusatory_questioning": {
+  "title": "Accusatory questioning",
+  "definition": "Using questions not to understand, but to corner, expose, imply guilt, trap, or pressure the other person toward a predetermined conclusion.",
+  "scriptures": [
+    {
+      "ref": "Proverbs 18:13",
+      "principle": "Understanding should come before response."
+    },
+    {
+      "ref": "Philippians 2:3-4",
+      "principle": "Humility seeks the good of the other person rather than leverage."
+    },
+    {
+      "ref": "1 Corinthians 13:5",
+      "principle": "Love does not insist on its own way."
+    }
+  ],
+  "common_forms": [
+    "questions designed to corner rather than clarify",
+    "stacking questions in a prosecuting way",
+    "asking with implied guilt already built in",
+    "using questions to force confession or emotional collapse",
+    "treating inquiry as a tool of pressure"
+  ],
+  "harm_impact": [
+    "can make the other person feel trapped rather than understood",
+    "can replace safety with interrogation",
+    "can produce fear, confusion, or compliance instead of honesty",
+    "can make conversation feel like prosecution instead of relationship"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have used questions as a weapon rather than a path toward understanding.",
+      "My questioning may have pressured instead of invited honesty.",
+      "Love asks in order to understand, not to trap."
+    ],
+    "shame": [
+      "If I questioned this way, I should never ask hard questions again.",
+      "Because I wanted truth, the pressure in my questioning does not matter.",
+      "If the other person felt cornered, that only proves they had something to hide."
+    ],
+    "love_led_reframe": [
+      "Love uses questions to clarify, not to dominate.",
+      "I can ask difficult things while still preserving safety and dignity.",
+      "Repair includes acknowledging when my questions became coercive."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to be questioned in a way that already assumes guilt?",
+    "Did my questions create room for honesty, or did they create fear?",
+    "Would I feel safe answering questions delivered this way?"
+  ],
+  "love_repair": [
+    "acknowledge the interrogating or cornering effect directly",
+    "slow down and ask one clear question at a time",
+    "separate inquiry from accusation",
+    "restore safety before pursuing more detail"
+  ]
+},
+
+"misuse_of_confession": {
+  "title": "Misuse of confession",
+  "definition": "Using confession language in a partial, strategic, vague, image-protective, or self-relieving way that avoids the full truth, true ownership, or meaningful repair.",
+  "scriptures": [
+    {
+      "ref": "James 5:16",
+      "principle": "Confession should be honest and real."
+    },
+    {
+      "ref": "Proverbs 28:13",
+      "principle": "Concealing wrong blocks mercy; true confession opens the way."
+    },
+    {
+      "ref": "Psalm 51:3-4",
+      "principle": "Repentance names sin clearly rather than hiding inside vagueness."
+    }
+  ],
+  "common_forms": [
+    "confessing only the least damaging part",
+    "vague apology without naming what was done",
+    "using confession to relieve inner pressure without repairing impact",
+    "performing repentance language while staying guarded",
+    "saying just enough to sound accountable"
+  ],
+  "harm_impact": [
+    "can make the harmed person feel manipulated instead of cared for",
+    "can deepen mistrust because confession does not feel solid",
+    "can replace real repair with spiritual or emotional performance",
+    "can leave the true issue still hidden"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have used confession more to manage myself than to tell the truth fully.",
+      "My words may have sounded repentant while still withholding reality.",
+      "Love confesses clearly, concretely, and honestly."
+    ],
+    "shame": [
+      "If my confession was partial, there is no point telling the fuller truth now.",
+      "Because I admitted something, the rest does not matter.",
+      "If I say spiritual words, the repair is already complete."
+    ],
+    "love_led_reframe": [
+      "Confession is not performance; it is truth in the light.",
+      "Love does not use repentance language to avoid real ownership.",
+      "Repair may require fuller truth, clearer naming, and follow-through."
+    ]
+  },
+  "empathy_prompts": [
+    "What does it feel like to hear words of confession that still do not feel fully real?",
+    "Did my confession make trust easier or harder?",
+    "Would I feel safe resting in the kind of confession I offered?"
+  ],
+  "love_repair": [
+    "confess specifically and concretely",
+    "say the fuller truth instead of the safest version",
+    "name the impact that still needs repair",
+    "let confession lead into action, not just relief"
+  ]
+}
+  },
+
+  "relational_sins": {
+    "stonewalling": {
+      "title": "Stonewalling / withholding presence",
+      "definition": "Shutting down, disappearing, going silent, or withdrawing without enough orientation or care, leaving the other person in uncertainty and distress.",
+      "scriptures": [
+        {
+          "ref": "Philippians 2:4",
+          "principle": "Look not only to your own interests, but also to the interests of others."
+        },
+        {
+          "ref": "Ephesians 4:26-27",
+          "principle": "Do not let anger remain unresolved in a way that gives room for further harm."
+        },
+        {
+          "ref": "Romans 12:18",
+          "principle": "As far as it depends on you, pursue peace."
+        }
+      ],
+      "common_forms": [
+        "silence without explanation",
+        "sudden disengagement",
+        "emotionally leaving while the issue remains open",
+        "punitive withdrawal",
+        "withholding responsiveness"
+      ],
+      "harm_impact": [
+        "can leave the other person braced, confused, or abandoned",
+        "can keep their nervous system stuck in uncertainty",
+        "can turn regulation needs into relational fear",
+        "can make repair feel inaccessible"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "My withdrawal may have intensified distress rather than containing it.",
+          "I may have left the other person carrying uncertainty alone.",
+          "I need to distinguish needed pause from withholding."
+        ],
+        "shame": [
+          "Because I withdrew badly, I should avoid the issue altogether.",
+          "My discomfort justifies indefinite silence.",
+          "If I feel flooded, orientation no longer matters."
+        ],
+        "love_led_reframe": [
+          "Love can pause without abandoning.",
+          "Love provides clarity, timing, and return.",
+          "Repair includes closing loops created by silence."
+        ]
+      },
+      "empathy_prompts": [
+        "What might my silence have felt like to the other person?",
+        "Did my withdrawal communicate regulation, or punishment, or disappearance?",
+        "Would I feel safe if someone left me this way?"
+      ],
+      "love_repair": [
+        "state clearly that you need a pause",
+        "give a concrete return time",
+        "signal care while stepping away",
+        "return and close the loop when you said you would"
+      ]
+    },
+
+    "blame_shifting": {
+      "title": "Blame-shifting",
+      "definition": "Avoiding ownership by relocating responsibility onto the harmed person, the circumstances, stress, or something else.",
+      "scriptures": [
+        {
+          "ref": "Genesis 3:12-13",
+          "principle": "Blame-shifting is an old human reflex, not repentance."
+        },
+        {
+          "ref": "Psalm 51:3-4",
+          "principle": "Repentance says, 'I know my transgressions.'"
+        },
+        {
+          "ref": "James 5:16",
+          "principle": "Confess sins honestly."
+        }
+      ],
+      "common_forms": [
+        "yes, but you...",
+        "I only did that because...",
+        "making the other person's pain the real problem",
+        "using context as excuse instead of explanation",
+        "moving quickly from ownership to counter-accusation"
+      ],
+      "harm_impact": [
+        "can make the harmed person feel unseen and burdened",
+        "can block actual repair",
+        "can create confusion about responsibility",
+        "can deepen mistrust and emotional exhaustion"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "I shifted focus away from what I did.",
+          "I tried to reduce my discomfort by relocating responsibility.",
+          "Repair requires ownership before explanation."
+        ],
+        "shame": [
+          "If I own this cleanly, I will be crushed.",
+          "Self-protection is more urgent than responsibility.",
+          "As long as context exists, ownership can stay partial."
+        ],
+        "love_led_reframe": [
+          "Love tells the truth about self before reacting to the other's contribution.",
+          "Ownership is not humiliation; it is part of repair.",
+          "I can name context without using it to erase responsibility."
+        ]
+      },
+      "empathy_prompts": [
+        "How might blame-shifting land on someone already hurt by my behavior?",
+        "Did my response make repair easier or harder to trust?",
+        "What would it feel like to have someone move away from ownership while I was in pain?"
+      ],
+      "love_repair": [
+        "name what you did first",
+        "separate causes from excuses",
+        "do not counter-accuse in the same breath as confession",
+        "ask what impact needs to be acknowledged directly"
+      ]
+    },
+
+    "defensiveness": {
+      "title": "Defensiveness",
+      "definition": "Protecting self-image so quickly that listening, empathy, and ownership are pushed aside.",
+      "scriptures": [
+        {
+          "ref": "James 1:19",
+          "principle": "Be quick to hear and slow to speak."
+        },
+        {
+          "ref": "Proverbs 18:13",
+          "principle": "Answering before listening is folly and shame."
+        },
+        {
+          "ref": "Philippians 2:3-4",
+          "principle": "Humility looks outward rather than guarding self-importance."
+        }
+      ],
+      "common_forms": [
+        "instant self-explanation",
+        "arguing before understanding",
+        "protecting intent over acknowledging impact",
+        "treating correction as attack",
+        "turning toward self instead of the other's pain"
+      ],
+      "harm_impact": [
+        "can make the other person feel impossible to reach",
+        "can force them to work harder to be understood",
+        "can stall repair",
+        "can make pain feel minimized or unsafe to express"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "I prioritized self-protection over understanding.",
+          "My defensiveness likely made the other person's pain harder to express.",
+          "Repair requires listening before defending."
+        ],
+        "shame": [
+          "If I am corrected, I am being condemned as a person.",
+          "My first task is to prove I am not the bad one.",
+          "If I feel exposed, I am justified in arguing immediately."
+        ],
+        "love_led_reframe": [
+          "Love makes room for another person's pain before self-explanation.",
+          "Listening is not surrendering all reality; it is honoring relationship.",
+          "I can slow down and reflect impact first."
+        ]
+      },
+      "empathy_prompts": [
+        "What did my defensiveness require the other person to carry?",
+        "Did my response invite honesty or shut it down?",
+        "How hard did I make it for the other person to feel heard?"
+      ],
+      "love_repair": [
+        "reflect impact before explaining intent",
+        "ask what felt most painful",
+        "pause argument mode",
+        "make understanding the first task"
+      ]
+    }, 
+    "emotional_neglect": {
+  "title": "Emotional neglect",
+  "definition": "Repeatedly failing to notice, respond to, or care about another person's emotional reality in a way that leaves them relationally alone.",
+  "scriptures": [
+    {
+      "ref": "Romans 12:15",
+      "principle": "Weep with those who weep."
+    },
+    {
+      "ref": "Galatians 6:2",
+      "principle": "Bear one another's burdens."
+    },
+    {
+      "ref": "1 John 3:18",
+      "principle": "Love must be in deed and truth, not word only."
+    }
+  ],
+  "common_forms": [
+    "not following up when distress is visible",
+    "staying detached while the other person is overwhelmed",
+    "ignoring emotional bids for care",
+    "remaining task-focused while relationship is hurting"
+  ],
+  "harm_impact": [
+    "can make the other person feel alone and unimportant",
+    "can deepen pain by leaving it unshared",
+    "can reduce trust that care will come when needed",
+    "can create chronic relational loneliness"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have left the other person alone in their pain.",
+      "My lack of attunement may have had real impact.",
+      "Love requires attention, not only absence of overt harm."
+    ],
+    "shame": [
+      "Because I missed it, I am only a bad person.",
+      "If attunement does not come naturally, it is not my responsibility.",
+      "Since I did not intend harm, the loneliness caused does not matter."
+    ],
+    "love_led_reframe": [
+      "Love notices and responds.",
+      "I can grow in attentiveness and emotional presence.",
+      "Repair includes acknowledging the loneliness my absence created."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to hurt next to me and still feel alone?",
+    "Did I communicate care through attention and follow-through?",
+    "Would I feel emotionally held if I were in their place?"
+  ],
+  "love_repair": [
+    "acknowledge the loneliness or pain left unaddressed",
+    "ask follow-up questions and stay present",
+    "practice noticing distress sooner",
+    "treat emotional care as part of faithfulness"
+  ]
+},
+
+"coercion": {
+  "title": "Coercion / control",
+  "definition": "Using pressure, consequences, leverage, fear, guilt, or power imbalance to force another person's response instead of honoring their agency and consent.",
+  "scriptures": [
+    {
+      "ref": "Matthew 20:25-28",
+      "principle": "Kingdom leadership rejects domineering control."
+    },
+    {
+      "ref": "1 Peter 5:2-3",
+      "principle": "Do not domineer, but be an example."
+    },
+    {
+      "ref": "1 Corinthians 13:5",
+      "principle": "Love does not insist on its own way."
+    }
+  ],
+  "common_forms": [
+    "using fear to secure agreement",
+    "guilting someone past their limits",
+    "making refusal feel unsafe",
+    "using relationship pressure to force compliance"
+  ],
+  "harm_impact": [
+    "can replace freedom with fear",
+    "can make the other person feel trapped or overpowered",
+    "can damage consent and safety",
+    "can teach the relationship that honesty is dangerous"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have prioritized my desired outcome over the other person's freedom.",
+      "My pressure may have made consent less real.",
+      "Love cannot be built on force."
+    ],
+    "shame": [
+      "Because I wanted something strongly, pressure was unavoidable.",
+      "If I let go of control, everything will collapse.",
+      "If the other person complied, the process was acceptable."
+    ],
+    "love_led_reframe": [
+      "Love honors agency and consent.",
+      "I can ask, invite, and influence without coercing.",
+      "Repair includes acknowledging where the other person felt trapped."
+    ]
+  },
+  "empathy_prompts": [
+    "Did the other person have real room to say no?",
+    "What might it feel like to be pressured into agreement?",
+    "Did I protect freedom, or control it?"
+  ],
+  "love_repair": [
+    "remove leverage and pressure",
+    "acknowledge the trapped feeling you created",
+    "honor no and pace immediately",
+    "rebuild trust through non-coercive consistency"
+  ]
+},
+
+"boundary_violation": {
+  "title": "Boundary violation",
+  "definition": "Ignoring, minimizing, pressuring past, or repeatedly testing another person's stated limits, pace, consent, or capacity.",
+  "scriptures": [
+    {
+      "ref": "Romans 13:10",
+      "principle": "Love does no wrong to a neighbor."
+    },
+    {
+      "ref": "Philippians 2:4",
+      "principle": "Attend to the interests of others."
+    },
+    {
+      "ref": "Matthew 7:12",
+      "principle": "Treat others as you would want to be treated."
+    }
+  ],
+  "common_forms": [
+    "pushing after a clear no",
+    "arguing with limits instead of honoring them",
+    "minimizing another person's capacity or pace",
+    "repeatedly pressing beyond stated boundaries"
+  ],
+  "harm_impact": [
+    "can make the other person feel unsafe with their own limits",
+    "can undermine trust and consent",
+    "can produce bracing, shutdown, or fear",
+    "can teach that honesty about limits will be punished"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have treated another person's limit as negotiable when it was not.",
+      "I may have made safety harder by pushing past their boundary.",
+      "Love honors limits quickly and consistently."
+    ],
+    "shame": [
+      "If I crossed a boundary, all hope is lost.",
+      "If I did not mean harm, the boundary does not really count.",
+      "Their limit matters less than my urgency."
+    ],
+    "love_led_reframe": [
+      "Love protects another person's no.",
+      "I can slow down and honor pace without losing love or truth.",
+      "Repair includes proving that boundaries are safe with me."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like if my limit was treated as something to push through?",
+    "Did I make boundaries safer or less safe to express?",
+    "Would I trust someone who kept testing my no?"
+  ],
+  "love_repair": [
+    "stop immediately when a limit is named",
+    "acknowledge the crossing without argument",
+    "repair the sense of unsafety directly",
+    "show consistency in honoring future boundaries"
+  ]
+},
+ "weaponized_silence": {
+  "title": "Weaponized silence",
+  "definition": "Using silence, withdrawal, or unresponsiveness as leverage, punishment, control, or emotional pressure rather than as a clearly communicated need for pause or regulation.",
+  "scriptures": [
+    {
+      "ref": "Philippians 2:4",
+      "principle": "Look to the interests of others, not only your own."
+    },
+    {
+      "ref": "Ephesians 4:26-27",
+      "principle": "Do not leave anger unresolved in a way that deepens harm."
+    },
+    {
+      "ref": "Romans 12:18",
+      "principle": "As far as it depends on you, pursue peace."
+    }
+  ],
+  "common_forms": [
+    "ignoring messages to punish",
+    "withholding response to increase anxiety",
+    "using silence to force compliance or apology",
+    "making the other person sit in uncertainty without orientation"
+  ],
+  "harm_impact": [
+    "can create fear, confusion, and emotional bracing",
+    "can make the other person feel punished and powerless",
+    "can trap them in uncertainty and self-doubt",
+    "can damage trust in pauses and space themselves"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "My silence may have functioned as punishment rather than regulation.",
+      "I may have used distance to control the other person's internal state.",
+      "I need to own the anxiety or fear my silence created."
+    ],
+    "shame": [
+      "If I used silence badly, I should avoid all space or pause forever.",
+      "Because I needed distance, the impact of my silence does not matter.",
+      "If I do not speak, I cannot be held responsible for the effect."
+    ],
+    "love_led_reframe": [
+      "Love can pause without punishing.",
+      "Love communicates orientation, timing, and care when distance is needed.",
+      "Repair includes making silence safer and more understandable."
+    ]
+  },
+  "empathy_prompts": [
+    "What might my silence have done to the other person's nervous system?",
+    "Did my silence communicate regulation or punishment?",
+    "Would I feel safe if someone used silence on me this way?"
+  ],
+  "love_repair": [
+    "acknowledge the punitive or controlling use of silence",
+    "differentiate pause from punishment clearly",
+    "provide return times and orientation in the future",
+    "repair the uncertainty and fear caused"
+  ]
+},
+
+"withholding_repair": {
+  "title": "Withholding repair",
+  "definition": "Refusing, delaying, minimizing, or evading the steps needed to acknowledge harm, restore trust, and move toward peace.",
+  "scriptures": [
+    {
+      "ref": "Matthew 5:23-24",
+      "principle": "Move toward reconciliation when relationship is ruptured."
+    },
+    {
+      "ref": "2 Corinthians 13:11",
+      "principle": "Aim for restoration and live in peace."
+    },
+    {
+      "ref": "Romans 12:18",
+      "principle": "Pursue peace where possible."
+    }
+  ],
+  "common_forms": [
+    "refusing to revisit unresolved harm",
+    "giving partial repair that avoids the real issue",
+    "treating apology as optional or excessive",
+    "delaying repair until the other person gives up"
+  ],
+  "harm_impact": [
+    "can leave pain lingering and uncontained",
+    "can make the harmed person feel they must carry the full burden",
+    "can erode trust in future repentance",
+    "can turn unresolved harm into chronic distance"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be resisting the work real repair requires.",
+      "My avoidance may be prolonging the other person's pain.",
+      "Love does not leave repair half-done when repair is needed."
+    ],
+    "shame": [
+      "If repair feels hard, it is better not to start at all.",
+      "Because I feel ashamed, I am excused from completing repair.",
+      "If the other person is still hurt, there is no point trying."
+    ],
+    "love_led_reframe": [
+      "Love moves toward completion, not avoidance.",
+      "Repair is costly, but unfinished repair costs relationship too.",
+      "I can take one concrete step toward restoring what was harmed."
+    ]
+  },
+  "empathy_prompts": [
+    "What is it like to wait for repair that never fully comes?",
+    "Did my avoidance leave the other person carrying unresolved pain alone?",
+    "What would it feel like if my own hurt were treated this way?"
+  ],
+  "love_repair": [
+    "acknowledge what remains unrepaired",
+    "return to the issue instead of drifting away from it",
+    "ask what needs to be addressed specifically",
+    "follow through until repair is more complete and clear"
+  ]
+},
+
+"using_spiritual_language_to_deflect": {
+  "title": "Using spiritual language to deflect",
+  "definition": "Invoking God, Scripture, prayer, forgiveness, submission, or spiritual ideals in a way that avoids ownership, silences pain, pressures the other person, or redirects attention away from the actual harm.",
+  "scriptures": [
+    {
+      "ref": "Ephesians 4:15",
+      "principle": "Truth must be spoken in love."
+    },
+    {
+      "ref": "James 3:17",
+      "principle": "Wisdom from above is gentle, peaceable, and open to reason."
+    },
+    {
+      "ref": "Matthew 23:4",
+      "principle": "Do not load burdens onto others while avoiding true care."
+    }
+  ],
+  "common_forms": [
+    "quoting Scripture to avoid accountability",
+    "using forgiveness language to bypass repair",
+    "spiritualizing the conflict instead of owning behavior",
+    "using religious language to pressure the other person into silence"
+  ],
+  "harm_impact": [
+    "can make truth and Scripture feel unsafe",
+    "can silence the harmed person under moral pressure",
+    "can deepen confusion and spiritual injury",
+    "can block real repentance by replacing it with religious framing"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have used spiritual language to protect myself instead of serving truth.",
+      "I may have turned something sacred into a shield against ownership.",
+      "I need to apply truth to myself before I use it to confront another person."
+    ],
+    "shame": [
+      "If I used spiritual language badly, I should avoid spiritual truth entirely.",
+      "Because I mentioned good things, the misuse does not matter.",
+      "If my words sounded biblical, they must have been loving."
+    ],
+    "love_led_reframe": [
+      "Truth must serve repentance and healing, not control or deflection.",
+      "Love applies Scripture with humility, gentleness, and integrity.",
+      "Repair includes acknowledging spiritual pressure or injury directly."
+    ]
+  },
+  "empathy_prompts": [
+    "How might it feel to have Scripture or spiritual language used against pain instead of for healing?",
+    "Did my words bring light, or did they create pressure and confusion?",
+    "Would I feel spiritually safe receiving these words in this way?"
+  ],
+  "love_repair": [
+    "acknowledge the deflecting use of spiritual language",
+    "stop using theology to avoid concrete ownership",
+    "apply Scripture to your own repentance first",
+    "repair any spiritual confusion or pressure caused"
+  ]
+}, 
+"invalidating_experience": {
+  "title": "Invalidating another person's experience",
+  "definition": "Refusing, overriding, or flattening another person's account of what happened or how it affected them in a way that treats their lived experience as untrustworthy or irrelevant.",
+  "scriptures": [
+    {
+      "ref": "Proverbs 18:13",
+      "principle": "Understanding should come before answering."
+    },
+    {
+      "ref": "Philippians 2:4",
+      "principle": "Attend to the interests and experience of the other person."
+    },
+    {
+      "ref": "Romans 12:15",
+      "principle": "Draw near to another person's sorrow rather than dismissing it."
+    }
+  ],
+  "common_forms": [
+    "telling the other person that what they experienced is not true",
+    "flattening their account into your preferred version",
+    "treating their perspective as inherently unreliable",
+    "overriding their lived experience with your interpretation"
+  ],
+  "harm_impact": [
+    "can produce confusion and self-doubt",
+    "can make the other person feel erased",
+    "can destabilize shared reality",
+    "can make communication feel unsafe and futile"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may have treated the other person's experience as less real than my interpretation.",
+      "My response may have made them feel erased or crazy.",
+      "Love takes lived experience seriously even when fuller understanding is still needed."
+    ],
+    "shame": [
+      "If I invalidated their experience, nothing I say can ever help again.",
+      "Because I experienced it differently, their account did not deserve real attention.",
+      "If I feel certain, their inner reality matters less."
+    ],
+    "love_led_reframe": [
+      "Love makes room for another person's experience before trying to master it.",
+      "I can seek fuller truth without erasing what they lived through.",
+      "Repair includes acknowledging the invalidation directly."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to have my own experience overridden?",
+    "Did I make the other person feel more clear and known, or more erased and unstable?",
+    "Would I trust someone who treated my experience this way?"
+  ],
+  "love_repair": [
+    "acknowledge that you invalidated their experience",
+    "invite them to restate what the event felt like from their side",
+    "separate your perspective from their lived experience",
+    "repair the confusion or erasure caused"
+  ]
+},
+
+"refusal_to_be_corrected": {
+  "title": "Refusal to be corrected",
+  "definition": "Resisting, dismissing, or hardening against correction in a way that blocks growth, accountability, and repair.",
+  "scriptures": [
+    {
+      "ref": "Proverbs 12:1",
+      "principle": "Loving correction is part of wisdom."
+    },
+    {
+      "ref": "Proverbs 15:31-32",
+      "principle": "Heeding correction leads toward understanding."
+    },
+    {
+      "ref": "James 1:19",
+      "principle": "Be quick to hear and slow to speak."
+    }
+  ],
+  "common_forms": [
+    "refusing feedback outright",
+    "treating correction as attack",
+    "hardening immediately when challenged",
+    "insisting on self-justification instead of teachability"
+  ],
+  "harm_impact": [
+    "can make the other person feel impossible to reach",
+    "can discourage honest feedback",
+    "can keep sinful patterns entrenched",
+    "can make repair feel hopeless or one-sided"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be resisting correction that I need.",
+      "My hardness may be protecting me from growth and accountability.",
+      "Teachability is part of love and repentance."
+    ],
+    "shame": [
+      "If I was corrected, I am being condemned as a person.",
+      "Because correction hurts, I am justified in rejecting it.",
+      "If I resist enough, I can avoid the truth."
+    ],
+    "love_led_reframe": [
+      "Love remains teachable.",
+      "Correction can be painful without being destructive.",
+      "Repair begins with willingness to hear what I do not want to hear."
+    ]
+  },
+  "empathy_prompts": [
+    "What does it feel like to bring concern to someone who refuses correction?",
+    "Did my response invite honesty or punish it?",
+    "Would I feel hopeful trying to repair with someone in my posture?"
+  ],
+  "love_repair": [
+    "acknowledge the resistant posture directly",
+    "reopen the correction with humility",
+    "ask what was hardest for the other person to say",
+    "practice receiving feedback before responding"
+  ]
+},
+
+"one_sided_accountability": {
+  "title": "One-sided accountability",
+  "definition": "Demanding, emphasizing, or tracking another person's faults while minimizing, delaying, or avoiding accountability for one's own patterns and impact.",
+  "scriptures": [
+    {
+      "ref": "Matthew 7:3-5",
+      "principle": "Deal honestly with your own fault before focusing on another's."
+    },
+    {
+      "ref": "Luke 18:9-14",
+      "principle": "Proud self-justification is not true righteousness."
+    },
+    {
+      "ref": "James 5:16",
+      "principle": "Confession includes naming one's own sin honestly."
+    }
+  ],
+  "common_forms": [
+    "holding the other person under a microscope while escaping the same scrutiny",
+    "tracking their failures while overlooking your own patterns",
+    "making accountability flow mostly one direction",
+    "equating being hurt with being automatically righteous"
+  ],
+  "harm_impact": [
+    "can make the relationship feel unequal and unsafe",
+    "can produce exhaustion and hopelessness",
+    "can distort truth by protecting one side from real examination",
+    "can block mutual humility and repair"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be treating accountability as something mainly for the other person.",
+      "I may be using their failures to avoid my own exposure.",
+      "Love and truth require shared honesty, not one-sided scrutiny."
+    ],
+    "shame": [
+      "If I admit my side too, then their harm no longer matters.",
+      "Because I was hurt, my own accountability is secondary.",
+      "If I stay focused on their wrong, I can avoid facing mine."
+    ],
+    "love_led_reframe": [
+      "Mutual accountability is not moral equivalence; it is truthful humility.",
+      "I can name real harm done to me without using it to hide my own sin.",
+      "Repair grows where accountability is honest in both directions."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to be held highly accountable by someone who avoids the same standard?",
+    "Did my posture communicate shared humility or protected superiority?",
+    "Would I feel safe and hopeful in a relationship where accountability worked this way?"
+  ],
+  "love_repair": [
+    "confess where accountability has been one-sided",
+    "apply the same honesty to yourself that you expect from the other person",
+    "separate valid concern from protective asymmetry",
+    "rebuild mutual trust through balanced ownership"
+  ]
+}, 
+"forced_reconciliation": {
+  "title": "Forced reconciliation",
+  "definition": "Pressuring, rushing, or demanding restored closeness, trust, peace, or emotional resolution before truth, safety, ownership, and repair have had time to take proper shape.",
+  "scriptures": [
+    {
+      "ref": "Romans 12:18",
+      "principle": "Pursue peace faithfully, but peace cannot be manufactured by pressure."
+    },
+    {
+      "ref": "Ephesians 4:2-3",
+      "principle": "Humility, patience, and gentleness are necessary in preserving unity."
+    },
+    {
+      "ref": "1 Corinthians 13:4",
+      "principle": "Love is patient."
+    }
+  ],
+  "common_forms": [
+    "pressuring the harmed person to move on too quickly",
+    "demanding emotional closeness before trust is rebuilt",
+    "calling unresolved hurt unforgiveness too quickly",
+    "treating pace as rebellion rather than part of healing",
+    "seeking relational comfort before real repair"
+  ],
+  "harm_impact": [
+    "can make the harmed person feel spiritually or relationally pressured",
+    "can erase the time needed for safety and trust to rebuild",
+    "can make forgiveness language feel unsafe",
+    "can force appearance of peace without actual peace"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be trying to reach reconciliation faster than truth and repair allow.",
+      "My desire for relief may be pressuring the other person's pace.",
+      "Love does not rush healing for its own comfort."
+    ],
+    "shame": [
+      "If reconciliation is not immediate, there is no hope.",
+      "Because I want peace now, their slower pace is the real problem.",
+      "If I feel sorry, trust should return on my timetable."
+    ],
+    "love_led_reframe": [
+      "Love is patient with the pace of rebuilding trust.",
+      "Reconciliation cannot be forced; it must be grown through truth and faithfulness.",
+      "Repair includes honoring the other person's process instead of trying to control it."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to be pushed toward closeness before safety has returned?",
+    "Did my urgency serve healing, or mainly my own relief?",
+    "Would I feel safe if reconciliation were demanded from me this way?"
+  ],
+  "love_repair": [
+    "acknowledge the pressure or rushing directly",
+    "honor the other person's pace without arguing it",
+    "focus on concrete repair rather than demanding emotional resolution",
+    "let trust rebuild through time and consistency"
+  ]
+},
+
+"silent_scorekeeping": {
+  "title": "Silent scorekeeping",
+  "definition": "Keeping an internal ledger of wrongs, disappointments, or perceived debts that quietly shapes tone, distance, reactions, and moral posture without being processed openly and honestly.",
+  "scriptures": [
+    {
+      "ref": "1 Corinthians 13:5",
+      "principle": "Love keeps no running record of wrongs."
+    },
+    {
+      "ref": "Ephesians 4:31-32",
+      "principle": "Bitterness must be put away as forgiveness and tenderness grow."
+    },
+    {
+      "ref": "Hebrews 12:15",
+      "principle": "Bitterness can grow and defile many."
+    }
+  ],
+  "common_forms": [
+    "tracking past failures internally",
+    "quietly holding moral debt over the other person",
+    "treating present moments through accumulated grievance",
+    "acting from an internal ledger not openly named"
+  ],
+  "harm_impact": [
+    "can make the relationship feel mysteriously loaded",
+    "can create chronic suspicion and hidden punishment",
+    "can make present conversations feel unfairly weighted",
+    "can turn unresolved grievance into ongoing atmosphere"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be carrying an internal record that is affecting how I speak and respond.",
+      "Unprocessed grievance may be shaping the relationship in hidden ways.",
+      "Love calls me to bring hurt into the light rather than let it harden silently."
+    ],
+    "shame": [
+      "If I have been silently scorekeeping, all my pain must have been fake.",
+      "Because the wrongs were real, the hidden ledger is automatically righteous.",
+      "If I say it out loud, I lose all moral ground."
+    ],
+    "love_led_reframe": [
+      "Love does not deny hurt, but it does refuse hidden bookkeeping as a way of relating.",
+      "I can bring accumulated pain into honest process rather than quiet control.",
+      "Repair may require naming what has been silently carried."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to be treated through a hidden ledger I cannot see?",
+    "Did my posture toward the other person feel transparent and fair, or quietly punishing?",
+    "Would I feel safe in a relationship shaped by unspoken bookkeeping?"
+  ],
+  "love_repair": [
+    "acknowledge the hidden ledger honestly",
+    "separate present issues from accumulated resentment",
+    "bring stored grievance into truthful processing",
+    "choose openness over hidden accounting"
+  ]
+}
+  },
+
+  "heart_sins": {
+    "pride": {
+      "title": "Pride",
+      "definition": "An inflated self-protective posture that resists humility, correction, and the full truth about one's own impact.",
+      "scriptures": [
+        {
+          "ref": "Proverbs 16:18",
+          "principle": "Pride goes before destruction."
+        },
+        {
+          "ref": "Philippians 2:3-4",
+          "principle": "Humility counts others significant."
+        },
+        {
+          "ref": "James 4:6",
+          "principle": "God opposes the proud but gives grace to the humble."
+        }
+      ],
+      "common_forms": [
+        "needing to be right above being loving",
+        "resisting correction",
+        "treating humility as weakness",
+        "protecting ego over relationship"
+      ],
+      "harm_impact": [
+        "can block repentance",
+        "can make others feel unsafe bringing concerns",
+        "can distort communication toward self-protection",
+        "can harden repeated sinful patterns"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "Pride may be shaping how I speak and respond.",
+          "I may be guarding ego more than love.",
+          "Humility is needed for repair."
+        ],
+        "shame": [
+          "If pride is present, I am beyond hope.",
+          "Since humility feels painful, I should avoid it.",
+          "Exposure means only condemnation."
+        ],
+        "love_led_reframe": [
+          "Godly conviction invites humility, not despair.",
+          "Love is willing to become low in order to repair.",
+          "The opposite of pride is not self-hatred but truthful humility."
+        ]
+      },
+      "empathy_prompts": [
+        "How might my pride make the other person feel unseen or unsafe?",
+        "Did my need to be right make it harder to love well?",
+        "Would I feel emotionally safe raising concerns with someone in my posture?"
+      ],
+      "love_repair": [
+        "choose humility over self-protection",
+        "welcome correction without immediate counter-defense",
+        "admit wrong specifically",
+        "let love matter more than ego"
+      ]
+    },
+
+    "self_protection": {
+      "title": "Self-protection above love",
+      "definition": "A heart pattern that prioritizes avoiding discomfort, exposure, consequence, or vulnerability over truth, empathy, and faithful repair.",
+      "scriptures": [
+        {
+          "ref": "1 John 3:18",
+          "principle": "Love must be in deed and truth."
+        },
+        {
+          "ref": "Philippians 2:4",
+          "principle": "Attend not only to your own interests."
+        },
+        {
+          "ref": "John 13:34-35",
+          "principle": "Love for one another marks discipleship."
+        }
+      ],
+      "common_forms": [
+        "hiding to avoid consequence",
+        "arguing to avoid ownership",
+        "withholding to avoid exposure",
+        "focusing on self-relief instead of the other's harm"
+      ],
+      "harm_impact": [
+        "can make the harmed person feel alone in carrying the cost",
+        "can block honesty and repair",
+        "can deepen mistrust",
+        "can train the relationship to revolve around the wrongdoer's comfort"
+      ],
+      "conviction_not_shame": {
+        "guilt": [
+          "I may be prioritizing my comfort over love.",
+          "My instinct to hide or defend may be increasing harm.",
+          "Love requires a willingness to bear discomfort for the sake of truth and repair."
+        ],
+        "shame": [
+          "If I feel exposed, I must protect myself at all costs.",
+          "Discomfort means I am being destroyed rather than refined.",
+          "My pain cancels out my responsibility."
+        ],
+        "love_led_reframe": [
+          "Love moves toward truth even when truth costs me.",
+          "Conviction calls me out of self-protection and into repair.",
+          "I can endure discomfort without making it the center."
+        ]
+      },
+      "empathy_prompts": [
+        "What burden did my self-protection place on the other person?",
+        "Did my comfort become more important than their safety or clarity?",
+        "What might love have required from me in that moment?"
+      ],
+      "love_repair": [
+        "tell the truth without curating it",
+        "choose empathy before image-management",
+        "stay present to the other's pain",
+        "accept discomfort as part of repentance"
+      ]
+    },
+    "hardness_of_heart": {
+  "title": "Hardness of heart",
+  "definition": "An inward resistance to tenderness, humility, correction, or compassion that makes a person less responsive to truth and to the pain of others.",
+  "scriptures": [
+    {
+      "ref": "Ezekiel 36:26",
+      "principle": "God gives a new heart, replacing stone with living responsiveness."
+    },
+    {
+      "ref": "Hebrews 3:13",
+      "principle": "Do not be hardened by sin's deceitfulness."
+    },
+    {
+      "ref": "Ephesians 4:32",
+      "principle": "Be kind, tenderhearted, and forgiving."
+    }
+  ],
+  "common_forms": [
+    "coldness toward another person's pain",
+    "refusal to soften under correction",
+    "chronic emotional distance",
+    "treating compassion as weakness"
+  ],
+  "harm_impact": [
+    "can make the other person feel unreachable and unimportant",
+    "can block repentance and repair",
+    "can turn communication into force rather than love",
+    "can keep conflict stuck in distance and defensiveness"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "My heart may be growing less tender toward truth and toward the other person.",
+      "Hardness may be shaping the way I respond.",
+      "I need softness, humility, and responsiveness before God."
+    ],
+    "shame": [
+      "If hardness is present, I am permanently ruined.",
+      "Tenderness is unrealistic, so there is no point trying.",
+      "Distance is safer than love."
+    ],
+    "love_led_reframe": [
+      "Godly conviction softens what sin hardens.",
+      "Love is not weakness; tenderness is part of strength.",
+      "Repair requires a heart willing to be moved."
+    ]
+  },
+  "empathy_prompts": [
+    "How might my hardness feel to the person trying to reach me?",
+    "Did my posture communicate care or emotional stonewalling?",
+    "Would I feel safe bringing pain to someone in my posture?"
+  ],
+  "love_repair": [
+    "ask God for tenderness and humility",
+    "stay present to the other's pain without shutting down",
+    "confess coldness or emotional distance directly",
+    "practice responsiveness instead of resistance"
+  ]
+},
+
+"fear_of_exposure": {
+  "title": "Fear of exposure",
+  "definition": "A heart pattern that reacts to being seen, corrected, or found out with concealment, defensiveness, distortion, or withdrawal rather than repentance.",
+  "scriptures": [
+    {
+      "ref": "Proverbs 28:13",
+      "principle": "Concealing wrong blocks mercy; confession opens the way."
+    },
+    {
+      "ref": "1 John 1:7-9",
+      "principle": "Walking in the light includes honest confession and cleansing."
+    },
+    {
+      "ref": "Psalm 32:3-5",
+      "principle": "Hiding sin is heavy; confession brings relief."
+    }
+  ],
+  "common_forms": [
+    "hiding details to avoid being known",
+    "defending quickly when confronted",
+    "retreating when truth gets close",
+    "reshaping the story to avoid exposure"
+  ],
+  "harm_impact": [
+    "can make truth fragmented and unstable",
+    "can shift burden onto the harmed person to keep uncovering reality",
+    "can block trust and repair",
+    "can keep relationship stuck in guessing and vigilance"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "Fear of being seen may be shaping my responses more than love.",
+      "My attempts to avoid exposure may be multiplying harm.",
+      "Truth in the light is necessary for repair."
+    ],
+    "shame": [
+      "If I am fully seen, I will be destroyed.",
+      "Hiding is the only way to survive correction.",
+      "Exposure means only condemnation, never repair."
+    ],
+    "love_led_reframe": [
+      "Conviction invites truth, not concealment.",
+      "Being seen honestly is part of healing, not only threat.",
+      "Love chooses the light even when it is costly."
+    ]
+  },
+  "empathy_prompts": [
+    "What burden does my hiding place on the other person?",
+    "How might repeated concealment affect their sense of safety and trust?",
+    "Did I make them work to uncover what I should have brought into the light myself?"
+  ],
+  "love_repair": [
+    "tell the truth without waiting to be cornered",
+    "acknowledge how concealment affected safety",
+    "accept exposure as part of repentance",
+    "practice honesty sooner, not later"
+  ]
+},
+
+"desire_for_control": {
+  "title": "Desire for control",
+  "definition": "A heart pattern that prioritizes controlling outcomes, perceptions, timing, or another person's response over trust, humility, consent, and love.",
+  "scriptures": [
+    {
+      "ref": "Matthew 20:25-28",
+      "principle": "Worldly domination is not the way of Christ."
+    },
+    {
+      "ref": "1 Peter 5:2-3",
+      "principle": "Do not domineer over others."
+    },
+    {
+      "ref": "Philippians 2:3-4",
+      "principle": "Humility looks to the good of others, not only one's own agenda."
+    }
+  ],
+  "common_forms": [
+    "needing to manage the outcome at all costs",
+    "pressuring timing or responses",
+    "controlling the story or narrative",
+    "treating another person's freedom as a threat"
+  ],
+  "harm_impact": [
+    "can make the other person feel overruled or cornered",
+    "can damage trust and consent",
+    "can turn communication into a battle for control",
+    "can keep love secondary to outcome-management"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be valuing control more than love.",
+      "My need to manage the situation may be harming safety and freedom.",
+      "I need to repent of forcing outcomes rather than trusting truth and love."
+    ],
+    "shame": [
+      "If I let go of control, everything will fall apart.",
+      "Because I fear disorder, domination is justified.",
+      "If I am not in control, I am unsafe."
+    ],
+    "love_led_reframe": [
+      "Love does not require domination.",
+      "I can pursue truth and repair without controlling another person's process.",
+      "Trusting God includes surrendering the urge to manage everyone else."
+    ]
+  },
+  "empathy_prompts": [
+    "How might my control feel to the other person?",
+    "Did I leave room for their freedom and dignity?",
+    "Would I feel safe with someone who approached me this way?"
+  ],
+  "love_repair": [
+    "name the controlling posture honestly",
+    "release pressure and leverage",
+    "make room for the other person's pace and response",
+    "practice asking rather than forcing"
+  ]
+}, 
+"resentment": {
+  "title": "Resentment",
+  "definition": "A simmering inward posture of bitterness, scorekeeping, grievance-holding, or quiet hostility that shapes communication away from love and toward punishment, distance, or accusation.",
+  "scriptures": [
+    {
+      "ref": "Ephesians 4:31-32",
+      "principle": "Bitterness must be put away, and tenderhearted forgiveness pursued."
+    },
+    {
+      "ref": "Hebrews 12:15",
+      "principle": "A root of bitterness can grow and defile many."
+    },
+    {
+      "ref": "1 Corinthians 13:5",
+      "principle": "Love keeps no running record of wrongs."
+    }
+  ],
+  "common_forms": [
+    "keeping score internally",
+    "using old pain to justify present harshness",
+    "coldness shaped by unresolved grievance",
+    "communicating from stored-up bitterness rather than present truth"
+  ],
+  "harm_impact": [
+    "can make current conversations feel loaded and unsafe",
+    "can turn correction into punishment",
+    "can intensify suspicion and negative interpretation",
+    "can erode tenderness and goodwill"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "Resentment may be shaping my tone and interpretations.",
+      "Stored bitterness may be making my communication less truthful and less loving.",
+      "I need to bring unresolved grievance into the light before it governs my words."
+    ],
+    "shame": [
+      "Because resentment is present, I am only a bitter person with no hope.",
+      "If I have held onto pain this long, repair is pointless.",
+      "My stored anger automatically justifies how I speak."
+    ],
+    "love_led_reframe": [
+      "Love does not build communication on hidden scorekeeping.",
+      "Conviction invites me to face bitterness rather than let it steer me.",
+      "Repair may include both confession and honest processing of unresolved hurt."
+    ]
+  },
+  "empathy_prompts": [
+    "How might resentment make the other person feel in my presence?",
+    "Did my words reflect current reality, or stored-up grievance?",
+    "Would I feel safe if someone spoke to me from quiet bitterness?"
+  ],
+  "love_repair": [
+    "acknowledge the bitterness honestly",
+    "separate present concerns from stored grievance",
+    "process unresolved hurt without weaponizing it",
+    "choose honest truth over punishing tone"
+  ]
+},
+
+"self_righteousness": {
+  "title": "Self-righteousness",
+  "definition": "A heart posture that magnifies another person's wrong while minimizing one's own need for humility, mercy, repentance, and accountability.",
+  "scriptures": [
+    {
+      "ref": "Luke 18:9-14",
+      "principle": "God opposes proud self-justification and receives humble repentance."
+    },
+    {
+      "ref": "Matthew 7:3-5",
+      "principle": "Deal honestly with the log in your own eye."
+    },
+    {
+      "ref": "Romans 12:3",
+      "principle": "Do not think of yourself more highly than you ought."
+    }
+  ],
+  "common_forms": [
+    "moral superiority in conflict",
+    "focusing on the other's sin while avoiding your own",
+    "using truth as proof of your greater righteousness",
+    "speaking as though correction only needs to go one direction"
+  ],
+  "harm_impact": [
+    "can make the other person feel judged rather than engaged",
+    "can block mutual humility and repair",
+    "can turn conflict into moral hierarchy instead of truth and love",
+    "can make confession and empathy harder"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be approaching this from superiority rather than humility.",
+      "I may be emphasizing another person's wrong to avoid my own need for repentance.",
+      "Love corrects without exalting self."
+    ],
+    "shame": [
+      "If self-righteousness is present, I must never speak about wrong again.",
+      "Because I see real sin, my own posture does not matter.",
+      "If I am more correct, humility becomes optional."
+    ],
+    "love_led_reframe": [
+      "Humility and truth must stay together.",
+      "I can name wrong clearly without placing myself above the other person.",
+      "Love stays teachable even while confronting sin."
+    ]
+  },
+  "empathy_prompts": [
+    "How might my posture feel to the other person?",
+    "Did my communication invite humility, or did it mainly project superiority?",
+    "Would I feel safe being corrected by someone in my posture?"
+  ],
+  "love_repair": [
+    "confess superiority or moral pride directly",
+    "name your own need for grace and correction",
+    "address wrong without elevating yourself",
+    "let humility shape both tone and content"
+  ]
+},
+
+"indifference": {
+  "title": "Indifference / lack of love",
+  "definition": "A heart posture of disengagement, apathy, or emotional distance in which another person's pain, dignity, or well-being is treated as unimportant or burdensome.",
+  "scriptures": [
+    {
+      "ref": "Philippians 2:4",
+      "principle": "Look not only to your own interests, but also to the interests of others."
+    },
+    {
+      "ref": "1 John 3:17-18",
+      "principle": "Love does not close its heart when another is in need."
+    },
+    {
+      "ref": "Romans 12:10",
+      "principle": "Be devoted to one another in love and honor."
+    }
+  ],
+  "common_forms": [
+    "not caring enough to engage",
+    "treating another person's distress as inconvenient",
+    "withdrawing concern emotionally",
+    "responding with cold passivity rather than attentive love"
+  ],
+  "harm_impact": [
+    "can make the other person feel invisible or unworthy of care",
+    "can intensify loneliness and discouragement",
+    "can make relationship feel one-sided or emotionally unsafe",
+    "can turn pain into abandonment"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be acting as though the other person's pain does not matter very much.",
+      "Apathy may be shaping my lack of response.",
+      "Love requires more than avoiding dramatic harm; it requires engaged care."
+    ],
+    "shame": [
+      "If indifference is present, I am permanently incapable of love.",
+      "Because I feel detached, care is no longer my responsibility.",
+      "If I do not feel warmth naturally, I am excused from acting in love."
+    ],
+    "love_led_reframe": [
+      "Love can be chosen in action even when warmth feels weak.",
+      "Conviction invites me out of apathy and into attentive care.",
+      "Repair includes acknowledging the loneliness my indifference created."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like to hurt near me and sense that I do not really care?",
+    "Did my posture communicate that the other person mattered?",
+    "Would I feel emotionally safe being vulnerable with someone in my posture?"
+  ],
+  "love_repair": [
+    "acknowledge the coldness or lack of response",
+    "move toward practical attentiveness",
+    "ask what care would help now",
+    "treat engagement as part of love, not an optional extra"
+  ]
+}, 
+"envy": {
+  "title": "Envy",
+  "definition": "A resentful or restless inward response to another person's good, dignity, closeness, strength, blessings, or position, which can distort communication and make love harder.",
+  "scriptures": [
+    {
+      "ref": "James 3:14-16",
+      "principle": "Envy and selfish ambition lead to disorder and evil practice."
+    },
+    {
+      "ref": "1 Corinthians 13:4",
+      "principle": "Love does not envy."
+    },
+    {
+      "ref": "Proverbs 14:30",
+      "principle": "Envy rots the bones."
+    }
+  ],
+  "common_forms": [
+    "resenting another person's strength or favor",
+    "feeling threatened by another person's goodness or position",
+    "quiet hostility toward what another person has",
+    "using words to diminish what is good in another person"
+  ],
+  "harm_impact": [
+    "can turn communication sour and comparative",
+    "can make generosity difficult",
+    "can distort how another person's actions are interpreted",
+    "can feed resentment, belittling, or rivalry"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be reacting against another person's good rather than rejoicing in it.",
+      "Envy may be souring my words and interpretations.",
+      "Love does not need the other person to become smaller."
+    ],
+    "shame": [
+      "If envy is present, I am only rotten inside.",
+      "Because I feel threatened, comparison is inevitable and harmless.",
+      "If I cannot rejoice naturally, I am excused from trying."
+    ],
+    "love_led_reframe": [
+      "Love rejoices in another person's good.",
+      "Conviction invites me to release rivalry and choose gratitude.",
+      "I do not need the other person diminished in order to be safe."
+    ]
+  },
+  "empathy_prompts": [
+    "How might envy change the way I speak to or about this person?",
+    "Did my words honor their dignity, or try to reduce it?",
+    "Would I feel safe around someone reacting to me from envy?"
+  ],
+  "love_repair": [
+    "confess envy honestly before God",
+    "stop using words to diminish the other person",
+    "practice gratitude and blessing rather than comparison",
+    "choose honor where rivalry was growing"
+  ]
+},
+
+"fear_driven_control": {
+  "title": "Fear-driven control",
+  "definition": "Using control, pressure, overmanagement, or domination as a way to protect oneself from fear, uncertainty, vulnerability, or loss.",
+  "scriptures": [
+    {
+      "ref": "1 Peter 5:7",
+      "principle": "Cast anxiety on God because He cares for you."
+    },
+    {
+      "ref": "Philippians 4:6-7",
+      "principle": "Bring anxiety to God rather than letting it rule you."
+    },
+    {
+      "ref": "1 Corinthians 13:5",
+      "principle": "Love does not insist on its own way."
+    }
+  ],
+  "common_forms": [
+    "tightening control when anxious",
+    "using pressure to reduce uncertainty",
+    "overmanaging the other person's process",
+    "treating vulnerability as something to dominate rather than endure"
+  ],
+  "harm_impact": [
+    "can make the other person feel managed rather than loved",
+    "can reduce freedom and honesty",
+    "can create fear-based dynamics instead of trust-based ones",
+    "can turn internal fear into external pressure"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "My fear may be driving me to control rather than trust.",
+      "I may be transferring my anxiety onto the other person through pressure.",
+      "Love cannot grow where fear is steering domination."
+    ],
+    "shame": [
+      "If I feel afraid, control is my only option.",
+      "Because my fear is intense, its effects on others are secondary.",
+      "If I let go of control, I will lose everything."
+    ],
+    "love_led_reframe": [
+      "Fear can be brought to God instead of imposed on others.",
+      "Love chooses trust and honesty over anxious domination.",
+      "Repair includes naming the fear without excusing the control."
+    ]
+  },
+  "empathy_prompts": [
+    "How might my fear-driven control feel to the other person?",
+    "Did my anxiety become something they had to carry in the form of pressure?",
+    "Would I feel free and safe under this kind of management?"
+  ],
+  "love_repair": [
+    "acknowledge the controlling effect of fear",
+    "separate your fear from the other person's responsibility",
+    "reduce pressure and restore freedom",
+    "practice trust instead of overmanagement"
+  ]
+},
+
+"people_pleasing_instead_of_truth": {
+  "title": "People-pleasing instead of truth",
+  "definition": "Shaping words, silence, agreement, or presentation primarily to avoid discomfort, disapproval, or conflict rather than to act in honest love.",
+  "scriptures": [
+    {
+      "ref": "Galatians 1:10",
+      "principle": "Seeking human approval above faithfulness distorts service."
+    },
+    {
+      "ref": "Ephesians 4:15",
+      "principle": "Truth must be spoken in love."
+    },
+    {
+      "ref": "Proverbs 29:25",
+      "principle": "Fear of man is a snare."
+    }
+  ],
+  "common_forms": [
+    "saying what seems easiest instead of what is true",
+    "avoiding needed truth to keep peace externally",
+    "false agreement to prevent discomfort",
+    "curating words mainly to avoid another person's reaction"
+  ],
+  "harm_impact": [
+    "can produce hidden dishonesty and confusion",
+    "can delay needed truth and repair",
+    "can make agreement feel unstable or performative",
+    "can burden the relationship with hidden reality"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be prioritizing approval or peacekeeping over truth.",
+      "Avoided truth can still wound a relationship.",
+      "Love needs honesty, not only pleasantness."
+    ],
+    "shame": [
+      "If I avoid truth, I should stop trying to speak altogether.",
+      "Because conflict scares me, dishonesty is harmless.",
+      "If everyone stays calm, the hidden reality does not matter."
+    ],
+    "love_led_reframe": [
+      "Love tells the truth with gentleness, not with avoidance.",
+      "Peace without truth is fragile and costly.",
+      "Repair includes bringing hidden truth into the light carefully and honestly."
+    ]
+  },
+  "empathy_prompts": [
+    "How might hidden truth affect the other person's trust if they later discover it?",
+    "Did my pleasantness serve love, or did it mainly protect me from discomfort?",
+    "Would I want agreement from someone who was not being fully truthful with me?"
+  ],
+  "love_repair": [
+    "acknowledge where approval-seeking replaced honesty",
+    "bring the withheld truth into the light gently",
+    "separate gentleness from avoidance",
+    "practice truthful love instead of performative peace"
+  ]
+}, 
+"cold_superiority": {
+  "title": "Cold superiority",
+  "definition": "An inward posture of emotional distance, moral height, or detached judgment that treats another person as beneath warmth, tenderness, or mutual humility.",
+  "scriptures": [
+    {
+      "ref": "Philippians 2:3-4",
+      "principle": "Humility counts others significant."
+    },
+    {
+      "ref": "Romans 12:10",
+      "principle": "Honor one another above yourselves."
+    },
+    {
+      "ref": "Luke 18:9-14",
+      "principle": "Self-exalting righteousness is not the posture God commends."
+    }
+  ],
+  "common_forms": [
+    "emotionally cool moral height",
+    "detached judgment without tenderness",
+    "acting as though warmth is unnecessary because one is right",
+    "treating the other person as lesser or immature without humility"
+  ],
+  "harm_impact": [
+    "can make correction feel like being looked down on",
+    "can create emotional distance and hopelessness",
+    "can make the other person feel beneath care",
+    "can block mutuality and teachability"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be relating from superiority instead of humble love.",
+      "My coolness may be communicating judgment without tenderness.",
+      "Love does not require me to become morally high and emotionally far away."
+    ],
+    "shame": [
+      "If superiority is present, I must never say anything corrective again.",
+      "Because I see real wrong, tenderness is optional.",
+      "Distance proves maturity more than humility does."
+    ],
+    "love_led_reframe": [
+      "Love remains low, near, and humane even while confronting sin.",
+      "Humility and warmth are not weakness; they are part of faithfulness.",
+      "Repair includes stepping down from emotional height and drawing nearer in love."
+    ]
+  },
+  "empathy_prompts": [
+    "How might my cold superiority feel to the person in front of me?",
+    "Did my posture communicate honor, or did it mainly communicate distance and judgment?",
+    "Would I feel safe receiving correction from someone standing over me like this?"
+  ],
+  "love_repair": [
+    "confess the superior posture honestly",
+    "repair the emotional distance it created",
+    "re-approach with humility and warmth",
+    "let truth come through tenderness rather than detachment"
+  ]
+},
+
+"self_pity_as_deflection": {
+  "title": "Self-pity as deflection",
+  "definition": "Turning quickly toward one's own pain, shame, burden, or emotional overwhelm in a way that redirects attention away from the harm done and softens accountability.",
+  "scriptures": [
+    {
+      "ref": "Philippians 2:4",
+      "principle": "Look not only to your own interests, but also to the interests of others."
+    },
+    {
+      "ref": "2 Corinthians 7:10",
+      "principle": "Godly grief produces repentance; self-absorbed sorrow does not."
+    },
+    {
+      "ref": "James 1:19",
+      "principle": "Be quick to hear, especially when the other person is in pain."
+    }
+  ],
+  "common_forms": [
+    "making your shame the center instead of the impact",
+    "moving quickly into your own emotional collapse",
+    "seeking comfort before ownership",
+    "using your distress to soften what the other person is saying"
+  ],
+  "harm_impact": [
+    "can make the harmed person caretake the wrongdoer emotionally",
+    "can push impact out of focus",
+    "can derail accountability and repair",
+    "can leave the other person feeling unseen and burdened"
+  ],
+  "conviction_not_shame": {
+    "guilt": [
+      "I may be centering my own pain in a way that moves focus away from the harm I caused.",
+      "My distress may be real, but it cannot replace ownership.",
+      "Love allows me to feel sorrow without making my sorrow the center."
+    ],
+    "shame": [
+      "If I feel terrible, that itself should count as repair.",
+      "Because I am overwhelmed, I do not need to stay with the other person's pain.",
+      "My shame should now become the primary issue in the room."
+    ],
+    "love_led_reframe": [
+      "Godly sorrow leads outward into repentance and repair.",
+      "I can hold my own pain without making the harmed person carry it for me.",
+      "Love keeps impact in view even when I feel exposed."
+    ]
+  },
+  "empathy_prompts": [
+    "What might it feel like if the person who hurt me quickly made their own pain the center?",
+    "Did my response require the other person to comfort me instead of being cared for themselves?",
+    "Would I feel safe bringing pain to someone who responded this way?"
+  ],
+  "love_repair": [
+    "acknowledge where self-focused sorrow displaced ownership",
+    "return focus to the harm and impact",
+    "seek support for your distress without burdening the harmed person with it",
+    "let sorrow produce specific repentance and repair"
+  ]
+}
+  }
+}

@@ -1007,6 +1007,25 @@ body:has(.btn-checkin:hover) .container {
   }
 }
 
+.gridZoomShell {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+
+.gridZoomShell * {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 760px) {
+  .gridZoomShell {
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 @media (max-width: 520px) {
  .modalCard {

@@ -1,0 +1,1052 @@
+[
+  {
+    "x": -7,
+    "y": 7,
+    "emotion": "motivated"
+  },
+  {
+    "x": -6,
+    "y": 7,
+    "emotion": "bright"
+  },
+  {
+    "x": -5,
+    "y": 7,
+    "emotion": "hopeful"
+  },
+  {
+    "x": -4,
+    "y": 7,
+    "emotion": "encouraged"
+  },
+  {
+    "x": -3,
+    "y": 7,
+    "emotion": "uplifted"
+  },
+  {
+    "x": -2,
+    "y": 7,
+    "emotion": "joyful"
+  },
+  {
+    "x": -1,
+    "y": 7,
+    "emotion": "glad"
+  },
+  {
+    "x": 1,
+    "y": 7,
+    "emotion": "safe with you"
+  },
+  {
+    "x": 2,
+    "y": 7,
+    "emotion": "for your care"
+  },
+  {
+    "x": 3,
+    "y": 7,
+    "emotion": "for your kindness"
+  },
+  {
+    "x": 4,
+    "y": 7,
+    "emotion": "for your empathy"
+  },
+  {
+    "x": 5,
+    "y": 7,
+    "emotion": "for your understanding"
+  },
+  {
+    "x": 6,
+    "y": 7,
+    "emotion": "for your listening"
+  },
+  {
+    "x": 7,
+    "y": 7,
+    "emotion": "for your reassurance"
+  },
+  {
+    "x": -7,
+    "y": 6,
+    "emotion": "curious"
+  },
+  {
+    "x": -6,
+    "y": 6,
+    "emotion": "confident"
+  },
+  {
+    "x": -5,
+    "y": 6,
+    "emotion": "empowered"
+  },
+  {
+    "x": -4,
+    "y": 6,
+    "emotion": "alive"
+  },
+  {
+    "x": -3,
+    "y": 6,
+    "emotion": "energized"
+  },
+  {
+    "x": -2,
+    "y": 6,
+    "emotion": "inspired"
+  },
+  {
+    "x": -1,
+    "y": 6,
+    "emotion": "creative"
+  },
+  {
+    "x": 1,
+    "y": 6,
+    "emotion": "grateful"
+  },
+  {
+    "x": 2,
+    "y": 6,
+    "emotion": "deeply grateful"
+  },
+  {
+    "x": 3,
+    "y": 6,
+    "emotion": "thankful"
+  },
+  {
+    "x": 4,
+    "y": 6,
+    "emotion": "relieved by care"
+  },
+  {
+    "x": 5,
+    "y": 6,
+    "emotion": "strengthened by love"
+  },
+  {
+    "x": 6,
+    "y": 6,
+    "emotion": "seen by you"
+  },
+  {
+    "x": 7,
+    "y": 6,
+    "emotion": "for your initiative"
+  },
+  {
+    "x": -7,
+    "y": 5,
+    "emotion": "focused"
+  },
+  {
+    "x": -6,
+    "y": 5,
+    "emotion": "engaged"
+  },
+  {
+    "x": -5,
+    "y": 5,
+    "emotion": "playful"
+  },
+  {
+    "x": -4,
+    "y": 5,
+    "emotion": "free"
+  },
+  {
+    "x": -3,
+    "y": 5,
+    "emotion": "open"
+  },
+  {
+    "x": -2,
+    "y": 5,
+    "emotion": "expanded"
+  },
+  {
+    "x": -1,
+    "y": 5,
+    "emotion": "capable"
+  },
+  {
+    "x": 1,
+    "y": 5,
+    "emotion": "admiring"
+  },
+  {
+    "x": 2,
+    "y": 5,
+    "emotion": "moved"
+  },
+  {
+    "x": 3,
+    "y": 5,
+    "emotion": "touched"
+  },
+  {
+    "x": 4,
+    "y": 5,
+    "emotion": "warmed"
+  },
+  {
+    "x": 5,
+    "y": 5,
+    "emotion": "appreciative"
+  },
+  {
+    "x": 6,
+    "y": 5,
+    "emotion": "valued by you"
+  },
+  {
+    "x": 7,
+    "y": 5,
+    "emotion": "for your commitment"
+  },
+  {
+    "x": -7,
+    "y": 4,
+    "emotion": "stable"
+  },
+  {
+    "x": -6,
+    "y": 4,
+    "emotion": "secure"
+  },
+  {
+    "x": -5,
+    "y": 4,
+    "emotion": "cherished"
+  },
+  {
+    "x": -4,
+    "y": 4,
+    "emotion": "known"
+  },
+  {
+    "x": -3,
+    "y": 4,
+    "emotion": "accepted"
+  },
+  {
+    "x": -2,
+    "y": 4,
+    "emotion": "included"
+  },
+  {
+    "x": -1,
+    "y": 4,
+    "emotion": "connected"
+  },
+  {
+    "x": 1,
+    "y": 4,
+    "emotion": "for your devotion"
+  },
+  {
+    "x": 2,
+    "y": 4,
+    "emotion": "for your attention"
+  },
+  {
+    "x": 3,
+    "y": 4,
+    "emotion": "for your presence"
+  },
+  {
+    "x": 4,
+    "y": 4,
+    "emotion": "for your gentleness"
+  },
+  {
+    "x": 5,
+    "y": 4,
+    "emotion": "for your partnership"
+  },
+  {
+    "x": 6,
+    "y": 4,
+    "emotion": "for your tenderness"
+  },
+  {
+    "x": 7,
+    "y": 4,
+    "emotion": "for your warmth"
+  },
+  {
+    "x": -7,
+    "y": 3,
+    "emotion": "grounded"
+  },
+  {
+    "x": -6,
+    "y": 3,
+    "emotion": "safe"
+  },
+  {
+    "x": -5,
+    "y": 3,
+    "emotion": "cared for"
+  },
+  {
+    "x": -4,
+    "y": 3,
+    "emotion": "close"
+  },
+  {
+    "x": -3,
+    "y": 3,
+    "emotion": "respected"
+  },
+  {
+    "x": -2,
+    "y": 3,
+    "emotion": "honored"
+  },
+  {
+    "x": -1,
+    "y": 3,
+    "emotion": "seen"
+  },
+  {
+    "x": 1,
+    "y": 3,
+    "emotion": "for your loyalty"
+  },
+  {
+    "x": 2,
+    "y": 3,
+    "emotion": "for your intimacy"
+  },
+  {
+    "x": 3,
+    "y": 3,
+    "emotion": "for your softness"
+  },
+  {
+    "x": 4,
+    "y": 3,
+    "emotion": "for your protection"
+  },
+  {
+    "x": 5,
+    "y": 3,
+    "emotion": "for your love"
+  },
+  {
+    "x": 6,
+    "y": 3,
+    "emotion": "for your desire"
+  },
+  {
+    "x": 7,
+    "y": 3,
+    "emotion": "for your sacrifice"
+  },
+  {
+    "x": -7,
+    "y": 2,
+    "emotion": "anchored"
+  },
+  {
+    "x": -6,
+    "y": 2,
+    "emotion": "steady"
+  },
+  {
+    "x": -5,
+    "y": 2,
+    "emotion": "held"
+  },
+  {
+    "x": -4,
+    "y": 2,
+    "emotion": "bonded"
+  },
+  {
+    "x": -3,
+    "y": 2,
+    "emotion": "heard"
+  },
+  {
+    "x": -2,
+    "y": 2,
+    "emotion": "supported"
+  },
+  {
+    "x": -1,
+    "y": 2,
+    "emotion": "valued"
+  },
+  {
+    "x": 1,
+    "y": 2,
+    "emotion": "for your patience with me"
+  },
+  {
+    "x": 2,
+    "y": 2,
+    "emotion": "for your forgiveness"
+  },
+  {
+    "x": 3,
+    "y": 2,
+    "emotion": "for your leadership"
+  },
+  {
+    "x": 4,
+    "y": 2,
+    "emotion": "for your strength"
+  },
+  {
+    "x": 5,
+    "y": 2,
+    "emotion": "for your affection"
+  },
+  {
+    "x": 6,
+    "y": 2,
+    "emotion": "for your pursuit"
+  },
+  {
+    "x": 7,
+    "y": 2,
+    "emotion": "for your reliability"
+  },
+  {
+    "x": -7,
+    "y": 1,
+    "emotion": "at peace"
+  },
+  {
+    "x": -6,
+    "y": 1,
+    "emotion": "gentle"
+  },
+  {
+    "x": -5,
+    "y": 1,
+    "emotion": "present"
+  },
+  {
+    "x": -4,
+    "y": 1,
+    "emotion": "rested"
+  },
+  {
+    "x": -3,
+    "y": 1,
+    "emotion": "balanced"
+  },
+  {
+    "x": -2,
+    "y": 1,
+    "emotion": "quiet"
+  },
+  {
+    "x": -1,
+    "y": 1,
+    "emotion": "content"
+  },
+  {
+    "x": 1,
+    "y": 1,
+    "emotion": "for your integrity"
+  },
+  {
+    "x": 2,
+    "y": 1,
+    "emotion": "for your attention to detail"
+  },
+  {
+    "x": 3,
+    "y": 1,
+    "emotion": "for your generosity"
+  },
+  {
+    "x": 4,
+    "y": 1,
+    "emotion": "for your hospitality"
+  },
+  {
+    "x": 5,
+    "y": 1,
+    "emotion": "for your gift"
+  },
+  {
+    "x": 6,
+    "y": 1,
+    "emotion": "for your wisdom"
+  },
+  {
+    "x": 7,
+    "y": 1,
+    "emotion": "for your repair attempt"
+  },
+  {
+    "x": -7,
+    "y": 0,
+    "emotion": "grateful inwardly"
+  },
+  {
+    "x": -6,
+    "y": 0,
+    "emotion": "soft inside"
+  },
+  {
+    "x": -5,
+    "y": 0,
+    "emotion": "clear minded"
+  },
+  {
+    "x": -4,
+    "y": 0,
+    "emotion": "settled inside"
+  },
+  {
+    "x": -3,
+    "y": 0,
+    "emotion": "relieved"
+  },
+  {
+    "x": -2,
+    "y": 0,
+    "emotion": "at ease"
+  },
+  {
+    "x": -1,
+    "y": 0,
+    "emotion": "peaceful"
+  },
+  {
+    "x": 1,
+    "y": 0,
+    "emotion": "for your humility"
+  },
+  {
+    "x": 2,
+    "y": 0,
+    "emotion": "for your truthfulness"
+  },
+  {
+    "x": 3,
+    "y": 0,
+    "emotion": "for your time"
+  },
+  {
+    "x": 4,
+    "y": 0,
+    "emotion": "for your problem solving"
+  },
+  {
+    "x": 5,
+    "y": 0,
+    "emotion": "for your help"
+  },
+  {
+    "x": 6,
+    "y": 0,
+    "emotion": "for your welcome"
+  },
+  {
+    "x": 7,
+    "y": 0,
+    "emotion": "for your service"
+  },
+  {
+    "x": -7,
+    "y": -1,
+    "emotion": "thankful inwardly"
+  },
+  {
+    "x": -6,
+    "y": -1,
+    "emotion": "tender inside"
+  },
+  {
+    "x": -5,
+    "y": -1,
+    "emotion": "mindful"
+  },
+  {
+    "x": -4,
+    "y": -1,
+    "emotion": "okay"
+  },
+  {
+    "x": -3,
+    "y": -1,
+    "emotion": "unburdened"
+  },
+  {
+    "x": -2,
+    "y": -1,
+    "emotion": "comfortable"
+  },
+  {
+    "x": -1,
+    "y": -1,
+    "emotion": "serene"
+  },
+  {
+    "x": 1,
+    "y": -1,
+    "emotion": "for your mentorship"
+  },
+  {
+    "x": 2,
+    "y": -1,
+    "emotion": "for your thoughtfulness"
+  },
+  {
+    "x": 3,
+    "y": -1,
+    "emotion": "for your bravery"
+  },
+  {
+    "x": 4,
+    "y": -1,
+    "emotion": "for your peacemaking"
+  },
+  {
+    "x": 5,
+    "y": -1,
+    "emotion": "for your energy"
+  },
+  {
+    "x": 6,
+    "y": -1,
+    "emotion": "for your teamwork"
+  },
+  {
+    "x": 7,
+    "y": -1,
+    "emotion": "for your encouragement"
+  },
+  {
+    "x": -7,
+    "y": -2,
+    "emotion": "deeply safe"
+  },
+  {
+    "x": -6,
+    "y": -2,
+    "emotion": "tranquil"
+  },
+  {
+    "x": -5,
+    "y": -2,
+    "emotion": "fine"
+  },
+  {
+    "x": -4,
+    "y": -2,
+    "emotion": "light in conscience"
+  },
+  {
+    "x": -3,
+    "y": -2,
+    "emotion": "fulfilled"
+  },
+  {
+    "x": -2,
+    "y": -2,
+    "emotion": "whole"
+  },
+  {
+    "x": -1,
+    "y": -2,
+    "emotion": "nourished"
+  },
+  {
+    "x": 1,
+    "y": -2,
+    "emotion": "for your follow through"
+  },
+  {
+    "x": 2,
+    "y": -2,
+    "emotion": "for your feedback"
+  },
+  {
+    "x": 3,
+    "y": -2,
+    "emotion": "for your friendliness"
+  },
+  {
+    "x": 4,
+    "y": -2,
+    "emotion": "for the laugh"
+  },
+  {
+    "x": 5,
+    "y": -2,
+    "emotion": "for the teaching"
+  },
+  {
+    "x": 6,
+    "y": -2,
+    "emotion": "for the reminder"
+  },
+  {
+    "x": 7,
+    "y": -2,
+    "emotion": "for the small kindness"
+  },
+  {
+    "x": -7,
+    "y": -3,
+    "emotion": "deeply rested"
+  },
+  {
+    "x": -6,
+    "y": -3,
+    "emotion": "still"
+  },
+  {
+    "x": -5,
+    "y": -3,
+    "emotion": "regulated"
+  },
+  {
+    "x": -4,
+    "y": -3,
+    "emotion": "at peace with God"
+  },
+  {
+    "x": -3,
+    "y": -3,
+    "emotion": "satisfied"
+  },
+  {
+    "x": -2,
+    "y": -3,
+    "emotion": "restored inside"
+  },
+  {
+    "x": -1,
+    "y": -3,
+    "emotion": "unclenched"
+  },
+  {
+    "x": 1,
+    "y": -3,
+    "emotion": "for your accountability"
+  },
+  {
+    "x": 2,
+    "y": -3,
+    "emotion": "for your consideration"
+  },
+  {
+    "x": 3,
+    "y": -3,
+    "emotion": "for your text back"
+  },
+  {
+    "x": 4,
+    "y": -3,
+    "emotion": "for the ride"
+  },
+  {
+    "x": 5,
+    "y": -3,
+    "emotion": "for the heads up"
+  },
+  {
+    "x": 6,
+    "y": -3,
+    "emotion": "for the backup"
+  },
+  {
+    "x": 7,
+    "y": -3,
+    "emotion": "for the small help"
+  },
+  {
+    "x": -7,
+    "y": -4,
+    "emotion": "deeply peaceful"
+  },
+  {
+    "x": -6,
+    "y": -4,
+    "emotion": "unhurried"
+  },
+  {
+    "x": -5,
+    "y": -4,
+    "emotion": "lighthearted"
+  },
+  {
+    "x": -4,
+    "y": -4,
+    "emotion": "humbled inwardly"
+  },
+  {
+    "x": -3,
+    "y": -4,
+    "emotion": "moved inwardly"
+  },
+  {
+    "x": -2,
+    "y": -4,
+    "emotion": "awe filled"
+  },
+  {
+    "x": -1,
+    "y": -4,
+    "emotion": "wonder filled"
+  },
+  {
+    "x": 1,
+    "y": -4,
+    "emotion": "for the cover"
+  },
+  {
+    "x": 2,
+    "y": -4,
+    "emotion": "for the recommendation"
+  },
+  {
+    "x": 3,
+    "y": -4,
+    "emotion": "for the coaching"
+  },
+  {
+    "x": 4,
+    "y": -4,
+    "emotion": "for the honest answer"
+  },
+  {
+    "x": 5,
+    "y": -4,
+    "emotion": "for the invite"
+  },
+  {
+    "x": 6,
+    "y": -4,
+    "emotion": "for the assist"
+  },
+  {
+    "x": 7,
+    "y": -4,
+    "emotion": "for the extra effort"
+  },
+  {
+    "x": -7,
+    "y": -5,
+    "emotion": "anchored in God"
+  },
+  {
+    "x": -6,
+    "y": -5,
+    "emotion": "restful"
+  },
+  {
+    "x": -5,
+    "y": -5,
+    "emotion": "softened"
+  },
+  {
+    "x": -4,
+    "y": -5,
+    "emotion": "integrated"
+  },
+  {
+    "x": -3,
+    "y": -5,
+    "emotion": "aligned"
+  },
+  {
+    "x": -2,
+    "y": -5,
+    "emotion": "congruent"
+  },
+  {
+    "x": -1,
+    "y": -5,
+    "emotion": "authentic"
+  },
+  {
+    "x": 1,
+    "y": -5,
+    "emotion": "for the intro"
+  },
+  {
+    "x": 2,
+    "y": -5,
+    "emotion": "for the tip"
+  },
+  {
+    "x": 3,
+    "y": -5,
+    "emotion": "for the note"
+  },
+  {
+    "x": 4,
+    "y": -5,
+    "emotion": "for the follow up"
+  },
+  {
+    "x": 5,
+    "y": -5,
+    "emotion": "for the explanation"
+  },
+  {
+    "x": 6,
+    "y": -5,
+    "emotion": "for the spot"
+  },
+  {
+    "x": 7,
+    "y": -5,
+    "emotion": "for the consistency"
+  },
+  {
+    "x": -7,
+    "y": -6,
+    "emotion": "composed"
+  },
+  {
+    "x": -6,
+    "y": -6,
+    "emotion": "peace filled"
+  },
+  {
+    "x": -5,
+    "y": -6,
+    "emotion": "quietly secure"
+  },
+  {
+    "x": -4,
+    "y": -6,
+    "emotion": "calm"
+  },
+  {
+    "x": -3,
+    "y": -6,
+    "emotion": "centered"
+  },
+  {
+    "x": -2,
+    "y": -6,
+    "emotion": "held together"
+  },
+  {
+    "x": -1,
+    "y": -6,
+    "emotion": "deeply settled"
+  },
+  {
+    "x": 1,
+    "y": -6,
+    "emotion": "for the share"
+  },
+  {
+    "x": 2,
+    "y": -6,
+    "emotion": "for the quick response"
+  },
+  {
+    "x": 3,
+    "y": -6,
+    "emotion": "for the good company"
+  },
+  {
+    "x": 4,
+    "y": -6,
+    "emotion": "for the respect"
+  },
+  {
+    "x": 5,
+    "y": -6,
+    "emotion": "for the fairness"
+  },
+  {
+    "x": 6,
+    "y": -6,
+    "emotion": "for the professionalism"
+  },
+  {
+    "x": 7,
+    "y": -6,
+    "emotion": "for the safe space"
+  },
+  {
+    "x": -7,
+    "y": -7,
+    "emotion": "collected"
+  },
+  {
+    "x": -6,
+    "y": -7,
+    "emotion": "unrushed"
+  },
+  {
+    "x": -5,
+    "y": -7,
+    "emotion": "receptive"
+  },
+  {
+    "x": -4,
+    "y": -7,
+    "emotion": "grounded in love"
+  },
+  {
+    "x": -3,
+    "y": -7,
+    "emotion": "stable in myself"
+  },
+  {
+    "x": -2,
+    "y": -7,
+    "emotion": "simple"
+  },
+  {
+    "x": -1,
+    "y": -7,
+    "emotion": "gentle presence"
+  },
+  {
+    "x": 1,
+    "y": -7,
+    "emotion": "for the listening"
+  },
+  {
+    "x": 2,
+    "y": -7,
+    "emotion": "for the patience today"
+  },
+  {
+    "x": 3,
+    "y": -7,
+    "emotion": "for the clarification"
+  },
+  {
+    "x": 4,
+    "y": -7,
+    "emotion": "comforted"
+  },
+  {
+    "x": 5,
+    "y": -7,
+    "emotion": "reassured"
+  },
+  {
+    "x": 6,
+    "y": -7,
+    "emotion": "settled by this"
+  },
+  {
+    "x": 7,
+    "y": -7,
+    "emotion": "supported by this"
+  }
+]
