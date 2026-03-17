@@ -3,9 +3,9 @@
     "title": "Content",
     "side": "internal",
     "needs_met": [
-      "enoughness",
-      "simplicity",
-      "satisfaction"
+      "Enoughness",
+      "Simplicity",
+      "Satisfaction"
     ],
     "definition": "An internal state of Content in which your body or mind feels more settled because important needs feel met.",
     "observation_options": [
@@ -27,15 +27,20 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Enoughness",
+      "Simplicity",
+      "Satisfaction"
     ]
   },
   "calm": {
     "title": "Calm",
     "side": "internal",
     "needs_met": [
-      "safety",
-      "predictability",
-      "rest"
+      "Safety",
+      "Predictability",
+      "Rest"
     ],
     "definition": "An internal state of Calm in which your body or mind feels more settled because important needs feel met.",
     "observation_options": [
@@ -57,15 +62,20 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Predictability",
+      "Rest"
     ]
   },
   "grounded": {
     "title": "Grounded",
     "side": "internal",
     "needs_met": [
-      "stability",
-      "presence",
-      "regulation"
+      "Stability",
+      "Presence",
+      "Regulation"
     ],
     "definition": "An internal state of Grounded in which your body or mind feels more settled because important needs feel met.",
     "observation_options": [
@@ -87,15 +97,20 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Presence",
+      "Regulation"
     ]
   },
   "secure": {
     "title": "Secure",
     "side": "internal",
     "needs_met": [
-      "trust",
-      "reliability",
-      "safety"
+      "Trust",
+      "Reliability",
+      "Safety"
     ],
     "definition": "An internal state of Secure in which your body or mind feels more settled because important needs feel met.",
     "observation_options": [
@@ -117,15 +132,20 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Trust",
+      "Reliability",
+      "Safety"
     ]
   },
   "clear": {
     "title": "Clear",
     "side": "internal",
     "needs_met": [
-      "understanding",
-      "order",
-      "direction"
+      "Understanding",
+      "Order",
+      "Direction"
     ],
     "definition": "An internal state of Clear in which your body or mind feels more settled because important needs feel met.",
     "observation_options": [
@@ -147,15 +167,20 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Order",
+      "Direction"
     ]
   },
   "present": {
     "title": "Present",
     "side": "internal",
     "needs_met": [
-      "attention",
-      "connection",
-      "embodiment"
+      "Attention",
+      "Connection",
+      "Embodiment"
     ],
     "definition": "An internal state of Present in which your body or mind feels more settled because important needs feel met.",
     "observation_options": [
@@ -177,15 +202,20 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Connection",
+      "Embodiment"
     ]
   },
   "gratitude_people": {
     "title": "Grateful for people",
     "side": "external",
     "needs_met": [
-      "connection",
-      "care",
-      "belonging"
+      "Connection",
+      "Care",
+      "Belonging"
     ],
     "gratitude_prompts": [
       "One person I’m grateful for is __ because __.",
@@ -211,15 +241,20 @@
           "I noticed more warmth or steadiness in me"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Care",
+      "Belonging"
     ]
   },
   "gratitude_provision": {
     "title": "Grateful for provision",
     "side": "external",
     "needs_met": [
-      "support",
-      "resources",
-      "stability"
+      "Support",
+      "Resources",
+      "Stability"
     ],
     "gratitude_prompts": [
       "One provision I’m grateful for today is __.",
@@ -245,15 +280,20 @@
           "I noticed more warmth or steadiness in me"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Resources",
+      "Stability"
     ]
   },
   "gratitude_rest": {
     "title": "Grateful for rest",
     "side": "external",
     "needs_met": [
-      "rest",
-      "margin",
-      "renewal"
+      "Rest",
+      "Margin",
+      "Renewal"
     ],
     "gratitude_prompts": [
       "One way I was able to rest was __.",
@@ -279,15 +319,20 @@
           "I noticed more warmth or steadiness in me"
         ]
       }
+    ],
+    "needs": [
+      "Rest",
+      "Margin",
+      "Renewal"
     ]
   },
   "gratitude_opportunity": {
     "title": "Grateful for opportunity",
     "side": "external",
     "needs_met": [
-      "growth",
-      "learning",
-      "purpose"
+      "Growth",
+      "Learning",
+      "Purpose"
     ],
     "gratitude_prompts": [
       "An opportunity I’m grateful for is __.",
@@ -313,15 +358,20 @@
           "I noticed more warmth or steadiness in me"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Learning",
+      "Purpose"
     ]
   },
   "gratitude_beauty": {
     "title": "Grateful for beauty",
     "side": "external",
     "needs_met": [
-      "awe",
-      "joy",
-      "appreciation"
+      "Awe",
+      "Joy",
+      "Appreciation"
     ],
     "gratitude_prompts": [
       "Something beautiful I noticed was __.",
@@ -347,15 +397,20 @@
           "I noticed more warmth or steadiness in me"
         ]
       }
+    ],
+    "needs": [
+      "Awe",
+      "Joy",
+      "Appreciation"
     ]
   },
   "gratitude_protection": {
     "title": "Grateful for protection",
     "side": "external",
     "needs_met": [
-      "safety",
-      "covering",
-      "help"
+      "Safety",
+      "Covering",
+      "Help"
     ],
     "gratitude_prompts": [
       "A protection/help I noticed was __.",
@@ -381,12 +436,23 @@
           "I noticed more warmth or steadiness in me"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Covering",
+      "Help"
     ]
   },
   "motivated": {
     "title": "Motivated",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -407,12 +473,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "bright": {
     "title": "Bright",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -433,12 +512,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "hopeful": {
     "title": "Hopeful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -459,12 +551,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "encouraged": {
     "title": "Encouraged",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -485,12 +590,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "uplifted": {
     "title": "Uplifted",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -511,12 +629,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "joyful": {
     "title": "Joyful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Joy",
+      "Connection",
+      "Rest",
+      "Appreciation",
+      "Freedom"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -537,12 +668,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Joy",
+      "Connection",
+      "Rest",
+      "Appreciation",
+      "Freedom"
     ]
   },
   "glad": {
     "title": "Glad",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Joy",
+      "Connection",
+      "Rest",
+      "Appreciation",
+      "Freedom"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -563,12 +707,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Joy",
+      "Connection",
+      "Rest",
+      "Appreciation",
+      "Freedom"
     ]
   },
   "safe with you": {
     "title": "Safe with you",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
+    ],
     "definition": "A positive relational state of feeling safe in connection with another person.",
     "observation_options": [
       {
@@ -589,12 +746,25 @@
           "I noticed trust increasing in me"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
     ]
   },
   "for your care": {
     "title": "For your care",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
+    ],
     "definition": "A gratitude response that appreciates another person’s care and the good it created for you.",
     "observation_options": [
       {
@@ -615,12 +785,25 @@
           "your care made it easier for me to stay open"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
     ]
   },
   "for your kindness": {
     "title": "For your kindness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
+    ],
     "definition": "A gratitude response that appreciates another person’s kindness and the good it created for you.",
     "observation_options": [
       {
@@ -641,12 +824,25 @@
           "your kindness made it easier for me to stay open"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
     ]
   },
   "for your empathy": {
     "title": "For your empathy",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s empathy and the good it created for you.",
     "observation_options": [
       {
@@ -667,12 +863,25 @@
           "your empathy made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your understanding": {
     "title": "For your understanding",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s understanding and the good it created for you.",
     "observation_options": [
       {
@@ -693,12 +902,25 @@
           "your understanding made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your listening": {
     "title": "For your listening",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s listening and the good it created for you.",
     "observation_options": [
       {
@@ -719,12 +941,25 @@
           "your listening made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your reassurance": {
     "title": "For your reassurance",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that appreciates another person’s reassurance and the good it created for you.",
     "observation_options": [
       {
@@ -745,12 +980,25 @@
           "your reassurance made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "curious": {
     "title": "Curious",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Learning",
+      "Understanding",
+      "Openness",
+      "Growth",
+      "Clarity"
+    ],
     "definition": "A positive emotional state of feeling curious, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -771,12 +1019,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Learning",
+      "Understanding",
+      "Openness",
+      "Growth",
+      "Clarity"
     ]
   },
   "confident": {
     "title": "Confident",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "A positive emotional state of feeling confident, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -797,12 +1058,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "empowered": {
     "title": "Empowered",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "A positive emotional state of feeling empowered, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -823,12 +1097,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "alive": {
     "title": "Alive",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -849,12 +1136,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "energized": {
     "title": "Energized",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -875,12 +1175,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "inspired": {
     "title": "Inspired",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -901,12 +1214,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "creative": {
     "title": "Creative",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -927,12 +1253,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "grateful": {
     "title": "Grateful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -953,12 +1292,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "deeply grateful": {
     "title": "Deeply grateful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -979,12 +1331,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "thankful": {
     "title": "Thankful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -1005,12 +1370,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "relieved by care": {
     "title": "Relieved by care",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
+    ],
     "definition": "A positive emotional state of feeling relieved by care, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -1031,12 +1409,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
     ]
   },
   "strengthened by love": {
     "title": "Strengthened by love",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A positive emotional state of feeling strengthened by love, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -1057,12 +1448,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "seen by you": {
     "title": "Seen by you",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A positive relational state of feeling seen through another person’s care, love, or support.",
     "observation_options": [
       {
@@ -1083,12 +1487,25 @@
           "I noticed more openness and trust in me"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "for your initiative": {
     "title": "For your initiative",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s initiative and the good it created for you.",
     "observation_options": [
       {
@@ -1109,12 +1526,25 @@
           "your initiative helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "focused": {
     "title": "Focused",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -1135,12 +1565,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "engaged": {
     "title": "Engaged",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -1161,12 +1604,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "playful": {
     "title": "Playful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Joy",
+      "Connection",
+      "Rest",
+      "Appreciation",
+      "Freedom"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -1187,12 +1643,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Joy",
+      "Connection",
+      "Rest",
+      "Appreciation",
+      "Freedom"
     ]
   },
   "free": {
     "title": "Free",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Space",
+      "Growth",
+      "Possibility",
+      "Ease",
+      "Openness"
+    ],
     "definition": "A positive emotional state of feeling free, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -1213,12 +1682,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Space",
+      "Growth",
+      "Possibility",
+      "Ease",
+      "Openness"
     ]
   },
   "open": {
     "title": "Open",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Space",
+      "Growth",
+      "Possibility",
+      "Ease",
+      "Openness"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -1239,12 +1721,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Space",
+      "Growth",
+      "Possibility",
+      "Ease",
+      "Openness"
     ]
   },
   "expanded": {
     "title": "Expanded",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Space",
+      "Growth",
+      "Possibility",
+      "Ease",
+      "Openness"
+    ],
     "definition": "An energized positive state marked by hope, vitality, or forward movement.",
     "observation_options": [
       {
@@ -1265,12 +1760,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Space",
+      "Growth",
+      "Possibility",
+      "Ease",
+      "Openness"
     ]
   },
   "capable": {
     "title": "Capable",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -1291,12 +1799,25 @@
           "I noticed more momentum inside than before"
         ]
       }
+    ],
+    "needs": [
+      "Growth",
+      "Purpose",
+      "Encouragement",
+      "Support",
+      "Possibility"
     ]
   },
   "admiring": {
     "title": "Admiring",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -1317,12 +1838,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "moved": {
     "title": "Moved",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -1343,12 +1877,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "touched": {
     "title": "Touched",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -1369,12 +1916,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "warmed": {
     "title": "Warmed",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -1395,12 +1955,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "appreciative": {
     "title": "Appreciative",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -1421,12 +1994,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "valued by you": {
     "title": "Valued by you",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A positive relational state of feeling valued through another person’s care, love, or support.",
     "observation_options": [
       {
@@ -1447,12 +2033,25 @@
           "I noticed more warmth and steadiness in me"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "for your commitment": {
     "title": "For your commitment",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s commitment and the good it created for you.",
     "observation_options": [
       {
@@ -1473,12 +2072,25 @@
           "your commitment helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "stable": {
     "title": "Stable",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -1499,12 +2111,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "cherished": {
     "title": "Cherished",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1525,12 +2150,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "known": {
     "title": "Known",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1551,12 +2189,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "accepted": {
     "title": "Accepted",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1577,12 +2228,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "included": {
     "title": "Included",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1603,12 +2267,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "connected": {
     "title": "Connected",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1629,12 +2306,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "for your devotion": {
     "title": "For your devotion",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
+    ],
     "definition": "A gratitude response that appreciates another person’s devotion and the good it created for you.",
     "observation_options": [
       {
@@ -1655,12 +2345,25 @@
           "your devotion helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
     ]
   },
   "for your attention": {
     "title": "For your attention",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s attention and the good it created for you.",
     "observation_options": [
       {
@@ -1681,12 +2384,25 @@
           "your attention made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your presence": {
     "title": "For your presence",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s presence and the good it created for you.",
     "observation_options": [
       {
@@ -1707,12 +2423,25 @@
           "your presence made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your gentleness": {
     "title": "For your gentleness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A gratitude response that appreciates another person’s gentleness and the good it created for you.",
     "observation_options": [
       {
@@ -1733,12 +2462,25 @@
           "your gentleness made it easier for me to stay open"
         ]
       }
+    ],
+    "needs": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
     ]
   },
   "for your partnership": {
     "title": "For your partnership",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
+    ],
     "definition": "A gratitude response that appreciates another person’s partnership and the good it created for you.",
     "observation_options": [
       {
@@ -1759,12 +2501,25 @@
           "your partnership helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
     ]
   },
   "for your tenderness": {
     "title": "For your tenderness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
+    ],
     "definition": "A gratitude response that appreciates another person’s tenderness and the good it created for you.",
     "observation_options": [
       {
@@ -1785,12 +2540,25 @@
           "your tenderness made it easier for me to stay open"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
     ]
   },
   "for your warmth": {
     "title": "For your warmth",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
+    ],
     "definition": "A gratitude response that appreciates another person’s warmth and the good it created for you.",
     "observation_options": [
       {
@@ -1811,12 +2579,25 @@
           "your warmth made it easier for me to stay open"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
     ]
   },
   "safe": {
     "title": "Safe",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -1837,12 +2618,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
     ]
   },
   "cared for": {
     "title": "Cared for",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1863,12 +2657,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "close": {
     "title": "Close",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1889,12 +2696,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "respected": {
     "title": "Respected",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1915,12 +2735,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "honored": {
     "title": "Honored",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1941,12 +2774,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "seen": {
     "title": "Seen",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -1967,12 +2813,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "for your loyalty": {
     "title": "For your loyalty",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
+    ],
     "definition": "A gratitude response that appreciates another person’s loyalty and the good it created for you.",
     "observation_options": [
       {
@@ -1993,12 +2852,25 @@
           "your loyalty helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
     ]
   },
   "for your intimacy": {
     "title": "For your intimacy",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
+    ],
     "definition": "A gratitude response that appreciates another person’s intimacy and the good it created for you.",
     "observation_options": [
       {
@@ -2019,12 +2891,25 @@
           "your intimacy made the relationship feel safer and warmer"
         ]
       }
+    ],
+    "needs": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
     ]
   },
   "for your softness": {
     "title": "For your softness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A gratitude response that appreciates another person’s softness and the good it created for you.",
     "observation_options": [
       {
@@ -2045,12 +2930,25 @@
           "your softness made it easier for me to stay open"
         ]
       }
+    ],
+    "needs": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
     ]
   },
   "for your protection": {
     "title": "For your protection",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
+    ],
     "definition": "A gratitude response that appreciates another person’s protection and the good it created for you.",
     "observation_options": [
       {
@@ -2071,12 +2969,25 @@
           "your protection made the relationship feel safer and warmer"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
     ]
   },
   "for your love": {
     "title": "For your love",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
+    ],
     "definition": "A gratitude response that appreciates another person’s love and the good it created for you.",
     "observation_options": [
       {
@@ -2097,12 +3008,25 @@
           "your love made the relationship feel safer and warmer"
         ]
       }
+    ],
+    "needs": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
     ]
   },
   "for your desire": {
     "title": "For your desire",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
+    ],
     "definition": "A gratitude response that appreciates another person’s desire and the good it created for you.",
     "observation_options": [
       {
@@ -2123,12 +3047,25 @@
           "your desire made the relationship feel safer and warmer"
         ]
       }
+    ],
+    "needs": [
+      "Love",
+      "Closeness",
+      "Security",
+      "Commitment",
+      "Protection"
     ]
   },
   "for your sacrifice": {
     "title": "For your sacrifice",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
+    ],
     "definition": "A gratitude response that appreciates another person’s sacrifice and the good it created for you.",
     "observation_options": [
       {
@@ -2149,12 +3086,25 @@
           "your sacrifice made the relationship feel safer and warmer"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
     ]
   },
   "anchored": {
     "title": "Anchored",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -2175,12 +3125,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "steady": {
     "title": "Steady",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -2201,12 +3164,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "held": {
     "title": "Held",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -2227,12 +3203,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "bonded": {
     "title": "Bonded",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -2253,12 +3242,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "heard": {
     "title": "Heard",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -2279,12 +3281,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "supported": {
     "title": "Supported",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -2305,12 +3320,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "valued": {
     "title": "Valued",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -2331,12 +3359,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "for your patience with me": {
     "title": "For your patience with me",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that appreciates another person’s patience with me and the good it created for you.",
     "observation_options": [
       {
@@ -2357,12 +3398,25 @@
           "your patience with me made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "for your forgiveness": {
     "title": "For your forgiveness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that appreciates another person’s forgiveness and the good it created for you.",
     "observation_options": [
       {
@@ -2383,12 +3437,25 @@
           "your forgiveness made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "for your leadership": {
     "title": "For your leadership",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s leadership and the good it created for you.",
     "observation_options": [
       {
@@ -2409,12 +3476,25 @@
           "your leadership helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your strength": {
     "title": "For your strength",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s strength and the good it created for you.",
     "observation_options": [
       {
@@ -2435,12 +3515,25 @@
           "your strength helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your affection": {
     "title": "For your affection",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
+    ],
     "definition": "A gratitude response that appreciates another person’s affection and the good it created for you.",
     "observation_options": [
       {
@@ -2461,12 +3554,25 @@
           "your affection made the relationship feel safer and warmer"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
     ]
   },
   "for your pursuit": {
     "title": "For your pursuit",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
+    ],
     "definition": "A gratitude response that appreciates another person’s pursuit and the good it created for you.",
     "observation_options": [
       {
@@ -2487,12 +3593,25 @@
           "your pursuit made the relationship feel safer and warmer"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
     ]
   },
   "for your reliability": {
     "title": "For your reliability",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s reliability and the good it created for you.",
     "observation_options": [
       {
@@ -2513,12 +3632,25 @@
           "your reliability helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "at peace": {
     "title": "At peace",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -2539,12 +3671,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
     ]
   },
   "gentle": {
     "title": "Gentle",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A positive emotional state of feeling gentle, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -2565,12 +3710,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
     ]
   },
   "rested": {
     "title": "Rested",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -2591,12 +3749,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "balanced": {
     "title": "Balanced",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -2617,12 +3788,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "quiet": {
     "title": "Quiet",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A positive emotional state of feeling quiet, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -2643,12 +3827,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "for your integrity": {
     "title": "For your integrity",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that appreciates another person’s integrity and the good it created for you.",
     "observation_options": [
       {
@@ -2669,12 +3866,25 @@
           "your integrity made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "for your attention to detail": {
     "title": "For your attention to detail",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s attention to detail and the good it created for you.",
     "observation_options": [
       {
@@ -2695,12 +3905,25 @@
           "your attention to detail made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your generosity": {
     "title": "For your generosity",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that appreciates another person’s generosity and the good it created for you.",
     "observation_options": [
       {
@@ -2721,12 +3944,25 @@
           "your generosity helped me feel more connected"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for your hospitality": {
     "title": "For your hospitality",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that appreciates another person’s hospitality and the good it created for you.",
     "observation_options": [
       {
@@ -2747,12 +3983,25 @@
           "your hospitality helped me feel more connected"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for your gift": {
     "title": "For your gift",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that appreciates another person’s gift and the good it created for you.",
     "observation_options": [
       {
@@ -2773,12 +4022,25 @@
           "your gift helped me feel more connected"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for your wisdom": {
     "title": "For your wisdom",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s wisdom and the good it created for you.",
     "observation_options": [
       {
@@ -2799,12 +4061,25 @@
           "your wisdom made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your repair attempt": {
     "title": "For your repair attempt",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that appreciates another person’s repair attempt and the good it created for you.",
     "observation_options": [
       {
@@ -2825,12 +4100,25 @@
           "your repair attempt made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "grateful inwardly": {
     "title": "Grateful inwardly",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -2851,12 +4139,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "soft inside": {
     "title": "Soft inside",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A positive emotional state of feeling soft inside, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -2877,12 +4178,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
     ]
   },
   "clear minded": {
     "title": "Clear minded",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -2903,12 +4217,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "settled inside": {
     "title": "Settled inside",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -2929,12 +4256,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "relieved": {
     "title": "Relieved",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
+    ],
     "definition": "A positive emotional state of feeling relieved, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -2955,12 +4295,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
     ]
   },
   "at ease": {
     "title": "At ease",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A positive emotional state of feeling at ease, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -2981,12 +4334,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "peaceful": {
     "title": "Peaceful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -3007,12 +4373,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
     ]
   },
   "for your humility": {
     "title": "For your humility",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that appreciates another person’s humility and the good it created for you.",
     "observation_options": [
       {
@@ -3033,12 +4412,25 @@
           "your humility made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "for your truthfulness": {
     "title": "For your truthfulness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that appreciates another person’s truthfulness and the good it created for you.",
     "observation_options": [
       {
@@ -3059,12 +4451,25 @@
           "your truthfulness made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "for your time": {
     "title": "For your time",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s time and the good it created for you.",
     "observation_options": [
       {
@@ -3085,12 +4490,25 @@
           "your time helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your problem solving": {
     "title": "For your problem solving",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s problem solving and the good it created for you.",
     "observation_options": [
       {
@@ -3111,12 +4529,25 @@
           "your problem solving helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your help": {
     "title": "For your help",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s help and the good it created for you.",
     "observation_options": [
       {
@@ -3137,12 +4568,25 @@
           "your help helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your welcome": {
     "title": "For your welcome",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that appreciates another person’s welcome and the good it created for you.",
     "observation_options": [
       {
@@ -3163,12 +4607,25 @@
           "your welcome helped me feel more connected"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for your service": {
     "title": "For your service",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s service and the good it created for you.",
     "observation_options": [
       {
@@ -3189,12 +4646,25 @@
           "your service helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "thankful inwardly": {
     "title": "Thankful inwardly",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -3215,12 +4685,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "tender inside": {
     "title": "Tender inside",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A positive emotional state of feeling tender inside, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -3241,12 +4724,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
     ]
   },
   "mindful": {
     "title": "Mindful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -3267,12 +4763,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "okay": {
     "title": "Okay",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Enoughness",
+      "Rest",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A positive emotional state of feeling okay, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -3293,12 +4802,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Enoughness",
+      "Rest",
+      "Safety",
+      "Acceptance"
     ]
   },
   "unburdened": {
     "title": "Unburdened",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
+    ],
     "definition": "A positive emotional state of feeling unburdened, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -3319,12 +4841,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
     ]
   },
   "comfortable": {
     "title": "Comfortable",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A positive emotional state of feeling comfortable, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -3345,12 +4880,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "serene": {
     "title": "Serene",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -3371,12 +4919,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
     ]
   },
   "for your mentorship": {
     "title": "For your mentorship",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s mentorship and the good it created for you.",
     "observation_options": [
       {
@@ -3397,12 +4958,25 @@
           "your mentorship made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your thoughtfulness": {
     "title": "For your thoughtfulness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s thoughtfulness and the good it created for you.",
     "observation_options": [
       {
@@ -3423,12 +4997,25 @@
           "your thoughtfulness made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your bravery": {
     "title": "For your bravery",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Encouragement",
+      "Support",
+      "Hope",
+      "Care",
+      "Strength"
+    ],
     "definition": "A gratitude response that appreciates another person’s bravery and the good it created for you.",
     "observation_options": [
       {
@@ -3449,12 +5036,25 @@
           "your bravery helped me feel more connected"
         ]
       }
+    ],
+    "needs": [
+      "Encouragement",
+      "Support",
+      "Hope",
+      "Care",
+      "Strength"
     ]
   },
   "for your peacemaking": {
     "title": "For your peacemaking",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that appreciates another person’s peacemaking and the good it created for you.",
     "observation_options": [
       {
@@ -3475,12 +5075,25 @@
           "your peacemaking made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "for your energy": {
     "title": "For your energy",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s energy and the good it created for you.",
     "observation_options": [
       {
@@ -3501,12 +5114,25 @@
           "your energy helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your teamwork": {
     "title": "For your teamwork",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s teamwork and the good it created for you.",
     "observation_options": [
       {
@@ -3527,12 +5153,25 @@
           "your teamwork helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your encouragement": {
     "title": "For your encouragement",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Encouragement",
+      "Support",
+      "Hope",
+      "Care",
+      "Strength"
+    ],
     "definition": "A gratitude response that appreciates another person’s encouragement and the good it created for you.",
     "observation_options": [
       {
@@ -3553,12 +5192,25 @@
           "your encouragement made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Encouragement",
+      "Support",
+      "Hope",
+      "Care",
+      "Strength"
     ]
   },
   "deeply safe": {
     "title": "Deeply safe",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -3579,12 +5231,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
     ]
   },
   "tranquil": {
     "title": "Tranquil",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -3605,12 +5270,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
     ]
   },
   "fine": {
     "title": "Fine",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Enoughness",
+      "Rest",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A positive emotional state of feeling fine, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -3631,12 +5309,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Enoughness",
+      "Rest",
+      "Safety",
+      "Acceptance"
     ]
   },
   "light in conscience": {
     "title": "Light in conscience",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A positive emotional state of feeling light in conscience, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -3657,12 +5348,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "fulfilled": {
     "title": "Fulfilled",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -3683,12 +5387,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
     ]
   },
   "whole": {
     "title": "Whole",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -3709,12 +5426,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
     ]
   },
   "nourished": {
     "title": "Nourished",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -3735,12 +5465,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
     ]
   },
   "for your follow through": {
     "title": "For your follow through",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s follow through and the good it created for you.",
     "observation_options": [
       {
@@ -3761,12 +5504,25 @@
           "your follow through helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your feedback": {
     "title": "For your feedback",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s feedback and the good it created for you.",
     "observation_options": [
       {
@@ -3787,12 +5543,25 @@
           "your feedback made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for your friendliness": {
     "title": "For your friendliness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
+    ],
     "definition": "A gratitude response that appreciates another person’s friendliness and the good it created for you.",
     "observation_options": [
       {
@@ -3813,12 +5582,25 @@
           "your friendliness helped me feel more connected"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
     ]
   },
   "for the laugh": {
     "title": "For the laugh",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that notices and values laugh as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -3839,12 +5621,25 @@
           "your the laugh helped me feel more connected"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for the teaching": {
     "title": "For the teaching",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values teaching as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -3865,12 +5660,25 @@
           "your the teaching made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for the reminder": {
     "title": "For the reminder",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values reminder as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -3891,12 +5699,25 @@
           "your the reminder made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for the small kindness": {
     "title": "For the small kindness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
+    ],
     "definition": "A gratitude response that notices and values small kindness as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -3917,12 +5738,25 @@
           "your the small kindness made it easier for me to stay open"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Kindness",
+      "Gentleness",
+      "Warmth",
+      "Love"
     ]
   },
   "deeply rested": {
     "title": "Deeply rested",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -3943,12 +5777,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "still": {
     "title": "Still",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A positive emotional state of feeling still, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -3969,12 +5816,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "regulated": {
     "title": "Regulated",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A positive emotional state of feeling regulated, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -3995,12 +5855,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "at peace with God": {
     "title": "At peace with God",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -4021,12 +5894,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
     ]
   },
   "satisfied": {
     "title": "Satisfied",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
+    ],
     "definition": "A positive emotional state of feeling satisfied, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -4047,12 +5933,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
     ]
   },
   "restored inside": {
     "title": "Restored inside",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -4073,12 +5972,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Enoughness",
+      "Satisfaction",
+      "Meaning",
+      "Rest",
+      "Peace"
     ]
   },
   "unclenched": {
     "title": "Unclenched",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A positive emotional state of feeling unclenched, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -4099,12 +6011,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "for your accountability": {
     "title": "For your accountability",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s accountability and the good it created for you.",
     "observation_options": [
       {
@@ -4125,12 +6050,25 @@
           "your accountability gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your consideration": {
     "title": "For your consideration",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that appreciates another person’s consideration and the good it created for you.",
     "observation_options": [
       {
@@ -4151,12 +6089,25 @@
           "your consideration gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "for your text back": {
     "title": "For your text back",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
+    ],
     "definition": "A gratitude response that appreciates another person’s text back and the good it created for you.",
     "observation_options": [
       {
@@ -4177,12 +6128,25 @@
           "your text back gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
     ]
   },
   "for the ride": {
     "title": "For the ride",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that notices and values ride as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4203,12 +6167,25 @@
           "your the ride gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for the heads up": {
     "title": "For the heads up",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values heads up as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4229,12 +6206,25 @@
           "your the heads up gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
     ]
   },
   "for the backup": {
     "title": "For the backup",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
+    ],
     "definition": "A gratitude response that notices and values backup as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4255,12 +6245,25 @@
           "your the backup gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
     ]
   },
   "for the small help": {
     "title": "For the small help",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that notices and values small help as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4281,12 +6284,25 @@
           "your the small help helped me trust your presence more"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "deeply peaceful": {
     "title": "Deeply peaceful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -4307,12 +6323,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
     ]
   },
   "unhurried": {
     "title": "Unhurried",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -4333,12 +6362,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "lighthearted": {
     "title": "Lighthearted",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Joy",
+      "Connection",
+      "Rest",
+      "Appreciation",
+      "Freedom"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -4359,12 +6401,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Joy",
+      "Connection",
+      "Rest",
+      "Appreciation",
+      "Freedom"
     ]
   },
   "humbled inwardly": {
     "title": "Humbled inwardly",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A positive emotional state of feeling humbled inwardly, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -4385,12 +6440,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "moved inwardly": {
     "title": "Moved inwardly",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
+    ],
     "definition": "A gratitude state marked by appreciation, warmth, and recognition of something good that has been received.",
     "observation_options": [
       {
@@ -4411,12 +6479,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Appreciation",
+      "Care",
+      "Support",
+      "Generosity",
+      "Provision"
     ]
   },
   "awe filled": {
     "title": "Awe filled",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -4437,12 +6518,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "wonder filled": {
     "title": "Wonder filled",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -4463,12 +6557,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "for the cover": {
     "title": "For the cover",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that notices and values cover as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4489,12 +6596,25 @@
           "your the cover gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for the recommendation": {
     "title": "For the recommendation",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
+    ],
     "definition": "A gratitude response that notices and values recommendation as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4515,12 +6635,25 @@
           "your the recommendation gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
     ]
   },
   "for the coaching": {
     "title": "For the coaching",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
+    ],
     "definition": "A gratitude response that notices and values coaching as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4541,12 +6674,25 @@
           "your the coaching gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
     ]
   },
   "for the honest answer": {
     "title": "For the honest answer",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
+    ],
     "definition": "A gratitude response that notices and values honest answer as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4567,12 +6713,25 @@
           "your the honest answer gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Attention",
+      "Trust",
+      "Connection"
     ]
   },
   "for the invite": {
     "title": "For the invite",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that notices and values invite as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4593,12 +6752,25 @@
           "your the invite gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for the assist": {
     "title": "For the assist",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that notices and values assist as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4619,12 +6791,25 @@
           "your the assist gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for the extra effort": {
     "title": "For the extra effort",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that notices and values extra effort as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4645,12 +6830,25 @@
           "your the extra effort gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "anchored in God": {
     "title": "Anchored in God",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -4671,12 +6869,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "restful": {
     "title": "Restful",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -4697,12 +6908,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Care",
+      "Support",
+      "Stability",
+      "Understanding",
+      "Peace"
     ]
   },
   "softened": {
     "title": "Softened",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -4723,12 +6947,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
     ]
   },
   "integrated": {
     "title": "Integrated",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -4749,12 +6986,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "aligned": {
     "title": "Aligned",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -4775,12 +7025,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "congruent": {
     "title": "Congruent",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -4801,12 +7064,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "authentic": {
     "title": "Authentic",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -4827,12 +7103,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "for the intro": {
     "title": "For the intro",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values intro as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4853,12 +7142,25 @@
           "your the intro gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
     ]
   },
   "for the tip": {
     "title": "For the tip",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values tip as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4879,12 +7181,25 @@
           "your the tip gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
     ]
   },
   "for the note": {
     "title": "For the note",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values note as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4905,12 +7220,25 @@
           "your the note gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
     ]
   },
   "for the follow up": {
     "title": "For the follow up",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values follow up as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4931,12 +7259,25 @@
           "your the follow up gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
     ]
   },
   "for the explanation": {
     "title": "For the explanation",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values explanation as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4957,12 +7298,25 @@
           "your the explanation gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for the spot": {
     "title": "For the spot",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values spot as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -4983,12 +7337,25 @@
           "your the spot gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
     ]
   },
   "for the consistency": {
     "title": "For the consistency",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
+    ],
     "definition": "A gratitude response that notices and values consistency as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5009,12 +7376,25 @@
           "your the consistency gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Support",
+      "Reliability",
+      "Stability",
+      "Partnership",
+      "Trust"
     ]
   },
   "composed": {
     "title": "Composed",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -5035,12 +7415,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "peace filled": {
     "title": "Peace filled",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
+    ],
     "definition": "A positive emotional state of feeling peace filled, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -5061,12 +7454,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Peace",
+      "Safety",
+      "Rest",
+      "Regulation",
+      "Predictability"
     ]
   },
   "quietly secure": {
     "title": "Quietly secure",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -5087,12 +7493,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
     ]
   },
   "centered": {
     "title": "Centered",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -5113,12 +7532,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "held together": {
     "title": "Held together",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -5139,12 +7571,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   },
   "deeply settled": {
     "title": "Deeply settled",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -5165,12 +7610,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "for the share": {
     "title": "For the share",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that notices and values share as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5191,12 +7649,25 @@
           "your the share gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for the quick response": {
     "title": "For the quick response",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values quick response as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5217,12 +7688,25 @@
           "your the quick response gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Attention",
+      "Consideration",
+      "Support",
+      "Reliability",
+      "Care"
     ]
   },
   "for the good company": {
     "title": "For the good company",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
+    ],
     "definition": "A gratitude response that notices and values good company as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5243,12 +7727,25 @@
           "your the good company gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Generosity",
+      "Care",
+      "Support",
+      "Belonging",
+      "Joy"
     ]
   },
   "for the respect": {
     "title": "For the respect",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Respect",
+      "Fairness",
+      "Safety",
+      "Trust",
+      "Value"
+    ],
     "definition": "A gratitude response that notices and values respect as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5269,12 +7766,25 @@
           "your the respect gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Respect",
+      "Fairness",
+      "Safety",
+      "Trust",
+      "Value"
     ]
   },
   "for the fairness": {
     "title": "For the fairness",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Respect",
+      "Fairness",
+      "Safety",
+      "Trust",
+      "Value"
+    ],
     "definition": "A gratitude response that notices and values fairness as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5295,12 +7805,25 @@
           "your the fairness gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Respect",
+      "Fairness",
+      "Safety",
+      "Trust",
+      "Value"
     ]
   },
   "for the professionalism": {
     "title": "For the professionalism",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Respect",
+      "Fairness",
+      "Safety",
+      "Trust",
+      "Value"
+    ],
     "definition": "A gratitude response that notices and values professionalism as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5321,12 +7844,25 @@
           "your the professionalism gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Respect",
+      "Fairness",
+      "Safety",
+      "Trust",
+      "Value"
     ]
   },
   "for the safe space": {
     "title": "For the safe space",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
+    ],
     "definition": "A gratitude response that notices and values safe space as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5347,12 +7883,25 @@
           "your the safe space gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Security",
+      "Protection",
+      "Trust",
+      "Stability"
     ]
   },
   "collected": {
     "title": "Collected",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -5373,12 +7922,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "unrushed": {
     "title": "Unrushed",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -5399,12 +7961,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "receptive": {
     "title": "Receptive",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -5425,12 +8000,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "grounded in love": {
     "title": "Grounded in love",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -5451,12 +8039,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "stable in myself": {
     "title": "Stable in myself",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -5477,12 +8078,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "simple": {
     "title": "Simple",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
+    ],
     "definition": "An internally coherent state in which your mind and body feel clearer, more present, and more aligned.",
     "observation_options": [
       {
@@ -5503,12 +8117,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Clarity",
+      "Understanding",
+      "Order",
+      "Direction",
+      "Presence"
     ]
   },
   "gentle presence": {
     "title": "Gentle presence",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
+    ],
     "definition": "A deeply fulfilled inner state marked by wholeness, meaning, or spiritual steadiness.",
     "observation_options": [
       {
@@ -5529,12 +8156,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Gentleness",
+      "Care",
+      "Warmth",
+      "Safety",
+      "Acceptance"
     ]
   },
   "for the listening": {
     "title": "For the listening",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values listening as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5555,12 +8195,25 @@
           "your the listening made communication feel easier"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "for the patience today": {
     "title": "For the patience today",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
+    ],
     "definition": "A gratitude response that notices and values patience today as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5581,12 +8234,25 @@
           "your the patience today made it easier for me to settle"
         ]
       }
+    ],
+    "needs": [
+      "Safety",
+      "Trust",
+      "Repair",
+      "Reassurance",
+      "Peace"
     ]
   },
   "for the clarification": {
     "title": "For the clarification",
     "side": "external",
-    "needs_met": [],
+    "needs_met": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
+    ],
     "definition": "A gratitude response that notices and values clarification as a concrete gift, help, or kindness.",
     "observation_options": [
       {
@@ -5607,12 +8273,25 @@
           "your the clarification gave me something good to receive"
         ]
       }
+    ],
+    "needs": [
+      "Understanding",
+      "Being Heard",
+      "Attention",
+      "Clarity",
+      "Care"
     ]
   },
   "comforted": {
     "title": "Comforted",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
+    ],
     "definition": "A positive emotional state of feeling comforted, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -5633,12 +8312,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
     ]
   },
   "reassured": {
     "title": "Reassured",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
+    ],
     "definition": "A positive emotional state of feeling reassured, reflecting support, fulfillment, or gratitude.",
     "observation_options": [
       {
@@ -5659,12 +8351,25 @@
           "I noticed gratitude becoming more conscious in me"
         ]
       }
+    ],
+    "needs": [
+      "Reassurance",
+      "Care",
+      "Support",
+      "Safety",
+      "Relief"
     ]
   },
   "settled by this": {
     "title": "Settled by this",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
+    ],
     "definition": "A settled, regulated state in which your body and mind feel safer, steadier, and less pressured.",
     "observation_options": [
       {
@@ -5685,12 +8390,25 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Stability",
+      "Regulation",
+      "Rest",
+      "Predictability",
+      "Safety"
     ]
   },
   "supported by this": {
     "title": "Supported by this",
     "side": "internal",
-    "needs_met": [],
+    "needs_met": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
+    ],
     "definition": "A relationally nourished state in which closeness, care, and belonging feel present.",
     "observation_options": [
       {
@@ -5711,6 +8429,13 @@
           "I felt less tight and more able to settle"
         ]
       }
+    ],
+    "needs": [
+      "Connection",
+      "Belonging",
+      "Closeness",
+      "Being Seen",
+      "Being Heard"
     ]
   }
 }

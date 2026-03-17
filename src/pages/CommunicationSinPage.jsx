@@ -7,6 +7,7 @@ import { getCommunicationPageBackground } from "../utils/pageThemes.js";
 import ScriptureRotator from "../components/ui/ScriptureRotator.jsx";
 
 
+
 function normalizeItems(obj) {
   if (!obj || typeof obj !== "object") return [];
   return Object.entries(obj).map(([key, value]) => ({
@@ -574,6 +575,8 @@ function CollapsiblePanel({ title, children, defaultOpen = false, background }) 
 
 function SinModal({ item, onClose }) {
   const [openSection, setOpenSection] = useState(null);
+    const backdropRef = useRef(null);
+    const modalCardRef = useRef(null);
 const repairSteps = item?.repair_steps || [];
 const empathyVisibility =
   Array.isArray(item?.empathy_visibility)
@@ -595,9 +598,28 @@ const practiceInterrupts = item?.practice_interrupts || [];
 const reflectionQuestions = item?.reflection_questions || [];
 const requestFlowNeeds = item?.request_flow_needs || [];
 
-  useEffect(() => {
-    setOpenSection(null);
-  }, [item]);
+useEffect(() => {
+  setOpenSection(null);
+
+  const id = setTimeout(() => {
+    if (backdropRef.current) {
+      backdropRef.current.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+
+    if (modalCardRef.current) {
+      modalCardRef.current.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
+    }
+  }, 40);
+
+  return () => clearTimeout(id);
+}, [item]);
 
   if (!item) return null;
 
@@ -613,6 +635,7 @@ const requestFlowNeeds = item?.request_flow_needs || [];
 
   return (
     <div
+          ref={backdropRef}
     className="modalBackdrop"
       role="dialog"
       aria-modal="true"
@@ -637,6 +660,7 @@ const requestFlowNeeds = item?.request_flow_needs || [];
 }}
     >
       <div
+              ref={modalCardRef}
         style={{
           width: "min(1040px, 100%)",
           margin: "40px auto",
@@ -946,6 +970,15 @@ export default function CommunicationSinPage({ goHome }) {
   const [selectedItem, setSelectedItem] = useState(null);
 const detailRef = useRef(null);
 
+useEffect(() => {
+  if (!selectedItem) return;
+
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+}, [selectedItem]);
 
 
   useEffect(() => {
@@ -975,10 +1008,6 @@ const detailRef = useRef(null);
     };
   }, []);
 
-useEffect(() => {
-  if (!selectedItem) return;
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}, [selectedItem]);
 
   const speechItems = useMemo(() => normalizeItems(data?.speech_sins), [data]);
   const relationalItems = useMemo(() => normalizeItems(data?.relational_sins), [data]);
@@ -1162,6 +1191,42 @@ useEffect(() => {
     </div>
   </div>
 </CollapsiblePanel>
+
+
+<Panel
+  style={{
+    background: "linear-gradient(180deg, rgba(255,255,255,0.72), rgba(217,196,247,0.60))",
+    border: "1px solid rgba(255,255,255,0.16)",
+    width: "min(1120px, 100%)",
+    margin: "0 auto",
+  }}
+>
+  <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+    <div style={{ color: "#111827", lineHeight: 1.55 }}>
+      Want the broader biblical framework beyond communication patterns?
+    </div>
+
+    <button
+      type="button"
+      onClick={() => {
+        window.location.hash = "#/cumulative-sins";
+      }}
+      style={{
+        borderRadius: 14,
+        border: "1px solid rgba(255,255,255,0.22)",
+        background:
+          "linear-gradient(180deg, rgba(255,255,255,0.30), rgba(255,255,255,0.18))",
+        color: "#1b1f3b",
+        padding: "12px 14px",
+        fontWeight: 900,
+        cursor: "pointer",
+      }}
+    >
+      Open cumulative sins
+    </button>
+  </div>
+</Panel>
+
       </div>
 
       <SinModal item={selectedItem} onClose={() => setSelectedItem(null)} />

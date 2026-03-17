@@ -1,12 +1,13 @@
   // src/pages/CheckInPage.jsx
   // COPY/PASTE ENTIRE FILE
 
-  import { useMemo, useState } from "react";
+  import { useMemo, useState, useEffect } from "react";
   import Header from "../components/layout/Header.jsx";
   import EmotionGrid from "../components/grid/EmotionGrid.jsx";
   import PositiveCheckInModal from "../components/checkin/PositiveCheckInModal.jsx";
   import TopNav from "../components/layout/TopNav.jsx";
   import { checkinColor } from "../utils/checkinColor.js";
+  import { compactCheckinGrid } from "../data/compactCheckinGrid.js";
 
   export default function CheckInPage({
     goHome,
@@ -15,8 +16,27 @@
     needsSupplement,
     loading,
     error,
+    showExpandedGrid,
+    setShowExpandedGrid,
   }) {
     const [selected, setSelected] = useState(null);
+const GRID_PREF_KEY = "preferredGridMode";
+const [mobile, setMobile] = useState(false);
+
+useEffect(() => {
+  const update = () => setMobile(window.innerWidth <= 768);
+  update();
+  window.addEventListener("resize", update);
+  return () => window.removeEventListener("resize", update);
+}, []);
+
+useEffect(() => {
+  if (typeof window === "undefined") return;
+  window.localStorage.setItem(
+    GRID_PREF_KEY,
+    showExpandedGrid ? "expanded" : "compact"
+  );
+}, [showExpandedGrid]);
 
     const grid = Array.isArray(checkinGrid) ? checkinGrid : [];
 
@@ -45,7 +65,7 @@
 
     return (
       <div
-    className="container"
+    className="container" 
     style={{
       ...(bgStyle || {}),
       position: "relative",
@@ -63,11 +83,15 @@
               <div className="pageMetaRow">
                   <div className= "pageHeaderTitle" style={{ minWidth: 0, maxWidth: 1120, flex: "1 1 620px" }}>
 
+
               <Header
-                title="Positive Emotion Check-In: Interoception and Gratitude"
+                title="Positive Check-In"
                 subtitle={
     <>
-      Left: what feels fulfilled • Right: what you are grateful for • Top: activated or energized • Bottom: calm or settled
+      Left: what feels fulfilled • 
+      Right: what you are grateful for • 
+      Top: activated or energized • 
+      Bottom: calm or settled
     </>
   }
               />
@@ -92,14 +116,22 @@
                   goPrayer={() => (window.location.hash = "#/prayer")}
                   goCommunication={() => (window.location.hash = "#/communication-sins")}
                   goLog={() => (window.location.hash = "#/log")}
+                  expanded={showExpandedGrid}
+                  onToggleExpanded={() => setShowExpandedGrid((v) => !v)}
                 />
               </div>
             </div>
           </div>
 
   <div className="panel gridPanel" style={{ width: "100%", margin: "0 auto" }}>
-       <EmotionGrid
+
+
+  <EmotionGrid
   grid={grid}
+  compactOverlay={!showExpandedGrid}
+  compactGrid={compactCheckinGrid}
+  compactTileSize={120}
+  compactLabelScale={1.18}
   onPick={setSelected}
   colorFn={checkinColor}
   meta={checkinMeta}
@@ -113,7 +145,7 @@
     xNeg: "Needs met inside",
     xPos: "Appreciation toward others",
   }}
-/>
+/>  
         </div>
 
   </div>

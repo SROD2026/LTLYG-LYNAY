@@ -1,0 +1,1314 @@
+{
+  "meta": {
+    "schema": "biblical_sin_map_v1",
+    "title": "Biblical Sin Map",
+    "core_framework": {
+      "romans_14_23": "Whatever does not proceed from faith is sin.",
+      "great_commandment": [
+        "Love the Lord your God with all your heart, soul, mind, and strength",
+        "Love your neighbor as yourself"
+      ],
+      "fruit_of_spirit": [
+        "love",
+        "joy",
+        "peace",
+        "patience",
+        "kindness",
+        "goodness",
+        "faithfulness",
+        "gentleness",
+        "self-control"
+      ]
+    }
+  },
+
+  "modules": {
+
+    "communication_sins": {
+      "source": "communicationSins.json",
+      "description": "Speech and relational communication sins that damage dignity, safety, trust, and clarity.",
+      "note": "Imported from existing file to avoid duplication."
+    },
+
+    "sins_against_god": {
+
+      "idolatry": [
+        "worship of false gods",
+        "self-worship",
+        "materialism",
+        "career worship",
+        "relationship worship",
+        "nationalism replacing allegiance to God's kingdom",
+        "ideology worship",
+        "entertainment worship"
+      ],
+
+      "spiritual_pride": [
+        "self-righteousness",
+        "religious superiority",
+        "trusting works instead of grace",
+        "desire for spiritual recognition",
+        "refusal to repent"
+      ],
+
+      "unbelief": [
+        "doubting God's goodness",
+        "refusing reliance on God",
+        "anxiety replacing trust",
+        "rejecting God's authority",
+        "spiritual cynicism"
+      ],
+
+      "rebellion": [
+        "deliberate disobedience",
+        "hardening the heart",
+        "persisting in known sin",
+        "rejecting conviction"
+      ],
+
+      "irreverence": [
+        "taking God's name lightly",
+        "treating sacred things casually",
+        "mocking spiritual truth",
+        "using religion for personal gain"
+      ],
+
+      "neglect_of_worship": [
+        "prayerlessness",
+        "failure to give thanks",
+        "neglect of Scripture",
+        "abandoning fellowship",
+        "spiritual apathy"
+      ]
+    },
+
+    "sins_against_neighbor": {
+
+      "violence_and_harm": [
+        "murder",
+        "abuse",
+        "cruelty",
+        "oppression",
+        "neglect of vulnerable people"
+      ],
+
+      "exploitation": [
+        "economic oppression",
+        "human trafficking",
+        "labor exploitation",
+        "taking advantage of weakness"
+      ],
+
+      "injustice": [
+        "corruption",
+        "bribery",
+        "abuse of power",
+        "perverting justice",
+        "partiality"
+      ],
+
+      "betrayal": [
+        "infidelity",
+        "breaking promises",
+        "disloyalty",
+        "revealing confidences"
+      ],
+
+      "theft_and_deceit": [
+        "stealing",
+        "fraud",
+        "financial manipulation",
+        "exploiting generosity"
+      ],
+
+      "objectification": [
+        "sexual objectification",
+        "dehumanization",
+        "racism",
+        "class contempt"
+      ],
+
+      "hardheartedness": [
+        "lack of empathy",
+        "refusal to forgive",
+        "indifference to suffering",
+        "enjoying others' misfortune"
+      ],
+
+      "neglect": [
+        "neglecting children",
+        "neglecting spouse",
+        "ignoring the poor",
+        "withholding help"
+      ]
+    },
+
+    "sins_of_the_heart": {
+
+      "lust": [
+        "sexual fantasy",
+        "pornography",
+        "adultery of the heart",
+        "objectifying desire"
+      ],
+
+      "covetousness": [
+        "envy of success",
+        "jealousy of relationships",
+        "greed for possessions",
+        "status competition"
+      ],
+
+      "gluttony": [
+        "overconsumption",
+        "addictive indulgence",
+        "comfort seeking through excess"
+      ],
+
+      "envy": [
+        "resenting others' blessings",
+        "comparing status",
+        "jealous rivalry"
+      ],
+
+      "bitterness": [
+        "holding resentment",
+        "refusing reconciliation"
+      ],
+
+      "malice": [
+        "desire for revenge",
+        "intent to harm"
+      ],
+
+      "selfish_ambition": [
+        "advancing self at others' expense",
+        "competition for dominance"
+      ],
+
+      "control": [
+        "refusing surrender to God",
+        "manipulating circumstances",
+        "dominating relationships"
+      ]
+    },
+
+    "sins_of_omission": {
+
+      "failure_to_help": [
+        "ignoring someone in need",
+        "withholding generosity",
+        "refusing hospitality"
+      ],
+
+      "failure_of_stewardship": [
+        "burying gifts",
+        "wasting resources",
+        "neglecting responsibilities"
+      ],
+
+      "failure_of_reconciliation": [
+        "refusing to pursue peace",
+        "allowing division to persist"
+      ],
+
+      "failure_of_justice": [
+        "not defending the oppressed",
+        "remaining silent in injustice"
+      ]
+    },
+
+    "works_of_the_flesh_galatians_5": [
+      "sexual immorality",
+      "impurity",
+      "sensuality",
+      "idolatry",
+      "sorcery",
+      "enmity",
+      "strife",
+      "jealousy",
+      "fits of anger",
+      "rivalries",
+      "dissensions",
+      "divisions",
+      "envy",
+      "drunkenness",
+      "orgies"
+    ],
+
+    "sexual_sins": {
+
+      "sexual_immorality": [
+        "adultery",
+        "fornication",
+        "sexual relations outside covenant marriage",
+        "sexual exploitation"
+      ],
+
+      "lust_patterns": [
+        "pornography",
+        "sexual fantasy",
+        "objectifying others",
+        "coveting another person's spouse"
+      ],
+
+      "sexual_corruption": [
+        "prostitution",
+        "sexual coercion",
+        "manipulative seduction",
+        "using sexuality for power or advantage"
+      ],
+
+      "sexual_exploitation": [
+        "sexual abuse",
+        "rape",
+        "human trafficking",
+        "coercive sexual behavior"
+      ]
+    }
+  },
+
+  "biblical_sin_map": {
+
+    "ten_commandments_structure": {
+
+      "1_no_other_gods": [
+        "idolatry",
+        "self worship",
+        "materialism",
+        "ideological worship"
+      ],
+
+      "2_no_idols": [
+        "image worship",
+        "religious manipulation",
+        "spiritual superstition"
+      ],
+
+      "3_do_not_misuse_gods_name": [
+        "blasphemy",
+        "false prophecy",
+        "spiritual manipulation",
+        "using religion for personal power"
+      ],
+
+      "4_keep_sabbath": [
+        "refusal of rest",
+        "constant productivity worship",
+        "ignoring sacred rhythms"
+      ],
+
+      "5_honor_parents": [
+        "rebellion against legitimate authority",
+        "family neglect",
+        "abandoning parental responsibility"
+      ],
+
+      "6_do_not_murder": [
+        "violence",
+        "abuse",
+        "hatred",
+        "cruelty",
+        "revenge"
+      ],
+
+      "7_do_not_commit_adultery": [
+        "adultery",
+        "sexual immorality",
+        "lust",
+        "sexual exploitation"
+      ],
+
+      "8_do_not_steal": [
+        "theft",
+        "fraud",
+        "economic exploitation"
+      ],
+
+      "9_do_not_bear_false_witness": [
+        "deception",
+        "perjury",
+        "slander",
+        "distorting truth"
+      ],
+
+      "10_do_not_covet": [
+        "envy",
+        "jealousy",
+        "status competition",
+        "material greed"
+      ]
+    },
+
+    "seven_deadly_sins": {
+
+      "pride": [
+        "arrogance",
+        "self-righteousness",
+        "spiritual superiority"
+      ],
+
+      "greed": [
+        "covetousness",
+        "financial exploitation",
+        "hoarding wealth"
+      ],
+
+      "lust": [
+        "sexual fantasy",
+        "pornography",
+        "adultery of the heart"
+      ],
+
+      "envy": [
+        "resentment of others' blessings",
+        "jealous rivalry"
+      ],
+
+      "gluttony": [
+        "overindulgence",
+        "addiction",
+        "comfort through consumption"
+      ],
+
+      "wrath": [
+        "rage",
+        "revenge",
+        "violence"
+      ],
+
+      "sloth": [
+        "spiritual apathy",
+        "neglect of responsibility",
+        "refusal to pursue good"
+      ]
+    },
+
+    "new_testament_vice_lists": {
+
+      "romans_1": [
+        "envy",
+        "murder",
+        "strife",
+        "deceit",
+        "malice",
+        "gossip",
+        "slander",
+        "hatred of God",
+        "insolence",
+        "arrogance",
+        "boastfulness",
+        "inventing evil",
+        "disobedience to parents",
+        "heartlessness",
+        "ruthlessness"
+      ],
+
+      "1_corinthians_6": [
+        "sexual immorality",
+        "idolatry",
+        "adultery",
+        "theft",
+        "greed",
+        "drunkenness",
+        "reviling",
+        "swindling"
+      ],
+
+      "ephesians_4_5": [
+        "bitterness",
+        "rage",
+        "anger",
+        "slander",
+        "malice",
+        "sexual immorality",
+        "impurity",
+        "greed"
+      ],
+
+      "colossians_3": [
+        "sexual immorality",
+        "impurity",
+        "passion",
+        "evil desire",
+        "covetousness",
+        "anger",
+        "wrath",
+        "malice",
+        "slander",
+        "obscene talk",
+        "lying"
+      ]
+    }
+  },
+
+  "tabs": {
+    "structural_biblical_map": {},
+    "three_roots_of_sin": {},
+    "heart_idols_model": {},
+    "fruit_vs_flesh_crossmap": {}
+  },
+
+
+
+
+    "structural_biblical_map": {
+      "meta": {
+        "schema": "biblical_sin_map_v1",
+        "title": "Biblical Sin Map",
+        "core_framework": {
+          "romans_14_23": "Whatever does not proceed from faith is sin.",
+          "great_commandment": [
+            "Love the Lord your God with all your heart, soul, mind, and strength",
+            "Love your neighbor as yourself"
+          ],
+          "fruit_of_spirit": [
+            "love",
+            "joy",
+            "peace",
+            "patience",
+            "kindness",
+            "goodness",
+            "faithfulness",
+            "gentleness",
+            "self-control"
+          ]
+        }
+      },
+
+      "modules": {
+        "communication_sins": {
+          "source": "communicationSins.json",
+          "description": "Speech and relational communication sins that damage dignity, safety, trust, and clarity.",
+          "note": "Imported from existing file to avoid duplication."
+        },
+
+        "sins_against_god": {
+          "idolatry": [
+            "worship of false gods",
+            "self-worship",
+            "materialism",
+            "career worship",
+            "relationship worship",
+            "nationalism replacing allegiance to God's kingdom",
+            "ideology worship",
+            "entertainment worship"
+          ],
+
+          "spiritual_pride": [
+            "self-righteousness",
+            "religious superiority",
+            "trusting works instead of grace",
+            "desire for spiritual recognition",
+            "refusal to repent"
+          ],
+
+          "unbelief": [
+            "doubting God's goodness",
+            "refusing reliance on God",
+            "anxiety replacing trust",
+            "rejecting God's authority",
+            "spiritual cynicism"
+          ],
+
+          "rebellion": [
+            "deliberate disobedience",
+            "hardening the heart",
+            "persisting in known sin",
+            "rejecting conviction"
+          ],
+
+          "irreverence": [
+            "taking God's name lightly",
+            "treating sacred things casually",
+            "mocking spiritual truth",
+            "using religion for personal gain"
+          ],
+
+          "neglect_of_worship": [
+            "prayerlessness",
+            "failure to give thanks",
+            "neglect of Scripture",
+            "abandoning fellowship",
+            "spiritual apathy"
+          ]
+        },
+
+        "sins_against_neighbor": {
+          "violence_and_harm": [
+            "murder",
+            "abuse",
+            "cruelty",
+            "oppression",
+            "neglect of vulnerable people"
+          ],
+
+          "exploitation": [
+            "economic oppression",
+            "human trafficking",
+            "labor exploitation",
+            "taking advantage of weakness"
+          ],
+
+          "injustice": [
+            "corruption",
+            "bribery",
+            "abuse of power",
+            "perverting justice",
+            "partiality"
+          ],
+
+          "betrayal": [
+            "infidelity",
+            "breaking promises",
+            "disloyalty",
+            "revealing confidences"
+          ],
+
+          "theft_and_deceit": [
+            "stealing",
+            "fraud",
+            "financial manipulation",
+            "exploiting generosity"
+          ],
+
+          "objectification": [
+            "sexual objectification",
+            "dehumanization",
+            "racism",
+            "class contempt"
+          ],
+
+          "hardheartedness": [
+            "lack of empathy",
+            "refusal to forgive",
+            "indifference to suffering",
+            "enjoying others' misfortune"
+          ],
+
+          "neglect": [
+            "neglecting children",
+            "neglecting spouse",
+            "ignoring the poor",
+            "withholding help"
+          ]
+        },
+
+        "sins_of_the_heart": {
+          "lust": [
+            "sexual fantasy",
+            "pornography",
+            "adultery of the heart",
+            "objectifying desire"
+          ],
+
+          "covetousness": [
+            "envy of success",
+            "jealousy of relationships",
+            "greed for possessions",
+            "status competition"
+          ],
+
+          "gluttony": [
+            "overconsumption",
+            "addictive indulgence",
+            "comfort seeking through excess"
+          ],
+
+          "envy": [
+            "resenting others' blessings",
+            "comparing status",
+            "jealous rivalry"
+          ],
+
+          "bitterness": [
+            "holding resentment",
+            "refusing reconciliation"
+          ],
+
+          "malice": [
+            "desire for revenge",
+            "intent to harm"
+          ],
+
+          "selfish_ambition": [
+            "advancing self at others' expense",
+            "competition for dominance"
+          ],
+
+          "control": [
+            "refusing surrender to God",
+            "manipulating circumstances",
+            "dominating relationships"
+          ]
+        }
+      }
+    },
+
+    "three_roots_of_sin": {
+
+      "scripture": "1 John 2:16",
+
+      "roots": {
+
+        "lust_of_the_flesh": [
+          "sexual immorality",
+          "pornography",
+          "sexual fantasy",
+          "adultery",
+          "fornication",
+          "gluttony",
+          "drunkenness",
+          "addiction",
+          "sensual indulgence"
+        ],
+
+        "lust_of_the_eyes": [
+          "covetousness",
+          "envy",
+          "materialism",
+          "greed",
+          "status competition",
+          "jealousy",
+          "theft",
+          "financial exploitation"
+        ],
+
+        "pride_of_life": [
+          "spiritual pride",
+          "self-righteousness",
+          "boastfulness",
+          "arrogance",
+          "self exaltation",
+          "control",
+          "domination",
+          "self worship",
+          "rebellion",
+          "seeking power over others"
+        ]
+      }
+    },  
+  
+  "heart_idols_model": {
+
+    "description": "Core motivational idols that drive sinful behavior patterns in the heart.",
+
+    "core_idols": {
+
+      "control": {
+        "description": "Desire to dominate circumstances or people rather than trusting God.",
+        "common_manifestations": [
+          "manipulation",
+          "domination",
+          "micromanaging others",
+          "refusal to surrender outcomes",
+          "coercion",
+          "anger when plans are disrupted"
+        ],
+        "related_sins": [
+          "rebellion",
+          "abuse of power",
+          "control of relationships",
+          "spiritual manipulation"
+        ],
+        "opposing_fruit": [
+          "peace",
+          "faithfulness",
+          "gentleness"
+        ]
+      },
+
+      "approval": {
+        "description": "Desire to be accepted, admired, or validated above obedience to God.",
+        "common_manifestations": [
+          "people pleasing",
+          "fear of rejection",
+          "performative righteousness",
+          "seeking praise",
+          "avoiding truth to maintain approval"
+        ],
+        "related_sins": [
+          "hypocrisy",
+          "deception",
+          "compromise of conviction",
+          "envy"
+        ],
+        "opposing_fruit": [
+          "faithfulness",
+          "love",
+          "self-control"
+        ]
+      },
+
+      "comfort": {
+        "description": "Desire for ease, pleasure, or escape rather than endurance and obedience.",
+        "common_manifestations": [
+          "addiction",
+          "overconsumption",
+          "avoidance of responsibility",
+          "seeking pleasure to escape pain",
+          "apathy"
+        ],
+        "related_sins": [
+          "gluttony",
+          "drunkenness",
+          "lust",
+          "sloth"
+        ],
+        "opposing_fruit": [
+          "self-control",
+          "patience",
+          "goodness"
+        ]
+      },
+
+      "power": {
+        "description": "Desire for influence, status, or dominance over others.",
+        "common_manifestations": [
+          "ambition for status",
+          "competition for superiority",
+          "intimidation",
+          "using others for advancement"
+        ],
+        "related_sins": [
+          "pride",
+          "oppression",
+          "exploitation",
+          "selfish ambition"
+        ],
+        "opposing_fruit": [
+          "gentleness",
+          "kindness",
+          "love"
+        ]
+      },
+
+      "security": {
+        "description": "Seeking safety in possessions, relationships, or status instead of trusting God.",
+        "common_manifestations": [
+          "financial hoarding",
+          "fear-driven decision making",
+          "refusal to take faithful risks",
+          "clinging to stability above obedience"
+        ],
+        "related_sins": [
+          "greed",
+          "covetousness",
+          "anxiety",
+          "idolatry of stability"
+        ],
+        "opposing_fruit": [
+          "peace",
+          "faithfulness",
+          "joy"
+        ]
+      }
+
+    },
+
+    "scriptural_roots": {
+      "matthew_6_21": "Where your treasure is, there your heart will be also.",
+      "ezekiel_14_3": "These men have taken their idols into their hearts.",
+      "colossians_3_5": "Covetousness, which is idolatry."
+    }
+
+  }, 
+  
+  "fruit_vs_flesh_crossmap": {
+    "description": "Maps recurring sin patterns to flesh expressions, heart roots, heart idols, and the fruit of the Spirit that most directly opposes and heals them.",
+
+    "framework": {
+      "faith_overlay": "Romans 14:23 — whatever does not proceed from faith is sin.",
+      "great_commandment": [
+        "Love the Lord your God with all your heart, soul, mind, and strength",
+        "Love your neighbor as yourself"
+      ],
+      "note": "A sin may connect to more than one root, idol, or fruit. This map emphasizes the most common pairing."
+    },
+
+    "categories": {
+
+      "pride_and_self_exaltation": {
+        "sins": [
+          "pride",
+          "self-righteousness",
+          "arrogance",
+          "boastfulness",
+          "cold superiority",
+          "spiritual superiority"
+        ],
+        "works_of_the_flesh": [
+          "rivalries",
+          "dissensions",
+          "divisions",
+          "conceit"
+        ],
+        "three_roots_of_sin": [
+          "pride_of_life"
+        ],
+        "heart_idols": [
+          "power",
+          "approval"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "gentleness",
+          "love",
+          "faithfulness"
+        ],
+        "gospel_direction": "Move from self-exaltation to humility, teachability, and honoring others."
+      },
+
+      "control_and_domination": {
+        "sins": [
+          "control",
+          "coercion",
+          "manipulation",
+          "domination",
+          "fear-driven control",
+          "abuse of power"
+        ],
+        "works_of_the_flesh": [
+          "enmity",
+          "strife",
+          "fits of anger",
+          "rivalries"
+        ],
+        "three_roots_of_sin": [
+          "pride_of_life"
+        ],
+        "heart_idols": [
+          "control",
+          "power",
+          "security"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "gentleness",
+          "peace",
+          "self-control"
+        ],
+        "gospel_direction": "Move from pressure and domination to surrendered trust, patience, and honoring agency."
+      },
+
+      "people_pleasing_and_hypocrisy": {
+        "sins": [
+          "people pleasing",
+          "hypocrisy",
+          "fear of man",
+          "performative righteousness",
+          "compromised honesty for approval"
+        ],
+        "works_of_the_flesh": [
+          "selfish ambition",
+          "dissensions"
+        ],
+        "three_roots_of_sin": [
+          "pride_of_life"
+        ],
+        "heart_idols": [
+          "approval"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "faithfulness",
+          "self-control",
+          "love"
+        ],
+        "gospel_direction": "Move from approval-seeking to faithful obedience before God."
+      },
+
+      "lust_and_sexual_corruption": {
+        "sins": [
+          "lust",
+          "pornography",
+          "sexual fantasy",
+          "adultery",
+          "fornication",
+          "sexual immorality",
+          "sexual exploitation",
+          "objectification"
+        ],
+        "works_of_the_flesh": [
+          "sexual immorality",
+          "impurity",
+          "sensuality"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_flesh",
+          "lust_of_the_eyes"
+        ],
+        "heart_idols": [
+          "comfort",
+          "power",
+          "approval"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "self-control",
+          "love",
+          "faithfulness",
+          "gentleness"
+        ],
+        "gospel_direction": "Move from consuming others to honoring them as image-bearers with purity and covenant faithfulness."
+      },
+
+      "gluttony_and_bodily_indulgence": {
+        "sins": [
+          "gluttony",
+          "drunkenness",
+          "overconsumption",
+          "addiction",
+          "comfort seeking through excess"
+        ],
+        "works_of_the_flesh": [
+          "drunkenness",
+          "orgies",
+          "sensuality"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_flesh"
+        ],
+        "heart_idols": [
+          "comfort"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "self-control",
+          "patience",
+          "joy"
+        ],
+        "gospel_direction": "Move from compulsive indulgence to disciplined enjoyment under God's rule."
+      },
+
+      "greed_covetousness_and_materialism": {
+        "sins": [
+          "greed",
+          "covetousness",
+          "materialism",
+          "financial exploitation",
+          "hoarding",
+          "theft"
+        ],
+        "works_of_the_flesh": [
+          "idolatry",
+          "envy"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_eyes"
+        ],
+        "heart_idols": [
+          "security",
+          "comfort",
+          "power"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "goodness",
+          "faithfulness",
+          "peace",
+          "kindness"
+        ],
+        "gospel_direction": "Move from grasping and accumulation to stewardship, generosity, and trust in God."
+      },
+
+      "envy_and_comparison": {
+        "sins": [
+          "envy",
+          "jealous rivalry",
+          "resentment of others' blessings",
+          "status competition",
+          "comparison"
+        ],
+        "works_of_the_flesh": [
+          "jealousy",
+          "envy",
+          "rivalries"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_eyes",
+          "pride_of_life"
+        ],
+        "heart_idols": [
+          "approval",
+          "power",
+          "security"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "love",
+          "kindness",
+          "joy",
+          "goodness"
+        ],
+        "gospel_direction": "Move from rivalry to rejoicing in others' good and walking in gratitude."
+      },
+
+      "anger_wrath_and_violence": {
+        "sins": [
+          "anger",
+          "wrath",
+          "revenge",
+          "hatred",
+          "violence",
+          "cruelty",
+          "malice"
+        ],
+        "works_of_the_flesh": [
+          "fits of anger",
+          "enmity",
+          "strife"
+        ],
+        "three_roots_of_sin": [
+          "pride_of_life",
+          "lust_of_the_flesh"
+        ],
+        "heart_idols": [
+          "control",
+          "power"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "patience",
+          "gentleness",
+          "peace",
+          "self-control"
+        ],
+        "gospel_direction": "Move from retaliation and force to patient restraint and mercy."
+      },
+
+      "bitterness_and_unforgiveness": {
+        "sins": [
+          "bitterness",
+          "resentment",
+          "unforgiveness",
+          "silent scorekeeping",
+          "withholding mercy"
+        ],
+        "works_of_the_flesh": [
+          "enmity",
+          "strife",
+          "divisions"
+        ],
+        "three_roots_of_sin": [
+          "pride_of_life"
+        ],
+        "heart_idols": [
+          "control",
+          "approval"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "kindness",
+          "love",
+          "peace",
+          "gentleness"
+        ],
+        "gospel_direction": "Move from stored grievance to truthful forgiveness and honest repair."
+      },
+
+      "deceit_and_falsehood": {
+        "sins": [
+          "lying",
+          "deception",
+          "concealment",
+          "false witness",
+          "fraud",
+          "perjury",
+          "distorting truth"
+        ],
+        "works_of_the_flesh": [
+          "enmity",
+          "selfish ambition"
+        ],
+        "three_roots_of_sin": [
+          "pride_of_life",
+          "lust_of_the_eyes"
+        ],
+        "heart_idols": [
+          "approval",
+          "security",
+          "control"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "faithfulness",
+          "goodness",
+          "self-control"
+        ],
+        "gospel_direction": "Move from image-management and concealment to truthfulness in the light."
+      },
+
+      "sloth_and_spiritual_apathy": {
+        "sins": [
+          "sloth",
+          "spiritual apathy",
+          "neglect of worship",
+          "failure of stewardship",
+          "avoidance of responsibility",
+          "buried gifts"
+        ],
+        "works_of_the_flesh": [
+          "selfish ambition",
+          "drunkenness"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_flesh"
+        ],
+        "heart_idols": [
+          "comfort"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "faithfulness",
+          "goodness",
+          "self-control",
+          "joy"
+        ],
+        "gospel_direction": "Move from passivity and avoidance to faithful presence and obedient action."
+      },
+
+      "unbelief_and_anxious_self_reliance": {
+        "sins": [
+          "unbelief",
+          "anxiety replacing trust",
+          "fear of exposure",
+          "fear-driven decision making",
+          "self-reliance apart from God"
+        ],
+        "works_of_the_flesh": [
+          "idolatry"
+        ],
+        "three_roots_of_sin": [
+          "pride_of_life",
+          "lust_of_the_eyes"
+        ],
+        "heart_idols": [
+          "security",
+          "control"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "peace",
+          "faithfulness",
+          "joy"
+        ],
+        "gospel_direction": "Move from fear-governed self-protection to restful trust in God."
+      },
+
+      "idolatry_and_false_worship": {
+        "sins": [
+          "idolatry",
+          "self-worship",
+          "career worship",
+          "relationship worship",
+          "ideology worship",
+          "entertainment worship"
+        ],
+        "works_of_the_flesh": [
+          "idolatry",
+          "sorcery"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_eyes",
+          "pride_of_life",
+          "lust_of_the_flesh"
+        ],
+        "heart_idols": [
+          "control",
+          "comfort",
+          "approval",
+          "power",
+          "security"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "faithfulness",
+          "love",
+          "joy",
+          "peace"
+        ],
+        "gospel_direction": "Move from false treasures to wholehearted worship of God."
+      },
+
+      "injustice_and_exploitation": {
+        "sins": [
+          "oppression",
+          "partiality",
+          "corruption",
+          "bribery",
+          "economic exploitation",
+          "human trafficking",
+          "abuse of the vulnerable"
+        ],
+        "works_of_the_flesh": [
+          "enmity",
+          "selfish ambition",
+          "rivalries"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_eyes",
+          "pride_of_life"
+        ],
+        "heart_idols": [
+          "power",
+          "security",
+          "comfort"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "goodness",
+          "kindness",
+          "faithfulness",
+          "gentleness"
+        ],
+        "gospel_direction": "Move from exploiting others to doing justice, loving mercy, and protecting dignity."
+      },
+
+      "neglect_and_indifference": {
+        "sins": [
+          "indifference",
+          "hardheartedness",
+          "neglect",
+          "failure to help",
+          "withholding generosity",
+          "ignoring the poor"
+        ],
+        "works_of_the_flesh": [
+          "enmity"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_flesh",
+          "pride_of_life"
+        ],
+        "heart_idols": [
+          "comfort",
+          "control"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "love",
+          "kindness",
+          "goodness",
+          "gentleness"
+        ],
+        "gospel_direction": "Move from cold passivity to active mercy and responsive care."
+      },
+
+      "betrayal_and_unfaithfulness": {
+        "sins": [
+          "betrayal",
+          "infidelity",
+          "disloyalty",
+          "breaking promises",
+          "revealing confidences"
+        ],
+        "works_of_the_flesh": [
+          "sexual immorality",
+          "enmity",
+          "divisions"
+        ],
+        "three_roots_of_sin": [
+          "lust_of_the_flesh",
+          "pride_of_life"
+        ],
+        "heart_idols": [
+          "comfort",
+          "approval",
+          "power"
+        ],
+        "opposing_fruit_of_the_spirit": [
+          "faithfulness",
+          "love",
+          "self-control"
+        ],
+        "gospel_direction": "Move from disloyalty and self-serving escape to covenant integrity."
+      }
+    }
+  }
+}

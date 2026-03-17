@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Panel from "../ui/Panel.jsx";
 import Select from "../ui/Select.jsx";
 import Chips from "../ui/Chips.jsx";
-import InteroStickFigure from "../interoception/InteroStickFigure.jsx";
+import InteroSceneFigure from "../intero/InteroSceneFigure.jsx";
 import GratitudeFlowBlock from "./GratitudeFlowBlock.jsx";
 import {
   csvEscape,
@@ -368,7 +368,9 @@ const nextStepRef = useRef(null);
   // -------------------------
     const modalBodyRef = useRef(null);
   const [selectedNeedMet, setSelectedNeedMet] = useState("");
+  const [showAllNeeds, setShowAllNeeds] = useState(false);
 const modalCardRef = useRef(null);
+const interoCaptureRef = useRef(null);
 const [spacerHeight, setSpacerHeight] = useState(0);
 const [contextNotes, setContextNotes] = useState("");
 
@@ -441,10 +443,12 @@ useEffect(() => {
 
   useEffect(() => {
     setSelectedNeedMet("");
+    setShowAllNeeds(false);
     setGratitudeText("");
     setSelectedGratPrompt("");
     setSelectedObservation("");
     setSelectedTheologyKey("");
+
 
     setIntero([blankIntero(), blankIntero(), blankIntero()]);
     setActiveInteroTab(0);
@@ -471,30 +475,59 @@ useEffect(() => {
   // -------------------------
   // Derived: needs + side + reframe
   // -------------------------
-  const allNeedsMet = useMemo(() => {
-    const primary = Array.isArray(entry?.needs_met) ? entry.needs_met.map(String) : [];
-    const global = Array.isArray(needsSupplement?.global) ? needsSupplement.global.map(String) : [];
 
-    const primaryLimited = uniqStrings(primary).slice(0, 8);
-    const filler = uniqStrings(global).filter((g) => !primaryLimited.includes(g));
+const emotionNeeds = useMemo(() => {
+  return uniqStrings(
+    (
+      Array.isArray(entry?.needs) ? entry.needs :
+      Array.isArray(entry?.needs_met) ? entry.needs_met :
+      []
+    ).map(String)
+  );
+}, [entry]);
 
-    return [...primaryLimited, ...filler].slice(0, 10);
-  }, [entry, needsSupplement]);
+const baseTopNeeds = useMemo(() => {
+  return emotionNeeds.slice(0, 5);
+}, [emotionNeeds]);
+
+const globalNeeds = useMemo(() => {
+  return uniqStrings(
+    Array.isArray(needsSupplement?.global)
+      ? needsSupplement.global.map(String)
+      : []
+  );
+}, [needsSupplement]);
+
+const extraNeeds = useMemo(() => {
+  return globalNeeds.filter((need) => !baseTopNeeds.includes(need));
+}, [globalNeeds, baseTopNeeds]);
+
+const displayNeeds = useMemo(() => {
+  if (!selectedNeedMet || baseTopNeeds.includes(selectedNeedMet)) {
+    return baseTopNeeds;
+  }
+
+  const rest = baseTopNeeds.slice(1);
+  return uniqStrings([selectedNeedMet, ...rest]).slice(0, 5);
+}, [baseTopNeeds, selectedNeedMet]);
+
+function handleNeedPick(need) {
+  setSelectedNeedMet(need);
+
+  if (!baseTopNeeds.includes(need)) {
+    setShowAllNeeds(false);
+  }
+}
 
 useEffect(() => {
-    function onKey(e) {
-      if (e.key === "Escape") onClose?.();
-    }
-    if (open) window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open, onClose]);
+  const validNeeds = [...baseTopNeeds, ...extraNeeds];
+  if (!validNeeds.length) return;
 
-  useEffect(() => {
-    if (!allNeedsMet.length) return;
-    if (!selectedNeedMet || !allNeedsMet.includes(selectedNeedMet)) {
-      setSelectedNeedMet(allNeedsMet[0]);
-    }
-  }, [allNeedsMet, selectedNeedMet]);
+  if (!selectedNeedMet || !validNeeds.includes(selectedNeedMet)) {
+    setSelectedNeedMet(baseTopNeeds[0] || validNeeds[0] || "");
+  }
+}, [baseTopNeeds, extraNeeds, selectedNeedMet]);
+
 
   const side = entry?.side === "external" ? "external" : "internal";
 const reframe = useMemo(() => {
@@ -638,41 +671,50 @@ return `${
 
   // -------------------------
   // Save / Export / Clear
-  // -------------------------
+  // -------------------------async function handleSaveEntry() {
   async function handleSaveEntry() {
-  try {
-    setSaveStatus("Saving…");
-    const pngDataUrl = await captureElementPng("#checkinStickCapture");
+    try {
+      setSaveStatus("Saving…");
+
+    let pngDataUrl = "";
+    try {
+      pngDataUrl = await captureElementPng(interoCaptureRef.current);
+    } catch (err) {
+      console.warn("Gratitude PNG capture failed:", err);
+    }
 
     appendReflectionEntry({
-  type: "gratitude",
+      type: "gratitude",
 
-  emotion: emotionKey,
-  title,
-  side,
+      emotion: emotionKey,
+      title,
+      side,
 
-  need: "",
-  needs_met: selectedNeedMet || "",
+      need: "",
+      needs_met: selectedNeedMet || "",
 
-  reframe: reframe || "",
-  request: "",
-  context_notes: contextNotes.trim(),
+      reframe: reframe || "",
+      request: "",
+      context_notes: contextNotes.trim(),
 
-  cause: "",
-  replacement: "",
+      cause: "",
+      replacement: "",
 
-  violationKey: "",
-  accountableViolationKey: "",
+      violationKey: "",
+      accountableViolationKey: "",
 
-  observation: selectedObservation || "",
-  theology_key: selectedTheologyKey || "",
+      observation: selectedObservation || "",
+      theology_key: selectedTheologyKey || "",
 
-  gratitude_prompt: selectedGratPrompt || "",
-  gratitude_text: gratitudeText || "",
+      gratitude_prompt: selectedGratPrompt || "",
+      gratitude_text: gratitudeText || "",
 
-  intero: intero.filter((x) => x?.region && x?.sensation),
-  pngDataUrl,
-});
+      x: cell?.x || 0,
+      y: cell?.y || 0,
+
+      intero: intero.filter((x) => x?.region && x?.sensation),
+      pngDataUrl,
+    });
 
     setLogCount(loadReflectionLog().length);
     setSaveStatus("Emotional State Saved ✓");
@@ -682,7 +724,8 @@ return `${
     console.error(e);
   }
 }
-  async function handleExportZip() {
+
+async function handleExportZip() {
     try {
       setSaveStatus("Exporting…");
 
@@ -870,10 +913,6 @@ width: "100%",
                 {definition}
               </div>
             ) : null}
-
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)" }}>
-              Saved check-ins on this device: <b>{logCount}</b> {saveStatus ? `• ${saveStatus}` : ""}
-            </div>
           </div>
 
         <div
@@ -887,9 +926,6 @@ width: "100%",
     minWidth: 0,
   }}
 >
-  <button className="btn" onClick={() => setShowLog((v) => !v)} style={{ minWidth: 110, flex: "0 1 auto" }}>
-    {showLog ? "Hide log" : "View log"}
-  </button>
 
   <button className="btn" onClick={handleSaveEntry} style={{ minWidth: 110, flex: "0 1 auto"  }}>
     Save entry
@@ -911,76 +947,12 @@ width: "100%",
             overflow: "visible",
           }}
         >
-                    {showLog && (
-         
-         <Panel style={{ display: "grid", gap: 10 }}>
-              <div style={{ fontWeight: 900 }}>Log (this device)</div>
-
-              {logEntries.length === 0 ? (
-                <div style={{ color: "rgba(255,255,255,0.70)", fontSize: 13 }}>
-                  (No saved entries yet.)
-                </div>
-              ) : (
-                <div style={{ display: "grid", gap: 10 }}>
-                  {logEntries.slice(0, 12).map((e) => {
-                    const when = new Date(e.ts).toLocaleString();
-                    const body = (e.intero || [])
-                      .map((x) => `${String(x.region).replaceAll("_", " ")}: ${x.sensation}`)
-                      .join(" | ");
-
-                    return (
-                      <div
-                        key={e.id}
-                        style={{
-                          border: "1px solid rgba(255,255,255,0.10)",
-                          borderRadius: 12,
-                          padding: 10,
-                          background: "rgba(0,0,0,0.18)",
-                          display: "grid",
-                          gap: 6,
-                        }}
-                      >
-                        <div style={{ display: "flex", justifyContent: "space-between", gap: 10 }}>
-                          <div style={{ fontWeight: 800 }}>
-                            {e.title || e.emotion}{" "}
-                            <span style={{ opacity: 0.75, fontWeight: 600, fontSize: 12 }}>
-                              {e.side === "external" ? "external" : "internal"}
-                            </span>
-                          </div>
-                          <div style={{ fontSize: 12, opacity: 0.75 }}>{when}</div>
-                        </div>
-
-                        <div style={{ fontSize: 13, opacity: 0.9 }}>{e.reframe || ""}</div>
-
-                        {e.observation ? (
-                          <div style={{ fontSize: 12, opacity: 0.85 }}>
-                            Observation: {e.observation}
-                          </div>
-                        ) : null}
-                        {e.theology_key ? (
-                          <div style={{ fontSize: 12, opacity: 0.85 }}>
-                            Theology: {e.theology_key}
-                          </div>
-                        ) : null}
-                        {body ? <div style={{ fontSize: 12, opacity: 0.8 }}>{body}</div> : null}
-                        {e.gratitude_text ? (
-                          <div style={{ fontSize: 12, opacity: 0.85 }}>
-                            Gratitude: {e.gratitude_text}
-                          </div>
-                        ) : null}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </Panel>
-         )}
 
          </div>
 
 
           <Panel style={{ display: "grid", gap: 10 }}>
-            <div style={{ fontWeight: 900 }}>1) I feel this in my body by…</div>
+            <div style={{ fontWeight: 900 }}>1) I feel this emotion in my body as...</div>
 
            <div
   className="mobileStack"
@@ -1115,9 +1087,6 @@ width: "100%",
   </div>
 ) : null}
 
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.62)" }}>
-                  These sensations are descriptive signals, not proof of meaning.
-                </div>
               </div>
 
               <div
@@ -1134,33 +1103,94 @@ width: "100%",
     minWidth: 0,
   }}
 >
-<InteroStickFigure intero={intero} theme="gratitude" />
+  <div ref={interoCaptureRef}>
+<InteroSceneFigure
+  intero={intero}
+  emotion={emotionKey}
+  mode="checkin"
+  x={cell?.x || 0}
+  y={cell?.y || 0}
+  width={340}
+  height={340}
+/>
+</div>
               </div>
             </div>
           </Panel>
 
 
-          <Panel style={{ display: "grid", gap: 10 }}>
-            <div style={{ fontWeight: 900 }}>2) Need that was met / value that was supported</div>
+<Panel style={{ display: "grid", gap: 10 }}>
+  <div style={{ fontWeight: 900 }}>2) Choose the need that was met
+  </div>
 
-            {allNeedsMet.length ? (
-              <Chips items={allNeedsMet} value={selectedNeedMet} onChange={setSelectedNeedMet} />
-            ) : (
-              <div style={{ color: "rgba(255,255,255,0.68)", fontSize: 13 }}>
-                (No needs_met listed for this item yet.)
-              </div>
-            )}
+{baseTopNeeds.length ? (
+  <div style={{ display: "grid", gap: 10 }}>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 8,
+        alignItems: "center",
+      }}
+    >
+      <Chips
+        items={displayNeeds}
+        value={selectedNeedMet}
+        onChange={handleNeedPick}
+      />
 
-            <div style={{ color: "rgba(255,255,255,0.90)", fontSize: 14, lineHeight: 1.45 }}>
-              {reframe}
-            </div>
+      {!showAllNeeds && extraNeeds.length > 0 ? (
+        <button
+          className="btn"
+          type="button"
+          onClick={() => setShowAllNeeds(true)}
+        >
+          Other
+        </button>
+      ) : null}
+    </div>
+      {showAllNeeds && extraNeeds.length > 0 ? (
+        <div style={{ display: "grid", gap: 8 }}>
+          <div
+            style={{
+              fontSize: 12,
+              color: "rgba(255,255,255,0.70)",
+              fontWeight: 700,
+            }}
+          >
+            Other needs
+          </div>
 
-            {hasIntero ? (
-              <div style={{ color: "rgba(255,255,255,0.80)", fontSize: 13, lineHeight: 1.45 }}>
-                {interoLines.join(" ")}
-              </div>
-            ) : null}
-          </Panel>
+          <Chips
+            items={extraNeeds}
+            value={selectedNeedMet}
+            onChange={handleNeedPick}
+          />
+
+          <div>
+            <button
+              className="btn"
+              type="button"
+              onClick={() => setShowAllNeeds(false)}
+            >
+              Collapse
+            </button>
+          </div>
+        </div>
+      ) : null}
+    </div>
+  ) : (
+    <div style={{ color: "rgba(255,255,255,0.68)", fontSize: 13 }}>
+      (No needs found.)
+    </div>
+  )}
+
+  {hasIntero ? (
+    <div style={{ color: "rgba(255,255,255,0.80)", fontSize: 13, lineHeight: 1.45 }}>
+      {interoLines.join(" ")}
+    </div>
+  ) : null}
+</Panel>
 
           <GratitudeFlowBlock
             observationGroups={observationGroups}
@@ -1177,11 +1207,14 @@ width: "100%",
             copyText={gratitudeSummaryText}
           />
 
+
+
+
           <Panel style={{ display: "grid", gap: 12 }}>
-  <div style={{ fontWeight: 900 }}>5) Context or what was happening</div>
+  <div style={{ fontWeight: 900, fontSize: 18 }}>7) Context of this gratitude entry (optional)</div>
 
   <div style={{ fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,0.86)" }}>
-    Add any situational details you want saved with this gratitude entry.
+    Add any situational details you want to remember.
   </div>
 
   <textarea

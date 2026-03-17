@@ -27,14 +27,14 @@ export function downloadBlob(blob, filename) {
   URL.revokeObjectURL(url);
 }
 
-export async function captureElementPng(selector) {
-  const el = document.querySelector(selector);
-  if (!el) return "";
-  const canvas = await html2canvas(el, {
-    backgroundColor: null,
-    scale: 2,
-    useCORS: true,
-    logging: false,
-  });
-  return canvas.toDataURL("image/png");
+  export async function captureElementPng(selector) {
+    const el = document.querySelector(selector);
+    if (!el) return "";
+    const canvas = await html2canvas(el, {
+      backgroundColor: null,
+      scale: 2,
+      useCORS: true,
+      logging: false,
+    });
+    return canvas.toDataURL("image/png");
 }

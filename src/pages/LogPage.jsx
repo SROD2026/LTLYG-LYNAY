@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Header from "../components/layout/Header.jsx";
 import TopNav from "../components/layout/TopNav.jsx";
 import { getLogPageBackground } from "../utils/pageThemes.js";
-import InteroStickFigure from "../components/interoception/InteroStickFigure.jsx";
+import InteroSceneFigure from "../components/intero/InteroSceneFigure.jsx";
 
 import {
   loadReflectionLog,
@@ -459,129 +459,165 @@ function ReflectionCard({ entry, expanded, onToggle }) {
           }}
         >
           <div style={{ display: "grid", gap: 10, minWidth: 0 }}>
+           <div
+  style={{
+    fontSize: expanded ? 14 : 13,
+    lineHeight: 1.48,
+    color: "rgba(60, 62, 95, 0.94)",
+    fontWeight: expanded ? 700 : 600,
+    overflowWrap: "anywhere",
+  }}
+>
+  {expanded ? displayReframe || compactSummary : compactSummary}
+</div>
+
+{expanded ? (
+  <div
+    style={{
+      display: "grid",
+      gap: 12,
+      marginTop: 4,
+    }}
+  >
+    {entry.type === "prayer" &&
+    Array.isArray(entry.scriptures) &&
+    entry.scriptures.length > 0 ? (
+      <div
+        style={{
+          borderRadius: 14,
+          border: "1px solid rgba(255,255,255,0.14)",
+          background: `
+            linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02)),
+            radial-gradient(circle at 30% 22%, rgba(255,255,255,0.12), transparent 42%),
+            rgba(108,126,214,0.18)
+          `,
+          boxShadow: "inset 0 0 6px rgba(0,0,0,0.14), 0 6px 18px rgba(0,0,0,0.12)",
+          padding: 12,
+          display: "grid",
+          gap: 8,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 12,
+            fontWeight: 800,
+            color: "rgba(80, 86, 126, 0.88)",
+          }}
+        >
+          Supporting scripture
+        </div>
+
+        {entry.scriptures.map((s, idx) => (
+          <div
+            key={`${s?.ref || "scripture"}-${idx}`}
+            style={{
+              display: "grid",
+              gap: 4,
+              padding: 10,
+              borderRadius: 12,
+              border: "1px solid rgba(255,255,255,0.12)",
+              background: "rgba(255,255,255,0.08)",
+              boxShadow: "inset 0 0 4px rgba(0,0,0,0.10)",
+            }}
+          >
             <div
               style={{
-                fontSize: expanded ? 14 : 13,
-                lineHeight: 1.48,
-                color: "rgba(60, 62, 95, 0.94)",
-                fontWeight: expanded ? 700 : 600,
-                overflowWrap: "anywhere",
+                fontSize: 13,
+                fontWeight: 800,
+                color: "rgba(58, 64, 108, 0.96)",
               }}
             >
-              {expanded ? displayReframe || compactSummary : compactSummary}
+              {s?.ref || ""}
             </div>
 
-            {expanded && entry.type === "prayer" ? (
-              <div
-                style={{
-                  display: "grid",
-                  gap: 12,
-                  marginTop: 4,
-                }}
-              >
-                {Array.isArray(entry.scriptures) && entry.scriptures.length > 0 ? (
-                  <div
-                    style={{
-                      borderRadius: 14,
-                      border: "1px solid rgba(255,255,255,0.14)",
-                      background: `
-                        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02)),
-                        radial-gradient(circle at 30% 22%, rgba(255,255,255,0.12), transparent 42%),
-                        rgba(108,126,214,0.18)
-                      `,
-                      boxShadow: "inset 0 0 6px rgba(0,0,0,0.14), 0 6px 18px rgba(0,0,0,0.12)",
-                      padding: 12,
-                      display: "grid",
-                      gap: 8,
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: 12,
-                        fontWeight: 800,
-                        color: "rgba(80, 86, 126, 0.88)",
-                      }}
-                    >
-                      Supporting scripture
-                    </div>
+            <div
+              style={{
+                fontSize: 13,
+                lineHeight: 1.5,
+                color: "rgba(52, 56, 92, 0.90)",
+              }}
+            >
+              {s?.principle || ""}
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : null}
 
-                    {entry.scriptures.map((s, idx) => (
-                      <div
-                        key={`${s?.ref || "scripture"}-${idx}`}
-                        style={{
-                          display: "grid",
-                          gap: 4,
-                          padding: 10,
-                          borderRadius: 12,
-                          border: "1px solid rgba(255,255,255,0.12)",
-                          background: "rgba(255,255,255,0.08)",
-                          boxShadow: "inset 0 0 4px rgba(0,0,0,0.10)",
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: 13,
-                            fontWeight: 800,
-                            color: "rgba(58, 64, 108, 0.96)",
-                          }}
-                        >
-                          {s?.ref || ""}
-                        </div>
+   {(entry.pngDataUrl || (Array.isArray(entry.intero) && entry.intero.length > 0)) ? (
+  <div
+    style={{
+      borderRadius: 14,
+      border: "1px solid rgba(255,255,255,0.10)",
+      background: "rgba(255,255,255,0.34)",
+      boxShadow: "inset 0 0 6px rgba(255,255,255,0.03), 0 8px 18px rgba(0,0,0,0.10)",
+      padding: 12,
+      display: "grid",
+      gap: 10,
+      justifyItems: "center",
+    }}
+  >
+    <div
+      style={{
+        justifySelf: "stretch",
+        fontSize: 12,
+        fontWeight: 800,
+        color: "rgba(80, 86, 126, 0.88)",
+      }}
+    >
+      Interoception
+    </div>
 
-                        <div
-                          style={{
-                            fontSize: 13,
-                            lineHeight: 1.5,
-                            color: "rgba(52, 56, 92, 0.90)",
-                          }}
-                        >
-                          {s?.principle || ""}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
+    {entry.pngDataUrl ? (
+      <img
+        src={entry.pngDataUrl}
+        alt="Interoception snapshot"
+        style={{
+          width: "100%",
+          maxWidth: 260,
+          height: "auto",
+          borderRadius: 12,
+          border: "1px solid rgba(255,255,255,0.10)",
+          background: "rgba(0,0,0,0.10)",
+          padding: 6,
+          boxSizing: "border-box",
+        }}
+      />
+    ) : (
+      
+      <InteroSceneFigure
+        intero={entry.intero || []}
+        emotion={entry.emotion || entry.title || ""}
+        mode={
+          entry.type === "prayer"
+            ? "prayer"
+            : entry.type === "gratitude"
+            ? "checkin"
+            : entry.type === "violent"
+            ? "violent"
+            : "nvc"
+        }
+        x={entry.x || 0}
+        y={entry.y || 0}
+        width={260}
+        height={260}
+        showControls={false}
+      />    )}
 
-                {Array.isArray(entry.intero) && entry.intero.length > 0 ? (
-                  <div
-                    style={{
-                      borderRadius: 14,
-                      border: "1px solid rgba(255,255,255,0.10)",
-                      background: "rgba(255,255,255,0.34)",
-                      boxShadow: "inset 0 0 6px rgba(255,255,255,0.03), 0 8px 18px rgba(0,0,0,0.10)",
-                      padding: 12,
-                      display: "grid",
-                      gap: 10,
-                      justifyItems: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        justifySelf: "stretch",
-                        fontSize: 12,
-                        fontWeight: 800,
-                        color: "rgba(80, 86, 126, 0.88)",
-                      }}
-                    >
-                      Interoception
-                    </div>
-
-<InteroStickFigure intero={entry.intero} theme="log" />
-
-                    <div
-                      style={{
-                        fontSize: 12,
-                        lineHeight: 1.45,
-                        color: "rgba(52, 56, 92, 0.84)",
-                        textAlign: "center",
-                      }}
-                    >
-                      {renderBodyText(entry.intero)}
-                    </div>
-                  </div>
-                ) : null}
-              </div>
-            ) : null}
+    <div
+      style={{
+        fontSize: 12,
+        lineHeight: 1.45,
+        color: "rgba(52, 56, 92, 0.84)",
+        textAlign: "center",
+      }}
+    >
+      {renderBodyText(entry.intero)}
+    </div>
+  </div>
+) : null}
+  </div>
+) : null}
 
             {expanded && detailRows.length ? (
               <div style={{ display: "grid", gap: 8 }}>
@@ -620,38 +656,6 @@ function ReflectionCard({ entry, expanded, onToggle }) {
               </div>
             ) : null}
           </div>
-
-          {entry.pngDataUrl && !(expanded && entry.type === "prayer") ? (
-            <button
-              type="button"
-              onClick={onToggle}
-              style={{
-                border: "none",
-                background: "transparent",
-                padding: 0,
-                margin: 0,
-                cursor: "pointer",
-                justifySelf: expanded ? "center" : "stretch",
-              }}
-              title={expanded ? "Collapse card" : "Expand card"}
-            >
-              <img
-                src={entry.pngDataUrl}
-                alt="Interoception snapshot"
-                style={{
-                  width: expanded ? "100%" : 120,
-                  maxWidth: expanded ? 250 : 120,
-                  height: expanded ? "auto" : 96,
-                  objectFit: "cover",
-                  borderRadius: 12,
-                  border: "1px solid rgba(255,255,255,0.10)",
-                  background: "rgba(0,0,0,0.10)",
-                  padding: 6,
-                  boxSizing: "border-box",
-                }}
-              />
-            </button>
-          ) : null}
         </div>
       </div>
     </div>
@@ -675,7 +679,6 @@ export default function LogPage({ goHome }) {
     return entries.filter((e) => (e?.type || "nonviolent") === filter);
   }, [entries, filter]);
 
-  const filterCount = filteredEntries.length;
 
   useEffect(() => {
   function refreshFromStorage() {

@@ -109,6 +109,7 @@ button,
 .topNav--desktop {
   flex-wrap: wrap;
   row-gap: 10px;
+  overflow: visible;
 }
 
 .topNav--mobile {
@@ -1252,11 +1253,16 @@ body:has(.btn-checkin:hover) .container {
 }
 
 /* Base overlay style (default for all regions) */
+.wholeBody {
+  fill: none !important;
+  stroke: none !important;
+}
+
 .overlay {
-  fill: rgba(246, 121, 121, 0.75);
-  stroke: rgba(255, 60, 0, 0.85);
-  stroke-width: 2.5;
-  opacity: 0.25;
+  fill: rgba(246, 121, 121, 0.72);
+  stroke: rgba(255, 98, 72, 0.86);
+  stroke-width: 2.4;
+  opacity: 0.34;
   transition: all 180ms ease;
   transform-box: fill-box;
   transform-origin: center;
@@ -1271,17 +1277,17 @@ body:has(.btn-checkin:hover) .container {
 /* --- WHOLE BODY SPECIAL CASE: softer than everything else --- */
 .overlay.wholeBody {
   opacity: 0.18;
-  fill: rgba(255, 210, 0, 0.18);
-  stroke: rgba(255, 80, 0, 0.35);
-  stroke-width: 2;
+  fill: none;
+  stroke: none;
   filter: blur(0.4px);
 }
 
 /* Even when Whole Body has effects, keep it softer than others */
 .overlay.wholeBody[class*="eff-"] {
   opacity: 0.35;
-  filter: blur(0.6px) drop-shadow(0 0 6px rgba(255, 162, 0, 0.696));
+  filter: blur(0.6px);
 }
+
 
 .pageTransition {
   width: 100%;
@@ -1446,9 +1452,8 @@ body:has(.btn-checkin:hover) .container {
 }
 
 .interoSilhouette path {
-  fill: rgba(180, 195, 215, 0.08);
-  stroke: rgba(255,255,255,0.04);
-  stroke-width: 1.5;
+  fill: none;
+  stroke: none;
 }
 
 /* Theme variants */
@@ -1475,19 +1480,7 @@ body:has(.btn-checkin:hover) .container {
    Overlay upgrades
    ========================= */
 
-.overlay {
-  fill: rgba(246, 121, 121, 0.72);
-  stroke: rgba(255, 98, 72, 0.86);
-  stroke-width: 2.4;
-  opacity: 0.34;
-  transition: all 180ms ease;
-  transform-box: fill-box;
-  transform-origin: center;
-}
 
-.overlay[class*="eff-"] {
-  opacity: 0.96;
-}
 
 /* Pulse / pressure / heaviness */
 .eff-pulse {
@@ -1550,15 +1543,15 @@ body:has(.btn-checkin:hover) .container {
 /* Whole body stays softer */
 .overlay.wholeBody {
   opacity: 0.18;
-  fill: rgba(255, 220, 120, 0.14);
-  stroke: rgba(255, 176, 70, 0.30);
+  fill: none;
+  stroke: none;
   stroke-width: 1.8;
   filter: blur(0.35px);
 }
 
 .overlay.wholeBody[class*="eff-"] {
   opacity: 0.34;
-  filter: blur(0.55px) drop-shadow(0 0 8px rgba(255, 176, 70, 0.28));
+  filter: blur(0.55px) ;
 }
 
 /* =========================

@@ -1,0 +1,3310 @@
+{"tabs": {
+  "structural_biblical_map": {
+    "description": "This tab gives a broader map of sinful patterns: against God, against neighbor, within the heart, and in neglected responsibilities. Each cell opens a more detailed modal with Scripture, repair, and love-led refocus.",
+    "sections": [
+      {
+        "key": "communication_sins",
+        "title": "Communication sins",
+        "intro": "Speech and relational communication sins that damage dignity, safety, trust, and clarity.",
+        "items": [
+          {
+            "key": "communication_sins_reference",
+            "title": "Communication sins",
+            "definition": "This section points back to the dedicated communication sins page rather than duplicating that dataset here.",
+            "common_forms": [
+              "harshness",
+              "deception",
+              "blame-shifting",
+              "concealment",
+              "distortion",
+              "stonewalling"
+            ],
+            "harm_impact": [
+              "damages trust",
+              "injures dignity",
+              "creates confusion",
+              "undermines emotional safety"
+            ],
+            "love_repair": [
+              "return to truthful and gentle speech",
+              "name harm clearly",
+              "replace concealment with honesty",
+              "practice listening before defending"
+            ],
+            "repair_steps": [
+              "go back to the dedicated communication page for the fuller breakdown",
+              "identify the communication pattern accurately",
+              "confess the specific harm done through words or silence",
+              "make a concrete repair plan"
+            ],
+            "encouragements": [
+              "Speech is not small in Scripture. Truthful, gentle, faithful words are part of love."
+            ],
+            "scriptures": [
+              { "ref": "Ephesians 4:29" },
+              { "ref": "Colossians 4:6" },
+              { "ref": "James 1:19" }
+            ],
+            "reflection_questions": [
+              "Am I using words to love, or to protect myself?",
+              "Where am I hiding, hardening, exaggerating, or avoiding truth?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sins_against_god",
+        "title": "Sins Against God",
+        "intro": "Patterns of false worship, unbelief, rebellion, and neglect of devotion.",
+        "items": [
+          {
+            "key": "idolatry",
+            "title": "Idolatry",
+            "definition": "Giving ultimate loyalty, trust, fear, love, or dependence to something other than God.",
+            "common_forms": [
+              "worship of false gods",
+              "self-worship",
+              "materialism",
+              "career worship",
+              "relationship worship",
+              "nationalism replacing allegiance to God's kingdom",
+              "ideology worship",
+              "entertainment worship"
+            ],
+            "harm_impact": [
+              "reorders love away from God",
+              "distorts worship",
+              "governs decisions by false treasures",
+              "makes created things carry god-sized weight"
+            ],
+            "love_repair": [
+              "return to wholehearted worship of God",
+              "name the false treasure honestly",
+              "practice surrender where control or attachment has ruled",
+              "replace grasping with gratitude and obedience"
+            ],
+            "repair_steps": [
+              "identify what is functioning as ultimate",
+              "confess the misplaced devotion specifically",
+              "turn from false dependence to prayerful trust",
+              "rebuild habits of worship, thanksgiving, and Scripture"
+            ],
+            "encouragements": [
+              "God does not call people out of idols to shame them, but to restore them to true life and true worship."
+            ],
+            "scriptures": [
+              { "ref": "Exodus 20:3" },
+              { "ref": "Romans 1:25" },
+              { "ref": "Colossians 3:5" }
+            ],
+            "reflection_questions": [
+              "What am I treating as non-negotiable or ultimate?",
+              "What loss do I fear so much that I disobey God to avoid it?"
+            ]
+          },
+          {
+            "key": "spiritual_pride",
+            "title": "Spiritual Pride",
+            "definition": "Exalting self before God through self-righteousness, superiority, or resistance to repentance.",
+            "common_forms": [
+              "self-righteousness",
+              "religious superiority",
+              "trusting works instead of grace",
+              "desire for spiritual recognition",
+              "refusal to repent"
+            ],
+            "harm_impact": [
+              "blocks humility",
+              "poisons teachability",
+              "turns holiness into self-exaltation",
+              "makes repentance feel beneath the self"
+            ],
+            "love_repair": [
+              "move toward humility and teachability",
+              "receive grace instead of performing righteousness",
+              "honor God rather than self-image",
+              "practice honest repentance"
+            ],
+            "repair_steps": [
+              "name the superiority pattern plainly",
+              "confess the need to appear righteous",
+              "listen without defensiveness",
+              "practice concrete repentance where pride has ruled"
+            ],
+            "encouragements": [
+              "Grace undercuts pride by making boasting empty and repentance safe."
+            ],
+            "scriptures": [
+              { "ref": "Luke 18:9-14" },
+              { "ref": "James 4:6" },
+              { "ref": "Philippians 3:7-9" }
+            ],
+            "reflection_questions": [
+              "Where do I feel above correction?",
+              "Do I want holiness, or do I want to look holy?"
+            ]
+          },
+          {
+            "key": "unbelief",
+            "title": "Unbelief",
+            "definition": "Distrusting God's goodness, truth, wisdom, or authority, and living from self-reliance instead of faith.",
+            "common_forms": [
+              "doubting God's goodness",
+              "refusing reliance on God",
+              "anxiety replacing trust",
+              "rejecting God's authority",
+              "spiritual cynicism"
+            ],
+            "harm_impact": [
+              "feeds fear-governed living",
+              "reduces prayerful dependence",
+              "makes obedience feel unsafe",
+              "strengthens self-protection"
+            ],
+            "love_repair": [
+              "return to trust in God's character",
+              "bring fear honestly into prayer",
+              "practice obedience before full certainty",
+              "replace cynical distance with faith-filled dependence"
+            ],
+            "repair_steps": [
+              "name where distrust is ruling choices",
+              "confess fear-based independence",
+              "choose one concrete act of obedience",
+              "rebuild prayer as dependence rather than last resort"
+            ],
+            "encouragements": [
+              "Faith grows through returning to God in weakness, not by pretending certainty."
+            ],
+            "scriptures": [
+              { "ref": "Hebrews 3:12" },
+              { "ref": "Mark 9:24" },
+              { "ref": "Proverbs 3:5-6" }
+            ],
+            "reflection_questions": [
+              "Where am I acting as though God is not trustworthy?",
+              "What fear keeps me from surrender?"
+            ]
+          },
+          {
+            "key": "rebellion",
+            "title": "Rebellion",
+            "definition": "Deliberate resistance to God's authority, conviction, or commands.",
+            "common_forms": [
+              "deliberate disobedience",
+              "hardening the heart",
+              "persisting in known sin",
+              "rejecting conviction"
+            ],
+            "harm_impact": [
+              "deadens conscience",
+              "normalizes resistance to God",
+              "makes repentance harder over time",
+              "turns conviction into something to evade"
+            ],
+            "love_repair": [
+              "soften quickly under conviction",
+              "return to obedience without delay",
+              "stop bargaining with clear commands",
+              "practice submission to God with honesty"
+            ],
+            "repair_steps": [
+              "name the area of direct disobedience",
+              "stop excusing or minimizing it",
+              "confess without self-justification",
+              "take one immediate step of obedience"
+            ],
+            "encouragements": [
+              "Conviction is mercy. God exposes rebellion to bring people back, not merely to condemn."
+            ],
+            "scriptures": [
+              { "ref": "1 Samuel 15:23" },
+              { "ref": "Hebrews 3:15" },
+              { "ref": "Isaiah 1:18-20" }
+            ],
+            "reflection_questions": [
+              "Where am I resisting what I already know is right?",
+              "What excuse do I keep using to stay unchanged?"
+            ]
+          },
+          {
+            "key": "irreverence",
+            "title": "Irreverence",
+            "definition": "Treating God, holy things, or spiritual truth lightly, casually, or manipulatively.",
+            "common_forms": [
+              "taking God's name lightly",
+              "treating sacred things casually",
+              "mocking spiritual truth",
+              "using religion for personal gain"
+            ],
+            "harm_impact": [
+              "shrinks awe",
+              "distorts worship",
+              "turns truth into a tool for self",
+              "weakens seriousness toward holiness"
+            ],
+            "love_repair": [
+              "recover reverence before God",
+              "handle truth with humility",
+              "stop using spiritual language for self-serving ends",
+              "cultivate worshipful seriousness"
+            ],
+            "repair_steps": [
+              "identify where sacred things have become casual or manipulative",
+              "confess misuse plainly",
+              "honor truth in speech and action",
+              "practice gratitude, worship, and restraint"
+            ],
+            "encouragements": [
+              "Reverence is not coldness; it is love marked by awe, truthfulness, and humility before God."
+            ],
+            "scriptures": [
+              { "ref": "Ecclesiastes 5:1-2" },
+              { "ref": "Malachi 1:6-8" },
+              { "ref": "Matthew 7:6" }
+            ],
+            "reflection_questions": [
+              "Have I treated God or truth casually?",
+              "Do I use spiritual language to gain leverage, image, or control?"
+            ]
+          },
+          {
+            "key": "neglect_of_worship",
+            "title": "Neglect Of Worship",
+            "definition": "Failure to give God the attention, gratitude, prayer, and devotion that belong to Him.",
+            "common_forms": [
+              "prayerlessness",
+              "failure to give thanks",
+              "neglect of Scripture",
+              "abandoning fellowship",
+              "spiritual apathy"
+            ],
+            "harm_impact": [
+              "drains spiritual attentiveness",
+              "feeds drift and numbness",
+              "weakens dependence on God",
+              "makes other idols easier to normalize"
+            ],
+            "love_repair": [
+              "return to prayer and thanksgiving",
+              "rebuild attentive worship rhythms",
+              "re-engage Scripture and fellowship",
+              "practice small, faithful acts of devotion"
+            ],
+            "repair_steps": [
+              "identify the neglected spiritual rhythms",
+              "confess apathy honestly",
+              "restart one small daily practice",
+              "rejoin worship and fellowship with intention"
+            ],
+            "encouragements": [
+              "Faithfulness often returns through small renewed habits, not dramatic emotion."
+            ],
+            "scriptures": [
+              { "ref": "Romans 1:21" },
+              { "ref": "Hebrews 10:24-25" },
+              { "ref": "Colossians 3:16-17" }
+            ],
+            "reflection_questions": [
+              "What practices of worship have I allowed to decay?",
+              "Where has apathy replaced attentive devotion?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sins_against_neighbor",
+        "title": "Sins Against Neighbor",
+        "intro": "Patterns that violate dignity, justice, safety, truth, and mercy toward other people.",
+        "items": [
+          {
+            "key": "violence_and_harm",
+            "title": "Violence And Harm",
+            "definition": "Direct harm against others through force, cruelty, abuse, oppression, or destructive disregard.",
+            "common_forms": [
+              "murder",
+              "abuse",
+              "cruelty",
+              "oppression",
+              "neglect of vulnerable people"
+            ],
+            "harm_impact": [
+              "destroys safety",
+              "violates dignity",
+              "creates trauma",
+              "turns power into harm"
+            ],
+            "love_repair": [
+              "move from force to protection",
+              "honor the image of God in others",
+              "stop domination and harm at the source",
+              "pursue justice, mercy, and safety"
+            ],
+            "repair_steps": [
+              "name the harm without euphemism",
+              "stop the harmful behavior fully",
+              "accept accountability and protective boundaries",
+              "make repair in ways that prioritize the harmed person"
+            ],
+            "encouragements": [
+              "True repentance toward harmful power includes concrete protection, not only remorse."
+            ],
+            "scriptures": [
+              { "ref": "Micah 6:8" },
+              { "ref": "Matthew 5:21-22" },
+              { "ref": "Psalm 82:3-4" }
+            ],
+            "reflection_questions": [
+              "Where have I used strength or position destructively?",
+              "Have I minimized harm because it benefited me?"
+            ]
+          },
+          {
+            "key": "exploitation",
+            "title": "Exploitation",
+            "definition": "Taking advantage of another person's vulnerability, need, labor, body, or weakness for personal gain.",
+            "common_forms": [
+              "economic oppression",
+              "human trafficking",
+              "labor exploitation",
+              "taking advantage of weakness"
+            ],
+            "harm_impact": [
+              "uses people as means rather than neighbors",
+              "profits from vulnerability",
+              "degrades dignity",
+              "strengthens injustice"
+            ],
+            "love_repair": [
+              "move toward justice and protection",
+              "honor people as image-bearers rather than resources",
+              "stop benefiting from vulnerability",
+              "practice generosity and fairness"
+            ],
+            "repair_steps": [
+              "identify where advantage was taken",
+              "confess the self-serving pattern",
+              "stop exploitative practices",
+              "make restitution where possible"
+            ],
+            "encouragements": [
+              "Justice in Scripture is not abstract. It includes how the strong treat the weak."
+            ],
+            "scriptures": [
+              { "ref": "Amos 5:11-12" },
+              { "ref": "James 5:1-6" },
+              { "ref": "Proverbs 14:31" }
+            ],
+            "reflection_questions": [
+              "Have I benefited from another person's weakness or need?",
+              "Where have I treated fairness as optional when I held advantage?"
+            ]
+          },
+          {
+            "key": "injustice",
+            "title": "Injustice",
+            "definition": "Corrupting fairness, truth, and protection through partiality, abuse of power, or perverted judgment.",
+            "common_forms": [
+              "corruption",
+              "bribery",
+              "abuse of power",
+              "perverting justice",
+              "partiality"
+            ],
+            "harm_impact": [
+              "undermines trust",
+              "injures the vulnerable",
+              "twists truth for advantage",
+              "protects the powerful at others' expense"
+            ],
+            "love_repair": [
+              "move toward fairness and truth",
+              "reject partiality",
+              "protect the vulnerable",
+              "use authority to serve rather than shield self"
+            ],
+            "repair_steps": [
+              "name the favoritism or corruption clearly",
+              "stop bending standards for self or allies",
+              "restore truth where it was distorted",
+              "practice impartial justice"
+            ],
+            "encouragements": [
+              "God cares deeply about justice because He cares deeply about the people injustice crushes."
+            ],
+            "scriptures": [
+              { "ref": "Isaiah 1:17" },
+              { "ref": "Leviticus 19:15" },
+              { "ref": "Proverbs 17:23" }
+            ],
+            "reflection_questions": [
+              "Where do I excuse unfairness when it serves me?",
+              "How have I used position or access to tilt outcomes?"
+            ]
+          },
+          {
+            "key": "betrayal",
+            "title": "Betrayal",
+            "definition": "Violating trust, loyalty, covenant, or confidence through disloyalty, infidelity, or faithlessness.",
+            "common_forms": [
+              "infidelity",
+              "breaking promises",
+              "disloyalty",
+              "revealing confidences"
+            ],
+            "harm_impact": [
+              "breaks trust",
+              "destabilizes covenant and safety",
+              "creates relational injury",
+              "turns closeness into exposure"
+            ],
+            "love_repair": [
+              "move toward faithfulness and truth",
+              "honor covenant and loyalty",
+              "replace secrecy with integrity",
+              "treat trust as weighty, not disposable"
+            ],
+            "repair_steps": [
+              "name the betrayal accurately",
+              "stop secret or disloyal patterns completely",
+              "tell the truth fully where required",
+              "accept slow trust rebuilding rather than demanding quick restoration"
+            ],
+            "encouragements": [
+              "Faithfulness is rebuilt through truth, consistency, and costly integrity over time."
+            ],
+            "scriptures": [
+              { "ref": "Proverbs 20:6" },
+              { "ref": "Luke 16:10" },
+              { "ref": "Psalm 15:1-4" }
+            ],
+            "reflection_questions": [
+              "Where have I treated loyalty lightly?",
+              "What trust have I broken and wanted to minimize?"
+            ]
+          },
+          {
+            "key": "theft_and_deceit",
+            "title": "Theft And Deceit",
+            "definition": "Taking what is not yours or distorting truth for gain, concealment, or advantage.",
+            "common_forms": [
+              "stealing",
+              "fraud",
+              "financial manipulation",
+              "exploiting generosity"
+            ],
+            "harm_impact": [
+              "violates trust",
+              "uses concealment for self-benefit",
+              "undermines fairness",
+              "damages security and truth"
+            ],
+            "love_repair": [
+              "move toward honesty and restitution",
+              "replace manipulation with transparent integrity",
+              "honor what belongs to others",
+              "practice truthful stewardship"
+            ],
+            "repair_steps": [
+              "name what was taken or distorted",
+              "stop deceptive gain",
+              "make restitution where possible",
+              "practice transparent honesty going forward"
+            ],
+            "encouragements": [
+              "Repentance in matters of theft and deceit includes truthfulness and concrete restitution."
+            ],
+            "scriptures": [
+              { "ref": "Ephesians 4:28" },
+              { "ref": "Leviticus 19:11" },
+              { "ref": "Proverbs 11:1" }
+            ],
+            "reflection_questions": [
+              "Have I used distortion or concealment to get what I wanted?",
+              "What restitution is needed where I took advantage?"
+            ]
+          },
+          {
+            "key": "objectification",
+            "title": "Objectification",
+            "definition": "Reducing people to categories, bodies, utilities, or stereotypes instead of honoring their God-given dignity.",
+            "common_forms": [
+              "sexual objectification",
+              "dehumanization",
+              "racism",
+              "class contempt"
+            ],
+            "harm_impact": [
+              "strips dignity",
+              "makes people easier to use or dismiss",
+              "supports prejudice and exploitation",
+              "blinds the heart to personhood"
+            ],
+            "love_repair": [
+              "move toward honor and dignity",
+              "see people as image-bearers rather than objects",
+              "reject contempt and reductionism",
+              "practice respect in thought, speech, and action"
+            ],
+            "repair_steps": [
+              "identify where people were reduced rather than honored",
+              "confess contempt or use plainly",
+              "interrupt habits of reduction and fantasy",
+              "practice concrete acts of dignity and restraint"
+            ],
+            "encouragements": [
+              "Love restores sight. It teaches the heart to see people as persons, not instruments."
+            ],
+            "scriptures": [
+              { "ref": "Genesis 1:27" },
+              { "ref": "1 Peter 2:17" },
+              { "ref": "Philippians 2:3-4" }
+            ],
+            "reflection_questions": [
+              "Where have I reduced people to categories, functions, or fantasies?",
+              "What contempt or superiority hides under that reduction?"
+            ]
+          },
+          {
+            "key": "hardheartedness",
+            "title": "Hardheartedness",
+            "definition": "Withholding empathy, mercy, tenderness, or compassion from others.",
+            "common_forms": [
+              "lack of empathy",
+              "refusal to forgive",
+              "indifference to suffering",
+              "enjoying others' misfortune"
+            ],
+            "harm_impact": [
+              "freezes compassion",
+              "prolongs injury",
+              "makes mercy feel optional",
+              "turns another person's pain into distance or leverage"
+            ],
+            "love_repair": [
+              "move toward mercy and tenderness",
+              "let another person's pain matter",
+              "practice compassion rather than cold distance",
+              "choose responsive care over indifference"
+            ],
+            "repair_steps": [
+              "name where the heart has gone cold",
+              "confess indifference and contempt",
+              "listen to pain without self-centering",
+              "practice active mercy"
+            ],
+            "encouragements": [
+              "Softheartedness is not weakness. It is strength shaped by mercy."
+            ],
+            "scriptures": [
+              { "ref": "Ephesians 4:31-32" },
+              { "ref": "Colossians 3:12-13" },
+              { "ref": "Proverbs 21:13" }
+            ],
+            "reflection_questions": [
+              "Where have I chosen emotional distance over mercy?",
+              "Do I resist compassion because it would cost me something?"
+            ]
+          },
+          {
+            "key": "neglect",
+            "title": "Neglect",
+            "definition": "Failing to provide needed care, attention, protection, or support to those entrusted to you or placed before you.",
+            "common_forms": [
+              "neglecting children",
+              "neglecting spouse",
+              "ignoring the poor",
+              "withholding help"
+            ],
+            "harm_impact": [
+              "abandons responsibility",
+              "leaves needs unanswered",
+              "creates injury through absence",
+              "communicates that others do not matter"
+            ],
+            "love_repair": [
+              "move toward responsive care",
+              "notice and answer real needs",
+              "take responsibility seriously",
+              "practice dependable presence"
+            ],
+            "repair_steps": [
+              "identify where responsibility has been withheld",
+              "confess passive harm honestly",
+              "show up with concrete care",
+              "build repeatable patterns of presence and support"
+            ],
+            "encouragements": [
+              "Love is not only avoiding direct harm; it is also answering responsibility with presence and care."
+            ],
+            "scriptures": [
+              { "ref": "James 2:15-17" },
+              { "ref": "1 John 3:17-18" },
+              { "ref": "1 Timothy 5:8" }
+            ],
+            "reflection_questions": [
+              "Where has my passivity harmed others?",
+              "What care or support have I withheld because it was inconvenient?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sins_of_the_heart",
+        "title": "Sins Of The Heart",
+        "intro": "Inner patterns of desire, comparison, resentment, self-exaltation, and craving that give rise to outward sin.",
+        "items": [
+          {
+            "key": "lust",
+            "title": "Lust",
+            "definition": "Disordered desire that consumes, objectifies, or seeks gratification outside God's design.",
+            "common_forms": [
+              "sexual fantasy",
+              "pornography",
+              "adultery of the heart",
+              "objectifying desire"
+            ],
+            "harm_impact": [
+              "consumes others for self",
+              "distorts desire",
+              "weakens purity and covenant integrity",
+              "trains the heart toward objectification"
+            ],
+            "love_repair": [
+              "move toward purity, honor, and self-control",
+              "see others as image-bearers rather than objects",
+              "practice covenant faithfulness",
+              "replace fantasy with truthful restraint"
+            ],
+            "repair_steps": [
+              "name the lust pattern specifically",
+              "interrupt environments and habits that feed it",
+              "confess without euphemism",
+              "build practices of purity, honesty, and accountability"
+            ],
+            "encouragements": [
+              "Desire can be retrained. Repentance here means both truth and disciplined reorientation."
+            ],
+            "scriptures": [
+              { "ref": "Matthew 5:27-28" },
+              { "ref": "1 Thessalonians 4:3-5" },
+              { "ref": "Job 31:1" }
+            ],
+            "reflection_questions": [
+              "Where have I allowed desire to turn another person into an object?",
+              "What patterns feed fantasy, secrecy, or indulgence?"
+            ]
+          },
+          {
+            "key": "covetousness",
+            "title": "Covetousness",
+            "definition": "Disordered craving for what belongs to another or grasping desire for more than God has given.",
+            "common_forms": [
+              "envy of success",
+              "jealousy of relationships",
+              "greed for possessions",
+              "status competition"
+            ],
+            "harm_impact": [
+              "feeds discontent",
+              "distorts gratitude",
+              "breeds rivalry",
+              "trains the heart to grasp rather than receive"
+            ],
+            "love_repair": [
+              "move toward gratitude and stewardship",
+              "rejoice in another person's good",
+              "practice contentment under God",
+              "replace grasping with generosity"
+            ],
+            "repair_steps": [
+              "name the craving honestly",
+              "confess resentment of another person's good",
+              "practice gratitude concretely",
+              "choose generosity where grasping ruled"
+            ],
+            "encouragements": [
+              "Contentment is learned as the heart is retrained away from comparison and toward trust."
+            ],
+            "scriptures": [
+              { "ref": "Exodus 20:17" },
+              { "ref": "Luke 12:15" },
+              { "ref": "Hebrews 13:5" }
+            ],
+            "reflection_questions": [
+              "What am I resentfully wanting that is not mine?",
+              "How has comparison weakened gratitude?"
+            ]
+          },
+          {
+            "key": "gluttony",
+            "title": "Gluttony",
+            "definition": "Disordered overconsumption or bodily indulgence that places appetite over self-control and wise stewardship.",
+            "common_forms": [
+              "overconsumption",
+              "addictive indulgence",
+              "comfort seeking through excess"
+            ],
+            "harm_impact": [
+              "lets appetite rule",
+              "trains the heart toward excess",
+              "uses comfort as escape",
+              "weakens disciplined enjoyment"
+            ],
+            "love_repair": [
+              "move toward self-control and gratitude",
+              "receive good gifts without being ruled by them",
+              "practice moderation",
+              "replace compulsive indulgence with ordered enjoyment"
+            ],
+            "repair_steps": [
+              "identify where appetite is ruling behavior",
+              "confess comfort-seeking excess",
+              "interrupt compulsive patterns",
+              "practice grateful moderation"
+            ],
+            "encouragements": [
+              "Christian self-control is not rejection of good gifts, but freedom from being mastered by them."
+            ],
+            "scriptures": [
+              { "ref": "Proverbs 23:20-21" },
+              { "ref": "Philippians 3:19" },
+              { "ref": "1 Corinthians 6:12" }
+            ],
+            "reflection_questions": [
+              "Where do I go to excess for comfort or escape?",
+              "What appetite is becoming a master?"
+            ]
+          },
+          {
+            "key": "envy",
+            "title": "Envy",
+            "definition": "Resentment toward another person's good, blessing, beauty, success, or favor.",
+            "common_forms": [
+              "resenting others' blessings",
+              "comparing status",
+              "jealous rivalry"
+            ],
+            "harm_impact": [
+              "turns another person's good into irritation",
+              "feeds rivalry",
+              "erodes love",
+              "makes gratitude harder"
+            ],
+            "love_repair": [
+              "move toward gratitude and rejoicing with others",
+              "replace comparison with blessing",
+              "practice contentment",
+              "honor others without rivalry"
+            ],
+            "repair_steps": [
+              "name where resentment is hiding",
+              "confess comparison and rivalry",
+              "bless what you have resented",
+              "practice gratitude in concrete terms"
+            ],
+            "encouragements": [
+              "Love can learn to rejoice where envy once narrowed the heart."
+            ],
+            "scriptures": [
+              { "ref": "James 3:14-16" },
+              { "ref": "Romans 12:15" },
+              { "ref": "1 Corinthians 13:4" }
+            ],
+            "reflection_questions": [
+              "Whose good feels threatening to me?",
+              "What comparison story keeps replaying in my mind?"
+            ]
+          },
+          {
+            "key": "bitterness",
+            "title": "Bitterness",
+            "definition": "Stored resentment that hardens the heart and keeps injury alive through internal replay and refusal of mercy.",
+            "common_forms": [
+              "holding resentment",
+              "refusing reconciliation"
+            ],
+            "harm_impact": [
+              "stores grievance",
+              "hardens empathy",
+              "keeps injury active",
+              "poisons relationships from within"
+            ],
+            "love_repair": [
+              "move toward truthful forgiveness and honest repair",
+              "name the hurt without feeding contempt",
+              "release scorekeeping",
+              "pursue reconciliation where appropriate"
+            ],
+            "repair_steps": [
+              "identify the grievance being carried",
+              "confess the stored resentment",
+              "tell the truth about the wound without weaponizing it",
+              "practice mercy and repair where possible"
+            ],
+            "encouragements": [
+              "Forgiveness is not pretending no wrong occurred. It is refusing to let stored bitterness become your guide."
+            ],
+            "scriptures": [
+              { "ref": "Ephesians 4:31-32" },
+              { "ref": "Hebrews 12:15" },
+              { "ref": "Colossians 3:13" }
+            ],
+            "reflection_questions": [
+              "What grievance am I still using to justify hardness?",
+              "Have I confused bitterness with strength or moral clarity?"
+            ]
+          },
+          {
+            "key": "malice",
+            "title": "Malice",
+            "definition": "Ill will toward another person expressed as desire for revenge, harm, downfall, or injury.",
+            "common_forms": [
+              "desire for revenge",
+              "intent to harm"
+            ],
+            "harm_impact": [
+              "feeds retaliation",
+              "corrupts justice into vengeance",
+              "turns hurt into active ill will",
+              "makes mercy feel intolerable"
+            ],
+            "love_repair": [
+              "move toward mercy and restraint",
+              "refuse revenge fantasies",
+              "practice patience and truthful justice",
+              "replace ill will with prayerful honesty before God"
+            ],
+            "repair_steps": [
+              "name the revenge impulse clearly",
+              "confess the desire to injure or see injury",
+              "stop rehearsing retaliation",
+              "entrust justice to God and pursue righteous action instead"
+            ],
+            "encouragements": [
+              "Refusing malice does not erase justice. It refuses to let hatred become your method."
+            ],
+            "scriptures": [
+              { "ref": "Romans 12:17-21" },
+              { "ref": "Titus 3:3" },
+              { "ref": "1 Peter 2:1" }
+            ],
+            "reflection_questions": [
+              "Where do I secretly want someone to suffer?",
+              "Am I calling revenge by a more acceptable name?"
+            ]
+          },
+          {
+            "key": "selfish_ambition",
+            "title": "Selfish Ambition",
+            "definition": "Pursuing self-advancement, recognition, or dominance at the expense of truth, love, or others' good.",
+            "common_forms": [
+              "advancing self at others' expense",
+              "competition for dominance"
+            ],
+            "harm_impact": [
+              "turns people into stepping stones",
+              "feeds rivalry",
+              "weakens humility",
+              "subordinates love to self-promotion"
+            ],
+            "love_repair": [
+              "move toward humility and service",
+              "honor others rather than leveraging them",
+              "seek faithfulness over self-exaltation",
+              "replace rivalry with sincere love"
+            ],
+            "repair_steps": [
+              "identify where advancement has become controlling",
+              "confess ambition without disguise",
+              "renounce competition for superiority",
+              "practice service and hidden faithfulness"
+            ],
+            "encouragements": [
+              "The gospel frees people from needing to become large in their own eyes."
+            ],
+            "scriptures": [
+              { "ref": "James 3:16" },
+              { "ref": "Philippians 2:3-4" },
+              { "ref": "Galatians 5:26" }
+            ],
+            "reflection_questions": [
+              "Where have I used others for elevation?",
+              "Do I want fruitfulness, or do I want superiority?"
+            ]
+          },
+          {
+            "key": "control",
+            "title": "Control",
+            "definition": "Refusing surrender and seeking to dominate circumstances, outcomes, or people rather than trusting God.",
+            "common_forms": [
+              "refusing surrender to God",
+              "manipulating circumstances",
+              "dominating relationships"
+            ],
+            "harm_impact": [
+              "creates pressure",
+              "erodes trust",
+              "restricts others' agency",
+              "reveals fear-governed self-protection"
+            ],
+            "love_repair": [
+              "move toward surrendered trust",
+              "honor other people's agency",
+              "replace pressure with gentleness",
+              "practice dependence on God instead of domination"
+            ],
+            "repair_steps": [
+              "name the control pattern plainly",
+              "confess fear-driven domination",
+              "release the demand to govern everything",
+              "practice patience, gentleness, and prayerful trust"
+            ],
+            "encouragements": [
+              "Control often feels like safety, but it cannot give the peace that surrendered trust can."
+            ],
+            "scriptures": [
+              { "ref": "Matthew 6:25-34" },
+              { "ref": "James 4:13-16" },
+              { "ref": "Psalm 46:10" }
+            ],
+            "reflection_questions": [
+              "Where am I demanding outcomes instead of trusting God?",
+              "How has fear made me press on people or circumstances?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sins_of_omission",
+        "title": "Sins Of Omission",
+        "intro": "Failures to do the good, merciful, faithful, and responsible acts that love requires.",
+        "items": [
+          {
+            "key": "failure_to_help",
+            "title": "Failure To Help",
+            "definition": "Seeing real need and withholding care, generosity, hospitality, or aid.",
+            "common_forms": [
+              "ignoring someone in need",
+              "withholding generosity",
+              "refusing hospitality"
+            ],
+            "harm_impact": [
+              "leaves need unanswered",
+              "turns compassion into passivity",
+              "withholds practical love",
+              "treats mercy as optional"
+            ],
+            "love_repair": [
+              "move toward responsive mercy",
+              "practice practical generosity",
+              "notice need and answer it",
+              "let compassion become action"
+            ],
+            "repair_steps": [
+              "identify where help was withheld",
+              "confess convenient indifference",
+              "offer concrete aid where possible",
+              "build habits of active generosity"
+            ],
+            "encouragements": [
+              "Biblical love is active. It is not complete when it only feels concern."
+            ],
+            "scriptures": [
+              { "ref": "James 2:15-17" },
+              { "ref": "1 John 3:17-18" },
+              { "ref": "Luke 10:30-37" }
+            ],
+            "reflection_questions": [
+              "What need have I seen and passed by?",
+              "Where has inconvenience hardened my response?"
+            ]
+          },
+          {
+            "key": "failure_of_stewardship",
+            "title": "Failure Of Stewardship",
+            "definition": "Neglecting the faithful use of gifts, responsibilities, resources, time, or opportunities entrusted by God.",
+            "common_forms": [
+              "burying gifts",
+              "wasting resources",
+              "neglecting responsibilities"
+            ],
+            "harm_impact": [
+              "squanders entrusted good",
+              "weakens reliability",
+              "feeds passivity",
+              "withholds fruit that could bless others"
+            ],
+            "love_repair": [
+              "move toward faithful stewardship",
+              "use gifts and resources responsibly",
+              "honor entrusted responsibilities",
+              "practice dependable follow-through"
+            ],
+            "repair_steps": [
+              "identify what has been neglected",
+              "confess waste or passivity",
+              "re-engage responsibility concretely",
+              "build simple patterns of faithfulness"
+            ],
+            "encouragements": [
+              "Stewardship is not about perfection. It is about faithful use of what has been entrusted."
+            ],
+            "scriptures": [
+              { "ref": "Matthew 25:14-30" },
+              { "ref": "1 Peter 4:10" },
+              { "ref": "Luke 16:10" }
+            ],
+            "reflection_questions": [
+              "What entrusted good have I buried, wasted, or neglected?",
+              "Where have I called passivity humility?"
+            ]
+          },
+          {
+            "key": "failure_of_reconciliation",
+            "title": "Failure Of Reconciliation",
+            "definition": "Refusing peace-making, repair, or movement toward reconciliation when truth and love require it.",
+            "common_forms": [
+              "refusing to pursue peace",
+              "allowing division to persist"
+            ],
+            "harm_impact": [
+              "lets division harden",
+              "extends unresolved injury",
+              "avoids costly repair",
+              "treats peace-making as optional"
+            ],
+            "love_repair": [
+              "move toward peace-making",
+              "practice truth with humility",
+              "seek repair instead of passive distance",
+              "honor reconciliation where it is righteous and possible"
+            ],
+            "repair_steps": [
+              "name the unresolved breach",
+              "confess avoidance clearly",
+              "initiate one honest movement toward peace",
+              "accept that reconciliation may require repeated faithful effort"
+            ],
+            "encouragements": [
+              "Peace-making is active work. It is one of the ordinary ways love takes shape."
+            ],
+            "scriptures": [
+              { "ref": "Matthew 5:23-24" },
+              { "ref": "Romans 12:18" },
+              { "ref": "Ephesians 4:3" }
+            ],
+            "reflection_questions": [
+              "Where have I preferred distance to repair?",
+              "What reconciliation step am I avoiding because it is costly?"
+            ]
+          },
+          {
+            "key": "failure_of_justice",
+            "title": "Failure Of Justice",
+            "definition": "Remaining passive where truth, defense, advocacy, or protection were needed.",
+            "common_forms": [
+              "not defending the oppressed",
+              "remaining silent in injustice"
+            ],
+            "harm_impact": [
+              "leaves vulnerable people exposed",
+              "protects comfort over righteousness",
+              "lets injustice continue unchallenged",
+              "turns silence into complicity"
+            ],
+            "love_repair": [
+              "move toward advocacy and truth",
+              "defend the vulnerable",
+              "speak where silence protected wrong",
+              "practice courage over convenience"
+            ],
+            "repair_steps": [
+              "identify where silence enabled wrong",
+              "confess passive complicity",
+              "take one concrete step toward advocacy or protection",
+              "practice justice with humility and courage"
+            ],
+            "encouragements": [
+              "Justice often requires presence, voice, and courage in places where passivity once felt easier."
+            ],
+            "scriptures": [
+              { "ref": "Proverbs 31:8-9" },
+              { "ref": "Isaiah 1:17" },
+              { "ref": "Psalm 82:3-4" }
+            ],
+            "reflection_questions": [
+              "Where has my silence protected comfort rather than people?",
+              "What vulnerable need have I left undefended?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "works_of_the_flesh_galatians_5",
+        "title": "Works Of The Flesh (Galatians 5)",
+        "intro": "A vice-list anchor section drawn from Galatians 5. This section is broader and more list-like, but still opens into a summary modal.",
+        "items": [
+          {
+            "key": "works_of_the_flesh_galatians_5_summary",
+            "title": "Galatians 5 vice list",
+            "definition": "A summary anchor for recurring flesh expressions listed in Galatians 5.",
+            "common_forms": [
+              "sexual immorality",
+              "impurity",
+              "sensuality",
+              "idolatry",
+              "sorcery",
+              "enmity",
+              "strife",
+              "jealousy",
+              "fits of anger",
+              "rivalries",
+              "dissensions",
+              "divisions",
+              "envy",
+              "drunkenness",
+              "orgies"
+            ],            
+            "harm_impact": [
+              "normalizes flesh-governed living",
+              "fractures community",
+              "feeds indulgence and rivalry",
+              "pulls the heart away from Spirit-led life"
+            ],
+            "love_repair": [
+              "walk by the Spirit",
+              "crucify fleshly patterns rather than feeding them",
+              "move toward self-control, peace, and love",
+              "practice repentance at the level of desire and habit"
+            ],
+            "repair_steps": [
+              "identify which flesh-patterns are recurring",
+              "stop excusing them as personality or stress",
+              "confess them specifically",
+              "replace them with Spirit-led practices and accountable obedience"
+            ],
+            "encouragements": [
+              "The point of this list is not despair, but contrast: the flesh is real, but so is the Spirit's transforming work."
+            ],
+            "scriptures": [
+              { "ref": "Galatians 5:19-21" },
+              { "ref": "Galatians 5:16" },
+              { "ref": "Romans 8:13" }
+            ],
+            "reflection_questions": [
+              "Which flesh-patterns do I most quickly excuse or normalize?",
+              "Where do I keep feeding what I say I want to overcome?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sexual_sins",
+        "title": "Sexual Sins",
+        "intro": "Patterns of sexual disorder, exploitation, impurity, and covenant-breaking that distort God's design and harm people.",
+        "items": [
+          {
+            "key": "sexual_immorality",
+            "title": "Sexual Immorality",
+            "definition": "Sexual expression or indulgence outside God's design for covenant faithfulness and holiness.",
+            "common_forms": [
+              "fornication",
+              "adultery",
+              "pornography",
+              "sexual fantasy",
+              "sexualized entertainment",
+              "hookup culture participation"
+            ],
+            "harm_impact": [
+              "disconnects sexuality from holiness and covenant",
+              "trains the heart toward use rather than love",
+              "damages trust and integrity",
+              "feeds secrecy and fragmentation"
+            ],
+            "love_repair": [
+              "move toward purity, covenant integrity, and honor",
+              "treat sexuality as holy rather than consumable",
+              "replace indulgence with self-control",
+              "practice truthful, embodied faithfulness"
+            ],
+            "repair_steps": [
+              "name the sexual pattern honestly",
+              "remove sources of repeated indulgence",
+              "confess without euphemism",
+              "build structures of honesty, restraint, and accountability"
+            ],
+            "encouragements": [
+              "Holiness is not the destruction of desire but its right ordering under truth, covenant, and love."
+            ],
+            "scriptures": [
+              { "ref": "1 Thessalonians 4:3-5" },
+              { "ref": "Hebrews 13:4" },
+              { "ref": "1 Corinthians 6:18-20" }
+            ],
+            "reflection_questions": [
+              "Where am I treating sexual desire as entitled rather than entrusted?",
+              "What secrecy keeps this pattern alive?"
+            ]
+          },
+          {
+            "key": "adultery",
+            "title": "Adultery",
+            "definition": "Violation of covenantal faithfulness through sexual or relational unfaithfulness.",
+            "common_forms": [
+              "extramarital sexual relationship",
+              "emotional affair",
+              "secret romantic attachment",
+              "covenant betrayal"
+            ],
+            "harm_impact": [
+              "breaks covenant trust",
+              "creates deep relational injury",
+              "joins sexual sin with betrayal",
+              "destabilizes safety, family, and fidelity"
+            ],
+            "love_repair": [
+              "move toward full covenant honesty",
+              "end unfaithful attachments completely",
+              "honor fidelity with costly truth",
+              "accept the long work of trust rebuilding"
+            ],
+            "repair_steps": [
+              "name the betrayal accurately",
+              "end the adulterous pattern fully",
+              "tell the truth where truth is owed",
+              "accept accountability and the consequences of betrayal"
+            ],
+            "encouragements": [
+              "Repair after betrayal requires far more than regret. It requires truth, severing secrecy, and long-term faithfulness."
+            ],
+            "scriptures": [
+              { "ref": "Exodus 20:14" },
+              { "ref": "Proverbs 6:32" },
+              { "ref": "Matthew 5:27-28" }
+            ],
+            "reflection_questions": [
+              "Where have I treated covenant faithfulness lightly?",
+              "Have I minimized betrayal because desire felt urgent?"
+            ]
+          },
+          {
+            "key": "pornography",
+            "title": "Pornography",
+            "definition": "Sexualized viewing that turns people into consumable objects for gratification.",
+            "common_forms": [
+              "explicit videos",
+              "sexualized images",
+              "erotic content consumption",
+              "private fantasy reinforcement"
+            ],
+            "harm_impact": [
+              "trains the heart in objectification",
+              "disconnects arousal from love and covenant",
+              "feeds secrecy and shame",
+              "reshapes perception of other people into consumable forms"
+            ],
+            "love_repair": [
+              "move toward purity, dignity, and embodied faithfulness",
+              "honor persons rather than consuming images",
+              "replace secrecy with honesty",
+              "practice disciplined redirection of attention and desire"
+            ],
+            "repair_steps": [
+              "name the pornography pattern directly",
+              "remove access points and routines that feed it",
+              "confess with precision rather than vagueness",
+              "build repeated habits of visual restraint, honesty, and accountability"
+            ],
+            "encouragements": [
+              "The heart can be retrained, but retraining usually requires both repentance and practical interruption."
+            ],
+            "scriptures": [
+              { "ref": "Job 31:1" },
+              { "ref": "Matthew 5:28" },
+              { "ref": "Philippians 4:8" }
+            ],
+            "reflection_questions": [
+              "What visual habits are training me to consume rather than honor?",
+              "What do I keep calling small that is actively shaping desire?"
+            ]
+          },
+          {
+            "key": "sexual_exploitation",
+            "title": "Sexual Exploitation",
+            "definition": "Using another person's body, vulnerability, need, or imbalance of power for sexual access or gratification.",
+            "common_forms": [
+              "coercion",
+              "manipulation for sexual access",
+              "taking advantage of vulnerability",
+              "sexual pressure"
+            ],
+            "harm_impact": [
+              "violates dignity and safety",
+              "uses power against vulnerability",
+              "creates fear, injury, and trauma",
+              "turns sexuality into domination rather than love"
+            ],
+            "love_repair": [
+              "move toward absolute respect for dignity, agency, and safety",
+              "reject coercion in all forms",
+              "practice restraint where selfish desire once pressed",
+              "treat vulnerability as something to protect, never use"
+            ],
+            "repair_steps": [
+              "name the coercive or exploitative behavior without softening it",
+              "stop all pressuring behavior immediately",
+              "accept accountability and protective boundaries",
+              "make no demand for quick trust or relational restoration"
+            ],
+            "encouragements": [
+              "Real repentance in exploitative patterns includes surrendering entitlement, power, and self-protection."
+            ],
+            "scriptures": [
+              { "ref": "1 Corinthians 13:4-5" },
+              { "ref": "Philippians 2:3-4" },
+              { "ref": "Micah 6:8" }
+            ],
+            "reflection_questions": [
+              "Have I ever used pressure, advantage, or vulnerability for sexual self-interest?",
+              "What entitlement do I need to name plainly?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+"three_roots_of_sin": {
+  "description": "This tab groups sinful patterns under the three roots named in 1 John 2:16: lust of the flesh, lust of the eyes, and pride of life. Each cell opens into a modal with Scripture, harm, repair, and love-led refocus.",
+  "scripture": [
+    { "ref": "1 John 2:16" }
+  ],
+  "sections": [
+    {
+      "key": "lust_of_the_flesh",
+      "title": "Lust Of The Flesh",
+      "intro": "Disordered bodily desire that seeks gratification, indulgence, or relief apart from God's design and rule.",
+      "items": [
+        {
+          "key": "sexual_immorality",
+          "title": "Sexual Immorality",
+          "definition": "Sexual indulgence outside God's design for holiness, covenant faithfulness, and self-control.",
+          "common_forms": [
+            "fornication",
+            "sexual immorality",
+            "casual sexual indulgence",
+            "acting as though desire creates entitlement"
+          ],
+          "harm_impact": [
+            "disconnects desire from holiness and covenant",
+            "trains the body toward gratification over obedience",
+            "feeds secrecy and fragmentation",
+            "weakens faithful restraint"
+          ],
+          "love_repair": [
+            "move toward purity, covenant honor, and self-control",
+            "treat desire as something to steward rather than obey",
+            "practice faithful boundaries",
+            "honor God's design with embodied obedience"
+          ],
+          "repair_steps": [
+            "name the sexual pattern without euphemism",
+            "interrupt environments and habits that feed indulgence",
+            "confess specifically",
+            "build practices of honesty, restraint, and accountability"
+          ],
+          "encouragements": [
+            "Holiness is not the destruction of desire but its right ordering under truth, covenant, and love."
+          ],
+          "scriptures": [
+            { "ref": "1 Thessalonians 4:3-5" },
+            { "ref": "1 Corinthians 6:18-20" },
+            { "ref": "Hebrews 13:4" }
+          ],
+          "reflection_questions": [
+            "Where am I treating desire as entitled rather than entrusted?",
+            "What habits keep indulgence active?"
+          ]
+        },
+        {
+          "key": "pornography",
+          "title": "Pornography",
+          "definition": "Sexualized viewing that turns people into consumable objects for gratification.",
+          "common_forms": [
+            "explicit content",
+            "sexualized image consumption",
+            "private fantasy reinforcement",
+            "repeated visual indulgence"
+          ],
+          "harm_impact": [
+            "trains the heart in objectification",
+            "disconnects arousal from love and covenant",
+            "feeds secrecy and shame",
+            "reshapes perception of people into consumable forms"
+          ],
+          "love_repair": [
+            "move toward purity, dignity, and embodied faithfulness",
+            "honor persons rather than consuming images",
+            "replace secrecy with honesty",
+            "practice disciplined redirection of attention and desire"
+          ],
+          "repair_steps": [
+            "name the pornography pattern directly",
+            "remove access points and routines that feed it",
+            "confess with precision rather than vagueness",
+            "build repeated habits of visual restraint, honesty, and accountability"
+          ],
+          "encouragements": [
+            "The heart can be retrained, but retraining usually requires both repentance and practical interruption."
+          ],
+          "scriptures": [
+            { "ref": "Job 31:1" },
+            { "ref": "Matthew 5:28" },
+            { "ref": "Philippians 4:8" }
+          ],
+          "reflection_questions": [
+            "What visual habits are training me to consume rather than honor?",
+            "What do I keep calling small that is actively shaping desire?"
+          ]
+        },
+        {
+          "key": "sexual_fantasy",
+          "title": "Sexual Fantasy",
+          "definition": "Internalized indulgence of sexual desire through imagination that uses others for private gratification.",
+          "common_forms": [
+            "mental replay",
+            "imagined sexual scenarios",
+            "dwelling on eroticized thoughts",
+            "feeding desire through fantasy"
+          ],
+          "harm_impact": [
+            "uses people inwardly for self-gratification",
+            "keeps desire self-centered",
+            "feeds lust even without outward action",
+            "makes purity feel optional at the thought level"
+          ],
+          "love_repair": [
+            "move toward purity in thought as well as action",
+            "interrupt fantasy before it becomes rehearsal",
+            "practice truthful mental redirection",
+            "honor others inwardly as image-bearers"
+          ],
+          "repair_steps": [
+            "name the fantasy pattern honestly",
+            "interrupt it early rather than negotiating with it",
+            "replace it with Scripture, prayer, or concrete redirection",
+            "build habits of mental custody and visual restraint"
+          ],
+          "encouragements": [
+            "The mind is not beyond discipleship. Desire can be retrained at the level of thought."
+          ],
+          "scriptures": [
+            { "ref": "Matthew 5:27-28" },
+            { "ref": "2 Corinthians 10:5" },
+            { "ref": "Philippians 4:8" }
+          ],
+          "reflection_questions": [
+            "What fantasy patterns am I tolerating because they feel private?",
+            "How am I inwardly using people rather than honoring them?"
+          ]
+        },
+        {
+          "key": "adultery",
+          "title": "Adultery",
+          "definition": "Violation of covenant faithfulness through sexual or relational unfaithfulness.",
+          "common_forms": [
+            "extramarital sexual relationship",
+            "emotional affair",
+            "secret romantic attachment",
+            "covenant betrayal"
+          ],
+          "harm_impact": [
+            "breaks covenant trust",
+            "creates deep relational injury",
+            "joins sexual sin with betrayal",
+            "destabilizes safety, family, and fidelity"
+          ],
+          "love_repair": [
+            "move toward full covenant honesty",
+            "end unfaithful attachments completely",
+            "honor fidelity with costly truth",
+            "accept the long work of trust rebuilding"
+          ],
+          "repair_steps": [
+            "name the betrayal accurately",
+            "end the adulterous pattern fully",
+            "tell the truth where truth is owed",
+            "accept accountability and the consequences of betrayal"
+          ],
+          "encouragements": [
+            "Repair after betrayal requires far more than regret. It requires truth, severing secrecy, and long-term faithfulness."
+          ],
+          "scriptures": [
+            { "ref": "Exodus 20:14" },
+            { "ref": "Proverbs 6:32" },
+            { "ref": "Matthew 5:27-28" }
+          ],
+          "reflection_questions": [
+            "Where have I treated covenant faithfulness lightly?",
+            "Have I minimized betrayal because desire felt urgent?"
+          ]
+        },
+        {
+          "key": "fornication",
+          "title": "Fornication",
+          "definition": "Sexual union outside covenant marriage, treating bodily intimacy apart from God's appointed faithfulness.",
+          "common_forms": [
+            "premarital sexual relationship",
+            "sexual intimacy without covenant",
+            "treating commitment as optional"
+          ],
+          "harm_impact": [
+            "disconnects intimacy from covenant faithfulness",
+            "turns sexuality into private arrangement rather than holy stewardship",
+            "feeds confusion about commitment and holiness",
+            "places desire ahead of obedience"
+          ],
+          "love_repair": [
+            "move toward covenant honor and sexual integrity",
+            "restore boundaries where they have been crossed",
+            "practice self-control with truthfulness",
+            "honor God's design above present desire"
+          ],
+          "repair_steps": [
+            "name the pattern clearly",
+            "stop crossing the sexual boundary",
+            "confess the sin specifically",
+            "build concrete relational and bodily boundaries"
+          ],
+          "encouragements": [
+            "Obedience may feel costly in the short term, but it protects love, conscience, and covenant clarity."
+          ],
+          "scriptures": [
+            { "ref": "1 Corinthians 6:18" },
+            { "ref": "Hebrews 13:4" },
+            { "ref": "1 Thessalonians 4:3-5" }
+          ],
+          "reflection_questions": [
+            "Where have I acted as though desire outranks obedience?",
+            "What boundaries need to become concrete rather than assumed?"
+          ]
+        },
+        {
+          "key": "gluttony",
+          "title": "Gluttony",
+          "definition": "Disordered overconsumption that lets appetite rule rather than receiving good gifts with gratitude and moderation.",
+          "common_forms": [
+            "overeating",
+            "compulsive comfort eating",
+            "lack of restraint around appetite",
+            "using consumption for relief"
+          ],
+          "harm_impact": [
+            "lets appetite rule",
+            "trains the heart toward excess",
+            "uses comfort as escape",
+            "weakens disciplined enjoyment"
+          ],
+          "love_repair": [
+            "move toward self-control and gratitude",
+            "receive good gifts without being ruled by them",
+            "practice moderation",
+            "replace compulsive indulgence with ordered enjoyment"
+          ],
+          "repair_steps": [
+            "identify where appetite is ruling behavior",
+            "confess comfort-seeking excess",
+            "interrupt compulsive patterns",
+            "practice grateful moderation"
+          ],
+          "encouragements": [
+            "Christian self-control is not rejection of good gifts, but freedom from being mastered by them."
+          ],
+          "scriptures": [
+            { "ref": "Proverbs 23:20-21" },
+            { "ref": "Philippians 3:19" },
+            { "ref": "1 Corinthians 6:12" }
+          ],
+          "reflection_questions": [
+            "Where do I go to excess for comfort or escape?",
+            "What appetite is becoming a master?"
+          ]
+        },
+        {
+          "key": "drunkenness",
+          "title": "Drunkenness",
+          "definition": "Using intoxication to escape, indulge, or loosen restraint rather than remaining sober and self-controlled.",
+          "common_forms": [
+            "heavy drinking",
+            "drinking to numb or escape",
+            "choosing intoxication over sobriety",
+            "substance indulgence"
+          ],
+          "harm_impact": [
+            "weakens judgment",
+            "lowers restraint",
+            "encourages escape rather than truthfulness",
+            "makes the body easier to govern by craving"
+          ],
+          "love_repair": [
+            "move toward sobriety, honesty, and self-control",
+            "refuse escape as a governing strategy",
+            "seek support rather than numbing",
+            "practice bodily stewardship"
+          ],
+          "repair_steps": [
+            "name the intoxicating pattern clearly",
+            "confess escape-based use",
+            "interrupt access and routines that feed it",
+            "pursue accountability and concrete sobriety supports"
+          ],
+          "encouragements": [
+            "Freedom often grows through repeated, humble choices toward sobriety and truth rather than dramatic one-time resolve."
+          ],
+          "scriptures": [
+            { "ref": "Ephesians 5:18" },
+            { "ref": "Proverbs 20:1" },
+            { "ref": "1 Peter 5:8" }
+          ],
+          "reflection_questions": [
+            "What am I trying to avoid, numb, or mute?",
+            "When does intoxication become my refuge instead of God?"
+          ]
+        },
+        {
+          "key": "addiction",
+          "title": "Addiction",
+          "definition": "Entrenched bondage to a substance, behavior, or indulgence that begins to master the body and will.",
+          "common_forms": [
+            "substance dependence",
+            "compulsive indulgence",
+            "behavioral bondage",
+            "using relief as mastery"
+          ],
+          "harm_impact": [
+            "diminishes freedom",
+            "reorders life around craving",
+            "feeds secrecy and shame",
+            "damages faithfulness and stewardship"
+          ],
+          "love_repair": [
+            "move toward freedom, honesty, and sustained help",
+            "bring bondage into the light",
+            "practice dependence on God and accountable support",
+            "replace secret mastery with truthful treatment and discipline"
+          ],
+          "repair_steps": [
+            "name the addiction plainly",
+            "stop protecting it with secrecy",
+            "seek concrete support and accountability",
+            "build a repeatable recovery structure instead of relying on willpower alone"
+          ],
+          "encouragements": [
+            "Bondage is not overcome by pretending strength. It is faced through truth, support, and repeated surrender."
+          ],
+          "scriptures": [
+            { "ref": "1 Corinthians 6:12" },
+            { "ref": "Romans 6:12-14" },
+            { "ref": "Psalm 51:10-12" }
+          ],
+          "reflection_questions": [
+            "What has begun to master me?",
+            "What pattern do I protect by staying vague about it?"
+          ]
+        },
+        {
+          "key": "sensual_indulgence",
+          "title": "Sensual Indulgence",
+          "definition": "Living for bodily stimulation, pleasure, and immediate gratification without regard for holiness, restraint, or wisdom.",
+          "common_forms": [
+            "living for bodily pleasure",
+            "unrestrained stimulation seeking",
+            "pleasure-first decision making",
+            "treating comfort and sensation as ultimate"
+          ],
+          "harm_impact": [
+            "centers life on gratification",
+            "trains the will away from endurance",
+            "weakens discipline",
+            "makes holiness feel burdensome"
+          ],
+          "love_repair": [
+            "move toward discipline, endurance, and ordered delight",
+            "receive pleasures with restraint rather than surrendering to them",
+            "practice saying no to immediate gratification",
+            "reorder life around God rather than sensation"
+          ],
+          "repair_steps": [
+            "identify the pleasure-governed pattern",
+            "confess where appetite rules choices",
+            "practice concrete restraint in repeated moments",
+            "build habits that strengthen endurance and self-control"
+          ],
+          "encouragements": [
+            "Self-control is learned through many small refusals of indulgence and many small yeses to faithfulness."
+          ],
+          "scriptures": [
+            { "ref": "Titus 2:11-12" },
+            { "ref": "Romans 13:13-14" },
+            { "ref": "Galatians 5:16" }
+          ],
+          "reflection_questions": [
+            "Where is bodily pleasure governing my choices?",
+            "What do I keep calling harmless because it feels normal?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "lust_of_the_eyes",
+      "title": "Lust Of The Eyes",
+      "intro": "Grasping desire awakened by what is seen: envy, comparison, greed, and acquisitive looking.",
+      "items": [
+        {
+          "key": "covetousness",
+          "title": "Covetousness",
+          "definition": "Disordered craving for what belongs to another or grasping desire for more than God has given.",
+          "common_forms": [
+            "envy of success",
+            "jealousy of relationships",
+            "greed for possessions",
+            "status competition"
+          ],
+          "harm_impact": [
+            "feeds discontent",
+            "distorts gratitude",
+            "breeds rivalry",
+            "trains the heart to grasp rather than receive"
+          ],
+          "love_repair": [
+            "move toward gratitude and stewardship",
+            "rejoice in another person's good",
+            "practice contentment under God",
+            "replace grasping with generosity"
+          ],
+          "repair_steps": [
+            "name the craving honestly",
+            "confess resentment of another person's good",
+            "practice gratitude concretely",
+            "choose generosity where grasping ruled"
+          ],
+          "encouragements": [
+            "Contentment is learned as the heart is retrained away from comparison and toward trust."
+          ],
+          "scriptures": [
+            { "ref": "Exodus 20:17" },
+            { "ref": "Luke 12:15" },
+            { "ref": "Hebrews 13:5" }
+          ],
+          "reflection_questions": [
+            "What am I resentfully wanting that is not mine?",
+            "How has comparison weakened gratitude?"
+          ]
+        },
+        {
+          "key": "envy",
+          "title": "Envy",
+          "definition": "Resentment toward another person's good, blessing, beauty, success, or favor.",
+          "common_forms": [
+            "resenting others' blessings",
+            "comparing status",
+            "jealous rivalry"
+          ],
+          "harm_impact": [
+            "turns another person's good into irritation",
+            "feeds rivalry",
+            "erodes love",
+            "makes gratitude harder"
+          ],
+          "love_repair": [
+            "move toward gratitude and rejoicing with others",
+            "replace comparison with blessing",
+            "practice contentment",
+            "honor others without rivalry"
+          ],
+          "repair_steps": [
+            "name where resentment is hiding",
+            "confess comparison and rivalry",
+            "bless what you have resented",
+            "practice gratitude in concrete terms"
+          ],
+          "encouragements": [
+            "Love can learn to rejoice where envy once narrowed the heart."
+          ],
+          "scriptures": [
+            { "ref": "James 3:14-16" },
+            { "ref": "Romans 12:15" },
+            { "ref": "1 Corinthians 13:4" }
+          ],
+          "reflection_questions": [
+            "Whose good feels threatening to me?",
+            "What comparison story keeps replaying in my mind?"
+          ]
+        },
+        {
+          "key": "materialism",
+          "title": "Materialism",
+          "definition": "Treating possessions, lifestyle, or visible abundance as a source of identity, security, or success.",
+          "common_forms": [
+            "status through possessions",
+            "identity built on lifestyle",
+            "fixation on visible abundance",
+            "measuring worth by what is owned"
+          ],
+          "harm_impact": [
+            "reorders value around visible things",
+            "feeds restlessness and comparison",
+            "turns stewardship into self-display",
+            "makes contentment feel small"
+          ],
+          "love_repair": [
+            "move toward stewardship and simplicity",
+            "receive possessions as tools rather than identity",
+            "practice generosity over display",
+            "value faithfulness above visible abundance"
+          ],
+          "repair_steps": [
+            "name where possessions have become identity",
+            "confess visible comparison and self-display",
+            "practice concrete generosity",
+            "simplify where excess has become self-definition"
+          ],
+          "encouragements": [
+            "The heart grows freer as it stops asking visible things to provide invisible security."
+          ],
+          "scriptures": [
+            { "ref": "Matthew 6:19-21" },
+            { "ref": "Luke 12:15" },
+            { "ref": "1 Timothy 6:6-10" }
+          ],
+          "reflection_questions": [
+            "What visible thing am I using to tell myself I am safe or important?",
+            "Where is possession becoming performance?"
+          ]
+        },
+        {
+          "key": "greed",
+          "title": "Greed",
+          "definition": "Insatiable desire to get, keep, accumulate, or secure more for self.",
+          "common_forms": [
+            "hoarding",
+            "grasping for more",
+            "refusing generosity",
+            "financial self-protection without mercy"
+          ],
+          "harm_impact": [
+            "shrinks generosity",
+            "makes accumulation feel righteous",
+            "trains the heart to clutch rather than open",
+            "treats enough as never enough"
+          ],
+          "love_repair": [
+            "move toward generosity and trust",
+            "replace accumulation as identity with stewardship",
+            "practice open-handedness",
+            "let enough become enough under God"
+          ],
+          "repair_steps": [
+            "name the grasping pattern",
+            "confess fear-driven accumulation",
+            "give concretely rather than abstractly",
+            "practice financial honesty and stewardship"
+          ],
+          "encouragements": [
+            "Generosity is one of the clearest ways the heart learns that it does not have to clutch to survive."
+          ],
+          "scriptures": [
+            { "ref": "Luke 12:13-21" },
+            { "ref": "Colossians 3:5" },
+            { "ref": "Hebrews 13:5" }
+          ],
+          "reflection_questions": [
+            "Where does more always feel necessary?",
+            "What fear is hiding beneath my grasping?"
+          ]
+        },
+        {
+          "key": "status_competition",
+          "title": "Status Competition",
+          "definition": "Comparing rank, image, or visibility with others and striving to be above them.",
+          "common_forms": [
+            "competitive self-elevation",
+            "ranking people by visibility",
+            "needing to be ahead",
+            "resenting another person's prominence"
+          ],
+          "harm_impact": [
+            "feeds rivalry",
+            "turns people into competitors",
+            "distorts calling into comparison",
+            "weakens sincere love"
+          ],
+          "love_repair": [
+            "move toward humility and faithfulness",
+            "let calling replace rivalry",
+            "honor others without needing to outshine them",
+            "practice hidden obedience over visible superiority"
+          ],
+          "repair_steps": [
+            "name the comparison ladder honestly",
+            "confess the need to be ahead",
+            "interrupt ranking thoughts",
+            "practice celebrating another person's good without self-reference"
+          ],
+          "encouragements": [
+            "Peace grows where the heart no longer needs to win to have worth."
+          ],
+          "scriptures": [
+            { "ref": "Philippians 2:3-4" },
+            { "ref": "Galatians 5:26" },
+            { "ref": "Romans 12:10" }
+          ],
+          "reflection_questions": [
+            "Where am I measuring myself against others for value?",
+            "Who do I keep turning into a rival?"
+          ]
+        },
+        {
+          "key": "jealousy",
+          "title": "Jealousy",
+          "definition": "Possessive or resentful reaction to another person's attention, standing, opportunities, or closeness.",
+          "common_forms": [
+            "resentment of another's access",
+            "fear-driven possessiveness",
+            "comparison-driven insecurity",
+            "watching others with suspicion"
+          ],
+          "harm_impact": [
+            "feeds insecurity and rivalry",
+            "turns relationships into territory",
+            "creates suspicion",
+            "weakens trust and rejoicing"
+          ],
+          "love_repair": [
+            "move toward trust and security under God",
+            "release possessive comparison",
+            "practice blessing rather than suspicion",
+            "honor others without needing control of their attention"
+          ],
+          "repair_steps": [
+            "identify the jealousy trigger honestly",
+            "confess possessive resentment",
+            "interrupt mental comparison and surveillance",
+            "practice truthful gratitude and trust"
+          ],
+          "encouragements": [
+            "Jealousy loses power when the heart stops treating another person's gain as its own loss."
+          ],
+          "scriptures": [
+            { "ref": "James 3:14-16" },
+            { "ref": "Song of Solomon 8:6" },
+            { "ref": "1 Corinthians 13:4" }
+          ],
+          "reflection_questions": [
+            "What attention, closeness, or blessing feels threatening to me?",
+            "Where am I confusing love with possession?"
+          ]
+        },
+        {
+          "key": "theft",
+          "title": "Theft",
+          "definition": "Taking what is not yours, whether money, goods, time, opportunity, or trust.",
+          "common_forms": [
+            "stealing money or goods",
+            "fraudulent taking",
+            "taking advantage of trust",
+            "acquiring through concealment"
+          ],
+          "harm_impact": [
+            "violates trust",
+            "injures fairness",
+            "uses concealment for self-benefit",
+            "treats another person's property as expendable"
+          ],
+          "love_repair": [
+            "move toward honesty and restitution",
+            "honor what belongs to others",
+            "replace taking with stewardship and work",
+            "practice transparent integrity"
+          ],
+          "repair_steps": [
+            "name what was taken or concealed",
+            "stop deceptive gain",
+            "make restitution where possible",
+            "build truthful financial and practical habits"
+          ],
+          "encouragements": [
+            "Repentance in matters of theft includes both truth and restoration where restoration can be made."
+          ],
+          "scriptures": [
+            { "ref": "Ephesians 4:28" },
+            { "ref": "Leviticus 19:11" },
+            { "ref": "Proverbs 11:1" }
+          ],
+          "reflection_questions": [
+            "Where have I treated another person's property or trust lightly?",
+            "What restoration is owed where I have taken?"
+          ]
+        },
+        {
+          "key": "financial_exploitation",
+          "title": "Financial Exploitation",
+          "definition": "Using money, economic advantage, or another person's need to benefit self at their expense.",
+          "common_forms": [
+            "predatory financial behavior",
+            "taking advantage of vulnerability",
+            "profit through unfairness",
+            "economic manipulation"
+          ],
+          "harm_impact": [
+            "uses need for self-benefit",
+            "profits from vulnerability",
+            "injures trust and dignity",
+            "turns provision into exploitation"
+          ],
+          "love_repair": [
+            "move toward fairness, justice, and generosity",
+            "refuse profit built on another's weakness",
+            "practice honest dealing",
+            "use resources to protect rather than exploit"
+          ],
+          "repair_steps": [
+            "name the unfair gain clearly",
+            "confess the exploitative pattern",
+            "stop benefiting from the imbalance",
+            "make restitution where possible and restore fair practice"
+          ],
+          "encouragements": [
+            "Justice is deeply practical in Scripture, especially in how money and power are handled."
+          ],
+          "scriptures": [
+            { "ref": "James 5:1-6" },
+            { "ref": "Amos 5:11-12" },
+            { "ref": "Proverbs 14:31" }
+          ],
+          "reflection_questions": [
+            "Have I benefited from someone else's financial weakness or need?",
+            "Where have I treated fairness as flexible when money was involved?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pride_of_life",
+      "title": "Pride Of Life",
+      "intro": "Self-exalting desire for status, power, control, superiority, or self-rule apart from humble dependence on God.",
+      "items": [
+        {
+          "key": "spiritual_pride",
+          "title": "Spiritual Pride",
+          "definition": "Exalting self before God through self-righteousness, superiority, or resistance to repentance.",
+          "common_forms": [
+            "self-righteousness",
+            "religious superiority",
+            "trusting works instead of grace",
+            "desire for spiritual recognition",
+            "refusal to repent"
+          ],
+          "harm_impact": [
+            "blocks humility",
+            "poisons teachability",
+            "turns holiness into self-exaltation",
+            "makes repentance feel beneath the self"
+          ],
+          "love_repair": [
+            "move toward humility and teachability",
+            "receive grace instead of performing righteousness",
+            "honor God rather than self-image",
+            "practice honest repentance"
+          ],
+          "repair_steps": [
+            "name the superiority pattern plainly",
+            "confess the need to appear righteous",
+            "listen without defensiveness",
+            "practice concrete repentance where pride has ruled"
+          ],
+          "encouragements": [
+            "Grace undercuts pride by making boasting empty and repentance safe."
+          ],
+          "scriptures": [
+            { "ref": "Luke 18:9-14" },
+            { "ref": "James 4:6" },
+            { "ref": "Philippians 3:7-9" }
+          ],
+          "reflection_questions": [
+            "Where do I feel above correction?",
+            "Do I want holiness, or do I want to look holy?"
+          ]
+        },
+        {
+          "key": "self_righteousness",
+          "title": "Self-Righteousness",
+          "definition": "Building identity and moral standing on personal performance, comparison, or visible righteousness.",
+          "common_forms": [
+            "measuring self against others",
+            "moral superiority",
+            "using obedience for self-justification",
+            "despising others while feeling clean"
+          ],
+          "harm_impact": [
+            "hardens compassion",
+            "feeds contempt",
+            "uses morality to elevate self",
+            "pushes grace to the margins"
+          ],
+          "love_repair": [
+            "move toward humility and mercy",
+            "receive righteousness as grace rather than self-achievement",
+            "see others without contempt",
+            "practice repentance rather than comparison"
+          ],
+          "repair_steps": [
+            "identify where goodness has become self-justification",
+            "confess comparison-based righteousness",
+            "stop using others as a moral mirror",
+            "return to grace and honest repentance"
+          ],
+          "encouragements": [
+            "The gospel does not erase obedience; it removes boasting from obedience."
+          ],
+          "scriptures": [
+            { "ref": "Isaiah 64:6" },
+            { "ref": "Romans 3:20-24" },
+            { "ref": "Luke 18:11-14" }
+          ],
+          "reflection_questions": [
+            "Where do I secretly feel cleaner or better than others?",
+            "Am I using obedience as worship, or as self-justification?"
+          ]
+        },
+        {
+          "key": "boastfulness",
+          "title": "Boastfulness",
+          "definition": "Drawing attention to self for admiration, dominance, or reputation-building.",
+          "common_forms": [
+            "self-promotion",
+            "image cultivation",
+            "using achievement for elevation",
+            "speaking to be admired"
+          ],
+          "harm_impact": [
+            "centers attention on self",
+            "weakens humility",
+            "turns gifts into self-display",
+            "makes service secondary to image"
+          ],
+          "love_repair": [
+            "move toward humble faithfulness",
+            "use gifts without self-exaltation",
+            "let service matter more than image",
+            "practice hidden obedience"
+          ],
+          "repair_steps": [
+            "name the self-display pattern",
+            "confess the need to be noticed",
+            "interrupt self-promoting habits",
+            "practice quiet faithfulness without announcement"
+          ],
+          "encouragements": [
+            "Freedom grows when value no longer depends on being seen as impressive."
+          ],
+          "scriptures": [
+            { "ref": "Jeremiah 9:23-24" },
+            { "ref": "1 Corinthians 1:31" },
+            { "ref": "Matthew 6:1" }
+          ],
+          "reflection_questions": [
+            "Where am I trying to be seen rather than faithful?",
+            "What part of me needs admiration to feel steady?"
+          ]
+        },
+        {
+          "key": "arrogance",
+          "title": "Arrogance",
+          "definition": "Inflated view of self that treats one's own judgment, worth, or entitlement as higher than it is.",
+          "common_forms": [
+            "dismissiveness",
+            "superiority",
+            "refusal to listen",
+            "presuming self-importance"
+          ],
+          "harm_impact": [
+            "shrinks teachability",
+            "injures others through contempt",
+            "makes listening difficult",
+            "turns confidence into superiority"
+          ],
+          "love_repair": [
+            "move toward humility and listening",
+            "honor others without ranking beneath self",
+            "practice accurate self-estimation",
+            "replace superiority with gentleness"
+          ],
+          "repair_steps": [
+            "name the dismissive posture",
+            "confess contempt and self-importance",
+            "listen without interrupting or ranking",
+            "practice humble speech and response"
+          ],
+          "encouragements": [
+            "Humility does not require self-hatred. It requires truth about God, self, and others."
+          ],
+          "scriptures": [
+            { "ref": "Proverbs 16:18" },
+            { "ref": "Romans 12:3" },
+            { "ref": "Philippians 2:3" }
+          ],
+          "reflection_questions": [
+            "Where do I assume I am above listening?",
+            "How does superiority show up in my tone, posture, or choices?"
+          ]
+        },
+        {
+          "key": "self_exaltation",
+          "title": "Self Exaltation",
+          "definition": "Seeking to elevate self into a place of special significance, superiority, or centrality.",
+          "common_forms": [
+            "needing to feel above others",
+            "making self the center of narratives",
+            "using position for elevation",
+            "demanding special treatment"
+          ],
+          "harm_impact": [
+            "turns relationships into orbit around self",
+            "makes love secondary to importance",
+            "feeds entitlement",
+            "disorders place and proportion"
+          ],
+          "love_repair": [
+            "move toward humility and shared dignity",
+            "let God assign significance rather than grasping for it",
+            "practice service over centrality",
+            "replace entitlement with gratitude"
+          ],
+          "repair_steps": [
+            "name where self-importance is driving behavior",
+            "confess entitlement and centrality-seeking",
+            "step out of being the reference point in every situation",
+            "practice ordinary service and gratitude"
+          ],
+          "encouragements": [
+            "Peace grows where the self no longer has to be large to feel secure."
+          ],
+          "scriptures": [
+            { "ref": "Luke 14:7-11" },
+            { "ref": "James 4:10" },
+            { "ref": "Philippians 2:5-8" }
+          ],
+          "reflection_questions": [
+            "Where do I demand to matter more than others?",
+            "How often do I make myself the center of interpretation or attention?"
+          ]
+        },
+        {
+          "key": "control",
+          "title": "Control",
+          "definition": "Refusing surrender and seeking to dominate circumstances, outcomes, or people rather than trusting God.",
+          "common_forms": [
+            "refusing surrender to God",
+            "manipulating circumstances",
+            "dominating relationships"
+          ],
+          "harm_impact": [
+            "creates pressure",
+            "erodes trust",
+            "restricts others' agency",
+            "reveals fear-governed self-protection"
+          ],
+          "love_repair": [
+            "move toward surrendered trust",
+            "honor other people's agency",
+            "replace pressure with gentleness",
+            "practice dependence on God instead of domination"
+          ],
+          "repair_steps": [
+            "name the control pattern plainly",
+            "confess fear-driven domination",
+            "release the demand to govern everything",
+            "practice patience, gentleness, and prayerful trust"
+          ],
+          "encouragements": [
+            "Control often feels like safety, but it cannot give the peace that surrendered trust can."
+          ],
+          "scriptures": [
+            { "ref": "Matthew 6:25-34" },
+            { "ref": "James 4:13-16" },
+            { "ref": "Psalm 46:10" }
+          ],
+          "reflection_questions": [
+            "Where am I demanding outcomes instead of trusting God?",
+            "How has fear made me press on people or circumstances?"
+          ]
+        },
+        {
+          "key": "domination",
+          "title": "Domination",
+          "definition": "Using position, force, pressure, or influence to control or subdue other people for self-serving ends.",
+          "common_forms": [
+            "coercion",
+            "relational pressure",
+            "heavy-handed leadership",
+            "power used to force compliance"
+          ],
+          "harm_impact": [
+            "erases safety",
+            "uses power against dignity",
+            "restricts another person's freedom and voice",
+            "turns leadership into control"
+          ],
+          "love_repair": [
+            "move toward servant-hearted strength",
+            "use influence to protect rather than press",
+            "practice gentleness with authority",
+            "honor consent, agency, and dignity"
+          ],
+          "repair_steps": [
+            "name the coercive pattern clearly",
+            "stop pressuring behavior",
+            "accept boundaries and accountability",
+            "relearn the use of strength as protection rather than force"
+          ],
+          "encouragements": [
+            "Strength becomes safe when it is disciplined by love, restraint, and humility."
+          ],
+          "scriptures": [
+            { "ref": "Mark 10:42-45" },
+            { "ref": "1 Peter 5:2-3" },
+            { "ref": "Micah 6:8" }
+          ],
+          "reflection_questions": [
+            "Where have I used influence to press rather than serve?",
+            "What does my power feel like to the people under it?"
+          ]
+        },
+        {
+          "key": "self_worship",
+          "title": "Self Worship",
+          "definition": "Treating self as ultimate reference point, final authority, or highest concern.",
+          "common_forms": [
+            "self-centered identity",
+            "life ordered around self-protection",
+            "self as final moral reference",
+            "treating personal desire as supreme"
+          ],
+          "harm_impact": [
+            "puts self where God belongs",
+            "reorders love around self-preservation",
+            "makes obedience feel negotiable",
+            "turns relationships into instruments of self"
+          ],
+          "love_repair": [
+            "move toward worship of God rather than self-reference",
+            "practice surrender instead of self-centrality",
+            "honor God as final authority",
+            "replace self-preservation with faithful obedience"
+          ],
+          "repair_steps": [
+            "identify where self has become the final reference point",
+            "confess self-centrality plainly",
+            "submit desires and plans to God",
+            "practice acts of obedience that decenter self"
+          ],
+          "encouragements": [
+            "Freedom begins where the self is no longer asked to be god."
+          ],
+          "scriptures": [
+            { "ref": "Romans 12:1-2" },
+            { "ref": "Luke 9:23" },
+            { "ref": "Romans 1:25" }
+          ],
+          "reflection_questions": [
+            "Where am I acting as though my will is ultimate?",
+            "How often do I evaluate everything by what it does for me?"
+          ]
+        },
+        {
+          "key": "rebellion",
+          "title": "Rebellion",
+          "definition": "Deliberate resistance to God's authority, conviction, or commands.",
+          "common_forms": [
+            "deliberate disobedience",
+            "hardening the heart",
+            "persisting in known sin",
+            "rejecting conviction"
+          ],
+          "harm_impact": [
+            "deadens conscience",
+            "normalizes resistance to God",
+            "makes repentance harder over time",
+            "turns conviction into something to evade"
+          ],
+          "love_repair": [
+            "soften quickly under conviction",
+            "return to obedience without delay",
+            "stop bargaining with clear commands",
+            "practice submission to God with honesty"
+          ],
+          "repair_steps": [
+            "name the area of direct disobedience",
+            "stop excusing or minimizing it",
+            "confess without self-justification",
+            "take one immediate step of obedience"
+          ],
+          "encouragements": [
+            "Conviction is mercy. God exposes rebellion to bring people back, not merely to condemn."
+          ],
+          "scriptures": [
+            { "ref": "1 Samuel 15:23" },
+            { "ref": "Hebrews 3:15" },
+            { "ref": "Isaiah 1:18-20" }
+          ],
+          "reflection_questions": [
+            "Where am I resisting what I already know is right?",
+            "What excuse do I keep using to stay unchanged?"
+          ]
+        },
+        {
+          "key": "seeking_power_over_others",
+          "title": "Seeking Power Over Others",
+          "definition": "Desiring influence, superiority, or authority over other people for self-exaltation, security, or control.",
+          "common_forms": [
+            "needing to be above others",
+            "wanting relational leverage",
+            "using authority to secure self",
+            "desiring status through dominance"
+          ],
+          "harm_impact": [
+            "turns people into subordinates of the self",
+            "feeds rivalry and fear",
+            "distorts authority into self-protection",
+            "makes mutuality difficult"
+          ],
+          "love_repair": [
+            "move toward service, humility, and shared dignity",
+            "use authority as stewardship rather than self-enlargement",
+            "release the need to be above",
+            "practice mutual honor and restraint"
+          ],
+          "repair_steps": [
+            "name the desire for leverage honestly",
+            "confess superiority-seeking motives",
+            "renounce the need to secure self by being above others",
+            "practice service where you previously sought dominance"
+          ],
+          "encouragements": [
+            "Greatness in the kingdom is measured by humble service, not by how far above others you can stand."
+          ],
+          "scriptures": [
+            { "ref": "Mark 10:42-45" },
+            { "ref": "Philippians 2:3-8" },
+            { "ref": "Matthew 23:11-12" }
+          ],
+          "reflection_questions": [
+            "Where do I want power because I fear weakness or vulnerability?",
+            "How am I using hierarchy or leverage to secure myself?"
+          ]
+        }
+      ]
+    }
+  ]
+},
+"heart_idols_model": {
+  "description": "Core motivational idols that drive sinful behavior patterns in the heart. Each cell opens into a modal with manifestations, harms, Scripture, love refocus, and repentance direction.",
+  "sections": [
+    {
+      "key": "core_idols",
+      "title": "Core Idols",
+      "intro": "These are ruling desires that often sit underneath recurring sinful patterns. The issue is not merely behavior, but what the heart insists on having in order to feel safe, important, comforted, or in control.",
+      "items": [
+        {
+          "key": "control",
+          "title": "Control",
+          "definition": "Desire to dominate circumstances or people rather than trusting God.",
+          "common_forms": [
+            "manipulation",
+            "domination",
+            "micromanaging others",
+            "refusal to surrender outcomes",
+            "coercion",
+            "anger when plans are disrupted"
+          ],
+          "harm_impact": [
+            "creates pressure instead of peace",
+            "erodes trust in relationships",
+            "restricts other people's agency",
+            "turns fear into domination",
+            "makes surrender feel intolerable"
+          ],
+          "love_repair": [
+            "move toward surrendered trust in God",
+            "honor other people's agency and dignity",
+            "replace pressure with gentleness",
+            "practice patience instead of domination",
+            "let obedience matter more than outcome-management"
+          ],
+          "repair_steps": [
+            "name the control pattern plainly",
+            "confess where fear has been driving domination",
+            "stop pressuring or over-governing others",
+            "release one concrete outcome you have been gripping",
+            "practice prayerful surrender in repeated moments"
+          ],
+          "empathy_prompts": [
+            "How might my need to control feel to the people around me?",
+            "Where might others feel compressed, watched, or overridden by me?"
+          ],
+          "encouragements": [
+            "Control often feels like safety, but it cannot give the peace that surrendered trust can.",
+            "God's rule is not threatened by your uncertainty."
+          ],
+          "opposite_fruit": [
+            "peace",
+            "faithfulness",
+            "gentleness"
+          ],
+          "scriptures": [
+            { "ref": "Matthew 6:25-34" },
+            { "ref": "James 4:13-16" },
+            { "ref": "Psalm 46:10" },
+            { "ref": "Proverbs 3:5-6" }
+          ],
+          "reflection_questions": [
+            "Where am I demanding outcomes instead of trusting God?",
+            "How has fear made me press on people or circumstances?",
+            "What feels unbearable unless I remain in charge?"
+          ]
+        },
+        {
+          "key": "approval",
+          "title": "Approval",
+          "definition": "Desire to be accepted, admired, or validated above obedience to God.",
+          "common_forms": [
+            "people pleasing",
+            "fear of rejection",
+            "performative righteousness",
+            "seeking praise",
+            "avoiding truth to maintain approval"
+          ],
+          "harm_impact": [
+            "compromises truth to preserve image",
+            "makes obedience negotiable when acceptance is threatened",
+            "creates instability because identity depends on response from others",
+            "encourages hypocrisy and concealment",
+            "turns relationships into stages for validation"
+          ],
+          "love_repair": [
+            "move toward faithful obedience before God",
+            "tell the truth even when approval may be lost",
+            "receive identity from God rather than applause",
+            "practice sincerity over performance",
+            "honor love and truth above likability"
+          ],
+          "repair_steps": [
+            "name where approval is governing your choices",
+            "confess where you have bent truth to stay accepted",
+            "stop performing righteousness for image",
+            "practice one concrete act of honest faithfulness",
+            "let discomfort teach you that obedience can survive disapproval"
+          ],
+          "empathy_prompts": [
+            "How has my need to be liked made me less truthful or less trustworthy?",
+            "Where have I protected admiration at another person's expense?"
+          ],
+          "encouragements": [
+            "Faithfulness often costs applause, but it restores integrity.",
+            "You do not need universal approval to walk in truth."
+          ],
+          "opposite_fruit": [
+            "faithfulness",
+            "love",
+            "self-control"
+          ],
+          "scriptures": [
+            { "ref": "Galatians 1:10" },
+            { "ref": "John 12:43" },
+            { "ref": "Proverbs 29:25" },
+            { "ref": "Colossians 3:23-24" }
+          ],
+          "reflection_questions": [
+            "Whose approval most controls me?",
+            "What truth do I avoid because I fear rejection?",
+            "Where am I performing instead of living honestly?"
+          ]
+        },
+        {
+          "key": "comfort",
+          "title": "Comfort",
+          "definition": "Desire for ease, pleasure, or escape rather than endurance and obedience.",
+          "common_forms": [
+            "addiction",
+            "overconsumption",
+            "avoidance of responsibility",
+            "seeking pleasure to escape pain",
+            "apathy"
+          ],
+          "harm_impact": [
+            "makes suffering or difficulty feel intolerable",
+            "turns relief into a governing principle",
+            "feeds passivity and avoidance",
+            "weakens endurance and self-control",
+            "uses comfort as an escape from truth or responsibility"
+          ],
+          "love_repair": [
+            "move toward endurance, self-control, and faithful responsibility",
+            "receive comfort as a gift rather than a god",
+            "practice obedience even when it is costly or uncomfortable",
+            "replace numbing with honest dependence on God",
+            "let pain drive prayer instead of indulgence"
+          ],
+          "repair_steps": [
+            "identify the comfort-seeking pattern clearly",
+            "confess where you have used ease or escape as a master",
+            "interrupt one indulgent avoidance routine",
+            "practice one concrete act of responsibility instead of escape",
+            "build small habits of endurance and restraint"
+          ],
+          "empathy_prompts": [
+            "How has my comfort-seeking made me less dependable for other people?",
+            "Where has my avoidance created extra weight for others?"
+          ],
+          "encouragements": [
+            "Comfort is a gift, but it becomes destructive when it rules the heart.",
+            "Endurance grows through repeated acts of faithful discomfort."
+          ],
+          "opposite_fruit": [
+            "self-control",
+            "patience",
+            "goodness"
+          ],
+          "scriptures": [
+            { "ref": "Luke 9:23" },
+            { "ref": "Romans 5:3-5" },
+            { "ref": "Titus 2:11-12" },
+            { "ref": "Hebrews 12:11" }
+          ],
+          "reflection_questions": [
+            "Where do I seek ease instead of obedience?",
+            "What pain or pressure do I keep trying to escape rather than face truthfully?",
+            "How has comfort become a functional master?"
+          ]
+        },
+        {
+          "key": "power",
+          "title": "Power",
+          "definition": "Desire for influence, status, or dominance over others.",
+          "common_forms": [
+            "seeking prominence",
+            "using leadership for self-exaltation",
+            "domination",
+            "coercive influence",
+            "status-driven control"
+          ],
+          "harm_impact": [
+            "turns authority into self-enlargement",
+            "makes people feel used or managed",
+            "feeds rivalry and superiority",
+            "converts influence into control rather than stewardship",
+            "makes service secondary to status"
+          ],
+          "love_repair": [
+            "move toward servant-hearted strength",
+            "use authority to protect rather than dominate",
+            "practice humility with influence",
+            "seek faithfulness over prominence",
+            "honor mutual dignity instead of leveraging position"
+          ],
+          "repair_steps": [
+            "name where influence has become self-serving",
+            "confess superiority-seeking motives",
+            "stop using pressure, position, or force for self-exaltation",
+            "practice one concrete act of hidden service",
+            "relearn authority as stewardship rather than entitlement"
+          ],
+          "empathy_prompts": [
+            "What does my strength or leadership feel like to the people under it?",
+            "Where have I used influence to get compliance instead of giving care?"
+          ],
+          "encouragements": [
+            "Strength becomes safe when it is disciplined by humility, love, and restraint.",
+            "Authority is most trustworthy when it does not need to prove itself."
+          ],
+          "opposite_fruit": [
+            "gentleness",
+            "kindness",
+            "love"
+          ],
+          "scriptures": [
+            { "ref": "Mark 10:42-45" },
+            { "ref": "1 Peter 5:2-3" },
+            { "ref": "Philippians 2:3-8" },
+            { "ref": "Micah 6:8" }
+          ],
+          "reflection_questions": [
+            "Where do I want to be above others rather than faithfully serve?",
+            "How have I used position, influence, or force to secure myself?",
+            "Do people feel safe around my strength?"
+          ]
+        },
+        {
+          "key": "security",
+          "title": "Security",
+          "definition": "Desire for safety, predictability, or stability apart from trusting God.",
+          "common_forms": [
+            "fear-driven self-protection",
+            "hoarding",
+            "anxiety-driven planning",
+            "withholding generosity to preserve safety",
+            "treating certainty as necessary for obedience"
+          ],
+          "harm_impact": [
+            "makes fear a ruling force",
+            "shrinks generosity and courage",
+            "turns prudence into self-protective control",
+            "keeps obedience hostage to certainty",
+            "makes trust feel risky and therefore avoidable"
+          ],
+          "love_repair": [
+            "move toward trust, generosity, and courageous faithfulness",
+            "practice obedience without demanding full certainty",
+            "receive safety from God rather than from total control",
+            "replace hoarding with stewardship",
+            "let prudence serve faith instead of replacing it"
+          ],
+          "repair_steps": [
+            "name the fear beneath the security pattern",
+            "confess where self-protection has outranked trust",
+            "take one concrete step of generosity or obedience",
+            "release one false safety strategy that is governing you",
+            "practice prayerful dependence in uncertainty"
+          ],
+          "empathy_prompts": [
+            "How has my fear made me less open, less generous, or less trustworthy?",
+            "Where has my demand for safety increased pressure on others?"
+          ],
+          "encouragements": [
+            "Trust does not require pretending risk is unreal; it means refusing to let fear become lord.",
+            "God often grows courage before He gives clarity."
+          ],
+          "opposite_fruit": [
+            "peace",
+            "faithfulness",
+            "goodness"
+          ],
+          "scriptures": [
+            { "ref": "Matthew 6:19-34" },
+            { "ref": "Hebrews 13:5-6" },
+            { "ref": "Psalm 56:3-4" },
+            { "ref": "Isaiah 26:3" }
+          ],
+          "reflection_questions": [
+            "What do I believe I must secure before I can obey?",
+            "Where has fear-driven self-protection replaced faith?",
+            "How is my demand for certainty shaping my decisions?"
+          ]
+        }
+      ]
+    }
+  ]
+}, 
+"fruit_vs_flesh_crossmap": {
+  "description": "Maps recurring sin patterns to flesh expressions, heart roots, heart idols, and the fruit of the Spirit that most directly opposes and heals them.",
+  "sections": [
+    {
+      "key": "pride_and_self_exaltation",
+      "title": "Pride And Self-Exaltation",
+      "intro": "Patterns where self is lifted up through superiority, image, rivalry, or self-importance.",
+      "items": [
+        {
+          "key": "pride_and_self_exaltation",
+          "title": "Pride And Self-Exaltation",
+          "definition": "A cluster of sins rooted in self-elevation, comparison, superiority, and the desire to be above others.",
+          "common_forms": [
+            "pride",
+            "self-righteousness",
+            "arrogance",
+            "boastfulness",
+            "cold superiority",
+            "spiritual superiority"
+          ],
+          "flesh_forms": [
+            "rivalries",
+            "dissensions",
+            "divisions",
+            "conceit"
+          ],
+          "harm_impact": [
+            "blocks humility and teachability",
+            "turns relationships into comparison fields",
+            "feeds contempt and rivalry",
+            "makes repentance feel beneath the self"
+          ],
+          "love_repair": [
+            "move from self-exaltation to humility, teachability, and honoring others",
+            "replace comparison with sincere love",
+            "let grace remove boasting",
+            "practice repentance rather than self-justification"
+          ],
+          "repair_steps": [
+            "name the superiority pattern clearly",
+            "confess self-exaltation without softening it",
+            "stop using others as mirrors for your value",
+            "practice hidden faithfulness and honoring speech"
+          ],
+          "encouragements": [
+            "Grace undercuts pride by making boasting empty and repentance safe."
+          ],
+          "opposite_fruit": [
+            "gentleness",
+            "love",
+            "faithfulness"
+          ],
+          "scriptures": [
+            { "ref": "Philippians 2:3-8" },
+            { "ref": "James 4:6" },
+            { "ref": "Luke 18:9-14" }
+          ],
+          "reflection_questions": [
+            "Where do I want to be above others?",
+            "How does superiority show up in my tone, posture, or judgments?",
+            "Do I want holiness, or do I want to look holy?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "control_and_domination",
+      "title": "Control And Domination",
+      "intro": "Patterns where fear, power, or self-protection become pressure, coercion, or over-governing others.",
+      "items": [
+        {
+          "key": "control_and_domination",
+          "title": "Control And Domination",
+          "definition": "A cluster of sins rooted in pressure, coercion, domination, and fear-governed management of people or outcomes.",
+          "common_forms": [
+            "control",
+            "coercion",
+            "manipulation",
+            "domination",
+            "fear-driven control",
+            "abuse of power"
+          ],
+          "flesh_forms": [
+            "enmity",
+            "strife",
+            "fits of anger",
+            "rivalries"
+          ],
+          "harm_impact": [
+            "creates pressure instead of peace",
+            "restricts dignity and agency",
+            "uses power against vulnerability",
+            "reveals fear-governed self-protection"
+          ],
+          "love_repair": [
+            "move from pressure and domination to surrendered trust, patience, and honoring agency",
+            "replace force with gentleness",
+            "use strength to protect rather than govern for self",
+            "practice peaceable restraint"
+          ],
+          "repair_steps": [
+            "name the controlling pattern clearly",
+            "stop pressuring behavior in real time",
+            "confess fear and domination together",
+            "practice one concrete act of releasing control"
+          ],
+          "encouragements": [
+            "Strength becomes safe when it is disciplined by humility, gentleness, and restraint."
+          ],
+          "opposite_fruit": [
+            "gentleness",
+            "peace",
+            "self-control"
+          ],
+          "scriptures": [
+            { "ref": "Mark 10:42-45" },
+            { "ref": "James 3:17" },
+            { "ref": "Galatians 5:22-23" }
+          ],
+          "reflection_questions": [
+            "Where am I using pressure rather than love?",
+            "What does my strength feel like to other people?",
+            "What fear is underneath the need to dominate?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "envy_and_covetousness",
+      "title": "Envy And Covetousness",
+      "intro": "Patterns where comparison, grasping, and resentment of another person's good displace gratitude and contentment.",
+      "items": [
+        {
+          "key": "envy_and_covetousness",
+          "title": "Envy And Covetousness",
+          "definition": "A cluster of sins rooted in grasping, comparison, resentment, and desire for what belongs to another.",
+          "common_forms": [
+            "envy",
+            "covetousness",
+            "greed",
+            "materialism",
+            "jealousy",
+            "status competition"
+          ],
+          "flesh_forms": [
+            "envy",
+            "jealousy",
+            "rivalries",
+            "conceit"
+          ],
+          "harm_impact": [
+            "feeds discontent and rivalry",
+            "turns another person's good into irritation",
+            "shrinks gratitude",
+            "makes enough feel like never enough"
+          ],
+          "love_repair": [
+            "move from comparison and grasping to gratitude, generosity, and contentment",
+            "rejoice in another person's good",
+            "replace grasping with stewardship",
+            "practice blessing instead of rivalry"
+          ],
+          "repair_steps": [
+            "name the comparison story honestly",
+            "confess resentment of another person's good",
+            "practice gratitude concretely",
+            "choose generosity where grasping has ruled"
+          ],
+          "encouragements": [
+            "Contentment is learned as the heart is retrained away from comparison and toward trust."
+          ],
+          "opposite_fruit": [
+            "love",
+            "goodness",
+            "peace"
+          ],
+          "scriptures": [
+            { "ref": "Exodus 20:17" },
+            { "ref": "James 3:14-16" },
+            { "ref": "Hebrews 13:5" }
+          ],
+          "reflection_questions": [
+            "Whose good feels threatening to me?",
+            "What am I resentfully wanting that is not mine?",
+            "Where has comparison weakened gratitude?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "anger_and_retribution",
+      "title": "Anger And Retribution",
+      "intro": "Patterns where grievance hardens into revenge, rage, harshness, or retaliatory desire.",
+      "items": [
+        {
+          "key": "anger_and_retribution",
+          "title": "Anger And Retribution",
+          "definition": "A cluster of sins rooted in retaliatory anger, rage, revenge desire, and harm-oriented response to injury.",
+          "common_forms": [
+            "wrath",
+            "rage",
+            "revenge",
+            "malice",
+            "hostility",
+            "violent reaction"
+          ],
+          "flesh_forms": [
+            "fits of anger",
+            "enmity",
+            "strife",
+            "murderous hatred"
+          ],
+          "harm_impact": [
+            "turns injury into retaliation",
+            "keeps grievance active",
+            "replaces justice with vengeance",
+            "makes mercy feel intolerable"
+          ],
+          "love_repair": [
+            "move from retaliation to patience, mercy, and truthful restraint",
+            "refuse revenge fantasies",
+            "practice peacemaking and self-control",
+            "let justice remain truthful without becoming personal vengeance"
+          ],
+          "repair_steps": [
+            "name the revenge impulse plainly",
+            "confess the desire to injure or see injury",
+            "interrupt retaliation rehearsals",
+            "practice prayerful restraint and peaceable truth"
+          ],
+          "encouragements": [
+            "Refusing malice does not erase justice. It refuses to let hatred become your method."
+          ],
+          "opposite_fruit": [
+            "patience",
+            "gentleness",
+            "peace"
+          ],
+          "scriptures": [
+            { "ref": "Romans 12:17-21" },
+            { "ref": "Ephesians 4:31-32" },
+            { "ref": "James 1:19-20" }
+          ],
+          "reflection_questions": [
+            "Where do I secretly want someone to suffer?",
+            "What grievance am I using to justify hardness?",
+            "Am I calling revenge by a more acceptable name?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sexual_impurity_and_objectification",
+      "title": "Sexual Impurity And Objectification",
+      "intro": "Patterns where desire becomes indulgence, fantasy, objectification, or exploitation instead of holy love.",
+      "items": [
+        {
+          "key": "sexual_impurity_and_objectification",
+          "title": "Sexual Impurity And Objectification",
+          "definition": "A cluster of sins rooted in lust, impurity, consumption, and the reduction of people into sexual objects.",
+          "common_forms": [
+            "sexual immorality",
+            "pornography",
+            "sexual fantasy",
+            "adultery of the heart",
+            "objectification",
+            "sexual exploitation"
+          ],
+          "flesh_forms": [
+            "sexual immorality",
+            "impurity",
+            "sensuality",
+            "passion"
+          ],
+          "harm_impact": [
+            "disconnects desire from covenant and holiness",
+            "trains the heart in objectification",
+            "uses people rather than honoring them",
+            "feeds secrecy, shame, and fragmentation"
+          ],
+          "love_repair": [
+            "move from consumption to purity, dignity, and covenant honor",
+            "honor people as image-bearers rather than objects",
+            "replace secrecy with honesty",
+            "practice disciplined redirection of attention and desire"
+          ],
+          "repair_steps": [
+            "name the sexual pattern without euphemism",
+            "interrupt access and routines that feed it",
+            "confess with precision",
+            "build habits of restraint, honesty, and accountability"
+          ],
+          "encouragements": [
+            "Desire can be retrained, but retraining usually requires both repentance and practical interruption."
+          ],
+          "opposite_fruit": [
+            "self-control",
+            "love",
+            "faithfulness"
+          ],
+          "scriptures": [
+            { "ref": "1 Thessalonians 4:3-5" },
+            { "ref": "Matthew 5:27-28" },
+            { "ref": "Job 31:1" }
+          ],
+          "reflection_questions": [
+            "Where have I allowed desire to turn another person into an object?",
+            "What visual or mental habits are shaping my desire?",
+            "What do I keep calling small that is actively shaping me?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "deception_and_falsehood",
+      "title": "Deception And Falsehood",
+      "intro": "Patterns where concealment, distortion, manipulation, or image-management replace truthful love.",
+      "items": [
+        {
+          "key": "deception_and_falsehood",
+          "title": "Deception And Falsehood",
+          "definition": "A cluster of sins rooted in concealment, distortion, false presentation, and self-protective manipulation of truth.",
+          "common_forms": [
+            "lying",
+            "deception",
+            "hypocrisy",
+            "concealment",
+            "distortion",
+            "fraud"
+          ],
+          "flesh_forms": [
+            "deceit",
+            "false witness",
+            "slander",
+            "obscene talk"
+          ],
+          "harm_impact": [
+            "damages trust",
+            "creates confusion and instability",
+            "uses truth as a tool rather than an obligation",
+            "protects self-image at others' expense"
+          ],
+          "love_repair": [
+            "move from concealment to honesty, clarity, and integrity",
+            "replace distortion with plain truth",
+            "practice sincerity instead of performance",
+            "let confession be specific rather than vague"
+          ],
+          "repair_steps": [
+            "name the distortion or concealment clearly",
+            "stop managing perception through half-truths",
+            "tell the truth where truth is owed",
+            "practice consistency between private and public reality"
+          ],
+          "encouragements": [
+            "Truth restores stability. Honest speech is one of the clearest forms of love."
+          ],
+          "opposite_fruit": [
+            "faithfulness",
+            "goodness",
+            "love"
+          ],
+          "scriptures": [
+            { "ref": "Ephesians 4:25" },
+            { "ref": "Colossians 3:9-10" },
+            { "ref": "Proverbs 12:22" }
+          ],
+          "reflection_questions": [
+            "Where am I using distortion to protect myself?",
+            "What truth am I trying to manage instead of tell?",
+            "How has image become more important than integrity?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sloth_and_omission",
+      "title": "Sloth And Omission",
+      "intro": "Patterns where apathy, passivity, or avoidance lead to neglected responsibility and withheld good.",
+      "items": [
+        {
+          "key": "sloth_and_omission",
+          "title": "Sloth And Omission",
+          "definition": "A cluster of sins rooted in apathy, refusal of responsibility, and failure to pursue the good that love requires.",
+          "common_forms": [
+            "sloth",
+            "spiritual apathy",
+            "neglect of responsibility",
+            "withholding help",
+            "passivity in justice",
+            "failure to reconcile"
+          ],
+          "flesh_forms": [
+            "apathy",
+            "cowardly withdrawal",
+            "refusal to pursue good",
+            "neglect"
+          ],
+          "harm_impact": [
+            "leaves good undone",
+            "abandons real needs",
+            "turns compassion into passivity",
+            "lets avoidable harm continue"
+          ],
+          "love_repair": [
+            "move from apathy to faithful action, mercy, and responsibility",
+            "practice concrete follow-through",
+            "notice and answer real needs",
+            "replace avoidance with responsive care"
+          ],
+          "repair_steps": [
+            "identify the responsibility being avoided",
+            "confess passive harm honestly",
+            "take one concrete step of follow-through",
+            "build repeatable habits of presence and stewardship"
+          ],
+          "encouragements": [
+            "Love is not only avoiding evil. It is also doing the good that is yours to do."
+          ],
+          "opposite_fruit": [
+            "goodness",
+            "faithfulness",
+            "kindness"
+          ],
+          "scriptures": [
+            { "ref": "James 2:15-17" },
+            { "ref": "Proverbs 24:30-34" },
+            { "ref": "Galatians 6:9-10" }
+          ],
+          "reflection_questions": [
+            "Where has my passivity harmed others?",
+            "What good am I delaying because it is costly or inconvenient?",
+            "Where have I called avoidance wisdom?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hardheartedness_and_lack_of_mercy",
+      "title": "Hardheartedness And Lack Of Mercy",
+      "intro": "Patterns where compassion is withheld and another person's pain is met with coldness, contempt, or indifference.",
+      "items": [
+        {
+          "key": "hardheartedness_and_lack_of_mercy",
+          "title": "Hardheartedness And Lack Of Mercy",
+          "definition": "A cluster of sins rooted in indifference, lack of empathy, unforgiveness, contempt, and refusal of tenderhearted response.",
+          "common_forms": [
+            "hardheartedness",
+            "lack of empathy",
+            "indifference to suffering",
+            "refusal to forgive",
+            "enjoying others' misfortune",
+            "coldness toward pain"
+          ],
+          "flesh_forms": [
+            "enmity",
+            "malice",
+            "bitterness",
+            "hatred"
+          ],
+          "harm_impact": [
+            "freezes compassion",
+            "extends injury",
+            "makes mercy feel optional",
+            "turns another person's pain into distance or leverage"
+          ],
+          "love_repair": [
+            "move from coldness to mercy, compassion, and tenderheartedness",
+            "let another person's pain matter",
+            "practice forgiveness without denial of truth",
+            "choose responsive care over indifference"
+          ],
+          "repair_steps": [
+            "name where the heart has gone cold",
+            "confess contempt, indifference, or stored resentment",
+            "listen to pain without self-centering",
+            "practice one concrete act of compassion or mercy"
+          ],
+          "encouragements": [
+            "Softheartedness is not weakness. It is strength shaped by mercy."
+          ],
+          "opposite_fruit": [
+            "kindness",
+            "gentleness",
+            "love"
+          ],
+          "scriptures": [
+            { "ref": "Ephesians 4:31-32" },
+            { "ref": "Colossians 3:12-13" },
+            { "ref": "Proverbs 21:13" }
+          ],
+          "reflection_questions": [
+            "Where have I chosen emotional distance over mercy?",
+            "What pain do I keep treating as inconvenient instead of weighty?",
+            "Have I confused hardness with strength?"
+          ]
+        }
+      ]
+    }
+  ]
+}}}

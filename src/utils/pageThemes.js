@@ -1,8 +1,73 @@
 // src/utils/pageThemes.js
-import { cellColor } from "./color.js";
+
+function getQuadrantKey(x = 0, y = 0) {
+  if (x < 0 && y > 0) return "topLeft";
+  if (x > 0 && y > 0) return "topRight";
+  if (x < 0 && y < 0) return "bottomLeft";
+  return "bottomRight";
+}
+
+function quadrantTint(mode, x = 0, y = 0) {
+  const q = getQuadrantKey(x, y);
+  const modeKey = mode === "checkin" ? "gratitude" : mode;
+
+  const MODE_TINTS = {
+    nvc: {
+      topLeft: "#c53a32",
+      topRight: "#d8b33f",
+      bottomLeft: "#4d7fc7",
+      bottomRight: "#6e4fb4",
+    },
+    violent: {
+      topLeft: "#c53a32",
+      topRight: "#d8b33f",
+      bottomLeft: "#4d7fc7",
+      bottomRight: "#6e4fb4",
+    },
+    gratitude: {
+      topLeft: "#e58a2f",
+      topRight: "#d8b33f",
+      bottomLeft: "#6f56b8",
+      bottomRight: "#4d7fc7",
+    },
+    prayer: {
+      topLeft: "#d96aa6",
+      topRight: "#d8b33f",
+      bottomLeft: "#4d7fc7",
+      bottomRight: "#59a96a",
+    },
+  };
+
+  return MODE_TINTS[modeKey]?.[q] || "#4d7fc7";
+}
+
+function tintGlow(hex, alpha = "33") {
+  return `${hex}${alpha}`;
+}
+
+export function getCumulativeSinsPageBackground() {
+  return {
+    "--page-bg": "#8f4a5e",
+    "--page-bg-gradient": `
+      radial-gradient(circle at 20% 18%, rgba(160,72,96,0.26) 0%, transparent 28%),
+      radial-gradient(circle at 78% 18%, rgba(138,73,103,0.24) 0%, transparent 30%),
+      radial-gradient(circle at 76% 82%, rgba(196,126,146,0.22) 0%, transparent 28%),
+      radial-gradient(circle at 24% 84%, rgba(236,204,214,0.18) 0%, transparent 24%),
+      linear-gradient(
+        180deg,
+        #6f3147 0%,
+        #8f4a5e 38%,
+        #b56b82 70%,
+        #dcc3cf 100%
+      )
+    `,
+    backgroundSize: "170% 170%, 180% 180%, 180% 180%, 170% 170%, 100% 100%",
+    backgroundPosition: "0% 0%, 100% 0%, 100% 100%, 0% 100%, 0 0",
+  };
+}
 
 export function getGridPageBackground(selected) {
-  const nonviolentBase = `
+  const base = `
     linear-gradient(
       180deg,
       #8aa4ea 0%,
@@ -16,37 +81,37 @@ export function getGridPageBackground(selected) {
     return {
       "--page-bg": "#b9c7f0",
       "--page-bg-gradient": `
-        radial-gradient(circle at 20% 22%, rgba(138,164,234,0.30) 0%, transparent 28%),
-        radial-gradient(circle at 78% 18%, rgba(185,199,240,0.28) 0%, transparent 30%),
-        radial-gradient(circle at 76% 76%, rgba(216,212,242,0.24) 0%, transparent 28%),
-        radial-gradient(circle at 24% 84%, rgba(235,224,210,0.20) 0%, transparent 24%),
-        ${nonviolentBase}
+        radial-gradient(circle at 18% 18%, rgba(197,58,50,0.16) 0%, transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(216,179,63,0.16) 0%, transparent 24%),
+        radial-gradient(circle at 18% 82%, rgba(77,127,199,0.14) 0%, transparent 24%),
+        radial-gradient(circle at 82% 82%, rgba(110,79,180,0.14) 0%, transparent 24%),
+        ${base}
       `,
-      backgroundSize: "170% 170%, 180% 180%, 180% 180%, 170% 170%, 100% 100%",
-      backgroundPosition: "0% 0%, 100% 0%, 100% 100%, 0% 100%, 0 0",
+      backgroundSize: "170% 170%, 170% 170%, 170% 170%, 170% 170%, 100% 100%",
+      backgroundPosition: "0% 0%, 100% 0%, 0% 100%, 100% 100%, 0 0",
     };
   }
 
-  const tint = cellColor(selected.x, selected.y);
+  const tint = quadrantTint("nvc", selected?.x, selected?.y);
 
   return {
     "--page-bg": "#b9c7f0",
     "--page-bg-gradient": `
-      radial-gradient(circle at 20% 22%, rgba(138,164,234,0.24) 0%, transparent 24%),
-      radial-gradient(circle at 78% 18%, rgba(185,199,240,0.22) 0%, transparent 26%),
-      radial-gradient(circle at 76% 76%, rgba(216,212,242,0.18) 0%, transparent 24%),
-      radial-gradient(circle at 24% 84%, rgba(235,224,210,0.16) 0%, transparent 20%),
-      radial-gradient(circle at 50% 52%, ${tint}33 0%, transparent 34%),
-      radial-gradient(circle at 50% 48%, rgba(255,255,255,0.18) 0%, transparent 28%),
-      ${nonviolentBase}
+      radial-gradient(circle at 18% 18%, rgba(197,58,50,0.14) 0%, transparent 22%),
+      radial-gradient(circle at 82% 18%, rgba(216,179,63,0.14) 0%, transparent 22%),
+      radial-gradient(circle at 18% 82%, rgba(77,127,199,0.12) 0%, transparent 22%),
+      radial-gradient(circle at 82% 82%, rgba(110,79,180,0.12) 0%, transparent 22%),
+      radial-gradient(circle at 50% 50%, ${tintGlow(tint, "38")} 0%, transparent 34%),
+      radial-gradient(circle at 50% 48%, rgba(255,255,255,0.16) 0%, transparent 28%),
+      ${base}
     `,
-    backgroundSize: "170% 170%, 180% 180%, 180% 180%, 170% 170%, 160% 160%, 150% 150%, 100% 100%",
-    backgroundPosition: "0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 50%, 50% 50%, 0 0",
+    backgroundSize: "170% 170%, 170% 170%, 170% 170%, 170% 170%, 155% 155%, 145% 145%, 100% 100%",
+    backgroundPosition: "0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%, 50% 50%, 0 0",
   };
 }
 
 export function getViolentPageBackground(selected) {
-  const emberSunsetBase = `
+  const base = `
     linear-gradient(
       to top,
       #9a1a3a 0%,
@@ -64,49 +129,37 @@ export function getViolentPageBackground(selected) {
     return {
       "--page-bg": "#17070b",
       "--page-bg-gradient": `
-        radial-gradient(circle at 50% 80%, rgba(255, 149, 64, 0.28) 0%, transparent 22%),
-        radial-gradient(circle at 24% 28%, rgba(149, 36, 66, 0.26) 0%, transparent 28%),
-        radial-gradient(circle at 78% 24%, rgba(108, 42, 149, 0.24) 0%, transparent 30%),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.06) 0%, transparent 42%),
-        ${emberSunsetBase}
+        radial-gradient(circle at 18% 18%, rgba(197,58,50,0.18) 0%, transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(216,179,63,0.16) 0%, transparent 24%),
+        radial-gradient(circle at 18% 82%, rgba(77,127,199,0.12) 0%, transparent 24%),
+        radial-gradient(circle at 82% 82%, rgba(110,79,180,0.12) 0%, transparent 24%),
+        ${base}
       `,
-      backgroundSize: "170% 170%, 180% 180%, 180% 180%, 150% 150%, 100% 100%",
-      backgroundPosition: "0% 0%, 0% 0%, 100% 0%, 50% 50%, 0 0",
+      backgroundSize: "170% 170%, 170% 170%, 170% 170%, 170% 170%, 100% 100%",
+      backgroundPosition: "0% 0%, 100% 0%, 0% 100%, 100% 100%, 0 0",
     };
   }
 
-  const { x = 0, y = 0 } = selected || {};
-  const quadrant =
-    x >= 0 && y >= 0 ? "Q1" :
-    x < 0 && y >= 0 ? "Q2" :
-    x < 0 && y < 0 ? "Q3" : "Q4";
-
-  const QUADRANT_COLORS = {
-    Q1: "#f2a13f",
-    Q2: "#d63b1f",
-    Q3: "#5a2a86",
-    Q4: "#3f1d5c",
-  };
-
-  const tint = QUADRANT_COLORS[quadrant] || "#8b1e2d";
+  const tint = quadrantTint("violent", selected?.x, selected?.y);
 
   return {
-    "--page-bg": tint,
+    "--page-bg": "#17070b",
     "--page-bg-gradient": `
-      radial-gradient(circle at 50% 80%, rgba(255, 149, 64, 0.24) 0%, transparent 20%),
-      radial-gradient(circle at 24% 28%, rgba(149, 36, 66, 0.18) 0%, transparent 24%),
-      radial-gradient(circle at 78% 24%, rgba(108, 42, 149, 0.18) 0%, transparent 26%),
-      radial-gradient(circle at 50% 52%, ${tint} 0%, transparent 38%),
+      radial-gradient(circle at 18% 18%, rgba(197,58,50,0.14) 0%, transparent 22%),
+      radial-gradient(circle at 82% 18%, rgba(216,179,63,0.14) 0%, transparent 22%),
+      radial-gradient(circle at 18% 82%, rgba(77,127,199,0.10) 0%, transparent 22%),
+      radial-gradient(circle at 82% 82%, rgba(110,79,180,0.10) 0%, transparent 22%),
+      radial-gradient(circle at 50% 50%, ${tintGlow(tint, "36")} 0%, transparent 36%),
       radial-gradient(circle at 50% 48%, rgba(255,255,255,0.08) 0%, transparent 28%),
-      ${emberSunsetBase}
+      ${base}
     `,
-    backgroundSize: "170% 170%, 180% 180%, 180% 180%, 160% 160%, 150% 150%, 100% 100%",
-    backgroundPosition: "0% 0%, 0% 0%, 100% 0%, 50% 50%, 50% 50%, 0 0",
+    backgroundSize: "170% 170%, 170% 170%, 170% 170%, 170% 170%, 160% 160%, 145% 145%, 100% 100%",
+    backgroundPosition: "0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%, 50% 50%, 0 0",
   };
 }
 
-export function getCheckInPageBackground() {
-  const sunsetBase = `
+export function getCheckInPageBackground(selected) {
+  const base = `
     linear-gradient(
       to top,
       #efd6a5 0%,
@@ -118,13 +171,36 @@ export function getCheckInPageBackground() {
     )
   `;
 
+  if (!selected) {
+    return {
+      "--page-bg": "#f3c9a8",
+      "--page-bg-gradient": `
+        radial-gradient(circle at 18% 18%, rgba(229,138,47,0.18) 0%, transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(216,179,63,0.16) 0%, transparent 24%),
+        radial-gradient(circle at 18% 82%, rgba(111,86,184,0.14) 0%, transparent 24%),
+        radial-gradient(circle at 82% 82%, rgba(77,127,199,0.14) 0%, transparent 24%),
+        ${base}
+      `,
+      backgroundSize: "170% 170%, 170% 170%, 170% 170%, 170% 170%, 100% 100%",
+      backgroundPosition: "0% 0%, 100% 0%, 0% 100%, 100% 100%, 0 0",
+    };
+  }
+
+  const tint = quadrantTint("gratitude", selected?.x, selected?.y);
+
   return {
     "--page-bg": "#f3c9a8",
     "--page-bg-gradient": `
-      radial-gradient(circle at 50% 78%, rgba(255, 226, 170, 0.55) 0%, transparent 26%),
-      radial-gradient(circle at 50% 38%, rgba(255, 176, 196, 0.28) 0%, transparent 34%),
-      ${sunsetBase}
+      radial-gradient(circle at 18% 18%, rgba(229,138,47,0.14) 0%, transparent 22%),
+      radial-gradient(circle at 82% 18%, rgba(216,179,63,0.14) 0%, transparent 22%),
+      radial-gradient(circle at 18% 82%, rgba(111,86,184,0.12) 0%, transparent 22%),
+      radial-gradient(circle at 82% 82%, rgba(77,127,199,0.12) 0%, transparent 22%),
+      radial-gradient(circle at 50% 50%, ${tintGlow(tint, "34")} 0%, transparent 34%),
+      radial-gradient(circle at 50% 48%, rgba(255,255,255,0.14) 0%, transparent 28%),
+      ${base}
     `,
+    backgroundSize: "170% 170%, 170% 170%, 170% 170%, 170% 170%, 155% 155%, 145% 145%, 100% 100%",
+    backgroundPosition: "0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%, 50% 50%, 0 0",
   };
 }
 
@@ -218,11 +294,11 @@ export function getPrayerPageBackground(selected) {
   const base = `
     linear-gradient(
       90deg,
-      #641d2e 0%,
-      #b83d44 18%,
-      #324c8a 38%,
-      #c3a43b 62%,
-      #5aaf5c 82%,
+      #7a3558 0%,
+      #d96aa6 18%,
+      #4d7fc7 38%,
+      #d8b33f 62%,
+      #59a96a 82%,
       #d7ecb6 100%
     )
   `;
@@ -231,10 +307,10 @@ export function getPrayerPageBackground(selected) {
     return {
       "--page-bg": "#2a3f74",
       "--page-bg-gradient": `
-        radial-gradient(circle at 16% 18%, rgba(176,62,72,0.30) 0%, transparent 24%),
-        radial-gradient(circle at 30% 80%, rgba(73,115,214,0.24) 0%, transparent 24%),
-        radial-gradient(circle at 70% 20%, rgba(222,193,74,0.24) 0%, transparent 24%),
-        radial-gradient(circle at 82% 78%, rgba(98,190,108,0.24) 0%, transparent 24%),
+        radial-gradient(circle at 16% 18%, rgba(217,106,166,0.24) 0%, transparent 24%),
+        radial-gradient(circle at 30% 80%, rgba(77,127,199,0.22) 0%, transparent 24%),
+        radial-gradient(circle at 70% 20%, rgba(216,179,63,0.22) 0%, transparent 24%),
+        radial-gradient(circle at 82% 78%, rgba(89,169,106,0.22) 0%, transparent 24%),
         ${base}
       `,
       backgroundSize: "170% 170%, 170% 170%, 170% 170%, 170% 170%, 100% 100%",
@@ -242,28 +318,21 @@ export function getPrayerPageBackground(selected) {
     };
   }
 
-  const { x = 0, y = 0 } = selected || {};
-  const tint =
-    x < 0 && y >= 0
-      ? "rgba(201,60,60,0.24)"
-      : x < 0 && y < 0
-      ? "rgba(65,112,212,0.24)"
-      : x >= 0 && y >= 0
-      ? "rgba(220,190,68,0.24)"
-      : "rgba(72,176,100,0.24)";
+  const tint = quadrantTint("prayer", selected?.x, selected?.y);
 
   return {
     "--page-bg": "#2a3f74",
     "--page-bg-gradient": `
-      radial-gradient(circle at 50% 50%, ${tint} 0%, transparent 30%),
-      radial-gradient(circle at 16% 18%, rgba(176,62,72,0.22) 0%, transparent 22%),
-      radial-gradient(circle at 30% 80%, rgba(73,115,214,0.18) 0%, transparent 22%),
-      radial-gradient(circle at 70% 20%, rgba(222,193,74,0.18) 0%, transparent 22%),
-      radial-gradient(circle at 82% 78%, rgba(98,190,108,0.18) 0%, transparent 22%),
+      radial-gradient(circle at 16% 18%, rgba(217,106,166,0.18) 0%, transparent 22%),
+      radial-gradient(circle at 30% 80%, rgba(77,127,199,0.16) 0%, transparent 22%),
+      radial-gradient(circle at 70% 20%, rgba(216,179,63,0.16) 0%, transparent 22%),
+      radial-gradient(circle at 82% 78%, rgba(89,169,106,0.16) 0%, transparent 22%),
+      radial-gradient(circle at 50% 50%, ${tintGlow(tint, "36")} 0%, transparent 30%),
+      radial-gradient(circle at 50% 48%, rgba(255,255,255,0.10) 0%, transparent 26%),
       ${base}
     `,
-    backgroundSize: "150% 150%, 170% 170%, 170% 170%, 170% 170%, 170% 170%, 100% 100%",
-    backgroundPosition: "50% 50%, 0% 0%, 0% 100%, 100% 0%, 100% 100%, 0 0",
+    backgroundSize: "170% 170%, 170% 170%, 170% 170%, 170% 170%, 150% 150%, 145% 145%, 100% 100%",
+    backgroundPosition: "0% 0%, 0% 100%, 100% 0%, 100% 100%, 50% 50%, 50% 50%, 0 0",
   };
 }
 
@@ -354,10 +423,10 @@ export function getTopNavTone(targetKey) {
         bg: `
           linear-gradient(
             135deg,
-            rgba(141,47,67,0.86) 0%,
-            rgba(57,94,168,0.84) 34%,
-            rgba(216,184,71,0.80) 68%,
-            rgba(92,168,103,0.82) 100%
+            rgba(217,106,166,0.86) 0%,
+            rgba(77,127,199,0.84) 34%,
+            rgba(216,179,63,0.80) 68%,
+            rgba(89,169,106,0.82) 100%
           )
         `,
         border: "rgba(82, 97, 170, 0.28)",
@@ -395,6 +464,8 @@ export function getTopNavTone(targetKey) {
         text: "rgba(52, 57, 93, 0.96)",
         shadow: "0 10px 22px rgba(92, 102, 162, 0.12)",
       };
+
+      
 
     default:
       return {

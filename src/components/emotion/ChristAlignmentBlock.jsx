@@ -196,6 +196,7 @@ function TheologyDropdownList({ keys, theologyLookup }) {
 export default function ChristAlignmentBlock({
   master,
   selectedKey,
+  title = "Imitator of Christ value alignment",
 }) {
   const violationsMap = master?.violations || {};
   const protocolsMap = master?.protocols || {};
@@ -239,7 +240,6 @@ export default function ChristAlignmentBlock({
 
   return (
     <Panel style={{ display: "grid", gap: 10 }}>
-      <div style={{ fontWeight: 900, marginTop: 6 }}>{title}</div>
 
       {!selectedKey ? (
         <div style={{ color: "rgba(255,255,255,0.70)", fontSize: 13 }}>
@@ -256,18 +256,20 @@ export default function ChristAlignmentBlock({
             gap: 10,
           }}
         >
-          {activeProtocol ? (
-            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.45 }}>
-              {activeProtocol.purpose || activeProtocol.intent || ""}
-            </div>
-          ) : (
-            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.70)" }}>
-              (No protocol linked for this violation.)
-            </div>
-          )}
+          
 
           {promiseKeys.length ? (
             <div style={{ display: "grid", gap: 8 }}>
+
+{activeProtocol ? (
+            <div style={{ fontSize: 15, color: "rgba(255,255,255,0.82)", lineHeight: 1.45 }}>
+              {activeProtocol.purpose || activeProtocol.intent || ""}
+            </div>
+          ) : (
+            <div style={{ fontSize: 15, color: "rgba(255,255,255,0.70)" }}>
+              (No protocol linked for this violation.)
+            </div>
+          )}
 
               {promiseKeys.map((pk) => {
                 const p = promisesLookup?.[pk];

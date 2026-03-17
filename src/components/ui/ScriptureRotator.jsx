@@ -1,29 +1,31 @@
 // src/components/ui/ScriptureRotator.jsx
 
 import { useEffect, useMemo, useState } from "react";
+import ScriptureText from "../common/ScriptureText.jsx";
 
 function normalizeScripture(item) {
   if (!item) return null;
 
   if (typeof item === "string") {
     const parts = item.split("—");
+
     if (parts.length >= 2) {
       return {
         ref: parts[0].trim(),
-        principle: parts.slice(1).join("—").trim(),
+        principle: "",
       };
     }
 
     return {
-      ref: "",
-      principle: item.trim(),
+      ref: item.trim(),
+      principle: "",
     };
   }
 
   if (typeof item === "object") {
     return {
       ref: String(item.ref || "").trim(),
-      principle: String(item.principle || item.text || "").trim(),
+      principle: "",
     };
   }
 
@@ -175,30 +177,23 @@ useEffect(() => {
       }}
     >
             {s.ref ? (
-              <div
-  style={{
-    fontWeight: 900,
-    marginBottom: 6,
-    fontSize: 18,
-    lineHeight: 1.2,
-    color: "rgba(255,255,255,0.96)",
-  }}
->
-                {s.ref}
-              </div>
+<ScriptureText reference={s.ref} showCopyright={false} />
             ) : null}
-
-            <div
-              style={{
-                fontSize: 14,
-                lineHeight: 1.55,
-                color: "rgba(255,255,255,0.92)",
-              }}
-            >
-              {s.principle}
-            </div>
           </div>
         ))}
+      </div>
+
+      <div
+        style={{
+          fontSize: 11,
+          opacity: 0.7,
+          lineHeight: 1.4,
+          marginTop: 2,
+        }}
+      >
+        Scripture quotations are from the ESV® Bible (The Holy Bible, English
+        Standard Version®), © 2001 by Crossway, a publishing ministry of Good
+        News Publishers. Used by permission. All rights reserved.
       </div>
     </div>
   );

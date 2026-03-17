@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import Header from "../components/layout/Header.jsx";
 import TopNav from "../components/layout/TopNav.jsx";
 import EmotionGrid from "../components/grid/EmotionGrid.jsx";
@@ -6,10 +6,13 @@ import PrayerModal from "../components/prayer/PrayerModal.jsx";
 import { prayerGrid, prayerMeta } from "../data/prayerGridData.js";
 import { prayerColor } from "../utils/prayerColor.js";
 import { getPrayerPageBackground } from "../utils/pageThemes.js";
+import { compactPrayerGrid } from "../data/compactPrayerGrid.js";
 
-export default function PrayerPage({ goHome }) {
+export default function PrayerPage({ goHome, showExpandedGrid, setShowExpandedGrid, }) {
   const [selected, setSelected] = useState(null);
+
   const bgStyle = useMemo(() => getPrayerPageBackground(selected), [selected]);
+
 
   return (
     <div
@@ -48,7 +51,9 @@ export default function PrayerPage({ goHome }) {
     display: "grid",
     gap: 10,
   }}
->
+  >
+
+
   <Header
     title="Emotional Prayer"
     subtitle={
@@ -62,7 +67,7 @@ export default function PrayerPage({ goHome }) {
       </span>
       }
   />
-</div>
+  </div>
 
             <div
   className="pageTopNavWrap"
@@ -73,7 +78,7 @@ export default function PrayerPage({ goHome }) {
     flexWrap: "wrap",
     marginTop: 4
   }}
->
+  >
 
               <TopNav
                 goHome={goHome}
@@ -83,7 +88,9 @@ export default function PrayerPage({ goHome }) {
                 goNeeds={() => (window.location.hash = "#/needs")}
                 goCommunication={() => (window.location.hash = "#/communication-sins")}
                 goLog={() => (window.location.hash = "#/log")}
-              />
+                expanded={showExpandedGrid}
+                onToggleExpanded={() => setShowExpandedGrid((v) => !v)}
+             />
             </div>
           </div>
         </div>
@@ -98,11 +105,15 @@ export default function PrayerPage({ goHome }) {
     padding: "10px 10px 8px",
           }}
         >
-        <EmotionGrid
+  <EmotionGrid
   grid={prayerGrid}
+  compactOverlay={!showExpandedGrid}
+  compactGrid={compactPrayerGrid}
+  compactTileSize={120}
+  compactLabelScale={1.18}
   meta={prayerMeta}
   colorFn={prayerColor}
-onPick={(value) => {
+  onPick={(value) => {
     setSelected(value);
 
     setTimeout(() => {
@@ -112,7 +123,7 @@ onPick={(value) => {
       });
     }, 80);
   }}
-    tileSize={78}
+  tileSize={78}
   labelScale={1.15}
   axisLabels={{
     tl: "Painful + activated",
@@ -125,7 +136,6 @@ onPick={(value) => {
     yNeg: "Grounded / settled",
   }}
 />
-      
       </div>
 </div>
         <PrayerModal

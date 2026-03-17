@@ -6,6 +6,8 @@ import Header from "./components/layout/Header.jsx";
 import EmotionGrid from "./components/grid/EmotionGrid.jsx";
 import EmotionModal from "./components/emotion/EmotionModal.jsx";
 import TopNav from "./components/layout/TopNav.jsx";
+import Footer from "./components/layout/Footer.jsx";
+import { clearExpiredEsvCache } from "./utils/esv.js";
 
 import ViolentPage from "./pages/ViolentPage.jsx";
 import PurposePage from "./pages/PurposePage.jsx";
@@ -14,16 +16,20 @@ import CheckInPage from "./pages/CheckInPage.jsx";
 import CommunicationSinPage from "./pages/CommunicationSinPage.jsx";
 import NeedsPage from "./pages/NeedsPage.jsx";
 import PrayerPage from "./pages/PrayerPage.jsx";
+import { compactNonviolentGrid } from "./data/compactNonviolentGrid.js";
+import CumulativeSinsPage from "./pages/CumulativeSinsPage.jsx";
 
 import { getGrids, getEmotions, getNeeds } from "./utils/masterSelectors.js";
 import { getGridPageBackground } from "./utils/pageThemes.js";
 
 import "./App.css";
 
+const GRID_PREF_KEY = "preferredGridMode";
+
 function useHashRoute() {
   const get = () => (window.location.hash || "#/").replace(/^#/, "");
   const [route, setRoute] = useState(get());
-
+  
   useEffect(() => {
     const onHash = () => setRoute(get());
     window.addEventListener("hashchange", onHash);
@@ -78,12 +84,17 @@ function HomePage({
   goNeeds,
   goPrayer,
   master,
+  showExpandedGrid,
+  setShowExpandedGrid,
 }) {
   const [selected, setSelected] = useState(null);
+
   const { nnmGrid } = getGrids(master);
   const { meta } = getEmotions(master);
   const { supplement: needsSupplement } = getNeeds(master);
-  const grid = nnmGrid;
+
+  const fullGrid = nnmGrid;
+  
   const bgStyle = useMemo(() => getGridPageBackground(selected), [selected]);
 
   const pageStyle = {
@@ -106,24 +117,27 @@ function HomePage({
   };
 
   return (
-    <div className="container" style={pageStyle}>
-      <div
+<div className="container" style={{ ...pageStyle, position: "relative" }}>     
+   <div
         className="appShell"
         style={{
     width: "min(1120px, 100%)",
           margin: "0 auto",
         }}
       >
+        
+
+        
 <div className="panel textOutlineGreen" style={{ width: "100%", margin: "0 auto" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16 }}>
           <div className="pageMetaRow">
               <div className="pageHeaderTitle" style={{ minWidth: 0, maxWidth: 1120 }}>
 
                 <Header
-                  title="I want to Communicate How I Feel"
+                  title="I feel like this..."
                   subtitle={
                     <>
-                      Observe the situation, and explore what you feel. Then you can communicate your need to another person:
+                      This tool is for present moment conflict. You can communicate your need while owning your own emotion:
                       <br />
                       When I notice/observe ___, I feel ___ because I need ___.
                     </>
@@ -151,16 +165,32 @@ function HomePage({
                 goPrayer={goPrayer}
                 goCommunication={goCommunication}
                 goLog={goLog}
-              />
+               expanded={showExpandedGrid}
+onToggleExpanded={(e) => {
+  e?.currentTarget?.blur?.();
+
+  const y = window.scrollY;
+  setShowExpandedGrid((v) => !v);
+
+  requestAnimationFrame(() => {
+    window.scrollTo(0, y);
+  });
+}}
+/>
             </div>
             </div>
           </div>
         </div>
 
+
         <div className="panel textOutlineGreen" style={{ width: "100%", margin: "0 auto", minWidth: 0 }}>
-          <EmotionGrid
-  grid={grid}
-onPick={(value) => {
+<EmotionGrid
+  grid={fullGrid}
+  compactOverlay={!showExpandedGrid}
+  compactGrid={compactNonviolentGrid}
+  compactTileSize={120}
+  compactLabelScale={1.18}
+  onPick={(value) => {
     setSelected(value);
 
     setTimeout(() => {
@@ -170,7 +200,7 @@ onPick={(value) => {
       });
     }, 80);
   }}
-    meta={meta}
+  meta={meta}
   tileSize={78}
   labelScale={1.0}
   axisLabels={{
@@ -196,12 +226,34 @@ onPick={(value) => {
           needsSupplement={needsSupplement}
         />
       </div>
+            <Footer />
     </div>
-  );
+ 
+);
 }
 
 export default function App() {
+
   const [route, nav] = useHashRoute();
+
+  const [showExpandedGrid, setShowExpandedGrid] = useState(() => {
+  if (typeof window === "undefined") return false;
+  return window.localStorage.getItem(GRID_PREF_KEY) === "expanded";
+  })
+  ;
+
+    useEffect(() => {
+    clearExpiredEsvCache();
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem(
+      GRID_PREF_KEY,
+      showExpandedGrid ? "expanded" : "compact"
+    );
+  }, [showExpandedGrid]);
+
 
   useEffect(() => {
     window.scrollTo({
@@ -211,7 +263,7 @@ export default function App() {
     });
   }, [route]);
 
-useEffect(() => {
+  useEffect(() => {
   function handleEscape(e) {
     if (e.key === "Escape") {
       const closeBtn = document.querySelector(".modalHeaderActions .btn");
@@ -224,7 +276,7 @@ useEffect(() => {
   return () => {
     window.removeEventListener("keydown", handleEscape);
   };
-}, []);
+  }, []);
 
   const { master, loading, error, checkinGrid, checkinMeta, purposeDropdown } = useAppData();
   const { supplement: needsSupplement } = getNeeds(master);
@@ -232,12 +284,17 @@ useEffect(() => {
   if (route === "/violent") {
     return (
       <PageTransition route={route}>
+        <>
         <ViolentPage
           master={master}
           loading={loading}
           error={error}
           goHome={() => nav("#/")}
+          showExpandedGrid={showExpandedGrid}
+          setShowExpandedGrid={setShowExpandedGrid}
         />
+              <Footer />
+      </>
       </PageTransition>
     );
   }
@@ -254,6 +311,8 @@ useEffect(() => {
           goPrayer={() => nav("#/prayer")}
           goCommunication={() => nav("#/communication-sins")}
           goLog={() => nav("#/log")}
+          showExpandedGrid={showExpandedGrid}
+          setShowExpandedGrid={setShowExpandedGrid}
         />
       </PageTransition>
     );
@@ -262,12 +321,15 @@ useEffect(() => {
   if (route === "/log") {
     return (
       <PageTransition route={route}>
+        <>
         <LogPage
           master={master}
           loading={loading}
           error={error}
           goHome={() => nav("#/")}
         />
+        <Footer />
+        </>
       </PageTransition>
     );
   }
@@ -275,6 +337,7 @@ useEffect(() => {
   if (route === "/checkin") {
     return (
       <PageTransition route={route}>
+       <>
         <CheckInPage
           goHome={() => nav("#/")}
           checkinGrid={checkinGrid}
@@ -282,7 +345,11 @@ useEffect(() => {
           needsSupplement={needsSupplement}
           loading={loading}
           error={error}
+          showExpandedGrid={showExpandedGrid}
+          setShowExpandedGrid={setShowExpandedGrid} 
         />
+        <Footer />
+        </>
       </PageTransition>
     );
   }
@@ -290,19 +357,39 @@ useEffect(() => {
   if (route === "/communication-sins") {
     return (
       <PageTransition route={route}>
+        <>  
         <CommunicationSinPage goHome={() => nav("#/")} />
+      <Footer />
+      </>
       </PageTransition>
     );
   }
 
+if (route === "/cumulative-sins") {
+  return (
+    <PageTransition route={route}>
+      <>
+        <CumulativeSinsPage
+          goHome={() => nav("#/")}
+          goCommunication={() => nav("#/communication-sins")}
+        />
+        <Footer />
+      </>
+    </PageTransition>
+  );
+}
+
   if (route === "/needs") {
     return (
       <PageTransition route={route}>
+       <>
         <NeedsPage
           goHome={() => nav("#/")}
           needsSupplement={needsSupplement}
           purposeDropdown={purposeDropdown}
         />
+        <Footer />
+      </>
       </PageTransition>
     );
   }
@@ -310,19 +397,27 @@ useEffect(() => {
   if (route === "/prayer") {
     return (
       <PageTransition route={route}>
-        <PrayerPage goHome={() => nav("#/")} />
+       <>
+        <PrayerPage
+          goHome={() => nav("#/")}
+          showExpandedGrid={showExpandedGrid}
+          setShowExpandedGrid={setShowExpandedGrid}
+        />
+        <Footer />
+      </>
       </PageTransition>
     );
   }
 
   return (
     <PageTransition route={route}>
-      <PurposePage
-        master={master}
-        loading={loading}
-        error={error}
-        purposeDropdown={purposeDropdown}
-        goHome={() => nav("#/")}
+       <>
+        <PurposePage
+          master={master}
+          loading={loading}
+          error={error}
+          purposeDropdown={purposeDropdown}
+          goHome={() => nav("#/")}
         goGrid={() => nav("#/grid")}
         goViolent={() => nav("#/violent")}
         goCheckin={() => nav("#/checkin")}
@@ -331,6 +426,9 @@ useEffect(() => {
         goLog={() => nav("#/log")}
         goCommunication={() => nav("#/communication-sins")}
       />
+      <Footer />
+      </>
     </PageTransition>
-  );
+  
+);
 }

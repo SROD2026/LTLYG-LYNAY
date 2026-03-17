@@ -9,10 +9,11 @@ function itemStyle(targetKey, isMobile = false) {
     borderRadius: isMobile ? 10 : 14,
     whiteSpace: "nowrap",
     fontSize: isMobile ? 11 : 14,
-    padding: isMobile ? "6px 8px" : "10px 14px",
+    padding: isMobile ? "6px 10px" : "6px 10px",
     minHeight: isMobile ? 34 : undefined,
     borderColor: tone.border,
     color: tone.text,
+    marginTop: 6,
     background: `
       linear-gradient(180deg, rgba(255,255,255,0.20), rgba(255,255,255,0.06)),
       ${tone.bg}
@@ -27,16 +28,25 @@ export default function TopNav({
   goGrid,
   goViolent,
   goCheckin,
-  goNeeds,
   goPrayer,
+  goNeeds,
   goCommunication,
   goLog,
   onExport,
+  onToggleExpanded,
+  expanded,
 }) {
   const isMobile =
     typeof window !== "undefined" &&
     window.matchMedia &&
     window.matchMedia("(max-width: 760px)").matches;
+
+  const hash = typeof window !== "undefined" ? window.location.hash || "#/" : "#/";
+  const isGridPage =
+    hash.startsWith("#/grid") ||
+    hash.startsWith("#/violent") ||
+    hash.startsWith("#/prayer") ||
+    hash.startsWith("#/checkin");
 
   const items = useMemo(
     () =>
@@ -61,15 +71,15 @@ export default function TopNav({
           label: isMobile ? "Gratitude" : "Positive Check-In / Gratitude",
           onClick: goCheckin,
         },
-        goNeeds && {
-          key: "needs",
-          label: isMobile ? "Needs" : "Needs and theology",
-          onClick: goNeeds,
-        },
         goPrayer && {
           key: "prayer",
           label: isMobile ? "Prayer" : "Emotional prayer",
           onClick: goPrayer,
+        },
+        goNeeds && {
+          key: "needs",
+          label: isMobile ? "Needs" : "Needs and theology",
+          onClick: goNeeds,
         },
         goCommunication && {
           key: "communication",
@@ -87,34 +97,69 @@ export default function TopNav({
           onClick: onExport,
         },
       ].filter(Boolean),
-    [goHome, goGrid, goViolent, goCheckin, goNeeds, goPrayer, goCommunication, goLog, onExport, isMobile]
+    [
+      goHome,
+      goGrid,
+      goViolent,
+      goCheckin,
+      goPrayer,
+      goNeeds,
+      goCommunication,
+      goLog,
+      onExport,
+      isMobile,
+    ]
   );
 
-return (
-  <div
-    className={`topNav ${isMobile ? "topNav--mobile" : "topNav--desktop"}`}
-    style={
-      isMobile
-        ? {
-            display: "grid",
-            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-            gap: 6,
-            width: "100%",
-          }
-        : undefined
-    }
+  return (
+    <div
+      className={`topNav ${isMobile ? "topNav--mobile" : "topNav--desktop"}`}
+      style={
+        isMobile
+          ? {
+              display: "grid",
+              gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+              gap: 6,
+              width: "100%",
+            }
+          : {
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 8,
+              width: "100%",
+              alignItems: "center",
+              overflow: "visible",
+            }
+      }
+    >
+      {items.map((item) => (
+        <button
+          key={item.key}
+          className="btn topNav__btn"
+          onClick={item.onClick}
+          type="button"
+          style={itemStyle(item.key, isMobile)}
+        >
+          {item.label}
+        </button>
+      ))}
+
+      {isGridPage && onToggleExpanded ? (
+  <button
+    className="btn topNav__btn"
+    onClick={onToggleExpanded}
+    type="button"
+    style={{
+      ...itemStyle("grid", isMobile),
+      fontWeight: 800,
+      opacity: 1,
+      backgroundColor: expanded ? "rgba(255,255,255,0.18)" : undefined,
+    }}
   >
-    {items.map((item) => (
-      <button
-        key={item.label}
-        className="btn topNav__btn"
-        onClick={item.onClick}
-        type="button"
-        style={itemStyle(item.key, isMobile)}
-      >
-        {item.label}
-      </button>
-    ))}
-  </div>
-);
+    {expanded ? "Compact Grid" : "Expanded Grid"}
+  </button>
+) : null}
+
+    </div>
+  );
 }

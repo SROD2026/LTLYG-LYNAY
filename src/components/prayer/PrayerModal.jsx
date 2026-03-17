@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Panel from "../ui/Panel.jsx";
 import Select from "../ui/Select.jsx";
 import Chips from "../ui/Chips.jsx";
-import InteroStickFigure from "../interoception/InteroStickFigure.jsx";
+import InteroSceneFigure from "../intero/InteroSceneFigure.jsx";
 import { captureElementPng } from "../../utils/exportHelpers.js";
 import {
   appendReflectionEntry,
@@ -340,10 +340,9 @@ const [spacerHeight, setSpacerHeight] = useState(0);
 
   const [writtenPrayer, setWrittenPrayer] = useState("");
 const [saveStatus, setSaveStatus] = useState("");
-const [showLog, setShowLog] = useState(false);
 const [logCount, setLogCount] = useState(0);
 const modalCardRef = useRef(null);
-
+const interoCaptureRef = useRef(null);
 
       useEffect(() => {
     if (!open) return;
@@ -722,19 +721,27 @@ function showNextScriptureSet() {
 
 const reframeLine = redirectOptions[redirectIndex] || "";
 
-
- async function handleSavePrayer() {
+async function handleSavePrayer() {
   try {
-    const pngDataUrl = await captureElementPng("#prayerStickCapture");
+    setSaveStatus("Saving…");
+
+    let pngDataUrl = "";
+    try {
+      pngDataUrl = await captureElementPng(interoCaptureRef.current);
+    } catch (err) {
+      console.warn("Prayer PNG capture failed:", err);
+    }
 
     const payload = {
       ts: new Date().toISOString(),
       type: "prayer",
       title: emotion,
+      x: cell?.x || 0,
+      y: cell?.y || 0,
       emotion,
       core_emotion: entry.core_emotion || "",
       definition: entry.definition || "",
-prayer_prompt: activePrayerPrompt || entry?.prayer_prompt || "",
+      prayer_prompt: activePrayerPrompt || entry?.prayer_prompt || "",
       reframe: reframeLine || "",
       written_prayer: writtenPrayer.trim(),
       intero: intero.filter((x) => x.region && x.sensation),
@@ -784,7 +791,7 @@ prayer_prompt: activePrayerPrompt || entry?.prayer_prompt || "",
   style={{
     position: "fixed",
     inset: 0,
-    zIndex: 9999,
+    zIndex: 9999, 
     overflowY: "auto",
     display: "grid",
     background: "rgba(10,12,20,0.52)",
@@ -857,7 +864,6 @@ justifySelf: "center",
       textTransform: "uppercase",
     }}
   >
-    {entry.core_emotion} prayer flow
   </div>
           </div>
 
@@ -871,9 +877,6 @@ justifySelf: "center",
     minWidth: 0,
   }}
 >
-  <button className="btn" onClick={() => setShowLog((v) => !v)} style={{ minWidth: 132 }}>
-    {showLog ? "Hide log" : "View log"}
-  </button>
 
   <button className="btn" onClick={handleSavePrayer} style={{ minWidth: 132 }}>
     Save prayer
@@ -891,123 +894,8 @@ justifySelf: "center",
   overflow: "visible",
 }}>
 
-  {showLog ? (
-    <Panel
-      title="Saved prayer reflections"
-      style={{ background: "rgba(255,255,255,0.04)" }}
-    >
-      <div style={{ display: "grid", gap: 10 }}>
-        <div style={{ fontSize: 13, color: "rgba(255,255,255,0.72)" }}>
-          {logCount} saved reflections on this device
-        </div>
-      </div>
-    </Panel>
-  ) : null}
 
-  <Panel
-    title="1) Prayer"
-  style={{
-    background: "rgba(255,255,255,0.04)",
-    color: "rgba(255,255,255,0.94)"
-  }}
->
-  
-   <div style={{ display: "grid", gap: 16 }}>
-    <div style={{ display: "grid", gap: 8 }}>
-  <strong>A. Turn the emotion into prayer</strong>
-
-  <p style={{ margin: "6px 0 0", lineHeight: 1.55 }}>
-    {activePrayerPrompt}
-  </p>
-
-  {prayerPromptOptions.length > 1 ? (
-    <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-      <button
-        type="button"
-        className="btn"
-        onClick={showNextPrayerPrompt}
-        style={{ padding: "8px 12px", fontSize: 12, borderRadius: 10 }}
-      >
-        Show another prayer prompt
-      </button>
-
-      <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)" }}>
-        {prayerPromptIndex + 1} of {prayerPromptOptions.length}
-      </div>
-    </div>
-  ) : null}
-</div>
-
-    <div>
-      <strong>B. Recognize the need</strong>
-      <p style={{ margin: "6px 0 0", lineHeight: 1.55 }}>
-        This emotion may point toward needs such as{" "}
-        {(entry.philippians_needs || []).join(", ") || "clarity, help, and steadiness"}.
-      </p>
-    </div>
-
-    <div style={{ display: "grid", gap: 8 }}>
-  <strong>C. Renew the mind</strong>
-
-  <p style={{ margin: "6px 0 0", lineHeight: 1.55 }}>
-    {reframeLine}
-  </p>
-
-  {redirectOptions.length > 1 ? (
-    <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-      <button
-        type="button"
-        className="btn"
-        onClick={showNextRedirect}
-        style={{ padding: "8px 12px", fontSize: 12, borderRadius: 10 }}
-      >
-        Show another redirect
-      </button>
-
-      <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)" }}>
-        {redirectIndex + 1} of {redirectOptions.length}
-      </div>
-    </div>
-  ) : null}
-</div>
-  </div>
-</Panel>
-</div>
-
- <Panel
-  title="2) God's communication method to us"
-  style={{ background: "rgba(255,255,255,0.04)" }}
->
-  <div style={{ display: "grid", gap: 10 }}>
-    <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-      {safeArray(entry?.scriptures).length > 1 ? (
-        <>
-          <button
-            type="button"
-            className="btn"
-            onClick={showNextScriptureSet}
-            style={{ padding: "8px 12px", fontSize: 12, borderRadius: 10 }}
-          >
-            Show another scripture set
-          </button>
-
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)" }}>
-            Start {scriptureStartIndex + 1} of {safeArray(entry?.scriptures).length}
-          </div>
-        </>
-      ) : null}
-    </div>
-
-    <ScriptureRotator
-      scriptures={rotatedScriptures}
-      perPage={2}
-      title="Scripture"
-      buttonLabel="Show more"
-    />
-  </div>
-</Panel>
-
-          <Panel title="3) Interoception" style={{ background: "rgba(255,255,255,0.04)" }}>
+          <Panel title="1) Interoception" style={{ background: "rgba(255,255,255,0.04)" }}>
 <div
   style={{
     display: "grid",
@@ -1017,7 +905,7 @@ justifySelf: "center",
   }}
 >              <div style={{ display: "grid", gap: 12 }}>
                 <div style={{ fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,0.84)" }}>
-                  Notice where this emotion shows up in your body. Naming body sensations can make prayer more concrete instead of vague.
+                  Notice where this emotion shows up in your body. God cares about how you feel, and vulnerability with God deepens relationship. He loves you.
                 </div>
 
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
@@ -1130,10 +1018,19 @@ justifySelf: "center",
     boxSizing: "border-box",
   }}
 >
-<InteroStickFigure
-  intero={intero.filter((x) => x.region && x.sensation)}
-  theme="prayer"
+  <div ref={interoCaptureRef}>
+
+<InteroSceneFigure
+  intero={intero || []}
+  emotion={cell?.emotion || ""}
+  mode="prayer"
+  x={cell?.x || 0}
+  y={cell?.y || 0}
+  width={320}
+  height={320}
 />
+</div>
+
   <div
     style={{
       fontSize: 12,
@@ -1142,42 +1039,54 @@ justifySelf: "center",
       maxWidth: 240,
     }}
   >
-                      This section is for noticing, not dramatizing. Bring the body to God as honestly as you bring the emotion.
+ Bring your emotion and feeling to God.
                 </div>
               </div>
             </div>
           </Panel>
 
-          <Panel title="4) Philippians 4:8 reframe" style={{ background: "rgba(255,255,255,0.04)" }}>
-            <div style={{ display: "grid", gap: 12 }}>
-<div style={{ display: "grid", gap: 10 }}>
-  <div style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.92)" }}>
-    {reframeLine}
-  </div>
-
-  {redirectOptions.length > 1 ? (
+ <Panel
+  title="2) God's communication method to us"
+  style={{ background: "rgba(255,255,255,0.04)" }}
+>
+  <div style={{ display: "grid", gap: 10 }}>
     <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-      <button
-        type="button"
-        className="btn"
-        onClick={showNextRedirect}
-        style={{ padding: "8px 12px", fontSize: 12, borderRadius: 10 }}
-      >
-        Show another redirect
-      </button>
+      {safeArray(entry?.scriptures).length > 1 ? (
+        <>
+          <button
+            type="button"
+            className="btn"
+            onClick={showNextScriptureSet}
+            style={{ padding: "8px 12px", fontSize: 12, borderRadius: 10 }}
+          >
+            Show another scripture set
+          </button>
 
-      <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)" }}>
-        {redirectIndex + 1} of {redirectOptions.length}
-      </div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)" }}>
+            Start {scriptureStartIndex + 1} of {safeArray(entry?.scriptures).length}
+          </div>
+        </>
+      ) : null}
     </div>
-  ) : null}
-</div>
+
+    <ScriptureRotator
+      scriptures={rotatedScriptures}
+      perPage={2}
+      title="Scripture"
+      buttonLabel="Show more"
+    />
+  </div>
+</Panel>
+
+
+          <Panel title="3) Philippians 4:8 reframe" style={{ background: "rgba(255,255,255,0.04)" }}>
+            
 
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
                 <div style={{ border: "1px solid rgba(255,255,255,0.14)", borderRadius: 12, padding: 12, background: "rgba(255,255,255,0.05)" }}>
                   <div style={{ fontWeight: 900, marginBottom: 8 }}>Think on what is {traitLabel}</div>
                   <div style={{ fontSize: 13, lineHeight: 1.5, color: "rgba(255,255,255,0.84)" }}>
-                    This is not denial. It is a redirection of attention toward what helps reality, love, truth, and peace come back into view.
+                    Redirect attention toward what helps you in reality: love, truth, and peace.
                   </div>
                 </div>
 
@@ -1188,15 +1097,86 @@ justifySelf: "center",
               </div>
 
               <div style={{ border: "1px solid rgba(255,255,255,0.14)", borderRadius: 12, padding: 12, background: "rgba(255,255,255,0.05)" }}>
-                <div style={{ fontWeight: 900, marginBottom: 8 }}>Possible shifts in attention</div>
+                <div style={{ fontWeight: 900, marginBottom: 8 }}>Redirect the mind to</div>
                 <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.55, color: "rgba(255,255,255,0.92)" }}>
                   {(entry.philippians_shifts || []).map((shift) => (
                     <li key={shift}>{shift}</li>
                   ))}
                 </ul>
               </div>
-            </div>
+            
           </Panel>
+
+
+  <Panel
+    title="4) Prayer"
+  style={{
+    background: "rgba(255,255,255,0.04)",
+    color: "rgba(255,255,255,0.94)"
+  }}
+>
+  
+   <div style={{ display: "grid", gap: 16 }}>
+    <div style={{ display: "grid", gap: 8 }}>
+  <strong>A. Turn the emotion into prayer</strong>
+
+  <p style={{ margin: "6px 0 0", lineHeight: 1.55 }}>
+    {activePrayerPrompt}
+  </p>
+
+  {prayerPromptOptions.length > 1 ? (
+    <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+      <button
+        type="button"
+        className="btn"
+        onClick={showNextPrayerPrompt}
+        style={{ padding: "8px 12px", fontSize: 12, borderRadius: 10 }}
+      >
+        Show another prayer prompt
+      </button>
+
+      <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)" }}>
+        {prayerPromptIndex + 1} of {prayerPromptOptions.length}
+      </div>
+    </div>
+  ) : null}
+</div>
+
+    <div>
+      <strong>B. Recognize what need is behind the emotion</strong>
+      <p style={{ margin: "6px 0 0", lineHeight: 1.55 }}>
+        This emotion shows me that I may need: {" "}
+        {(entry.philippians_needs || []).join(", ") || "clarity, help, and steadiness"}.
+      </p>
+    </div>
+
+    <div style={{ display: "grid", gap: 8 }}>
+  <strong>C. Renew the mind</strong>
+
+  <p style={{ margin: "6px 0 0", lineHeight: 1.55 }}>
+    {reframeLine}
+  </p>
+
+  {redirectOptions.length > 1 ? (
+    <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+      <button
+        type="button"
+        className="btn"
+        onClick={showNextRedirect}
+        style={{ padding: "8px 12px", fontSize: 12, borderRadius: 10 }}
+      >
+        Show another Philippians 4:8 reframe
+      </button>
+
+      <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)" }}>
+        {redirectIndex + 1} of {redirectOptions.length}
+      </div>
+    </div>
+  ) : null}
+</div>
+  </div>
+</Panel>
+</div>
 
 <Panel title="5) Write your prayer" style={{ background: "rgba(255,255,255,0.04)" }}>
   <div style={{ display: "grid", gap: 12 }}>
@@ -1242,10 +1222,6 @@ justifySelf: "center",
       minWidth: 0,
     }}
   >
-    <div style={{ fontSize: 13, color: "rgba(255,255,255,0.70)" }}>
-      {logCount} saved reflections
-    </div>
-
     {saveStatus ? (
       <div style={{ fontSize: 13, color: "rgba(255,255,255,0.82)" }}>
         {saveStatus}
